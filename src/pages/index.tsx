@@ -65,7 +65,7 @@ const Header = withSize(
   <div
     style={{
       width: '100%',
-      paddingBottom: `${(1 - scale) * 50 + 40}%`,
+      paddingBottom: `${(1 - scale) * 35 + 55}%`,
       backgroundImage: `url("${photo}")`,
       backgroundSize: 'cover',
       backgroundPosition: '50%',
