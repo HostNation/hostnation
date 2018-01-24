@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import * as React from 'react';
 import Helmet from 'react-helmet';
 import { Txt } from 'elmnt';
@@ -28,11 +30,9 @@ export default ({ location, children }) => (
         href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
         rel="stylesheet"
       />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js" />
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ8P7-0kTGz2_tkcHjOo0IUiMB_z9Bbp4" />
     </Helmet>
-    {location.pathname === '/dashboard' ||
-    location.pathname === '/dashboard/' ? (
+    {location.pathname.startsWith('/dashboard') ? (
       children()
     ) : (
       <>

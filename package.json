@@ -5,18 +5,19 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "prettier":
-      "prettier --single-quote --trailing-comma all --write \"src/**/*.{js,jsx}\""
+    "prettier": "prettier --single-quote --trailing-comma all --write \"src/**/*.{js,jsx}\""
   },
   "dependencies": {
     "@types/react": "^16.0.34",
     "@types/react-router-dom": "^4.2.3",
     "@types/recompose": "^0.24.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "elmnt": "^0.3.12",
     "gatsby": "^1.9.166",
     "gatsby-link": "^1.6.34",
+    "gatsby-plugin-create-client-paths": "^1.0.4",
     "gatsby-plugin-react-helmet": "^2.0.4",
     "gatsby-plugin-react-next": "^1.0.8",
     "gatsby-plugin-typescript": "^1.4.13",

@@ -15,7 +15,7 @@ const textStyle = {
 };
 
 const MenuLink = withHover(
-  ({ text, to, newTab, active, toggle, isHovered, hoverProps }: any) => {
+  ({ text, to, newTab, active, setClosed, isHovered, hoverProps }: any) => {
     const external = to.startsWith('http');
     const Comp = external ? 'a' : Link;
     return (
@@ -28,7 +28,7 @@ const MenuLink = withHover(
           textAlign: 'center',
         }}
         target={newTab ? '_blank' : undefined}
-        onClick={toggle}
+        onClick={setClosed}
         {...hoverProps}
       >
         <div
@@ -60,6 +60,7 @@ export default compose<any, any>(
   withState('isOpen', 'setIsOpen', false),
   withHandlers({
     toggle: ({ isOpen, setIsOpen }) => () => setIsOpen(!isOpen),
+    setClosed: ({ setIsOpen }) => () => setIsOpen(false),
   }),
   withSize(
     'small',
@@ -69,7 +70,7 @@ export default compose<any, any>(
   withProps(({ isOpen, toggle, small }: any) => {
     if (isOpen && !small) toggle();
   }),
-)(({ active, isOpen, setIsOpen, toggle, small, setBoundsElem }) => (
+)(({ active, isOpen, toggle, setClosed, small, setBoundsElem }) => (
   <div
     style={{
       background: colors.grey,
@@ -92,7 +93,11 @@ export default compose<any, any>(
         }}
       >
         <Div style={{ layout: 'bar', spacing: 13 }}>
-          <Link to="/" style={{ display: 'block', padding: 5, margin: -5 }}>
+          <Link
+            to="/"
+            onClick={setClosed}
+            style={{ display: 'block', padding: 5, margin: -5 }}
+          >
             <Hover
               style={{
                 ...textStyle,
@@ -168,31 +173,31 @@ export default compose<any, any>(
               text="About Us"
               to="/about-us"
               active={active}
-              toggle={toggle}
+              setClosed={setClosed}
             />
             <MenuLink
               text="Befriend"
               to="/befriend"
               active={active}
-              toggle={toggle}
+              setClosed={setClosed}
             />
             <MenuLink
               text="Refer"
               to="/refer"
               active={active}
-              toggle={toggle}
+              setClosed={setClosed}
             />
             <MenuLink
               text="Befrienders’ guide"
               to="/guide.pdf"
               newTab
-              toggle={toggle}
+              setClosed={setClosed}
             />
             <MenuLink
               text="News"
               to="https://hostnationblog.wordpress.com"
               newTab
-              toggle={toggle}
+              setClosed={setClosed}
             />
           </Div>
         </div>

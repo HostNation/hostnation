@@ -8,7 +8,7 @@ export default () => (
     <Helmet title="HostNation">
       <style>{`
       html {
-        background: white;
+        background: white !important;
       }
       `}</style>
     </Helmet>
