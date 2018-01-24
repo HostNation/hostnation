@@ -1,14 +1,14 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
 import { Txt } from 'elmnt';
-import { withBounds } from 'mishmash';
+import { withSize } from 'mishmash';
 
 import '../core/base.css';
 
 import Menu from '../core/menu';
 import styles, { colors } from '../core/styles';
 
-const Sticky = withBounds('bounds', 'setBoundsElem')(
+const Sticky = withSize('bounds', 'setBoundsElem')(
   ({ content, footer, bounds = { height: 0 }, setBoundsElem }) => (
     <>
       <div style={{ minHeight: '100%', marginBottom: -bounds.height }}>

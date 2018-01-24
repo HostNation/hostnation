@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Div, Txt } from 'elmnt';
-import { withBounds } from 'mishmash';
+import { withSize } from 'mishmash';
 
 import * as logoWide from '../img/logo-wide.png';
 import * as phfLogo from '../img/phf-logo.jpg';
@@ -59,7 +59,7 @@ const Profile = ({ small, image, name, role, bio }) => (
   </Div>
 );
 
-const Profiles = withBounds(
+const Profiles = withSize(
   'small',
   'setBoundsElem',
   ({ width } = { width: 0 }) => width <= 600,

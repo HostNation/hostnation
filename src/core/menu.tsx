@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'gatsby-link';
 import { Div, Icon, Txt } from 'elmnt';
-import { Hover, withBounds, withHover } from 'mishmash';
+import { Hover, withHover, withSize } from 'mishmash';
 import { compose, withHandlers, withProps, withState } from 'recompose';
 
 import styles, { colors, icons } from '../core/styles';
@@ -61,7 +61,7 @@ export default compose<any, any>(
   withHandlers({
     toggle: ({ isOpen, setIsOpen }) => () => setIsOpen(!isOpen),
   }),
-  withBounds(
+  withSize(
     'small',
     'setBoundsElem',
     ({ width } = { width: 0 }) => width <= 800,

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'gatsby-link';
 import { Div, Icon, Txt } from 'elmnt';
-import { Hover, withBounds } from 'mishmash';
+import { Hover, withSize } from 'mishmash';
 
 import * as logoWide from '../img/logo-wide.png';
 import * as adelSophia from '../img/photos/adel-sophia.jpg';
@@ -17,7 +17,7 @@ import * as newsIcon from '../img/icons/news.png';
 import * as testimonialsIcon from '../img/icons/testimonials.png';
 
 import * as doIt from '../img/links/do-it.jpg';
-import * as refugeeAid from '../img/links/refugee-aid.jpg';
+import * as refugeeCouncil from '../img/links/refugee-council.png';
 import * as refugeesAtHome from '../img/links/refugees-at-home.png';
 
 import styles, { colors, icons } from '../core/styles';
@@ -38,7 +38,7 @@ const linkStyle = {
   hover: { background: '#eee' },
 };
 
-const Header = withBounds(
+const Header = withSize(
   'scale',
   'setBoundsElem',
   ({ width } = { width: 0 }) => (width - 400) / 500,
@@ -91,7 +91,7 @@ const Header = withBounds(
   </div>
 ));
 
-const MainLinks = withBounds(
+const MainLinks = withSize(
   'small',
   'setBoundsElem',
   ({ width } = { width: 0 }) => width <= 800,
@@ -130,7 +130,7 @@ const MainLinks = withBounds(
   </div>
 ));
 
-const Testimonials = withBounds(
+const Testimonials = withSize(
   'small',
   'setBoundsElem',
   ({ width } = { width: 0 }) => width <= 500,
@@ -155,7 +155,7 @@ const Testimonials = withBounds(
         <Txt style={styles.subtitle}>Befrienders</Txt>
         <Txt style={testimonialStyle('yellow')}>
           “He’s not an asylum seeker anymore, he’s Sanjal and he’s got a place
-          in all our hearts”
+          in our heart”
         </Txt>
         <Txt style={testimonialStyle('yellow')}>
           “We do lots together but more than anything we have long, long talks.
@@ -190,8 +190,8 @@ const Testimonials = withBounds(
           thoughts or anxiety”
         </Txt>
         <Txt style={testimonialStyle('purple')}>
-          “It is such a wonderful thing to meet people that will welcome us into
-          their lives and family”
+          “It is such a wonderful thing to meet people who will welcome us into
+          their life”
         </Txt>
       </Div>
     </Div>
@@ -207,13 +207,15 @@ export default () => (
     </div>
     <Div style={{ spacing: 25 }}>
       <Txt style={styles.body}>
-        We are an introductory service dedicated to connecting people in their
-        communities. A befriender commits to meeting the refugee or asylum
-        seeker that they are introduced to socially for a minimum of 3 hours
-        once a fortnight over a period of 3 months.
+        We are a London-based introductory service dedicated to connecting
+        people in their communities. Befrienders are matched with and then
+        introduced to a refugee or asylum seeker in their area. They commit to
+        meeting socially for a minimum of 3 hours once a fortnight over a period
+        of 3 months.
       </Txt>
       <Txt style={styles.body}>
-        If you like what we’re trying to do then please consider donating.
+        If you like what we’re trying to do, but are not in London or don’t have
+        the time to befriend, then please consider donating.
       </Txt>
       <a
         href="https://mydonate.bt.com/charities/hostnation"
@@ -324,13 +326,16 @@ export default () => (
             </Div>
           </Hover>
         </a>
-        <a href="http://refugeeaidapp.com" target="_blank">
+        <a href="https://www.refugeecouncil.org.uk/services" target="_blank">
           <Hover style={linkStyle}>
             <Div>
-              <img src={refugeeAid} style={{ width: 100, margin: '0 auto' }} />
+              <img
+                src={refugeeCouncil}
+                style={{ width: 100, margin: '0 auto' }}
+              />
               <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
-                linking refugees and asylum seekers to local refugee support
-                services
+                a searchable database linking refugees and asylum seekers to
+                support services in Greater London
               </Txt>
             </Div>
           </Hover>

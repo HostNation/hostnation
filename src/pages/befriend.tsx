@@ -3,33 +3,16 @@ import { Div, Txt } from 'elmnt';
 import { Hover } from 'mishmash';
 
 import * as logoWide from '../img/logo-wide.png';
+import * as aiLingPattie from '../img/banners/ai-ling-pattie.png';
 
 import App from '../core/app';
 import Box from '../core/box';
 import styles, { colors } from '../core/styles';
 
 export default () => (
-  <Div style={{ spacing: 50, padding: '50px 0' }}>
+  <Div style={{ spacing: 50, paddingTop: 50 }}>
     <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
-    <Box title="BEFRIENDER REGISTRATION FORM" color="yellow">
-      <Txt style={styles.boxText}>
-        Thank you for your interest in HostNation refugee befriending. We are
-        currently seeking befrienders who live in Greater London zones 3-6 which
-        is where most refugees and asylum seekers are housed. If you live in the
-        outer zones but within the M25, we would love to have you on board. We
-        are also keen to recruit more men to join HostNation. If you’re female,
-        we still want you, but please spread the word amongst men you know who
-        might also be interested in registering!
-      </Txt>
-      <Txt
-        style={{ ...styles.boxText, fontWeight: 'bold', fontStyle: 'italic' }}
-      >
-        Please do not register if you live outside of Greater London as we are
-        not yet in a position to take referrals from outside of the capital.
-      </Txt>
-      <Txt style={styles.boxText}>Many thanks, HostNation team</Txt>
-      <App app="befriend" color="yellow" />
-    </Box>
+
     <Box title="WHY WE NEED TO ASK A LOT OF YOU" toggle>
       <Txt style={styles.boxText}>
         HostNation recognise that whilst asylum seekers and refugees over the
@@ -52,6 +35,27 @@ export default () => (
         befriending, boundaries, signposting to specialist support services etc.
       </Txt>
     </Box>
+
+    <Box title="BEFRIENDER REGISTRATION FORM" color="yellow">
+      <Txt style={styles.boxText}>
+        Thank you for your interest in HostNation refugee befriending. We are
+        currently seeking befrienders who live in Greater London zones 3-6 which
+        is where most refugees and asylum seekers are housed. If you live in the
+        outer zones but within the M25, we would love to have you on board. We
+        are also keen to recruit more men to join HostNation. If you’re female,
+        we still want you, but please spread the word amongst men you know who
+        might also be interested in registering!
+      </Txt>
+      <Txt
+        style={{ ...styles.boxText, fontWeight: 'bold', fontStyle: 'italic' }}
+      >
+        Please do not register if you live outside of Greater London as we are
+        not yet in a position to take referrals from outside of the capital.
+      </Txt>
+      <Txt style={styles.boxText}>Many thanks, HostNation team</Txt>
+      <App app="befriend" color="yellow" />
+    </Box>
+
     <Box title="SCOPE OF SERVICES AND EXCLUSION OF LIABILITY" toggle>
       <Txt style={{ ...styles.boxText, fontSize: 22, fontWeight: 'bold' }}>
         Scope of Services
@@ -109,6 +113,7 @@ export default () => (
         use of the web site).
       </Txt>
     </Box>
+
     <Box title="HOSTNATION PRIVACY POLICY" toggle>
       <Txt style={styles.boxText}>
         At HostNation we will only collect, process and store information about
@@ -140,5 +145,7 @@ export default () => (
         </Hover>
       </a>
     </Box>
+
+    <img src={aiLingPattie} />
   </Div>
 );
