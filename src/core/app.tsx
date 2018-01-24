@@ -4,12 +4,14 @@ import Spinner from './spinner';
 import { colors } from './styles';
 
 const loadScript = url => {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = url;
-  const head = document.head || document.getElementsByTagName('head')[0];
-  script.onload = () => head.removeChild(script);
-  head.appendChild(script);
+  if (typeof document !== 'undefined') {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+    const head = document.head || document.getElementsByTagName('head')[0];
+    script.onload = () => head.removeChild(script);
+    head.appendChild(script);
+  }
 };
 
 export default function App({ app, color = 'grey', full = false, ...config }) {
