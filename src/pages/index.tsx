@@ -4,11 +4,18 @@ import { Div, Icon, Txt } from 'elmnt';
 import { Hover, withSize } from 'mishmash';
 
 import * as logoWide from '../img/logo-wide.png';
-import * as adelSophia from '../img/photos/adel-sophia.jpg';
 
-import * as darwinSasha from '../img/banners/darwin-sasha-transparent.png';
-import * as nithiAndySue from '../img/banners/nithi-andy-sue-transparent.png';
-import * as oliviaAnna from '../img/banners/olivia-anna-transparent.png';
+import * as adelSophia from '../img/photos/adel-sophia.jpg';
+import * as aiLingPattie from '../img/photos/ai-ling-pattie.jpg';
+import * as darwinSasha from '../img/photos/darwin-sasha.jpg';
+import * as florenceLucy from '../img/photos/florence-lucy.jpg';
+import * as mohamedJulia from '../img/photos/mohamed-julia.jpg';
+import * as oliviaAnna from '../img/photos/olivia-anna.jpg';
+import * as tobyLaurence from '../img/photos/toby-laurence.jpg';
+
+import * as darwinSashaBanner from '../img/banners/darwin-sasha-transparent.png';
+import * as nithiAndySueBanner from '../img/banners/nithi-andy-sue-transparent.png';
+import * as oliviaAnnaBanner from '../img/banners/olivia-anna-transparent.png';
 
 import * as contactIcon from '../img/icons/contact.png';
 import * as guideIcon from '../img/icons/guide.png';
@@ -21,6 +28,16 @@ import * as refugeeCouncil from '../img/links/refugee-council.png';
 import * as refugeesAtHome from '../img/links/refugees-at-home.png';
 
 import styles, { colors, icons } from '../core/styles';
+
+const photos = [
+  adelSophia,
+  aiLingPattie,
+  darwinSasha,
+  florenceLucy,
+  mohamedJulia,
+  oliviaAnna,
+  tobyLaurence,
+];
 
 const testimonialStyle = color => ({
   ...styles.text,
@@ -38,6 +55,8 @@ const linkStyle = {
   hover: { background: '#eee' },
 };
 
+const photo = photos[Math.floor(Math.random() * photos.length)];
+
 const Header = withSize(
   'scale',
   'setBoundsElem',
@@ -46,14 +65,25 @@ const Header = withSize(
   <div
     style={{
       width: '100%',
-      paddingBottom: `${(1 - scale) * 55 + 45}%`,
-      backgroundImage: `url("${adelSophia}")`,
+      paddingBottom: `${(1 - scale) * 50 + 40}%`,
+      backgroundImage: `url("${photo}")`,
       backgroundSize: 'cover',
       backgroundPosition: '50%',
       position: 'relative',
     }}
     ref={setBoundsElem}
   >
+    <div
+      style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        background:
+          'linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 60%,rgba(0,0,0,0.5) 100%)',
+      }}
+    />
     <Div
       style={{
         spacing: 10,
@@ -249,7 +279,7 @@ export default () => (
       </Div>
     </Div>
     <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
-    <img src={darwinSasha} style={{ maxWidth: 650, margin: '0 auto' }} />
+    <img src={darwinSashaBanner} style={{ maxWidth: 650, margin: '0 auto' }} />
     <Div style={{ spacing: 40, padding: 40, background: 'white' }}>
       <Div style={{ spacing: 10 }}>
         <img src={testimonialsIcon} style={{ width: 100, margin: '0 auto' }} />
@@ -291,7 +321,7 @@ export default () => (
       <Txt style={styles.body}>For the latest news from HostNation.</Txt>
     </Div>
     <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
-    <img src={oliviaAnna} style={{ maxWidth: 650, margin: '0 auto' }} />
+    <img src={oliviaAnnaBanner} style={{ maxWidth: 650, margin: '0 auto' }} />
     <Div style={{ spacing: 40, padding: 40, background: 'white' }}>
       <Div style={{ spacing: 15 }}>
         <img src={linksIcon} style={{ width: 100, margin: '0 auto' }} />
@@ -343,7 +373,7 @@ export default () => (
       </Div>
     </Div>
     <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
-    <img src={nithiAndySue} style={{ maxWidth: 650, margin: '0 auto' }} />
+    <img src={nithiAndySueBanner} style={{ maxWidth: 650, margin: '0 auto' }} />
     <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
     <Div style={{ spacing: 35 }}>
       <Div style={{ spacing: 15 }}>

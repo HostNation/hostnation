@@ -31,7 +31,8 @@ export default ({ location, children }) => (
       <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js" />
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ8P7-0kTGz2_tkcHjOo0IUiMB_z9Bbp4" />
     </Helmet>
-    {location.pathname === '/dashboard' ? (
+    {location.pathname === '/dashboard' ||
+    location.pathname === '/dashboard/' ? (
       children()
     ) : (
       <>
