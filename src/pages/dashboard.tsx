@@ -1,17 +1,18 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-import App from '../core/app';
+import DashboardApp from '../apps/apps/dashboard';
 
 export default () => (
   <>
     <Helmet title="HostNation">
+      <title>Dashboard | HostNation</title>
       <style>{`
       html {
         background: white !important;
       }
       `}</style>
     </Helmet>
-    <App app="dashboard" color="purple" full />
+    <DashboardApp />
   </>
 );

@@ -5,26 +5,39 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "prettier": "prettier --single-quote --trailing-comma all --write \"src/**/*.{js,jsx}\""
+    "prettier":
+      "prettier --single-quote --trailing-comma all --write \"src/**/*.{ts,tsx}\""
+  },
+  "babel": {
+    "presets": ["env", "stage-0"]
   },
   "dependencies": {
-    "@types/react": "^16.0.34",
+    "@types/react": "^16.0.35",
+    "@types/react-dom": "^16.0.3",
     "@types/react-router-dom": "^4.2.3",
     "@types/recompose": "^0.24.4",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "elmnt": "^0.3.12",
-    "gatsby": "^1.9.166",
-    "gatsby-link": "^1.6.34",
+    "common": "https://github.com/kalambo/common",
+    "common-client": "https://github.com/kalambo/common-client",
+    "elmnt": "^0.4.1",
+    "gatsby": "^1.9.172",
+    "gatsby-link": "^1.6.35",
     "gatsby-plugin-create-client-paths": "^1.0.4",
     "gatsby-plugin-react-helmet": "^2.0.4",
     "gatsby-plugin-react-next": "^1.0.8",
-    "gatsby-plugin-typescript": "^1.4.13",
-    "mishmash": "^0.4.10",
+    "gatsby-plugin-typescript": "^1.4.15",
+    "lodash.debounce": "^4.0.8",
+    "mishmash": "^0.5.1",
+    "moment": "^2.20.1",
+    "node-fetch": "^1.7.3",
+    "pegjs": "^0.10.0",
     "prettier": "^1.10.2",
+    "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.0",
+    "react-router-dom": "^4.2.2",
     "recompose": "^0.26.0",
-    "typescript": "^2.6.2"
+    "rgo": "^0.3.6",
+    "typescript": "^2.6.2",
+    "whatwg-fetch": "^2.0.3"
   }
 }

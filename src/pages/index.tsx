@@ -2,6 +2,8 @@ import * as React from 'react';
 import Link from 'gatsby-link';
 import { Div, Icon, Txt } from 'elmnt';
 import { Hover, withSize } from 'mishmash';
+import { compose, lifecycle } from 'recompose';
+import Helmet from 'react-helmet';
 
 import * as logoWide from '../img/logo-wide.png';
 
@@ -55,13 +57,20 @@ const linkStyle = {
   hover: { background: '#eee' },
 };
 
-const photo = photos[Math.floor(Math.random() * photos.length)];
-
-const Header = withSize(
-  'scale',
-  'setBoundsElem',
-  ({ width } = { width: 0 }) => (width - 400) / 500,
-)(({ scale, setBoundsElem }) => (
+const Header = compose<any, any>(
+  withSize(
+    'scale',
+    'setBoundsElem',
+    ({ width } = { width: 0 }) => (width - 400) / 500,
+  ),
+  lifecycle({
+    componentDidMount() {
+      this.setState({
+        photo: photos[Math.floor(Math.random() * photos.length)],
+      });
+    },
+  }),
+)(({ scale, setBoundsElem, photo }) => (
   <div
     style={{
       width: '100%',
@@ -230,6 +239,10 @@ const Testimonials = withSize(
 
 export default () => (
   <Div style={{ spacing: 50, padding: '50px 0' }}>
+    <Helmet>
+      <title>HostNation</title>
+    </Helmet>
+
     <img src={logoWide} />
     <div>
       <Header />

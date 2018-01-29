@@ -1,16 +1,21 @@
 import * as React from 'react';
 import { Div, Txt } from 'elmnt';
 import { Hover } from 'mishmash';
+import Helmet from 'react-helmet';
 
 import * as logoWide from '../img/logo-wide.png';
 import * as aiLingPattie from '../img/banners/ai-ling-pattie.png';
 
-import App from '../core/app';
+import BefriendApp from '../apps/apps/befriend';
 import Box from '../core/box';
 import styles, { colors } from '../core/styles';
 
 export default () => (
   <Div style={{ spacing: 50, paddingTop: 50 }}>
+    <Helmet>
+      <title>Befriend | HostNation</title>
+    </Helmet>
+
     <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
 
     <Box title="WHY WE NEED TO ASK A LOT OF YOU" toggle>
@@ -53,7 +58,8 @@ export default () => (
         not yet in a position to take referrals from outside of the capital.
       </Txt>
       <Txt style={styles.boxText}>Many thanks, HostNation team</Txt>
-      <App app="befriend" color="yellow" />
+
+      <BefriendApp />
     </Box>
 
     <Box title="SCOPE OF SERVICES AND EXCLUSION OF LIABILITY" toggle>

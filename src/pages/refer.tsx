@@ -1,16 +1,21 @@
 import * as React from 'react';
 import { Div, Txt } from 'elmnt';
 import { Hover } from 'mishmash';
+import Helmet from 'react-helmet';
 
 import * as logoWide from '../img/logo-wide.png';
 import * as florenceLucy from '../img/banners/florence-lucy.png';
 
-import App from '../core/app';
+import ReferApp from '../apps/apps/refer';
 import Box from '../core/box';
 import styles, { colors } from '../core/styles';
 
 export default () => (
   <Div style={{ spacing: 50, paddingTop: 50 }}>
+    <Helmet>
+      <title>Refer | HostNation</title>
+    </Helmet>
+
     <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
 
     <Box title="SCREENING & SAFEGUARDING" toggle>
@@ -124,7 +129,7 @@ export default () => (
         personal and background information you can provide, the better the
         match we can make.
       </Txt>
-      <App app="refer" color="purple" />
+      <ReferApp />
     </Box>
 
     <Box title="HOSTNATION PRIVACY POLICY" toggle>

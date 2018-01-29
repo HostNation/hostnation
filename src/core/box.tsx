@@ -42,10 +42,15 @@ export default branch(
         )}
       </div>
     </Hover>
-    {(!toggle || isOpen) && (
-      <Div style={{ spacing: 30, padding: 40, background: 'white' }}>
-        {children}
-      </Div>
-    )}
+    <Div
+      style={{
+        display: !toggle || isOpen ? 'block' : 'none',
+        spacing: 30,
+        padding: 40,
+        background: 'white',
+      }}
+    >
+      {children}
+    </Div>
   </div>
 ));

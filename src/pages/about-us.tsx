@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Div, Txt } from 'elmnt';
 import { withSize } from 'mishmash';
+import Helmet from 'react-helmet';
 
 import * as logoWide from '../img/logo-wide.png';
 import * as phfLogo from '../img/phf-logo.jpg';
@@ -160,6 +161,10 @@ const Profiles = withSize(
 
 export default () => (
   <Div style={{ spacing: 50, padding: '50px 0' }}>
+    <Helmet>
+      <title>About Us | HostNation</title>
+    </Helmet>
+
     <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
     <Div style={{ spacing: 20 }}>
       <Txt style={styles.title}>Who Are We?</Txt>
