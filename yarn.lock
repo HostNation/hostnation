@@ -1814,13 +1814,13 @@ commander@2.9.0, commander@2.9.x:
 
 "common-client@https://github.com/kalambo/common-client":
   version "0.1.0"
-  resolved "https://github.com/kalambo/common-client#fe4c967f80d9c65771f28bfd8b3f76f26fb5a71a"
+  resolved "https://github.com/kalambo/common-client#c7ae0b50c53e89508fc357ea6f14994646fa7de6"
   dependencies:
     common "https://github.com/kalambo/common"
     deep-equal "^1.0.1"
     keys-to-object "^0.2.0"
     lodash "^4.17.4"
-    mishmash "^0.5.1"
+    mishmash "^0.5.2"
     recompose "^0.26.0"
     rgo "^0.3.6"
 
@@ -3167,9 +3167,9 @@ gatsby-1-config-css-modules@^1.0.8:
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-cli@^1.1.32:
-  version "1.1.32"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-1.1.32.tgz#5591b343a1ef4c4643a05c85ca711043dcd487c7"
+gatsby-cli@^1.1.33:
+  version "1.1.33"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-1.1.33.tgz#a79337d73f88ef1157aceefd245242ec0d463680"
   dependencies:
     babel-code-frame "^6.26.0"
     babel-runtime "^6.26.0"
@@ -3242,9 +3242,9 @@ gatsby-react-router-scroll@^1.0.8:
     scroll-behavior "^0.9.1"
     warning "^3.0.0"
 
-gatsby@^1.9.172:
-  version "1.9.172"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.172.tgz#2d3719b85fcce392415a654e7bdad1369d12726b"
+gatsby@^1.9.174:
+  version "1.9.174"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.174.tgz#1d552549d3a5ff2a047e3e5fcd07406641815f45"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -3284,7 +3284,7 @@ gatsby@^1.9.172:
     front-matter "^2.1.0"
     fs-extra "^4.0.1"
     gatsby-1-config-css-modules "^1.0.8"
-    gatsby-cli "^1.1.32"
+    gatsby-cli "^1.1.33"
     gatsby-link "^1.6.35"
     gatsby-module-loader "^1.0.9"
     gatsby-react-router-scroll "^1.0.8"
@@ -3332,6 +3332,7 @@ gatsby@^1.9.172:
     relay-compiler "^1.4.1"
     remote-redux-devtools "^0.5.7"
     serve "^6.4.0"
+    shallow-compare "^1.2.2"
     sift "^3.2.6"
     signal-exit "^3.0.2"
     slash "^1.0.0"
@@ -4968,9 +4969,9 @@ minimist@~0.0.1:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
 
-mishmash@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/mishmash/-/mishmash-0.5.1.tgz#b013970c610700c455cac22492d68dea965cea29"
+mishmash@^0.5.1, mishmash@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/mishmash/-/mishmash-0.5.2.tgz#03afe4b1b99ef52ff81caf8c7fb848c8f762ab96"
   dependencies:
     "@types/react" "^16.0.35"
     "@types/recompose" "^0.24.4"
@@ -7171,6 +7172,10 @@ sha.js@^2.4.0, sha.js@^2.4.8:
   dependencies:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
+
+shallow-compare@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/shallow-compare/-/shallow-compare-1.2.2.tgz#fa4794627bf455a47c4f56881d8a6132d581ffdb"
 
 shallowequal@^1.0.1:
   version "1.0.2"
