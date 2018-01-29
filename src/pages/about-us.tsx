@@ -160,58 +160,59 @@ const Profiles = withSize(
 ));
 
 export default () => (
-  <Div style={{ spacing: 50, padding: '50px 0' }}>
+  <>
     <Helmet>
       <title>About Us | HostNation</title>
     </Helmet>
-
-    <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
-    <Div style={{ spacing: 20 }}>
-      <Txt style={styles.title}>Who Are We?</Txt>
-      <Txt style={{ ...styles.body, fontWeight: 'bold' }}>
-        HostNation came into being at the start of 2017.
-      </Txt>
-      <Txt style={styles.body}>
-        We are a not-for-profit social enterprise and we are registered as a
-        restricted fund under the auspices of Prism the Gift Fund, UK charity
-        no. 1099682.
-      </Txt>
-    </Div>
-    <Div style={{ spacing: 20 }}>
-      <Txt style={styles.title}>Friends of HostNation</Txt>
-      <Txt style={styles.body}>
-        Thank you to the following people for giving us especially generous
-        financial support or the benefit of your expertise (or both!):
-      </Txt>
-      <Div style={{ spacing: 15, padding: '15px 0' }}>
-        {[
-          'Martin and Bud Sandbrook',
-          'Sue Odell',
-          'Imogen Wall',
-          'Mark Sutcliffe',
-          'Alex Graham',
-          'Makena Lohr',
-          'Anthony Fawcett',
-          'David Crook',
-          'Norma O’Flynn',
-          'Marion Gough and Martin Hill',
-          'Rebecca and Henry Tinsley',
-        ].map((name, i) => (
-          <Txt style={{ ...styles.body, fontWeight: 'normal' }} key={i}>
-            {name}
-          </Txt>
-        ))}
+    <Div style={{ spacing: 50, padding: '50px 0' }}>
+      <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
+      <Div style={{ spacing: 20 }}>
+        <Txt style={styles.title}>Who Are We?</Txt>
+        <Txt style={{ ...styles.body, fontWeight: 'bold' }}>
+          HostNation came into being at the start of 2017.
+        </Txt>
+        <Txt style={styles.body}>
+          We are a not-for-profit social enterprise and we are registered as a
+          restricted fund under the auspices of Prism the Gift Fund, UK charity
+          no. 1099682.
+        </Txt>
       </Div>
-      <Txt style={styles.body}>
-        We are also very grateful to the Freshfields Bruckhaus Deringer Pro Bono
-        Team for their legal support and to the Paul Hamlyn Ideas and Pioneers
-        Fund for the faith they have placed in our work and for funding our
-        start up.
-      </Txt>
-      <img src={phfLogo} style={{ maxWidth: 400, margin: '0 auto' }} />
+      <Div style={{ spacing: 20 }}>
+        <Txt style={styles.title}>Friends of HostNation</Txt>
+        <Txt style={styles.body}>
+          Thank you to the following people for giving us especially generous
+          financial support or the benefit of your expertise (or both!):
+        </Txt>
+        <Div style={{ spacing: 15, padding: '15px 0' }}>
+          {[
+            'Martin and Bud Sandbrook',
+            'Sue Odell',
+            'Imogen Wall',
+            'Mark Sutcliffe',
+            'Alex Graham',
+            'Makena Lohr',
+            'Anthony Fawcett',
+            'David Crook',
+            'Norma O’Flynn',
+            'Marion Gough and Martin Hill',
+            'Rebecca and Henry Tinsley',
+          ].map((name, i) => (
+            <Txt style={{ ...styles.body, fontWeight: 'normal' }} key={i}>
+              {name}
+            </Txt>
+          ))}
+        </Div>
+        <Txt style={styles.body}>
+          We are also very grateful to the Freshfields Bruckhaus Deringer Pro
+          Bono Team for their legal support and to the Paul Hamlyn Ideas and
+          Pioneers Fund for the faith they have placed in our work and for
+          funding our start up.
+        </Txt>
+        <img src={phfLogo} style={{ maxWidth: 400, margin: '0 auto' }} />
+      </Div>
+      <Box title="MEET THE TEAM BEHIND HOSTNATION">
+        <Profiles />
+      </Box>
     </Div>
-    <Box title="MEET THE TEAM BEHIND HOSTNATION">
-      <Profiles />
-    </Box>
-  </Div>
+  </>
 );

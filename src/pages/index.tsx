@@ -238,191 +238,207 @@ const Testimonials = withSize(
 ));
 
 export default () => (
-  <Div style={{ spacing: 50, padding: '50px 0' }}>
+  <>
     <Helmet>
       <title>HostNation</title>
     </Helmet>
-
-    <img src={logoWide} />
-    <div>
-      <Header />
-      <MainLinks />
-    </div>
-    <Div style={{ spacing: 25 }}>
-      <Txt style={styles.body}>
-        We are a London-based introductory service dedicated to connecting
-        people in their communities. Befrienders are matched with and then
-        introduced to a refugee or asylum seeker in their area. They commit to
-        meeting socially for a minimum of 3 hours once a fortnight over a period
-        of 3 months.
-      </Txt>
-      <Txt style={styles.body}>
-        If you like what we’re trying to do, but are not in London or don’t have
-        the time to befriend, then please consider donating.
-      </Txt>
-      <a
-        href="https://mydonate.bt.com/charities/hostnation"
-        target="_blank"
-        style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
-      >
-        <Hover style={{ ...styles.button('yellow'), margin: '0 auto' }}>
-          <Txt>DONATE HERE</Txt>
-        </Hover>
-      </a>
-    </Div>
-    <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
-    <Div style={{ spacing: 25 }}>
-      <Txt style={styles.title}>The Befrienders’ Guide</Txt>
-      <Txt style={styles.body}>
-        For detailed information on befriending and background to seeking asylum
-        in the UK read our guide. It also includes answers to frequently asked
-        questions (FAQS).
-      </Txt>
-      <Div style={{ spacing: 15 }}>
-        <img src={guideIcon} style={{ width: 100, margin: '0 auto' }} />
-        <Link
-          to="/guide.pdf"
-          target="_blank"
-          style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
-        >
-          <Hover style={{ ...styles.button('grey'), margin: '0 auto' }}>
-            <Txt>READ THE GUIDE</Txt>
-          </Hover>
-        </Link>
-      </Div>
-    </Div>
-    <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
-    <img src={darwinSashaBanner} style={{ maxWidth: 650, margin: '0 auto' }} />
-    <Div style={{ spacing: 40, padding: 40, background: 'white' }}>
-      <Div style={{ spacing: 10 }}>
-        <img src={testimonialsIcon} style={{ width: 100, margin: '0 auto' }} />
+    <Div style={{ spacing: 50, padding: '50px 0' }}>
+      <img src={logoWide} />
+      <div>
+        <Header />
+        <MainLinks />
+      </div>
+      <Div style={{ spacing: 25 }}>
         <Txt style={styles.body}>
-          Read what recent friends have said about their experiences.
+          We are a London-based introductory service dedicated to connecting
+          people in their communities. Befrienders are matched with and then
+          introduced to a refugee or asylum seeker in their area. They commit to
+          meeting socially for a minimum of 3 hours once a fortnight over a
+          period of 3 months.
         </Txt>
-      </Div>
-      <Testimonials />
-    </Div>
-    <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
-    <div style={{ position: 'relative', paddingBottom: '55%' }}>
-      <iframe
-        src="https://www.youtube.com/embed/A7xW4w3CTcM?rel=0"
-        frameBorder="0"
-        allowFullScreen
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-        }}
-      />
-    </div>
-    <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
-    <Div style={{ spacing: 25 }}>
-      <Div style={{ spacing: 15 }}>
-        <img src={newsIcon} style={{ width: 100, margin: '0 auto' }} />
+        <Txt style={styles.body}>
+          If you like what we’re trying to do, but are not in London or don’t
+          have the time to befriend, then please consider donating.
+        </Txt>
         <a
-          href="https://hostnationblog.wordpress.com"
+          href="https://mydonate.bt.com/charities/hostnation"
           target="_blank"
           style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
         >
-          <Hover style={{ ...styles.button('purple'), margin: '0 auto' }}>
-            <Txt>NEWS UPDATES</Txt>
+          <Hover style={{ ...styles.button('yellow'), margin: '0 auto' }}>
+            <Txt>DONATE HERE</Txt>
           </Hover>
         </a>
       </Div>
-      <Txt style={styles.body}>For the latest news from HostNation.</Txt>
-    </Div>
-    <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
-    <img src={oliviaAnnaBanner} style={{ maxWidth: 650, margin: '0 auto' }} />
-    <Div style={{ spacing: 40, padding: 40, background: 'white' }}>
-      <Div style={{ spacing: 15 }}>
-        <img src={linksIcon} style={{ width: 100, margin: '0 auto' }} />
-        <Txt style={styles.title}>Links</Txt>
+      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <Div style={{ spacing: 25 }}>
+        <Txt style={styles.title}>The Befrienders’ Guide</Txt>
         <Txt style={styles.body}>
-          Here are links to other online sites connecting refugees to host
-          communities.
+          For detailed information on befriending and background to seeking
+          asylum in the UK read our guide. It also includes answers to
+          frequently asked questions (FAQS).
         </Txt>
+        <Div style={{ spacing: 15 }}>
+          <img src={guideIcon} style={{ width: 100, margin: '0 auto' }} />
+          <Link
+            to="/guide.pdf"
+            target="_blank"
+            style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
+          >
+            <Hover style={{ ...styles.button('grey'), margin: '0 auto' }}>
+              <Txt>READ THE GUIDE</Txt>
+            </Hover>
+          </Link>
+        </Div>
       </Div>
-      <Div style={{ spacing: 20 }}>
-        <a href="https://do-it.org" target="_blank">
-          <Hover style={linkStyle}>
-            <Div>
-              <img src={doIt} style={{ width: 100, margin: '0 auto' }} />
-              <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
-                for volunteering opportunities in your area
-              </Txt>
-            </Div>
-          </Hover>
-        </a>
-        <a href="http://www.refugeesathome.org" target="_blank">
-          <Hover style={linkStyle}>
-            <Div>
-              <img
-                src={refugeesAtHome}
-                style={{ width: 100, margin: '0 auto' }}
+      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <img
+        src={darwinSashaBanner}
+        style={{ maxWidth: 650, margin: '0 auto' }}
+      />
+      <Div style={{ spacing: 40, padding: 40, background: 'white' }}>
+        <Div style={{ spacing: 10 }}>
+          <img
+            src={testimonialsIcon}
+            style={{ width: 100, margin: '0 auto' }}
+          />
+          <Txt style={styles.body}>
+            Read what recent friends have said about their experiences.
+          </Txt>
+        </Div>
+        <Testimonials />
+      </Div>
+      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <div style={{ position: 'relative', paddingBottom: '55%' }}>
+        <iframe
+          src="https://www.youtube.com/embed/A7xW4w3CTcM?rel=0"
+          frameBorder="0"
+          allowFullScreen
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+          }}
+        />
+      </div>
+      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <Div style={{ spacing: 25 }}>
+        <Div style={{ spacing: 15 }}>
+          <img src={newsIcon} style={{ width: 100, margin: '0 auto' }} />
+          <a
+            href="https://hostnationblog.wordpress.com"
+            target="_blank"
+            style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
+          >
+            <Hover style={{ ...styles.button('purple'), margin: '0 auto' }}>
+              <Txt>NEWS UPDATES</Txt>
+            </Hover>
+          </a>
+        </Div>
+        <Txt style={styles.body}>For the latest news from HostNation.</Txt>
+      </Div>
+      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <img src={oliviaAnnaBanner} style={{ maxWidth: 650, margin: '0 auto' }} />
+      <Div style={{ spacing: 40, padding: 40, background: 'white' }}>
+        <Div style={{ spacing: 15 }}>
+          <img src={linksIcon} style={{ width: 100, margin: '0 auto' }} />
+          <Txt style={styles.title}>Links</Txt>
+          <Txt style={styles.body}>
+            Here are links to other online sites connecting refugees to host
+            communities.
+          </Txt>
+        </Div>
+        <Div style={{ spacing: 20 }}>
+          <a href="https://do-it.org" target="_blank">
+            <Hover style={linkStyle}>
+              <Div>
+                <img src={doIt} style={{ width: 100, margin: '0 auto' }} />
+                <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
+                  for volunteering opportunities in your area
+                </Txt>
+              </Div>
+            </Hover>
+          </a>
+          <a href="http://www.refugeesathome.org" target="_blank">
+            <Hover style={linkStyle}>
+              <Div>
+                <img
+                  src={refugeesAtHome}
+                  style={{ width: 100, margin: '0 auto' }}
+                />
+                <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
+                  connecting those with a spare room to refugees and asylum
+                  seekers in need of accommodation
+                </Txt>
+              </Div>
+            </Hover>
+          </a>
+          <a href="https://www.refugeecouncil.org.uk/services" target="_blank">
+            <Hover style={linkStyle}>
+              <Div>
+                <img
+                  src={refugeeCouncil}
+                  style={{ width: 100, margin: '0 auto' }}
+                />
+                <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
+                  a searchable database linking refugees and asylum seekers to
+                  support services in Greater London
+                </Txt>
+              </Div>
+            </Hover>
+          </a>
+        </Div>
+      </Div>
+      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <img
+        src={nithiAndySueBanner}
+        style={{ maxWidth: 650, margin: '0 auto' }}
+      />
+      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <Div style={{ spacing: 35 }}>
+        <Div style={{ spacing: 15 }}>
+          <img src={contactIcon} style={{ width: 100, margin: '0 auto' }} />
+          <Txt style={styles.subtitle}>info@hostnation.org.uk</Txt>
+        </Div>
+        <Div style={{ layout: 'bar', spacing: 40, margin: '0 auto' }}>
+          <Hover
+            style={{
+              display: 'block',
+              padding: 12,
+              margin: -5,
+              background: colors.purple,
+              borderRadius: 100,
+              hover: { background: colors.purpleDark },
+            }}
+          >
+            <a href="https://www.facebook.com/HostNationUK" target="_blank">
+              <Icon
+                {...icons.fbThin}
+                style={{ color: 'white', fontSize: 24 }}
               />
-              <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
-                connecting those with a spare room to refugees and asylum
-                seekers in need of accommodation
-              </Txt>
-            </Div>
+            </a>
           </Hover>
-        </a>
-        <a href="https://www.refugeecouncil.org.uk/services" target="_blank">
-          <Hover style={linkStyle}>
-            <Div>
-              <img
-                src={refugeeCouncil}
-                style={{ width: 100, margin: '0 auto' }}
+          <Hover
+            style={{
+              display: 'block',
+              padding: 12,
+              margin: -5,
+              background: colors.purple,
+              borderRadius: 100,
+              hover: { background: colors.purpleDark },
+            }}
+          >
+            <a href="https://twitter.com/hostnationuk" target="_blank">
+              <Icon
+                {...icons.twitter}
+                style={{ color: 'white', fontSize: 24 }}
               />
-              <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
-                a searchable database linking refugees and asylum seekers to
-                support services in Greater London
-              </Txt>
-            </Div>
+            </a>
           </Hover>
-        </a>
+        </Div>
       </Div>
     </Div>
-    <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
-    <img src={nithiAndySueBanner} style={{ maxWidth: 650, margin: '0 auto' }} />
-    <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
-    <Div style={{ spacing: 35 }}>
-      <Div style={{ spacing: 15 }}>
-        <img src={contactIcon} style={{ width: 100, margin: '0 auto' }} />
-        <Txt style={styles.subtitle}>info@hostnation.org.uk</Txt>
-      </Div>
-      <Div style={{ layout: 'bar', spacing: 40, margin: '0 auto' }}>
-        <Hover
-          style={{
-            display: 'block',
-            padding: 12,
-            margin: -5,
-            background: colors.purple,
-            borderRadius: 100,
-            hover: { background: colors.purpleDark },
-          }}
-        >
-          <a href="https://www.facebook.com/HostNationUK" target="_blank">
-            <Icon {...icons.fbThin} style={{ color: 'white', fontSize: 24 }} />
-          </a>
-        </Hover>
-        <Hover
-          style={{
-            display: 'block',
-            padding: 12,
-            margin: -5,
-            background: colors.purple,
-            borderRadius: 100,
-            hover: { background: colors.purpleDark },
-          }}
-        >
-          <a href="https://twitter.com/hostnationuk" target="_blank">
-            <Icon {...icons.twitter} style={{ color: 'white', fontSize: 24 }} />
-          </a>
-        </Hover>
-      </Div>
-    </Div>
-  </Div>
+  </>
 );
