@@ -10,7 +10,7 @@ import { Hover, renderLayer } from 'mishmash';
 import { Div, Input, Txt } from 'elmnt';
 import { Spinner } from 'common-client';
 
-import styles, { colors } from '../../styles';
+import styles, { colors } from '../core/styles';
 
 export default compose<any, any>(
   renderLayer(({ children }) => (

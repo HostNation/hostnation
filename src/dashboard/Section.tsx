@@ -19,7 +19,7 @@ import {
 import { Div, Input, Mark, Txt } from 'elmnt';
 import { Query } from 'rgo';
 import { getValueString, Obj, root } from 'common';
-import { getData, Spinner } from 'common-client';
+import { getData, parseFilter, Spinner } from 'common-client';
 import {
   GoogleMap,
   InfoWindow,
@@ -29,9 +29,7 @@ import {
 } from 'react-google-maps';
 import * as debounce from 'lodash.debounce';
 
-import styles, { colors } from '../../styles';
-
-import parseFilter from './parseFilter';
+import styles, { colors } from '../core/styles';
 
 const icons = {
   redQuestionLight:
@@ -73,7 +71,7 @@ const MapMarker = compose<any, any>(
       <InfoWindow onCloseClick={closeInfo}>
         {
           <Div style={{ padding: 10, spacing: 10 }}>
-            <Txt style={{ ...styles.text, fontSize: 18, fontWeight: 'bold' }}>
+            <Txt style={{ ...styles.base, fontSize: 18, fontWeight: 'bold' }}>
               {title}
             </Txt>
             <table>
@@ -85,7 +83,7 @@ const MapMarker = compose<any, any>(
                       <td style={{ padding: '15px 15px 0 0' }}>
                         <Txt
                           style={{
-                            ...styles.text,
+                            ...styles.base,
                             fontSize: 14,
                             fontWeight: 'bold',
                           }}
@@ -94,7 +92,7 @@ const MapMarker = compose<any, any>(
                         </Txt>
                       </td>
                       <td style={{ padding: '15px 0 0 0' }}>
-                        <Txt style={{ ...styles.text, fontSize: 14 }}>
+                        <Txt style={{ ...styles.base, fontSize: 14 }}>
                           {value}
                         </Txt>
                       </td>
@@ -180,15 +178,15 @@ const TableFilter = compose<any, any>(
               spacing: 25,
             }}
           >
-            <Txt style={{ ...styles.text, fontWeight: 'bold', fontSize: 30 }}>
+            <Txt style={{ ...styles.base, fontWeight: 'bold', fontSize: 30 }}>
               Filtering
             </Txt>
-            <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
+            <Txt style={{ ...styles.base, fontWeight: 'bold' }}>
               A basic filter is a rule in the format:
             </Txt>
             <Txt
               style={{
-                ...styles.text,
+                ...styles.base,
                 fontStyle: 'italic',
                 color: colors.purple,
                 paddingLeft: 40,
@@ -196,12 +194,12 @@ const TableFilter = compose<any, any>(
             >
               [field] [operation] [value]
             </Txt>
-            <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
+            <Txt style={{ ...styles.base, fontWeight: 'bold' }}>
               For example:
             </Txt>
             <Txt
               style={{
-                ...styles.text,
+                ...styles.base,
                 fontStyle: 'italic',
                 color: colors.purple,
                 paddingLeft: 40,
@@ -209,14 +207,14 @@ const TableFilter = compose<any, any>(
             >
               firstname = David
             </Txt>
-            <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
+            <Txt style={{ ...styles.base, fontWeight: 'bold' }}>
               Multiple of these basic filters can be combined together, using
               commas, 'OR', and brackets:
             </Txt>
             <Div style={{ spacing: 15 }}>
               <Txt
                 style={{
-                  ...styles.text,
+                  ...styles.base,
                   fontStyle: 'italic',
                   color: colors.purple,
                   paddingLeft: 40,
@@ -226,7 +224,7 @@ const TableFilter = compose<any, any>(
               </Txt>
               <Txt
                 style={{
-                  ...styles.text,
+                  ...styles.base,
                   fontSize: 14,
                   opacity: 0.7,
                   fontStyle: 'italic',
@@ -237,11 +235,11 @@ const TableFilter = compose<any, any>(
                 and either lastname equals 'Smith' or sex equals 'Male')
               </Txt>
             </Div>
-            <Txt style={styles.text}>
+            <Txt style={styles.base}>
               Note: If the current filter is invalid the input will go red and
               the page will act as if no filter is entered.
             </Txt>
-            <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
+            <Txt style={{ ...styles.base, fontWeight: 'bold' }}>
               The available operations are:
             </Txt>
             <Div style={{ spacing: 10, paddingLeft: 40 }}>
@@ -256,7 +254,7 @@ const TableFilter = compose<any, any>(
                 <Div style={{ layout: 'bar', spacing: 10 }} key={i}>
                   <Txt
                     style={{
-                      ...styles.text,
+                      ...styles.base,
                       fontWeight: 'bold',
                       fontStyle: 'italic',
                       width: 40,
@@ -266,7 +264,7 @@ const TableFilter = compose<any, any>(
                   </Txt>
                   <Txt
                     style={{
-                      ...styles.text,
+                      ...styles.base,
                       fontStyle: 'italic',
                       fontWeight: 'bold',
                     }}
@@ -276,7 +274,7 @@ const TableFilter = compose<any, any>(
                 </Div>
               ))}
             </Div>
-            <Txt style={styles.text}>
+            <Txt style={styles.base}>
               Note: The last 4 operations are only valid for number and date
               fields.
             </Txt>
@@ -288,7 +286,7 @@ const TableFilter = compose<any, any>(
                 padding: 20,
               }}
             >
-              <Txt style={{ ...styles.text, fontWeight: 'bold', fontSize: 20 }}>
+              <Txt style={{ ...styles.base, fontWeight: 'bold', fontSize: 20 }}>
                 Available fields
               </Txt>
               <Div style={{ spacing: 15 }}>
@@ -304,12 +302,12 @@ const TableFilter = compose<any, any>(
                       key={i}
                     >
                       <Txt
-                        style={{ ...styles.text, fontSize: 14, width: 130 }}
+                        style={{ ...styles.base, fontSize: 14, width: 130 }}
                         key={field}
                       >
                         {field}
                       </Txt>
-                      <Txt style={{ ...styles.text, fontSize: 14 }} key={field}>
+                      <Txt style={{ ...styles.base, fontSize: 14 }} key={field}>
                         {getFieldHelp(root.rgo.schema[type][field])}
                       </Txt>
                     </Div>
@@ -335,7 +333,7 @@ const TableFilter = compose<any, any>(
   >
     <Txt
       style={{
-        ...styles.text,
+        ...styles.base,
         fontSize: 14,
         fontWeight: 'bold',
         fontStyle: 'italic',
@@ -354,7 +352,7 @@ const TableFilter = compose<any, any>(
     />
     <Hover
       style={{
-        ...styles.text,
+        ...styles.base,
         fontSize: 14,
         fontWeight: 'bold',
         width: 75,
@@ -394,7 +392,7 @@ const TableLink = compose<any, any>(withHover)(
         >
           <Txt
             style={{
-              ...styles.text,
+              ...styles.base,
               fontSize: 13,
               color: isHovered
                 ? colors.white
@@ -582,7 +580,7 @@ export default compose<any, any>(
                     >
                       <Txt
                         style={{
-                          ...styles.text,
+                          ...styles.base,
                           fontSize: 13,
                           fontWeight: 'bold',
                         }}
@@ -773,34 +771,34 @@ export default compose<any, any>(
             <Div style={{ layout: 'bar', spacing: 5 }}>
               <img src={icons.redQuestionLight} style={{ height: 20 }} />
               <img src={icons.redQuestionDark} style={{ height: 20 }} />
-              <Txt style={{ ...styles.text, fontSize: 14, paddingLeft: 10 }}>
+              <Txt style={{ ...styles.base, fontSize: 14, paddingLeft: 10 }}>
                 Unready
               </Txt>
             </Div>
             <Div style={{ layout: 'bar', spacing: 5 }}>
               <img src={icons.blueStarLight} style={{ height: 20 }} />
               <img src={icons.blueStarDark} style={{ height: 20 }} />
-              <Txt style={{ ...styles.text, fontSize: 14, paddingLeft: 10 }}>
+              <Txt style={{ ...styles.base, fontSize: 14, paddingLeft: 10 }}>
                 Ready
               </Txt>
             </Div>
             <Div style={{ layout: 'bar', spacing: 5 }}>
               <img src={icons.greenStarLight} style={{ height: 20 }} />
               <img src={icons.greenStarDark} style={{ height: 20 }} />
-              <Txt style={{ ...styles.text, fontSize: 14, paddingLeft: 10 }}>
+              <Txt style={{ ...styles.base, fontSize: 14, paddingLeft: 10 }}>
                 Matched
               </Txt>
             </Div>
             <Div style={{ layout: 'bar', spacing: 5 }}>
               <img src={icons.yellowStarLight} style={{ height: 20 }} />
               <img src={icons.yellowStarDark} style={{ height: 20 }} />
-              <Txt style={{ ...styles.text, fontSize: 14, paddingLeft: 10 }}>
+              <Txt style={{ ...styles.base, fontSize: 14, paddingLeft: 10 }}>
                 Refugee
               </Txt>
             </Div>
             <Txt
               style={{
-                ...styles.text,
+                ...styles.base,
                 fontSize: 14,
                 paddingTop: 10,
                 fontStyle: 'italic',

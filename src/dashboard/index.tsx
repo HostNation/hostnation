@@ -13,7 +13,7 @@ import keysToObject from 'keys-to-object';
 import { Obj } from 'common';
 import { getData, Spinner } from 'common-client';
 
-import styles, { colors } from '../../styles';
+import styles, { colors } from '../core/styles';
 
 import BreadCrumbs from './BreadCrumbs';
 import rootConfig from './config';

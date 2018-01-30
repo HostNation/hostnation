@@ -270,7 +270,7 @@ export default () => (
           </Hover>
         </a>
       </Div>
-      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <Div style={{ spacing: 25 }}>
         <Txt style={styles.title}>The Befrienders’ Guide</Txt>
         <Txt style={styles.body}>
@@ -285,13 +285,13 @@ export default () => (
             target="_blank"
             style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
           >
-            <Hover style={{ ...styles.button('grey'), margin: '0 auto' }}>
+            <Hover style={{ ...styles.button('black'), margin: '0 auto' }}>
               <Txt>READ THE GUIDE</Txt>
             </Hover>
           </Link>
         </Div>
       </Div>
-      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <img
         src={darwinSashaBanner}
         style={{ maxWidth: 650, margin: '0 auto' }}
@@ -308,7 +308,7 @@ export default () => (
         </Div>
         <Testimonials />
       </Div>
-      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <div style={{ position: 'relative', paddingBottom: '55%' }}>
         <iframe
           src="https://www.youtube.com/embed/A7xW4w3CTcM?rel=0"
@@ -323,7 +323,7 @@ export default () => (
           }}
         />
       </div>
-      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <Div style={{ spacing: 25 }}>
         <Div style={{ spacing: 15 }}>
           <img src={newsIcon} style={{ width: 100, margin: '0 auto' }} />
@@ -339,7 +339,7 @@ export default () => (
         </Div>
         <Txt style={styles.body}>For the latest news from HostNation.</Txt>
       </Div>
-      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <img src={oliviaAnnaBanner} style={{ maxWidth: 650, margin: '0 auto' }} />
       <Div style={{ spacing: 40, padding: 40, background: 'white' }}>
         <Div style={{ spacing: 15 }}>
@@ -391,12 +391,12 @@ export default () => (
           </a>
         </Div>
       </Div>
-      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <img
         src={nithiAndySueBanner}
         style={{ maxWidth: 650, margin: '0 auto' }}
       />
-      <div style={{ background: colors.grey, height: 3, borderRadius: 3 }} />
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <Div style={{ spacing: 35 }}>
         <Div style={{ spacing: 15 }}>
           <img src={contactIcon} style={{ width: 100, margin: '0 auto' }} />

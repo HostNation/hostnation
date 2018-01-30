@@ -7,7 +7,7 @@ import createBlock from './createBlock';
 import styles, { colors, icons } from './styles';
 
 const errorStyle = {
-  ...styles.text,
+  ...styles.base,
   color: colors.red,
   fontWeight: 'bold' as 'bold',
   fontStyle: 'italic' as 'italic',

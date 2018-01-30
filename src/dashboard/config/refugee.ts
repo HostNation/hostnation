@@ -1,6 +1,6 @@
 import { decodeId } from 'common';
 
-import * as blocks from '../../../blocks';
+import * as blocks from '../../core/blocks';
 
 export default url => [
   {

@@ -1,4 +1,11 @@
 import * as React from 'react';
+import {
+  branch,
+  compose,
+  renderComponent,
+  withHandlers,
+  withState,
+} from 'recompose';
 import { Div, Txt } from 'elmnt';
 import { Hover } from 'mishmash';
 import Helmet from 'react-helmet';
@@ -6,9 +13,46 @@ import Helmet from 'react-helmet';
 import * as logoWide from '../img/logo-wide.png';
 import * as aiLingPattie from '../img/banners/ai-ling-pattie.png';
 
-import BefriendApp from '../apps/apps/befriend';
-import Box from '../core/box';
+import * as blocks from '../core/blocks';
+import Box from '../core/Box';
+import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
+
+const BefriendForm = compose(
+  withState('complete', 'setComplete', false),
+  branch(
+    ({ complete }: any) => complete,
+    renderComponent(() => (
+      <Txt
+        style={{
+          ...styles.base,
+          fontSize: 30,
+          lineHeight: '40px',
+          fontWeight: 'bold',
+          textAlign: 'center',
+          padding: '50px 0',
+          color: colors.yellow,
+        }}
+      >
+        Thanks for registering, we’ll be in touch soon!
+      </Txt>
+    )),
+  ),
+  withHandlers({
+    onSubmit: ({ setComplete }: any) => () => setComplete(true),
+  }),
+)(({ onSubmit }: any) => (
+  <Forms.Yellow
+    objects={{
+      befriender: {
+        type: 'befrienders',
+        initial: { mapaddress: null },
+      },
+    }}
+    blocks={blocks.befriend()}
+    onSubmit={onSubmit}
+  />
+));
 
 export default () => (
   <>
@@ -61,7 +105,7 @@ export default () => (
         </Txt>
         <Txt style={styles.boxText}>Many thanks, HostNation team</Txt>
 
-        <BefriendApp />
+        <BefriendForm />
       </Box>
 
       <Box title="SCOPE OF SERVICES AND EXCLUSION OF LIABILITY" toggle>

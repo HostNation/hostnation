@@ -1,17 +1,10 @@
 import * as React from 'react';
-import { branch, compose, renderComponent, withProps } from 'recompose';
-import { Div, Input, Txt } from 'elmnt';
-import {
-  combineState,
-  cssGroups,
-  Hover,
-  mapStyle,
-  renderLayer,
-} from 'mishmash';
-import { getValueString, root } from 'common';
+import { branch, compose, renderComponent } from 'recompose';
+import { Txt } from 'elmnt';
+import { combineState, cssGroups, mapStyle } from 'mishmash';
+import { root } from 'common';
+import { Field } from 'common-client';
 import * as debounce from 'lodash.debounce';
-
-import styles from './styles';
 
 const codeAddress = async (address: string) => {
   const response = await fetch(
@@ -27,48 +20,6 @@ const codeAddress = async (address: string) => {
 };
 
 export default compose<any, any>(
-  branch(
-    ({ type, options, addNull }: any) =>
-      addNull && !type.endsWith('list') && Array.isArray(options),
-    withProps(({ options, labels }: any) => ({
-      options:
-        options && (!options.includes(null) ? [...options, null] : options),
-      labels:
-        labels &&
-        (!options.includes(null) ? [...labels, '-- None --'] : labels),
-    })),
-  ),
-  branch(
-    ({ type, showFile }: any) => type === 'file' && showFile,
-    renderLayer(({ value, children }) => (
-      <div style={{ width: '100%' }}>
-        <Div style={{ spacing: 40, layout: 'bar', width: '100%' }}>
-          {value ? (
-            <a
-              href={`${process.env.DATA_URL!}/storage/file/${
-                value.split(':')[0]
-              }`}
-              target="_blank"
-              style={{ width: 150 }}
-            >
-              <Hover
-                style={{
-                  ...styles.button('purple'),
-                  fontSize: 15,
-                  padding: 8,
-                }}
-              >
-                <Txt>View file</Txt>
-              </Hover>
-            </a>
-          ) : (
-            <div style={{ width: 150 }} />
-          )}
-          {children}
-        </Div>
-      </div>
-    )),
-  ),
   branch(
     ({ getAddress }: any) => getAddress !== undefined,
     combineState(({ initialProps: { field }, onUnmount }) => {
@@ -120,13 +71,4 @@ export default compose<any, any>(
       )),
     ),
   ),
-  branch(
-    ({ view }: any) => view,
-    compose(
-      mapStyle([['filter', ...cssGroups.text]]),
-      renderComponent(({ type, value, style }: any) => (
-        <Txt style={style}>{getValueString(value, type)}</Txt>
-      )),
-    ),
-  ),
-)(Input);
+)(Field);

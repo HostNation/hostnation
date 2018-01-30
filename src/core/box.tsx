@@ -13,7 +13,7 @@ export default branch(
       toggleIsOpen: ({ isOpen, setIsOpen }) => () => setIsOpen(!isOpen),
     }),
   ),
-)(({ title, color = 'grey', toggle, isOpen, toggleIsOpen, children }: any) => (
+)(({ title, color = 'black', toggle, isOpen, toggleIsOpen, children }: any) => (
   <div>
     <Hover
       style={{

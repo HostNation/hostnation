@@ -1,4 +1,11 @@
 import * as React from 'react';
+import {
+  branch,
+  compose,
+  renderComponent,
+  withHandlers,
+  withState,
+} from 'recompose';
 import { Div, Txt } from 'elmnt';
 import { Hover } from 'mishmash';
 import Helmet from 'react-helmet';
@@ -6,9 +13,46 @@ import Helmet from 'react-helmet';
 import * as logoWide from '../img/logo-wide.png';
 import * as florenceLucy from '../img/banners/florence-lucy.png';
 
-import ReferApp from '../apps/apps/refer';
-import Box from '../core/box';
+import * as blocks from '../core/blocks';
+import Box from '../core/Box';
+import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
+
+const ReferForm = compose<any, any>(
+  withState('complete', 'setComplete', false),
+  branch(
+    ({ complete }: any) => complete,
+    renderComponent(() => (
+      <Txt
+        style={{
+          ...styles.base,
+          fontSize: 30,
+          lineHeight: '40px',
+          fontWeight: 'bold',
+          textAlign: 'center',
+          padding: '50px 0',
+          color: colors.purple,
+        }}
+      >
+        Thanks for completing your referral, we’ll be in touch soon!
+      </Txt>
+    )),
+  ),
+  withHandlers({
+    onSubmit: ({ setComplete }: any) => () => setComplete(true),
+  }),
+)(({ onSubmit }) => (
+  <Forms.Purple
+    objects={{
+      refugee: {
+        type: 'refugees',
+        initial: { mapaddress: null },
+      },
+    }}
+    blocks={blocks.refer()}
+    onSubmit={onSubmit}
+  />
+));
 
 export default () => (
   <>
@@ -131,7 +175,7 @@ export default () => (
           personal and background information you can provide, the better the
           match we can make.
         </Txt>
-        <ReferApp />
+        <ReferForm />
       </Box>
 
       <Box title="HOSTNATION PRIVACY POLICY" toggle>

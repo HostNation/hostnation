@@ -5,9 +5,8 @@ import { Hover } from 'mishmash';
 import { Redirect } from 'react-router-dom';
 import { createForm, Spinner } from 'common-client';
 
-import styles, { colors } from '../../styles';
-
-import createBlock from '../../createBlock';
+import styles, { colors } from '../core/styles';
+import createBlock from '../core/createBlock';
 
 const FormBar = ({ valid, button, submit }: any) => (
   <Div

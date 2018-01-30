@@ -9,12 +9,11 @@ import {
 import { Div, Mark, Txt } from 'elmnt';
 import { Comp, cssGroups, mapStyle, renderLayer } from 'mishmash';
 
+import Field from './Field';
 import styles, { colors } from './styles';
 
-import Field from './Field';
-
 const promptStyle = {
-  ...styles.text,
+  ...styles.base,
   fontSize: 13,
   fontStyle: 'italic' as 'italic',
   color: '#888',
@@ -96,7 +95,7 @@ export default (color: 'yellow' | 'purple', admin?: boolean) =>
                 <Div style={{ spacing: 10 }}>
                   <Txt
                     style={{
-                      ...styles.text,
+                      ...styles.base,
                       ...(admin ? { fontSize: 15 } : {}),
                       fontWeight: 'bold',
                     }}
@@ -133,7 +132,7 @@ export default (color: 'yellow' | 'purple', admin?: boolean) =>
                   >
                     <Txt
                       style={{
-                        ...styles.text,
+                        ...styles.base,
                         ...(admin ? { fontSize: 15 } : {}),
                         fontWeight: 'bold',
                       }}

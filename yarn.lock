@@ -1555,8 +1555,8 @@ caniuse-api@^1.5.2, caniuse-api@^1.5.3:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000798"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000798.tgz#92f26f77f89cc2a4d60487f41e0b3d2a6c3fe341"
+  version "1.0.30000799"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000799.tgz#0904953de93f3f492647e58c1a1bda7a73a0cb0b"
 
 caniuse-lite@^1.0.30000792:
   version "1.0.30000792"
@@ -1814,13 +1814,18 @@ commander@2.9.0, commander@2.9.x:
 
 "common-client@https://github.com/kalambo/common-client":
   version "0.1.0"
-  resolved "https://github.com/kalambo/common-client#c7ae0b50c53e89508fc357ea6f14994646fa7de6"
+  resolved "https://github.com/kalambo/common-client#41e3d70b3490b13ab6f5c9e947ecf3fcbf57fcd3"
   dependencies:
     common "https://github.com/kalambo/common"
     deep-equal "^1.0.1"
+    elmnt "^0.4.1"
     keys-to-object "^0.2.0"
-    lodash "^4.17.4"
+    lodash.omit "^4.5.0"
+    lodash.pick "^4.4.0"
+    lodash.set "^4.3.2"
     mishmash "^0.5.2"
+    pegjs "^0.10.0"
+    react-helmet "^5.2.0"
     recompose "^0.26.0"
     rgo "^0.3.6"
 
@@ -3234,17 +3239,17 @@ gatsby-plugin-typescript@^1.4.15:
     ts-loader "^2.0.3"
     typescript "^2.2.1"
 
-gatsby-react-router-scroll@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.8.tgz#6cc9d80c139e58ed5189dd35146ac37b46846cd5"
+gatsby-react-router-scroll@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.9.tgz#0a321e7ae8c69ac6ba9528abf5b7be4e549a943f"
   dependencies:
     babel-runtime "^6.26.0"
     scroll-behavior "^0.9.1"
     warning "^3.0.0"
 
-gatsby@^1.9.174:
-  version "1.9.174"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.174.tgz#1d552549d3a5ff2a047e3e5fcd07406641815f45"
+gatsby@^1.9.175:
+  version "1.9.175"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.175.tgz#a0e1f9a66202f5821abfc1fdbcf3673c3dfa5b4c"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -3287,7 +3292,7 @@ gatsby@^1.9.174:
     gatsby-cli "^1.1.33"
     gatsby-link "^1.6.35"
     gatsby-module-loader "^1.0.9"
-    gatsby-react-router-scroll "^1.0.8"
+    gatsby-react-router-scroll "^1.0.9"
     glob "^7.1.1"
     graphql "^0.11.7"
     graphql-relay "^0.5.1"
@@ -4618,6 +4623,10 @@ lodash.merge@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.0.tgz#69884ba144ac33fe699737a6086deffadd0f89c5"
 
+lodash.omit@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.omit/-/lodash.omit-4.5.0.tgz#6eb19ae5a1ee1dd9df0b969e66ce0b7fa30b5e60"
+
 lodash.pad@^4.1.0:
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/lodash.pad/-/lodash.pad-4.5.1.tgz#4330949a833a7c8da22cc20f6a26c4d59debba70"
@@ -4630,7 +4639,7 @@ lodash.padstart@^4.1.0:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/lodash.padstart/-/lodash.padstart-4.6.1.tgz#d2e3eebff0d9d39ad50f5cbd1b52a7bce6bb611b"
 
-lodash.pick@^4.2.1:
+lodash.pick@^4.2.1, lodash.pick@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
 
@@ -4641,6 +4650,10 @@ lodash.reduce@^4.4.0:
 lodash.reject@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.reject/-/lodash.reject-4.6.0.tgz#80d6492dc1470864bbf583533b651f42a9f52415"
+
+lodash.set@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/lodash.set/-/lodash.set-4.3.2.tgz#d8757b1da807dde24816b0d6a84bea1a76230b23"
 
 lodash.some@^4.4.0:
   version "4.6.0"

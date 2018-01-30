@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-import DashboardApp from '../apps/apps/dashboard';
+import DashboardApp from '../dashboard';
 
 export default () => (
   <>

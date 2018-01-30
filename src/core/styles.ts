@@ -1,3 +1,31 @@
+export const colors = {
+  purple: '#b34b6a',
+  purpleDark: '#8f3c55',
+  //   purpleDark: '#a1435f',
+  purpleFaint: '#f3e2e7', // 42%
+
+  yellow: '#c3a217',
+  yellowDark: '#957c12',
+  //   yellowDark: '#ac8f14',
+  yellowFaint: '#f7ebb9', // 42%
+
+  red: 'red',
+  redDark: '#b30000',
+  redFaint: '#ffe0e0',
+  redExtraFaint: '#fff5f5',
+
+  black: '#2f3644',
+  blackDark: '#1a1e26',
+  blackLight: '#444e62',
+
+  white: '#fff',
+  processing: 'rgba(255,255,255,.4)',
+};
+
+// export const fonts = {
+//   body: 'Lato, sans-serif',
+// };
+
 export const icons = {
   fb: {
     viewBox: '0 0 1024 1024',
@@ -24,27 +52,28 @@ export const icons = {
     path:
       'M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z',
   },
+  error: {
+    viewBox: '0 0 16 16',
+    path:
+      'M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z',
+  },
 };
 
-export const colors = {
-  purple: '#b34b6a',
-  purpleDark: '#8f3c55',
-  yellow: '#c3a217',
-  yellowDark: '#957c12',
-  grey: '#2f3644',
-  greyDark: '#1a1e26',
-  greyLight: '#444e62',
+const baseStyle = {
+  fontFamily: 'Lato, sans-serif',
+  fontSize: 16,
+  color: colors.black,
 };
 
 const textStyle = {
-  fontFamily: 'Lato, sans-serif',
+  ...baseStyle,
   fontSize: 20,
-  color: '#333',
   fontWeight: 300 as 300,
   textAlign: 'center',
 };
 
 export default {
+  base: baseStyle,
   text: textStyle,
   title: {
     ...textStyle,
@@ -67,14 +96,139 @@ export default {
     textAlign: 'left',
     fontWeight: 'normal' as 'normal',
   },
+  header: {
+    ...baseStyle,
+    fontSize: 30,
+    fontWeight: 'bold' as 'bold',
+  },
+  markdown: (color: 'yellow' | 'purple') => ({
+    ...baseStyle,
+    link: {
+      color: colors[color],
+    },
+    hr: {
+      background: colors[color],
+    },
+  }),
   button: color => ({
-    ...textStyle,
+    ...baseStyle,
     fontSize: 30,
     color: 'white',
     fontWeight: 'bold' as 'bold',
+    letterSpacing: 0.5,
+    userSelect: 'none',
+    cursor: 'pointer',
     background: colors[color],
     padding: 15,
     textAlign: 'center',
     hover: { background: colors[`${color}Dark`] },
   }),
+  field: (color: 'yellow' | 'purple', admin?: boolean) => ({
+    ...baseStyle,
+
+    borderWidth: 1,
+    borderStyle: 'solid',
+    padding: 10,
+    boxShadow: 'inset 0 1px 1px rgba(0,0,0,0.15)',
+    spacing: '10px 25px',
+    ...(!admin
+      ? {
+          borderColor: colors.white,
+          background: '#f2f2f2',
+        }
+      : {
+          borderColor: '#888',
+          background: colors.white,
+        }),
+
+    placeholder: {
+      color: 'rgba(0,0,0,0.35)',
+    },
+    selected: {
+      fontWeight: 'bold' as 'bold',
+    },
+    group: {
+      fontWeight: 'bold' as 'bold',
+      fontStyle: 'italic' as 'italic',
+    },
+    key: {
+      fontWeight: 'bold' as 'bold',
+      fontStyle: 'italic' as 'italic',
+      fontSize: 14,
+      width: 200,
+    },
+    none: {
+      fontStyle: 'italic' as 'italic',
+    },
+
+    focus: {
+      borderColor: colors[color],
+      active: {
+        borderColor: colors[`${color}Dark`],
+        background: colors[`${color}Faint`],
+      },
+    },
+
+    invalid: {
+      background: colors.redExtraFaint,
+      borderColor: colors.red,
+      focus: {
+        borderColor: colors.redDark,
+        active: {
+          background: colors.redFaint,
+          borderColor: colors.redDark,
+        },
+      },
+    },
+
+    icon: {
+      background: 'rgba(0,0,0,0.1)',
+    },
+
+    processing: {
+      backgroundColor: '#f2f2f2',
+      backgroundImage: `linear-gradient(45deg, ${[
+        `${colors.processing} 25%`,
+        'transparent 25%',
+        'transparent 50%',
+        `${colors.processing} 50%`,
+        `${colors.processing} 75%`,
+        'transparent 75%',
+        'transparent',
+      ].join(',')})`,
+      backgroundSize: '40px 40px',
+      animation: 'upload-bar 1s linear infinite',
+      focus: {
+        background: colors[`${color}Faint`],
+      },
+    },
+
+    button: {
+      textAlign: 'center',
+      color: colors.white,
+      fontWeight: 'bold' as 'bold',
+      letterSpacing: 0.5,
+      width: 120,
+      boxShadow: 'none',
+      background: colors[color],
+      hover: {
+        background: colors[`${color}Dark`],
+      },
+      focus: {
+        active: {
+          background: colors[color],
+          hover: {
+            background: colors[`${color}Dark`],
+          },
+        },
+      },
+    },
+  }),
+  // fill: {
+  //   position: 'absolute' as 'absolute',
+  //   top: 0,
+  //   right: 0,
+  //   bottom: 0,
+  //   left: 0,
+  // },
 };

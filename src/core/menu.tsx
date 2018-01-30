@@ -73,7 +73,7 @@ export default compose<any, any>(
 )(({ active, isOpen, toggle, setClosed, small, setBoundsElem }) => (
   <div
     style={{
-      background: colors.grey,
+      background: colors.black,
       position: 'fixed',
       top: 0,
       left: 0,
@@ -137,7 +137,7 @@ export default compose<any, any>(
               padding: '8px 5px',
               margin: '-8px -5px',
               cursor: 'pointer',
-              hover: { background: colors.greyLight },
+              hover: { background: colors.blackLight },
             }}
           >
             <Div onClick={toggle}>
