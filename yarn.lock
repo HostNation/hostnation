@@ -32,7 +32,7 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.0.35", "@types/react@^16.0.36":
+"@types/react@*", "@types/react@^16.0.36":
   version "16.0.36"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.36.tgz#ceb5639013bdb92a94147883052e69bb2c22c69b"
 
@@ -1814,15 +1814,15 @@ commander@2.9.0, commander@2.9.x:
 
 "common-client@https://github.com/kalambo/common-client":
   version "0.1.0"
-  resolved "https://github.com/kalambo/common-client#efac29c41e0be4a9cfaff5251c32c369e67e5155"
+  resolved "https://github.com/kalambo/common-client#726ac2916290620158f9d17bfd7e51c7b1e3443c"
   dependencies:
     common "https://github.com/kalambo/common"
     deep-equal "^1.0.1"
-    elmnt "^0.4.2"
+    elmnt "^0.4.3"
     keys-to-object "^0.2.0"
     lodash.debounce "^4.0.8"
     lodash.set "^4.3.2"
-    mishmash "^0.5.3"
+    mishmash "^0.5.4"
     pegjs "^0.10.0"
     prop-types "^15.6.0"
     react-helmet "^5.2.0"
@@ -2495,15 +2495,15 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
-elmnt@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/elmnt/-/elmnt-0.4.2.tgz#4629e75def75bf65cf44f59cc5108dae1022a64e"
+elmnt@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/elmnt/-/elmnt-0.4.3.tgz#815080291062c210c4e7b6590caae4b233272dc3"
   dependencies:
-    "@types/react" "^16.0.35"
+    "@types/react" "^16.0.36"
     "@types/recompose" "^0.24.4"
     commonmark "^0.28.1"
     commonmark-react-renderer "^4.3.4"
-    mishmash "^0.5.3"
+    mishmash "^0.5.4"
     recompose "^0.26.0"
 
 emojis-list@^2.0.0:
@@ -4979,15 +4979,15 @@ minimist@~0.0.1:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
 
-mishmash@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/mishmash/-/mishmash-0.5.3.tgz#2f54309e78fba3390fc72a92f84fc3ceeb9ccf15"
+mishmash@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/mishmash/-/mishmash-0.5.4.tgz#595e0e4427bacafb73a4bf8010b50aaa5e29c256"
   dependencies:
-    "@types/react" "^16.0.35"
+    "@types/react" "^16.0.36"
     "@types/recompose" "^0.24.4"
-    deep-equal "^1.0.1"
     element-resize-detector "^1.1.13"
     keys-to-object "^0.2.0"
+    lodash.throttle "^4.1.1"
     recompose "^0.26.0"
     style-transform "^0.1.9"
 
