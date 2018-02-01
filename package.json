@@ -12,14 +12,14 @@
     "presets": ["env", "stage-0"]
   },
   "dependencies": {
-    "@types/react": "^16.0.35",
+    "@types/react": "^16.0.36",
     "@types/react-dom": "^16.0.3",
     "@types/react-router-dom": "^4.2.3",
     "@types/recompose": "^0.24.4",
     "babel-polyfill": "^6.26.0",
     "common": "https://github.com/kalambo/common",
     "common-client": "https://github.com/kalambo/common-client",
-    "elmnt": "^0.4.1",
+    "elmnt": "^0.4.2",
     "gatsby": "^1.9.175",
     "gatsby-link": "^1.6.35",
     "gatsby-plugin-create-client-paths": "^1.0.4",
@@ -27,7 +27,7 @@
     "gatsby-plugin-react-next": "^1.0.8",
     "gatsby-plugin-typescript": "^1.4.15",
     "lodash.debounce": "^4.0.8",
-    "mishmash": "^0.5.2",
+    "mishmash": "^0.5.3",
     "moment": "^2.20.1",
     "node-fetch": "^1.7.3",
     "prettier": "^1.10.2",
@@ -35,8 +35,8 @@
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.2.2",
     "recompose": "^0.26.0",
-    "rgo": "^0.3.6",
-    "typescript": "^2.6.2",
+    "rgo": "^0.3.7",
+    "typescript": "^2.7.1",
     "whatwg-fetch": "^2.0.3"
   }
 }

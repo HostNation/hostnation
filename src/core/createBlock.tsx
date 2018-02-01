@@ -1,201 +1,116 @@
 import * as React from 'react';
-import {
-  branch,
-  compose,
-  mapProps,
-  renderComponent,
-  renderNothing,
-} from 'recompose';
-import { Div, Mark, Txt } from 'elmnt';
-import { Comp, cssGroups, mapStyle, renderLayer } from 'mishmash';
+import { branch, compose, renderComponent, renderNothing } from 'recompose';
+import { Mark, Txt } from 'elmnt';
+import { combineState, cssGroups, mapStyle } from 'mishmash';
+import { createBlock } from 'common-client';
+import { root } from 'common';
+import * as debounce from 'lodash.debounce';
 
-import Field from './Field';
 import styles, { colors } from './styles';
 
-const promptStyle = {
-  ...styles.base,
-  fontSize: 13,
-  fontStyle: 'italic' as 'italic',
-  color: '#888',
+const codeAddress = async (address: string) => {
+  const response = await fetch(
+    `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
+      address,
+    )}&key=AIzaSyCQ8P7-0kTGz2_tkcHjOo0IUiMB_z9Bbp4`,
+    { method: 'GET' },
+  );
+  if (!response.ok) return null;
+  const result = (await response.json()).results[0];
+  if (!result) return null;
+  return result.geometry.location;
 };
 
-const TableHeading = mapStyle([
-  ['filter', ...cssGroups.text],
-  [
-    'merge',
+export default (color: 'yellow' | 'purple', admin: boolean = false) => {
+  return createBlock(
+    ['title', 'info'],
+    branch(
+      ({ fields }: any) => !fields,
+      compose(
+        branch(
+          ({ title }: any) => title,
+          renderComponent(({ title }: any) => (
+            <Txt
+              style={{
+                ...styles.header,
+                fontSize: 30,
+                padding: '5px 0 5px',
+                color: colors[color],
+              }}
+            >
+              {title}
+            </Txt>
+          )),
+        ),
+        branch(
+          ({ info }: any) => info,
+          renderComponent(({ info }: any) => (
+            <Mark style={{ ...styles.markdown(color), fontSize: 16 }}>
+              {info}
+            </Mark>
+          )),
+        ),
+        renderNothing,
+      ),
+    ),
     {
-      textAlign: 'center',
-      fontSize: 14,
-      fontWeight: 'bold',
-      fontStyle: 'italic',
-      padding: '8px 15px',
+      ...styles.field(color, admin),
+      ...(admin ? { fontSize: 15, padding: 7 } : {}),
+      question: { fontWeight: 'bold' },
+      required: { color: colors.red },
+      prompt: { fontSize: 13, fontStyle: 'italic', color: '#888' },
+      column: { fontSize: 14, fontWeight: 'bold', fontStyle: 'italic' },
     },
-  ],
-])(Txt);
-
-export default (color: 'yellow' | 'purple', admin?: boolean) =>
-  [
-    ['title', 'info', 'text', 'prompt', 'vertical', 'bar', 'view'],
+    admin,
     compose<any, any>(
       branch(
-        ({ fields }: any) => !fields,
-        compose(
-          branch(
-            ({ title }: any) => title,
-            renderComponent(({ title }: any) => (
-              <Txt
-                style={{
-                  ...styles.header,
-                  fontSize: 30,
-                  padding: '5px 0 5px',
-                  color: colors[color],
-                }}
-              >
-                {title}
-              </Txt>
-            )),
-          ),
-          branch(
-            ({ info }: any) => info,
-            renderComponent(({ info }: any) => (
-              <Mark style={{ ...styles.markdown(color), fontSize: 16 }}>
-                {info}
-              </Mark>
-            )),
-          ),
-          renderNothing,
-        ),
-      ),
-      mapProps(({ fields, attempted, ...props }: any) => ({
-        fields: fields.map(
-          ({ scalar, isList, file, type, invalid, ...field }) => ({
-            ...field,
-            type: `${file ? 'file' : scalar || 'string'}${
-              isList && field.index === undefined ? 'list' : ''
-            }`,
-            relation: type,
-            invalid: invalid && (admin || attempted),
-            style: {
-              ...styles.field(color, admin),
-              ...(admin ? { fontSize: 15, padding: 7 } : {}),
-              ...field.style,
+        ({ getAddress }: any) => getAddress !== undefined,
+        combineState(({ initialProps: { field }, onUnmount }) => {
+          let unsubscribes = [] as (() => void)[];
+          let first = true;
+          const updateAddress = debounce(address => {
+            codeAddress(address).then(location => {
+              root.rgo.set({
+                key: [field.key[0], field.key[1], 'mapaddress'],
+                value: location,
+              });
+            });
+          }, 1000);
+          unsubscribes.push(updateAddress.cancel, root.rgo.query(
+            {
+              name: field.key[0],
+              filter: field.key[1],
+              fields: ['address', 'postcode'],
             },
-            view: props.view,
-            ...(admin ? { addNull: true, showFile: true } : {}),
-          }),
-        ),
-        ...props,
-        ...(admin ? { prompt: undefined, vertical: false } : {}),
-      })),
-      renderLayer(
-        ({ text, prompt, vertical, view, fields, children }) =>
-          text ? (
-            <Div style={{ spacing: 10 }}>
-              {vertical ? (
-                <Div style={{ spacing: 10 }}>
-                  <Txt
-                    style={{
-                      ...styles.base,
-                      ...(admin ? { fontSize: 15 } : {}),
-                      fontWeight: 'bold',
-                    }}
-                  >
-                    {text}
-                    {fields.some(f => !f.optional) && (
-                      <span style={{ color: colors.red }}>&nbsp;*</span>
-                    )}
-                  </Txt>
-                  {prompt && <Txt style={promptStyle}>{prompt}</Txt>}
-                  {children}
-                </Div>
-              ) : (
-                <Div
-                  style={{
-                    layout: 'bar',
-                    width: '100%',
-                    verticalAlign: 'top',
-                    spacing: 30,
-                  }}
-                >
-                  <Div
-                    style={{
-                      spacing: 10,
-                      width: 200,
-                      paddingTop:
-                        !view &&
-                        (fields[0].type === 'boolean' ||
-                        (fields[0].options &&
-                          fields[0].style.layout !== 'modal')
-                          ? admin ? 3 : 4
-                          : admin ? 8 : 11),
-                    }}
-                  >
-                    <Txt
-                      style={{
-                        ...styles.base,
-                        ...(admin ? { fontSize: 15 } : {}),
-                        fontWeight: 'bold',
-                      }}
-                    >
-                      {text}
-                      {fields.some(f => !f.optional) && (
-                        <span style={{ color: colors.red }}>&nbsp;*</span>
-                      )}
-                    </Txt>
-                    {prompt && <Txt style={promptStyle}>{prompt}</Txt>}
-                  </Div>
-                  {children}
-                </Div>
-              )}
-            </Div>
-          ) : (
-            children
-          ),
+            data => {
+              if (data) {
+                const { address, postcode } = data[field.key[0]][0];
+                if (!first) {
+                  root.rgo.set({
+                    key: [field.key[0], field.key[1], 'mapaddress'],
+                    value: true,
+                  });
+                }
+                first = false;
+                updateAddress(`${address}, ${postcode}`);
+              }
+            },
+          ) as any);
+          onUnmount(() => unsubscribes.forEach(u => u()));
+          return props => props;
+        }),
       ),
       branch(
-        ({ fields }: any) => fields.length > 1,
-        renderComponent(
-          ({ fields, bar }: any) =>
-            bar ? (
-              <div>
-                <Div style={{ layout: 'bar', width: '100%', spacing: '4%' }}>
-                  <Field
-                    {...fields[0]}
-                    style={{ ...fields[0].style, width: '48%' }}
-                  />
-                  <Field
-                    {...fields[1]}
-                    style={{ ...fields[1].style, width: '52%' }}
-                  />
-                </Div>
-              </div>
-            ) : fields[0].style.layout === 'table' ? (
-              <table style={{ width: '100%' }}>
-                <tbody>
-                  <tr>
-                    <td />
-                    {(fields[0].labels || fields[0].options).map(l => (
-                      <td style={{ verticalAlign: 'middle' }} key={l}>
-                        <TableHeading style={fields[0].style}>{l}</TableHeading>
-                      </td>
-                    ))}
-                  </tr>
-                  {fields.map((field, i) => (
-                    <Field
-                      {...field}
-                      labels={field.options.map(() => '')}
-                      key={i}
-                    />
-                  ))}
-                </tbody>
-              </table>
-            ) : (
-              <Div style={{ spacing: 10 }}>
-                {fields.map((field, i) => <Field {...field} key={i} />)}
-              </Div>
-            ),
+        ({ mapAddress }: any) => mapAddress,
+        compose(
+          mapStyle([['filter', ...cssGroups.text]]),
+          renderComponent(({ value, style }: any) => (
+            <Txt style={style}>
+              {value === null ? 'No' : value === true ? 'Checking...' : 'Yes'}
+            </Txt>
+          )),
         ),
-        mapProps(({ fields }: any) => fields[0]),
       ),
-    )(Field),
-  ] as [string[], Comp];
+    ),
+  );
+};

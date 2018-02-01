@@ -50,7 +50,7 @@ export default function(admin?: boolean) {
         text: 'Date of birth',
         field: 'befriender.dob',
         optional: admin,
-        style: { maxWidth: 450 },
+        style: { maxWidth: 400 },
       },
       {
         text: 'Sex',
@@ -60,7 +60,7 @@ export default function(admin?: boolean) {
       {
         text: 'Nationality, if not british',
         field: 'befriender.nationality',
-        style: { maxWidth: 450 },
+        style: { maxWidth: 400 },
         optional: true,
       },
       {
@@ -112,14 +112,14 @@ export default function(admin?: boolean) {
         text: 'Region',
         field: 'befriender.region',
         optional: admin,
-        style: { layout: 'modal', maxWidth: 450 },
+        style: { layout: 'modal', maxWidth: 400 },
       },
       {
         text: admin
           ? 'Length of time in this area'
           : 'How long have you lived in this area?',
         field: 'befriender.duration',
-        style: { layout: 'modal', maxWidth: 450 },
+        style: { layout: 'modal', maxWidth: 400 },
         optional: true,
       },
       {
@@ -143,7 +143,7 @@ export default function(admin?: boolean) {
           : 'What is your current work status?',
         field: 'befriender.workstatus',
         optional: admin,
-        style: { layout: 'modal', maxWidth: 450 },
+        style: { layout: 'modal', maxWidth: 400 },
       },
       {
         text: admin
@@ -167,7 +167,7 @@ export default function(admin?: boolean) {
           : 'If you have ever needed a criminal record check for any work you have undertaken, please enter the date (approx. year) here.',
         field: 'befriender.dbsdate',
         placeholder: 'YYYY',
-        style: { maxWidth: 450 },
+        style: { maxWidth: 400 },
         optional: true,
       },
       {
@@ -190,7 +190,7 @@ export default function(admin?: boolean) {
           ? 'Attitude towards religion'
           : 'How would you describe your attitude towards religion?',
         field: 'befriender.religion',
-        style: { layout: 'modal', maxWidth: 450 },
+        style: { layout: 'modal', maxWidth: 400 },
         optional: true,
       },
       {

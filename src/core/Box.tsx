@@ -11,7 +11,7 @@ export default branch(
     withState('isOpen', 'setIsOpen', false),
     withHandlers({
       toggleIsOpen: ({ isOpen, setIsOpen }) => () => setIsOpen(!isOpen),
-    }),
+    } as any),
   ),
 )(({ title, color = 'black', toggle, isOpen, toggleIsOpen, children }: any) => (
   <div>

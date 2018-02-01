@@ -13,7 +13,7 @@ import Helmet from 'react-helmet';
 import * as logoWide from '../img/logo-wide.png';
 import * as florenceLucy from '../img/banners/florence-lucy.png';
 
-import * as blocks from '../core/blocks';
+import referBlocks from '../blocks/refer';
 import Box from '../core/Box';
 import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
@@ -49,7 +49,7 @@ const ReferForm = compose<any, any>(
         initial: { mapaddress: null },
       },
     }}
-    blocks={blocks.refer()}
+    blocks={referBlocks()}
     onSubmit={onSubmit}
   />
 ));

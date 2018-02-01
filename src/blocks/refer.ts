@@ -42,7 +42,7 @@ export default function(admin?: boolean) {
       {
         text: 'Date of birth',
         field: 'refugee.dob',
-        style: { maxWidth: 450 },
+        style: { maxWidth: 400 },
         optional: admin,
       },
       {
@@ -106,13 +106,13 @@ export default function(admin?: boolean) {
         text: 'Region',
         field: 'refugee.region',
         optional: admin,
-        style: { layout: 'modal', maxWidth: 450 },
+        style: { layout: 'modal', maxWidth: 400 },
       },
       {
         text: 'Immigration status',
         field: 'refugee.status',
         optional: admin,
-        style: { layout: 'modal', maxWidth: 450 },
+        style: { layout: 'modal', maxWidth: 400 },
       },
       {
         text: admin
@@ -135,13 +135,13 @@ export default function(admin?: boolean) {
         text: 'Length of time in the UK',
         field: 'refugee.ukduration',
         optional: admin,
-        style: { layout: 'modal', maxWidth: 450 },
+        style: { layout: 'modal', maxWidth: 400 },
       },
       {
         text: admin ? 'English ability' : 'How good is your English?',
         field: 'refugee.englishskill',
         optional: admin,
-        style: { layout: 'modal', maxWidth: 450 },
+        style: { layout: 'modal', maxWidth: 400 },
       },
       {
         text: admin
@@ -188,7 +188,7 @@ export default function(admin?: boolean) {
       {
         text: admin ? 'Religion' : 'What religion if any do you have?',
         field: 'refugee.religion',
-        style: { layout: 'modal', maxWidth: 450 },
+        style: { layout: 'modal', maxWidth: 400 },
         optional: true,
       },
       {
@@ -204,7 +204,7 @@ export default function(admin?: boolean) {
           ? 'Health issues'
           : 'Do you have any health issues (physical or mental) that we should be aware of?',
         field: 'refugee.healthissues',
-        style: { layout: 'modal', maxWidth: 450 },
+        style: { layout: 'modal', maxWidth: 400 },
         optional: true,
       },
       {
@@ -212,7 +212,7 @@ export default function(admin?: boolean) {
           ? 'Receiving regular treatment'
           : 'Are you receiving regular treatment?',
         field: 'refugee.regulartreatment',
-        style: { layout: 'modal', maxWidth: 450 },
+        style: { layout: 'modal', maxWidth: 400 },
         optional: true,
       },
       {
@@ -420,7 +420,7 @@ export default function(admin?: boolean) {
           {
             field: 'refugee.contactrelation',
             optional: admin,
-            style: { layout: 'modal', maxWidth: 450 },
+            style: { layout: 'modal', maxWidth: 400 },
           },
           {
             field: 'refugee.contactrelationother',

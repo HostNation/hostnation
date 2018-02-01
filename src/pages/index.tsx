@@ -2,13 +2,12 @@ import * as React from 'react';
 import Link from 'gatsby-link';
 import { Div, Icon, Txt } from 'elmnt';
 import { Hover, withSize } from 'mishmash';
-import { compose, lifecycle } from 'recompose';
+import { lifecycle } from 'recompose';
 import Helmet from 'react-helmet';
 
 import * as logoWide from '../img/logo-wide.png';
 
 import * as adelSophia from '../img/photos/adel-sophia.jpg';
-import * as aiLingPattie from '../img/photos/ai-ling-pattie.jpg';
 import * as darwinSasha from '../img/photos/darwin-sasha.jpg';
 import * as florenceLucy from '../img/photos/florence-lucy.jpg';
 import * as mohamedJulia from '../img/photos/mohamed-julia.jpg';
@@ -33,7 +32,6 @@ import styles, { colors, icons } from '../core/styles';
 
 const photos = [
   adelSophia,
-  aiLingPattie,
   darwinSasha,
   florenceLucy,
   mohamedJulia,
@@ -57,114 +55,44 @@ const linkStyle = {
   hover: { background: '#eee' },
 };
 
-const Header = compose<any, any>(
-  withSize(
-    'scale',
-    'setBoundsElem',
-    ({ width } = { width: 0 }) => (width - 400) / 500,
-  ),
-  lifecycle({
-    componentDidMount() {
-      this.setState({
-        photo: photos[Math.floor(Math.random() * photos.length)],
-      });
-    },
-  }),
-)(({ scale, setBoundsElem, photo }) => (
-  <div
-    style={{
-      width: '100%',
-      paddingBottom: `${(1 - scale) * 35 + 55}%`,
-      backgroundImage: `url("${photo}")`,
-      backgroundSize: 'cover',
-      backgroundPosition: '50%',
-      position: 'relative',
-    }}
-    ref={setBoundsElem}
-  >
-    <div
-      style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        background:
-          'linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 60%,rgba(0,0,0,0.5) 100%)',
-      }}
-    />
-    <Div
-      style={{
-        spacing: 10,
-        position: 'absolute',
-        bottom: 30,
-        left: 0,
-        width: '100%',
-        padding: '0 15px',
-      }}
-    >
-      <Txt
-        style={{
-          ...styles.text,
-          fontSize: scale * 7 + 17,
-          color: 'white',
-          fontWeight: 'bold',
-          textAlign: 'center',
-        }}
-      >
-        HostNation believes every refugee deserves a friend.
-      </Txt>
-      <Txt
-        style={{
-          ...styles.text,
-          fontSize: scale * 7 + 17,
-          color: 'white',
-          fontWeight: 300,
-          textAlign: 'center',
-        }}
-      >
-        A digital means of connecting those offering friendship with those
-        needing it.
-      </Txt>
-    </Div>
-  </div>
-));
-
-const MainLinks = withSize(
+const Header = withSize(
   'small',
   'setBoundsElem',
-  ({ width } = { width: 0 }) => width <= 800,
+  ({ width } = { width: 1000 }) => width <= 700,
 )(({ small, setBoundsElem }) => (
   <div ref={setBoundsElem}>
     <Div
       style={{
         layout: small ? 'stack' : 'bar',
-        spacing: small && 20,
         width: '100%',
-        padding: 40,
-        background: 'white',
+        spacing: small ? 30 : 50,
       }}
     >
-      <div style={small ? {} : { width: '50%', paddingRight: 15 }}>
+      <div>
+        <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
+      </div>
+      <Div style={{ width: 250, spacing: 10, margin: '0 auto' }}>
         <Link
           to="/befriend"
           style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
         >
-          <Hover style={styles.button('yellow')}>
+          <Hover
+            style={{ ...styles.button('yellow'), fontSize: 20, padding: 10 }}
+          >
             <Txt>BEFRIEND A REFUGEE</Txt>
           </Hover>
         </Link>
-      </div>
-      <div style={small ? {} : { width: '50%', paddingLeft: 15 }}>
         <Link
           to="/refer"
           style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
         >
-          <Hover style={styles.button('purple')}>
+          <Hover
+            style={{ ...styles.button('purple'), fontSize: 20, padding: 10 }}
+          >
             <Txt>REFER A REFUGEE</Txt>
           </Hover>
         </Link>
-      </div>
+      </Div>
     </Div>
   </div>
 ));
@@ -237,25 +165,38 @@ const Testimonials = withSize(
   </div>
 ));
 
-export default () => (
+export default lifecycle({
+  componentDidMount() {
+    this.setState({
+      photo: photos[Math.floor(Math.random() * photos.length)],
+    });
+  },
+})(({ photo }: any) => (
   <>
     <Helmet>
       <title>HostNation</title>
     </Helmet>
     <Div style={{ spacing: 50, padding: '50px 0' }}>
-      <img src={logoWide} />
-      <div>
-        <Header />
-        <MainLinks />
-      </div>
-      <Div style={{ spacing: 25 }}>
-        <Txt style={styles.body}>
-          We are a London-based introductory service dedicated to connecting
-          people in their communities. Befrienders are matched with and then
-          introduced to a refugee or asylum seeker in their area. They commit to
-          meeting socially for a minimum of 3 hours once a fortnight over a
-          period of 3 months.
+      <Header />
+      <Div style={{ spacing: 10 }}>
+        <Txt style={{ ...styles.text, fontSize: 24, fontWeight: 'bold' }}>
+          HostNation believes every refugee deserves a friend.
         </Txt>
+        <Txt style={{ ...styles.text, fontSize: 24 }}>
+          A digital means of connecting those offering friendship with those
+          needing it.
+        </Txt>
+      </Div>
+      <img src={photo} />
+      <Txt style={{ ...styles.text, fontSize: 24 }}>
+        We are a London-based introductory service dedicated to connecting
+        people in their communities. Befrienders are matched with and then
+        introduced to a refugee or asylum seeker in their area. They commit to
+        meeting socially for a minimum of 3 hours once a fortnight over a period
+        of 3 months.
+      </Txt>
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+      <Div style={{ spacing: 25 }}>
         <Txt style={styles.body}>
           If you like what we’re trying to do, but are not in London or don’t
           have the time to befriend, then please consider donating.
@@ -441,4 +382,4 @@ export default () => (
       </Div>
     </Div>
   </>
-);
+));

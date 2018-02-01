@@ -13,7 +13,7 @@ import Helmet from 'react-helmet';
 import * as logoWide from '../img/logo-wide.png';
 import * as aiLingPattie from '../img/banners/ai-ling-pattie.png';
 
-import * as blocks from '../core/blocks';
+import befriendBlocks from '../blocks/befriend';
 import Box from '../core/Box';
 import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
@@ -49,7 +49,7 @@ const BefriendForm = compose(
         initial: { mapaddress: null },
       },
     }}
-    blocks={blocks.befriend()}
+    blocks={befriendBlocks()}
     onSubmit={onSubmit}
   />
 ));

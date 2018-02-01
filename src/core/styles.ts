@@ -1,13 +1,11 @@
 export const colors = {
   purple: '#b34b6a',
   purpleDark: '#8f3c55',
-  //   purpleDark: '#a1435f',
-  purpleFaint: '#f3e2e7', // 42%
+  purpleFaint: '#f3e2e7',
 
   yellow: '#c3a217',
   yellowDark: '#957c12',
-  //   yellowDark: '#ac8f14',
-  yellowFaint: '#f7ebb9', // 42%
+  yellowFaint: '#f7ebb9',
 
   red: 'red',
   redDark: '#b30000',
@@ -21,10 +19,6 @@ export const colors = {
   white: '#fff',
   processing: 'rgba(255,255,255,.4)',
 };
-
-// export const fonts = {
-//   body: 'Lato, sans-serif',
-// };
 
 export const icons = {
   fb: {
@@ -71,6 +65,108 @@ const textStyle = {
   fontWeight: 300 as 300,
   textAlign: 'center',
 };
+
+const fieldStyle = (color: 'yellow' | 'purple', admin?: boolean) => ({
+  ...baseStyle,
+
+  borderWidth: 1,
+  borderStyle: 'solid',
+  padding: 10,
+  boxShadow: 'inset 0 1px 1px rgba(0,0,0,0.15)',
+  spacing: '10px 25px',
+  ...(!admin
+    ? {
+        borderColor: colors.white,
+        background: '#f2f2f2',
+      }
+    : {
+        borderColor: '#888',
+        background: colors.white,
+      }),
+
+  placeholder: {
+    color: 'rgba(0,0,0,0.35)',
+  },
+  selected: {
+    fontWeight: 'bold' as 'bold',
+  },
+  group: {
+    fontWeight: 'bold' as 'bold',
+    fontStyle: 'italic' as 'italic',
+  },
+  key: {
+    fontWeight: 'bold' as 'bold',
+    fontStyle: 'italic' as 'italic',
+    fontSize: 14,
+    width: 200,
+  },
+  none: {
+    fontStyle: 'italic' as 'italic',
+  },
+
+  focus: {
+    borderColor: colors[color],
+    active: {
+      borderColor: colors[`${color}Dark`],
+      background: colors[`${color}Faint`],
+    },
+  },
+
+  invalid: {
+    background: colors.redExtraFaint,
+    borderColor: colors.red,
+    focus: {
+      borderColor: colors.redDark,
+      active: {
+        background: colors.redFaint,
+        borderColor: colors.redDark,
+      },
+    },
+  },
+
+  icon: {
+    background: 'rgba(0,0,0,0.1)',
+  },
+
+  processing: {
+    backgroundColor: '#f2f2f2',
+    backgroundImage: `linear-gradient(45deg, ${[
+      `${colors.processing} 25%`,
+      'transparent 25%',
+      'transparent 50%',
+      `${colors.processing} 50%`,
+      `${colors.processing} 75%`,
+      'transparent 75%',
+      'transparent',
+    ].join(',')})`,
+    backgroundSize: '40px 40px',
+    animation: 'upload-bar 1s linear infinite',
+    focus: {
+      background: colors[`${color}Faint`],
+    },
+  },
+
+  button: {
+    textAlign: 'center',
+    color: colors.white,
+    fontWeight: 'bold' as 'bold',
+    letterSpacing: 0.5,
+    width: 120,
+    boxShadow: 'none',
+    background: colors[color],
+    hover: {
+      background: colors[`${color}Dark`],
+    },
+    focus: {
+      active: {
+        background: colors[color],
+        hover: {
+          background: colors[`${color}Dark`],
+        },
+      },
+    },
+  },
+});
 
 export default {
   base: baseStyle,
@@ -123,112 +219,70 @@ export default {
     textAlign: 'center',
     hover: { background: colors[`${color}Dark`] },
   }),
-  field: (color: 'yellow' | 'purple', admin?: boolean) => ({
+  field: fieldStyle,
+  tableLinks: {
     ...baseStyle,
-
-    borderWidth: 1,
-    borderStyle: 'solid',
-    padding: 10,
-    boxShadow: 'inset 0 1px 1px rgba(0,0,0,0.15)',
-    spacing: '10px 25px',
-    ...(!admin
-      ? {
-          borderColor: colors.white,
-          background: '#f2f2f2',
-        }
-      : {
-          borderColor: '#888',
-          background: colors.white,
-        }),
-
-    placeholder: {
-      color: 'rgba(0,0,0,0.35)',
-    },
-    selected: {
-      fontWeight: 'bold' as 'bold',
-    },
-    group: {
-      fontWeight: 'bold' as 'bold',
-      fontStyle: 'italic' as 'italic',
-    },
-    key: {
-      fontWeight: 'bold' as 'bold',
-      fontStyle: 'italic' as 'italic',
-      fontSize: 14,
-      width: 200,
-    },
-    none: {
-      fontStyle: 'italic' as 'italic',
-    },
-
-    focus: {
-      borderColor: colors[color],
-      active: {
-        borderColor: colors[`${color}Dark`],
-        background: colors[`${color}Faint`],
+    fontSize: 13,
+    verticalAlign: 'middle',
+    borderRadius: 3,
+    spinner: { color: colors.purple },
+    header: {
+      heading: { fontSize: 30 },
+      link: {
+        color: colors.purple,
+        hover: { color: colors.purpleDark },
       },
+      hr: { background: colors.purple },
     },
-
-    invalid: {
-      background: colors.redExtraFaint,
-      borderColor: colors.red,
-      focus: {
-        borderColor: colors.redDark,
-        active: {
-          background: colors.redFaint,
-          borderColor: colors.redDark,
-        },
+    column: {
+      fontWeight: 'bold',
+      background: '#e0e0e0',
+      padding: '10px 20px 9px 10px',
+    },
+    link: {
+      color: colors.purple,
+      padding: `8px 20px 8px 10px`,
+      alt: { background: '#f9f9f9' },
+      index: {
+        fontWeight: 'bold',
+        color: colors.black,
+        width: 50,
       },
-    },
-
-    icon: {
-      background: 'rgba(0,0,0,0.1)',
-    },
-
-    processing: {
-      backgroundColor: '#f2f2f2',
-      backgroundImage: `linear-gradient(45deg, ${[
-        `${colors.processing} 25%`,
-        'transparent 25%',
-        'transparent 50%',
-        `${colors.processing} 50%`,
-        `${colors.processing} 75%`,
-        'transparent 75%',
-        'transparent',
-      ].join(',')})`,
-      backgroundSize: '40px 40px',
-      animation: 'upload-bar 1s linear infinite',
-      focus: {
-        background: colors[`${color}Faint`],
-      },
-    },
-
-    button: {
-      textAlign: 'center',
-      color: colors.white,
-      fontWeight: 'bold' as 'bold',
-      letterSpacing: 0.5,
-      width: 120,
-      boxShadow: 'none',
-      background: colors[color],
       hover: {
-        background: colors[`${color}Dark`],
-      },
-      focus: {
-        active: {
-          background: colors[color],
-          hover: {
-            background: colors[`${color}Dark`],
-          },
-        },
+        color: 'white',
+        background: colors.purple,
+        alt: { background: colors.purple },
+        index: { color: 'white' },
       },
     },
-  }),
-  // fill: {
-  //   position: 'absolute' as 'absolute',
-  //   top: 0,
-  //   right: 0,
-  //   bottom: 0,
-  //   left: 0,
-  // },
+    filter: {
+      fontSize: 14,
+      label: {
+        fontWeight: 'bold',
+        fontStyle: 'italic',
+        width: 50,
+      },
+      helpLabel: {
+        fontWeight: 'bold',
+        width: 75,
+        color: colors.purple,
+        hover: { color: colors.purpleDark },
+      },
+      field: {
+        ...fieldStyle('purple', true),
+        fontSize: 14,
+        padding: 8,
+      },
+      help: {
+        fontSize: 16,
+        title: { fontWeight: 'bold', fontSize: 30 },
+        subtitle: { fontWeight: 'bold', fontSize: 20 },
+        text: { fontWeight: 'bold' },
+        indent: { fontStyle: 'italic', color: colors.purple },
+        note: { opacity: 0.7, fontStyle: 'italic' },
+        op: { fontWeight: 'bold', fontStyle: 'italic' },
+        fields: { fontSize: 13 },
+      },
+    },
+  },
 };

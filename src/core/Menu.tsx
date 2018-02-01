@@ -61,7 +61,7 @@ export default compose<any, any>(
   withHandlers({
     toggle: ({ isOpen, setIsOpen }) => () => setIsOpen(!isOpen),
     setClosed: ({ setIsOpen }) => () => setIsOpen(false),
-  }),
+  } as any),
   withSize(
     'small',
     'setBoundsElem',
