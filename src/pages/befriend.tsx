@@ -1,13 +1,6 @@
 import * as React from 'react';
-import {
-  branch,
-  compose,
-  renderComponent,
-  withHandlers,
-  withState,
-} from 'recompose';
+import { branch, compose, enclose, render, withHover, Wrap } from 'mishmash';
 import { Div, Txt } from 'elmnt';
-import { Hover } from 'mishmash';
 import Helmet from 'react-helmet';
 
 import * as logoWide from '../img/logo-wide.png';
@@ -19,10 +12,17 @@ import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
 
 const BefriendForm = compose(
-  withState('complete', 'setComplete', false),
+  enclose(
+    ({ setState }) => (props, state) => ({
+      ...props,
+      ...state,
+      onSubmit: () => setState({ complete: true }),
+    }),
+    { complete: false },
+  ),
   branch(
-    ({ complete }: any) => complete,
-    renderComponent(() => (
+    ({ complete }) => complete,
+    render(() => (
       <Txt
         style={{
           ...styles.base,
@@ -38,10 +38,7 @@ const BefriendForm = compose(
       </Txt>
     )),
   ),
-  withHandlers({
-    onSubmit: ({ setComplete }: any) => () => setComplete(true),
-  }),
-)(({ onSubmit }: any) => (
+)(({ onSubmit }) => (
   <Forms.Yellow
     objects={{
       befriender: {
@@ -185,17 +182,21 @@ export default () => (
           ‘breaching confidentiality’).
         </Txt>
         <a href="/privacy-policy.pdf" target="_blank">
-          <Hover
-            style={{
-              ...styles.boxText,
-              color: colors.purple,
-              display: 'inline-block',
-              fontWeight: 'bold',
-              hover: { color: colors.purpleDark },
-            }}
-          >
-            <Txt>Read our full privacy policy here.</Txt>
-          </Hover>
+          <Wrap hoc={withHover}>
+            {({ isHovered, hoverProps }) => (
+              <Txt
+                {...hoverProps}
+                style={{
+                  ...styles.boxText,
+                  color: isHovered ? colors.purpleDark : colors.purple,
+                  display: 'inline-block',
+                  fontWeight: 'bold',
+                }}
+              >
+                Read our full privacy policy here.
+              </Txt>
+            )}
+          </Wrap>
         </a>
       </Box>
 

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Div, Icon, Txt } from 'elmnt';
-import { Hover } from 'mishmash';
 import { createForm, Spinner } from 'common-client';
 
+import Button from './Button';
 import createBlock from './createBlock';
 import styles, { colors, icons } from './styles';
 
@@ -30,11 +30,13 @@ const buildForm = (color: 'yellow' | 'purple') =>
         )}
         {blocks && (
           <Div style={{ spacing: 10 }}>
-            <Hover
-              style={{ ...styles.button(color), width: 200, margin: '0 auto' }}
+            <Button
+              onClick={submit}
+              color={color}
+              style={{ width: 200, margin: '0 auto' }}
             >
-              <Txt onClick={submit}>{button || 'Submit'}</Txt>
-            </Hover>
+              {button || 'Submit'}
+            </Button>
             {invalid &&
               attempted && (
                 <Div style={{ layout: 'bar', spacing: 12, margin: '0 auto' }}>

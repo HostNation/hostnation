@@ -1,75 +1,61 @@
 import * as React from 'react';
-import Link from 'gatsby-link';
 import { Div, Icon, Txt } from 'elmnt';
-import { Hover, withHover, withSize } from 'mishmash';
-import { compose, withHandlers, withProps, withState } from 'recompose';
+import { compose, enclose, withHover, withSize, Wrap } from 'mishmash';
+import { Link } from 'common-client';
 
 import styles, { colors, icons } from '../core/styles';
 
-const textStyle = {
+const textStyle = active => ({
   ...styles.text,
-  color: '#f2f2f2',
+  color: active ? 'white' : '#f2f2f2',
   fontSize: 18,
   fontWeight: 'normal' as 'normal',
-  hover: { color: 'white' },
-};
+});
 
 const MenuLink = withHover(
-  ({ text, to, newTab, active, setClosed, isHovered, hoverProps }: any) => {
-    const external = to.startsWith('http');
-    const Comp = external ? 'a' : Link;
-    return (
-      <Comp
-        {...(external ? { href: to } : { to })}
+  ({ text, to, newTab, active, setClosed, isHovered, hoverProps }: any) => (
+    <Link
+      to={to}
+      newTab={newTab}
+      onClick={setClosed}
+      {...hoverProps}
+      style={{
+        display: 'block',
+        padding: 5,
+        margin: -5,
+        textAlign: 'center',
+      }}
+    >
+      <div
         style={{
-          display: 'block',
-          padding: 5,
-          margin: -5,
-          textAlign: 'center',
+          display: 'inline-block',
+          paddingBottom: 3,
+          borderBottomWidth: 2,
+          borderBottomStyle: 'solid',
+          borderBottomColor:
+            isHovered || active === to ? 'white' : 'transparent',
+          marginBottom: -5,
         }}
-        target={newTab ? '_blank' : undefined}
-        onClick={setClosed}
-        {...hoverProps}
       >
-        <div
-          style={{
-            display: 'inline-block',
-            paddingBottom: 3,
-            borderBottomWidth: 2,
-            borderBottomStyle: 'solid',
-            borderBottomColor:
-              isHovered || active === to ? 'white' : 'transparent',
-            marginBottom: -5,
-          }}
-        >
-          <Txt
-            style={{
-              ...textStyle,
-              ...(isHovered || active === to ? { color: 'white' } : {}),
-            }}
-          >
-            {text}
-          </Txt>
-        </div>
-      </Comp>
-    );
-  },
+        <Txt style={textStyle(isHovered || active === to)}>{text}</Txt>
+      </div>
+    </Link>
+  ),
 );
 
-export default compose<any, any>(
-  withState('isOpen', 'setIsOpen', false),
-  withHandlers({
-    toggle: ({ isOpen, setIsOpen }) => () => setIsOpen(!isOpen),
-    setClosed: ({ setIsOpen }) => () => setIsOpen(false),
-  } as any),
-  withSize(
-    'small',
-    'setBoundsElem',
-    ({ width } = { width: 0 }) => width <= 800,
+export default compose(
+  withSize('small', 'setBoundsElem', ({ width = 0 }) => width <= 800),
+  enclose(
+    ({ setState }) => {
+      const toggle = () => setState(({ isOpen }) => ({ isOpen: !isOpen }));
+      const setClosed = () => setState({ isOpen: false });
+      return (props, state) => {
+        if (state.isOpen && !props.small) setTimeout(setClosed);
+        return { ...props, ...state, toggle, setClosed };
+      };
+    },
+    { isOpen: false },
   ),
-  withProps(({ isOpen, toggle, small }: any) => {
-    if (isOpen && !small) toggle();
-  }),
 )(({ active, isOpen, toggle, setClosed, small, setBoundsElem }) => (
   <div
     style={{
@@ -98,54 +84,83 @@ export default compose<any, any>(
             onClick={setClosed}
             style={{ display: 'block', padding: 5, margin: -5 }}
           >
-            <Hover
-              style={{
-                ...textStyle,
-                fontSize: 21,
-                marginRight: 20,
-              }}
-            >
-              <Txt>HostNation</Txt>
-            </Hover>
+            <Wrap hoc={withHover}>
+              {({ isHovered, hoverProps }) => (
+                <Txt
+                  {...hoverProps}
+                  style={{
+                    ...textStyle(isHovered),
+                    fontSize: 21,
+                    marginRight: 20,
+                  }}
+                >
+                  HostNation
+                </Txt>
+              )}
+            </Wrap>
           </Link>
           <a
             href="https://www.facebook.com/HostNationUK"
             target="_blank"
             style={{ display: 'block', padding: 5, margin: -5 }}
           >
-            <Hover style={{ ...textStyle, fontSize: 19 }}>
-              <Icon {...icons.fb} />
-            </Hover>
+            <Wrap hoc={withHover}>
+              {({ isHovered, hoverProps }) => (
+                <Icon
+                  {...icons.fb}
+                  {...hoverProps}
+                  style={{
+                    ...textStyle(isHovered),
+                    fontSize: 19,
+                    padding: 5,
+                    margin: -5,
+                  }}
+                />
+              )}
+            </Wrap>
           </a>
           <a
             href="https://twitter.com/hostnationuk"
             target="_blank"
             style={{ display: 'block' }}
           >
-            <Hover
-              style={{ ...textStyle, fontSize: 19, padding: 5, margin: -5 }}
-            >
-              <Icon {...icons.twitter} />
-            </Hover>
+            <Wrap hoc={withHover}>
+              {({ isHovered, hoverProps }) => (
+                <Icon
+                  {...icons.twitter}
+                  {...hoverProps}
+                  style={{
+                    ...textStyle(isHovered),
+                    fontSize: 19,
+                    padding: 5,
+                    margin: -5,
+                  }}
+                />
+              )}
+            </Wrap>
           </a>
         </Div>
         {small ? (
-          <Hover
-            style={{
-              spacing: 5,
-              float: 'right',
-              padding: '8px 5px',
-              margin: '-8px -5px',
-              cursor: 'pointer',
-              hover: { background: colors.blackLight },
-            }}
-          >
-            <Div onClick={toggle}>
-              <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />
-              <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />
-              <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />
-            </Div>
-          </Hover>
+          <Wrap hoc={withHover}>
+            {({ isHovered, hoverProps }) => (
+              <Div
+                onClick={toggle}
+                {...hoverProps}
+                style={{
+                  spacing: 5,
+                  float: 'right',
+                  padding: '8px 5px',
+                  margin: '-8px -5px',
+                  cursor: 'pointer',
+                  ...(isHovered ? { background: colors.blackLight } : {}),
+                }}
+              >
+                <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />
+                <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />
+                <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />
+              </Div>
+            )}
+          </Wrap>
         ) : (
           <Div style={{ layout: 'bar', spacing: 30, float: 'right' }}>
             <MenuLink text="About Us" to="/about-us" active={active} />

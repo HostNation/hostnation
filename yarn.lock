@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@types/history@*":
+"@types/history@*", "@types/history@^4.6.2":
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.6.2.tgz#12cfaba693ba20f114ed5765467ff25fdf67ddb0"
 
@@ -35,12 +35,6 @@
 "@types/react@*", "@types/react@^16.0.36":
   version "16.0.36"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.36.tgz#ceb5639013bdb92a94147883052e69bb2c22c69b"
-
-"@types/recompose@^0.24.4":
-  version "0.24.4"
-  resolved "https://registry.yarnpkg.com/@types/recompose/-/recompose-0.24.4.tgz#39de3048382d39f0808a1780d3aa2fdb839986cd"
-  dependencies:
-    "@types/react" "*"
 
 "@zeit/check-updates@1.0.5":
   version "1.0.5"
@@ -382,8 +376,8 @@ babel-core@^6.24.1, babel-core@^6.26.0:
     source-map "^0.5.6"
 
 babel-generator@^6.24.1, babel-generator@^6.26.0:
-  version "6.26.0"
-  resolved "https://registry.yarnpkg.com/babel-generator/-/babel-generator-6.26.0.tgz#ac1ae20070b79f6e3ca1d3269613053774f20dc5"
+  version "6.26.1"
+  resolved "https://registry.yarnpkg.com/babel-generator/-/babel-generator-6.26.1.tgz#1844408d3b8f0d35a404ea7ac180f087a601bd90"
   dependencies:
     babel-messages "^6.23.0"
     babel-runtime "^6.26.0"
@@ -391,7 +385,7 @@ babel-generator@^6.24.1, babel-generator@^6.26.0:
     detect-indent "^4.0.0"
     jsesc "^1.3.0"
     lodash "^4.17.4"
-    source-map "^0.5.6"
+    source-map "^0.5.7"
     trim-right "^1.0.1"
 
 babel-helper-bindify-decorators@^6.24.1:
@@ -1555,8 +1549,8 @@ caniuse-api@^1.5.2, caniuse-api@^1.5.3:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000800"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000800.tgz#a86e6bc23bd9a707d5df42f33e64d0495cfda218"
+  version "1.0.30000802"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000802.tgz#f7dca342da1c12cf84ff2c80432e24c7e1cc36d9"
 
 caniuse-lite@^1.0.30000792:
   version "1.0.30000792"
@@ -1814,21 +1808,21 @@ commander@2.9.0, commander@2.9.x:
 
 "common-client@https://github.com/kalambo/common-client":
   version "0.1.0"
-  resolved "https://github.com/kalambo/common-client#726ac2916290620158f9d17bfd7e51c7b1e3443c"
+  resolved "https://github.com/kalambo/common-client#17f6857d3bb9617ecbca73eaa5a51cdb8b755c09"
   dependencies:
     common "https://github.com/kalambo/common"
     deep-equal "^1.0.1"
-    elmnt "^0.4.3"
+    elmnt "^0.5.0"
+    gatsby-link "^1.6.36"
     keys-to-object "^0.2.0"
     lodash.debounce "^4.0.8"
     lodash.set "^4.3.2"
-    mishmash "^0.5.4"
+    mishmash "^0.6.0"
     pegjs "^0.10.0"
-    prop-types "^15.6.0"
     react-helmet "^5.2.0"
     react-router-dom "^4.2.2"
-    recompose "^0.26.0"
     rgo "^0.3.7"
+    style-transform "^0.1.9"
 
 common-tags@0.1.1:
   version "0.1.1"
@@ -2495,16 +2489,15 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
-elmnt@^0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/elmnt/-/elmnt-0.4.3.tgz#815080291062c210c4e7b6590caae4b233272dc3"
+elmnt@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/elmnt/-/elmnt-0.5.0.tgz#cf3f5d494cf74c865dd0ac37916e2e9d954f4fae"
   dependencies:
     "@types/react" "^16.0.36"
-    "@types/recompose" "^0.24.4"
     commonmark "^0.28.1"
     commonmark-react-renderer "^4.3.4"
-    mishmash "^0.5.4"
-    recompose "^0.26.0"
+    mishmash "^0.6.0"
+    style-transform "^0.1.9"
 
 emojis-list@^2.0.0:
   version "2.1.0"
@@ -3173,9 +3166,9 @@ gatsby-1-config-css-modules@^1.0.8:
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-cli@^1.1.33:
-  version "1.1.33"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-1.1.33.tgz#a79337d73f88ef1157aceefd245242ec0d463680"
+gatsby-cli@^1.1.34:
+  version "1.1.34"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-1.1.34.tgz#85c17bf67bc717be0274c8e4a56c7df819ede1f5"
   dependencies:
     babel-code-frame "^6.26.0"
     babel-runtime "^6.26.0"
@@ -3195,10 +3188,11 @@ gatsby-cli@^1.1.33:
     yargs "^8.0.2"
     yurnalist "^0.2.1"
 
-gatsby-link@^1.6.35:
-  version "1.6.35"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.35.tgz#28ade7aa44460d0a3102d45e4f7413ff7a633e47"
+gatsby-link@^1.6.36:
+  version "1.6.36"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.36.tgz#3f969d38e9396e2650d3804543c76881eab98feb"
   dependencies:
+    "@types/history" "^4.6.2"
     "@types/react-router-dom" "^4.2.2"
     babel-runtime "^6.26.0"
     prop-types "^15.5.8"
@@ -3248,9 +3242,9 @@ gatsby-react-router-scroll@^1.0.9:
     scroll-behavior "^0.9.1"
     warning "^3.0.0"
 
-gatsby@^1.9.175:
-  version "1.9.175"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.175.tgz#a0e1f9a66202f5821abfc1fdbcf3673c3dfa5b4c"
+gatsby@^1.9.178:
+  version "1.9.178"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.178.tgz#56601badc81d527fef7a6d25d87e9d7ff44e52e9"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -3290,8 +3284,8 @@ gatsby@^1.9.175:
     front-matter "^2.1.0"
     fs-extra "^4.0.1"
     gatsby-1-config-css-modules "^1.0.8"
-    gatsby-cli "^1.1.33"
-    gatsby-link "^1.6.35"
+    gatsby-cli "^1.1.34"
+    gatsby-link "^1.6.36"
     gatsby-module-loader "^1.0.9"
     gatsby-react-router-scroll "^1.0.9"
     glob "^7.1.1"
@@ -3800,8 +3794,8 @@ http-errors@1.6.2, http-errors@^1.3.0, http-errors@~1.6.2:
     statuses ">= 1.3.1 < 2"
 
 http-parser-js@>=0.4.0:
-  version "0.4.9"
-  resolved "https://registry.yarnpkg.com/http-parser-js/-/http-parser-js-0.4.9.tgz#ea1a04fb64adff0242e9974f297dd4c3cad271e1"
+  version "0.4.10"
+  resolved "https://registry.yarnpkg.com/http-parser-js/-/http-parser-js-0.4.10.tgz#92c9c1374c35085f75db359ec56cc257cbb93fa4"
 
 http-proxy-middleware@~0.17.1:
   version "0.17.4"
@@ -4238,8 +4232,8 @@ isemail@2.x.x:
   resolved "https://registry.yarnpkg.com/isemail/-/isemail-2.2.1.tgz#0353d3d9a62951080c262c2aa0a42b8ea8e9e2a6"
 
 isemail@3.x.x:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/isemail/-/isemail-3.1.0.tgz#d15156d67529d48241bc0e644df28281e21dd458"
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/isemail/-/isemail-3.1.1.tgz#e8450fe78ff1b48347db599122adcd0668bd92b5"
   dependencies:
     punycode "2.x.x"
 
@@ -4561,8 +4555,8 @@ locate-path@^2.0.0:
     path-exists "^3.0.0"
 
 lodash-es@^4.2.1:
-  version "4.17.4"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.4.tgz#dcc1d7552e150a0640073ba9cb31d70f032950e7"
+  version "4.17.5"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.5.tgz#9fc6e737b1c4d151d8f9cae2247305d552ce748f"
 
 lodash-id@^0.14.0:
   version "0.14.0"
@@ -4621,8 +4615,8 @@ lodash.memoize@^4.1.2:
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
 
 lodash.merge@^4.4.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.0.tgz#69884ba144ac33fe699737a6086deffadd0f89c5"
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
 
 lodash.pad@^4.1.0:
   version "4.5.1"
@@ -4686,8 +4680,8 @@ lodash@3.10.1:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
 lodash@4, lodash@^4.0.0, lodash@^4.1.0, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.16.2, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
-  version "4.17.4"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+  version "4.17.5"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
 lodash@4.11.1:
   version "4.11.1"
@@ -4938,8 +4932,8 @@ mime@^1.3.6, mime@^1.5.0:
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
 
 mimic-fn@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.1.0.tgz#e667783d92e89dbd342818b5230b9d62a672ad18"
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
 
 min-document@^2.19.0:
   version "2.19.0"
@@ -4979,16 +4973,15 @@ minimist@~0.0.1:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
 
-mishmash@^0.5.4:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/mishmash/-/mishmash-0.5.4.tgz#595e0e4427bacafb73a4bf8010b50aaa5e29c256"
+mishmash@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/mishmash/-/mishmash-0.6.0.tgz#88b994a844ef9c45e22a980dab6a0444d46f23b8"
   dependencies:
     "@types/react" "^16.0.36"
-    "@types/recompose" "^0.24.4"
     element-resize-detector "^1.1.13"
     keys-to-object "^0.2.0"
     lodash.throttle "^4.1.1"
-    recompose "^0.26.0"
+    prop-types "^15.6.0"
     style-transform "^0.1.9"
 
 mitt@^1.1.2:
@@ -5070,12 +5063,16 @@ node-eta@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/node-eta/-/node-eta-0.9.0.tgz#9fb0b099bcd2a021940e603c64254dc003d9a7a8"
 
-node-fetch@^1.0.1, node-fetch@^1.7.3:
+node-fetch@^1.0.1:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
+
+node-fetch@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.0.0.tgz#982bba43ecd4f2922a29cc186a6bbb0bb73fcba6"
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -5261,8 +5258,8 @@ object-copy@^0.1.0:
     kind-of "^3.0.3"
 
 object-path-immutable@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/object-path-immutable/-/object-path-immutable-0.5.2.tgz#fb7041de26598db99aacccbc1a9c03fd1187269e"
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/object-path-immutable/-/object-path-immutable-0.5.3.tgz#57a874bdfa98147907ea1b9b0c570940a0f45ae0"
 
 object-path@^0.11.2:
   version "0.11.4"
@@ -6155,8 +6152,8 @@ postcss@^5.0.0, postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.
     supports-color "^3.2.3"
 
 postcss@^6.0.1:
-  version "6.0.16"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.16.tgz#112e2fe2a6d2109be0957687243170ea5589e146"
+  version "6.0.17"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.17.tgz#e259a051ca513f81e9afd0c21f7f82eda50c65c5"
   dependencies:
     chalk "^2.3.0"
     source-map "^0.6.1"

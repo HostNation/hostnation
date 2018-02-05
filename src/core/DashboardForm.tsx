@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { branch, compose, renderComponent, withStateHandlers } from 'recompose';
-import { Div, Txt } from 'elmnt';
-import { Hover } from 'mishmash';
+import { Div } from 'elmnt';
+import { branch, compose, enclose, render } from 'mishmash';
 import { Redirect } from 'react-router-dom';
 import { createForm, Spinner } from 'common-client';
 
-import styles, { colors } from '../core/styles';
+import Button from '../core/Button';
 import createBlock from '../core/createBlock';
+import { colors } from '../core/styles';
 
 const FormBar = ({ valid, button, submit }: any) => (
   <Div
@@ -16,9 +16,10 @@ const FormBar = ({ valid, button, submit }: any) => (
     }}
   >
     {valid && (
-      <Hover
+      <Button
+        onClick={submit}
+        color="purple"
         style={{
-          ...styles.button('purple'),
           fontSize: 22,
           padding: '10px 20px',
           display: 'inline-block',
@@ -26,24 +27,26 @@ const FormBar = ({ valid, button, submit }: any) => (
           margin: '0 20px 0 0',
         }}
       >
-        <Txt onClick={submit}>{button || 'Save'}</Txt>
-      </Hover>
+        {button || 'Save'}
+      </Button>
     )}
   </Div>
 );
 
 export default branch(
-  ({ redirect }: any) => redirect,
+  ({ redirect }) => redirect,
   compose(
-    withStateHandlers(
+    enclose(
+      ({ setState }) => (props, state) => ({
+        ...props,
+        ...state,
+        onSubmit: values => setState({ values }),
+      }),
       { values: null },
-      { onSubmit: () => values => ({ values }) },
     ),
     branch(
-      ({ values }: any) => values,
-      renderComponent(({ redirect, values }: any) => (
-        <Redirect to={redirect(values)} />
-      )),
+      ({ values }) => values,
+      render(({ redirect, values }) => <Redirect to={redirect(values)} />),
     ),
   ),
 )(

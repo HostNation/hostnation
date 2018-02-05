@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
-import { compose } from 'recompose';
-import { Hover } from 'mishmash';
+import { compose, withHover } from 'mishmash';
 import { Div, Mark, Txt } from 'elmnt';
 import { encodeId } from 'common';
 import {
@@ -28,30 +27,28 @@ const duration = (date?: Date) =>
     '\xa0',
   );
 
-const MarkLink = ({ to, text }) => (
-  <Link to={to}>
-    <Hover
+const MarkLink = withHover<any>(({ to, text, isHovered, hoverProps }) => (
+  <Link to={to} route>
+    <div
+      {...hoverProps}
       style={{
         padding: 15,
-        background: colors.purple,
-        hover: { background: colors.purpleDark },
+        background: isHovered ? colors.purpleDark : colors.purple,
       }}
     >
-      <div>
-        <Mark
-          style={{
-            ...styles.markdown,
-            fontSize: 16,
-            color: 'white',
-            heading: { fontSize: 30 },
-          }}
-        >
-          {text}
-        </Mark>
-      </div>
-    </Hover>
+      <Mark
+        style={{
+          ...styles.markdown,
+          fontSize: 16,
+          color: 'white',
+          heading: { fontSize: 30 },
+        }}
+      >
+        {text}
+      </Mark>
+    </div>
   </Link>
-);
+));
 
 const BefriendersLinksRoute = ({
   path,
@@ -359,25 +356,23 @@ const Content = routerPure(() => (
   </div>
 ));
 
-const Dashboard = compose<any, any>(auth, withRouter('dashboard'))(
-  ({ breadcrumbs }) => (
-    <Div style={{ spacing: 15 }}>
-      <Breadcrumbs
-        breadcrumbs={breadcrumbs}
-        style={{
-          ...styles.base,
-          fontWeight: 'bold',
-          fontStyle: 'italic',
-          link: {
-            color: colors.purple,
-            hover: { color: colors.purpleDark },
-          },
-        }}
-      />
-      <Content />
-    </Div>
-  ),
-);
+const Dashboard = compose(auth, withRouter('dashboard'))(({ breadcrumbs }) => (
+  <Div style={{ spacing: 15 }}>
+    <Breadcrumbs
+      breadcrumbs={breadcrumbs}
+      style={{
+        ...styles.base,
+        fontWeight: 'bold',
+        fontStyle: 'italic',
+        link: {
+          color: colors.purple,
+          hover: { color: colors.purpleDark },
+        },
+      }}
+    />
+    <Content />
+  </Div>
+));
 
 export default () => (
   <>

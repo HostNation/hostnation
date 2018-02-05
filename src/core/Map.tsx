@@ -2,12 +2,12 @@ import * as React from 'react';
 import {
   branch,
   compose,
-  renderComponent,
-  withHandlers,
-  withProps,
-  withState,
-} from 'recompose';
-import { Hover, renderLayer } from 'mishmash';
+  enclose,
+  map,
+  render,
+  withHover,
+  Wrap,
+} from 'mishmash';
 import { Div, Txt } from 'elmnt';
 import { encodeId } from 'common';
 import { getData, Link, Spinner } from 'common-client';
@@ -40,11 +40,17 @@ const icons = {
     'https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1502-shape_star_4x.png&highlight=ff000000,01579B,ff000000&scale=2.0',
 };
 
-const MapMarker = compose<any, any>(
-  withHandlers({
-    onClick: ({ index, openInfo }: any) => () => openInfo(index),
-  }),
-)(({ position, icon, title, info, link, isOpen, closeInfo, onClick }) => (
+const MapMarker = ({
+  index,
+  position,
+  icon,
+  title,
+  info,
+  link,
+  isOpen,
+  openInfo,
+  closeInfo,
+}) => (
   <Marker
     position={position}
     icon={{
@@ -52,7 +58,7 @@ const MapMarker = compose<any, any>(
       scaledSize: new (window as any).google.maps.Size(30, 30),
       anchor: new (window as any).google.maps.Point(15, 15),
     }}
-    onClick={onClick}
+    onClick={() => openInfo(index)}
   >
     {isOpen && (
       <InfoWindow onCloseClick={closeInfo}>
@@ -88,18 +94,22 @@ const MapMarker = compose<any, any>(
               </tbody>
             </table>
             <div style={{ paddingTop: 15 }}>
-              <Link to={link}>
-                <Hover
-                  style={{
-                    ...styles.base,
-                    fontSize: 18,
-                    fontWeight: 'bold',
-                    color: colors.purple,
-                    hover: { color: colors.purpleDark },
-                  }}
-                >
-                  <Txt>View details</Txt>
-                </Hover>
+              <Link to={link} route>
+                <Wrap hoc={withHover}>
+                  {({ isHovered, hoverProps }) => (
+                    <Txt
+                      {...hoverProps}
+                      style={{
+                        ...styles.base,
+                        fontSize: 18,
+                        fontWeight: 'bold',
+                        color: isHovered ? colors.purpleDark : colors.purple,
+                      }}
+                    >
+                      View details
+                    </Txt>
+                  )}
+                </Wrap>
               </Link>
             </div>
           </Div>
@@ -107,7 +117,7 @@ const MapMarker = compose<any, any>(
       </InfoWindow>
     )}
   </Marker>
-));
+);
 
 export default compose(
   getData(
@@ -141,12 +151,12 @@ export default compose(
     },
   ),
   branch(
-    ({ data }: any) => !data,
-    renderComponent(() => <Spinner style={{ color: colors.purple }} />),
+    ({ data }) => !data,
+    render(() => <Spinner style={{ color: colors.purple }} />),
   ),
-  renderLayer(({ children }) => (
+  render(({ next }) => (
     <Div style={{ layout: 'stack', spacing: 30 }}>
-      {children}
+      {next()}
       <Div style={{ layout: 'stack', spacing: 5 }}>
         <Div style={{ layout: 'bar', spacing: 5 }}>
           <img src={icons.redQuestionLight} style={{ height: 20 }} />
@@ -189,7 +199,8 @@ export default compose(
       </Div>
     </Div>
   )),
-  withProps(({ data: { befrienders, refugees } }: any) => ({
+  map(({ data: { befrienders, refugees }, ...props }) => ({
+    ...props,
     markers: [
       ...befrienders.map(
         ({
@@ -236,15 +247,19 @@ export default compose(
     loadingElement: <Spinner style={{ color: colors.purple }} />,
     mapElement: <div style={{ height: '100%' }} />,
   })),
-  withScriptjs,
+  withScriptjs as any,
   withGoogleMap,
-  withState('openIndex', 'setOpenIndex', -1),
-  withHandlers({
-    openInfo: ({ openIndex, setOpenIndex }: any) => index =>
-      index !== openIndex && setOpenIndex(index),
-    closeInfo: ({ setOpenIndex }: any) => () => setOpenIndex(-1),
-  }),
-)(({ markers, openIndex, openInfo, closeInfo }: any) => (
+  enclose(
+    ({ setState }) => (props, state) => ({
+      ...props,
+      ...state,
+      openInfo: index =>
+        index !== props.openIndex && setState({ openIndex: index }),
+      closeInfo: () => setState({ openIndex: -1 }),
+    }),
+    { openIndex: -1 },
+  ),
+)(({ markers, openIndex, openInfo, closeInfo }) => (
   <GoogleMap
     defaultZoom={10}
     defaultCenter={{ lat: 51.507614, lng: -0.127771 }}

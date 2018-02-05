@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { branch, compose, renderComponent, renderNothing } from 'recompose';
-import { Mark, Txt } from 'elmnt';
-import { combineState, cssGroups, mapStyle } from 'mishmash';
+import { branch, compose, enclose, map, render, restyle } from 'mishmash';
+import { css, Mark, Txt } from 'elmnt';
 import { createBlock } from 'common-client';
 import { root } from 'common';
 import * as debounce from 'lodash.debounce';
@@ -25,11 +24,11 @@ export default (color: 'yellow' | 'purple', admin: boolean = false) => {
   return createBlock(
     ['title', 'info'],
     branch(
-      ({ fields }: any) => !fields,
+      ({ fields }) => !fields,
       compose(
         branch(
-          ({ title }: any) => title,
-          renderComponent(({ title }: any) => (
+          ({ title }) => title,
+          render(({ title }) => (
             <Txt
               style={{
                 ...styles.header,
@@ -43,14 +42,14 @@ export default (color: 'yellow' | 'purple', admin: boolean = false) => {
           )),
         ),
         branch(
-          ({ info }: any) => info,
-          renderComponent(({ info }: any) => (
+          ({ info }) => info,
+          render(({ info }) => (
             <Mark style={{ ...styles.markdown(color), fontSize: 16 }}>
               {info}
             </Mark>
           )),
         ),
-        renderNothing,
+        render(),
       ),
     ),
     {
@@ -62,10 +61,10 @@ export default (color: 'yellow' | 'purple', admin: boolean = false) => {
       column: { fontSize: 14, fontWeight: 'bold', fontStyle: 'italic' },
     },
     admin,
-    compose<any, any>(
+    compose(
       branch(
-        ({ getAddress }: any) => getAddress !== undefined,
-        combineState(({ initialProps: { field }, onUnmount }) => {
+        ({ getAddress }) => getAddress !== undefined,
+        enclose(({ initialProps: { field }, onProps }) => {
           let unsubscribes = [] as (() => void)[];
           let first = true;
           const updateAddress = debounce(address => {
@@ -96,15 +95,15 @@ export default (color: 'yellow' | 'purple', admin: boolean = false) => {
               }
             },
           ) as any);
-          onUnmount(() => unsubscribes.forEach(u => u()));
+          onProps(props => !props && unsubscribes.forEach(u => u()));
           return props => props;
         }),
       ),
       branch(
-        ({ mapAddress }: any) => mapAddress,
+        ({ mapAddress }) => mapAddress,
         compose(
-          mapStyle([['filter', ...cssGroups.text]]),
-          renderComponent(({ value, style }: any) => (
+          map(restyle([['filter', ...css.groups.text]])),
+          render(({ value, style }) => (
             <Txt style={style}>
               {value === null ? 'No' : value === true ? 'Checking...' : 'Yes'}
             </Txt>

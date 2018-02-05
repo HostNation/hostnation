@@ -1,8 +1,6 @@
 import * as React from 'react';
-import Link from 'gatsby-link';
 import { Div, Icon, Txt } from 'elmnt';
-import { Hover, withSize } from 'mishmash';
-import { lifecycle } from 'recompose';
+import { enclose, withHover, withSize, Wrap } from 'mishmash';
 import Helmet from 'react-helmet';
 
 import * as logoWide from '../img/logo-wide.png';
@@ -28,6 +26,7 @@ import * as doIt from '../img/links/do-it.jpg';
 import * as refugeeCouncil from '../img/links/refugee-council.png';
 import * as refugeesAtHome from '../img/links/refugees-at-home.png';
 
+import Button from '../core/Button';
 import styles, { colors, icons } from '../core/styles';
 
 const photos = [
@@ -46,138 +45,76 @@ const testimonialStyle = color => ({
   fontWeight: 'normal' as 'normal',
   color: colors[color],
 });
-const linkStyle = {
-  background: 'white',
+const linkStyle = hover => ({
+  background: hover ? '#eee' : 'white',
   maxWidth: 500,
   padding: 10,
   margin: '0 auto',
   spacing: 15,
-  hover: { background: '#eee' },
-};
+});
 
-const Header = withSize(
+const headerSize = withSize(
   'small',
-  'setBoundsElem',
-  ({ width } = { width: 1000 }) => width <= 700,
-)(({ small, setBoundsElem }) => (
-  <div ref={setBoundsElem}>
-    <Div
-      style={{
-        layout: small ? 'stack' : 'bar',
-        width: '100%',
-        spacing: small ? 30 : 50,
-      }}
-    >
-      <div>
-        <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
-      </div>
-      <Div style={{ width: 250, spacing: 10, margin: '0 auto' }}>
-        <Link
-          to="/befriend"
-          style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
-        >
-          <Hover
-            style={{ ...styles.button('yellow'), fontSize: 20, padding: 10 }}
-          >
-            <Txt>BEFRIEND A REFUGEE</Txt>
-          </Hover>
-        </Link>
-        <Link
-          to="/refer"
-          style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
-        >
-          <Hover
-            style={{ ...styles.button('purple'), fontSize: 20, padding: 10 }}
-          >
-            <Txt>REFER A REFUGEE</Txt>
-          </Hover>
-        </Link>
-      </Div>
-    </Div>
-  </div>
-));
+  'setSizeElem',
+  ({ width = 1000 }) => width <= 700,
+);
 
-const Testimonials = withSize(
+const testimonialsSize = withSize(
   'small',
-  'setBoundsElem',
-  ({ width } = { width: 0 }) => width <= 500,
-)(({ small, setBoundsElem }) => (
-  <div ref={setBoundsElem}>
-    <Div
-      style={{
-        layout: small ? 'stack' : 'bar',
-        spacing: small && 40,
-        width: '100%',
-        verticalAlign: 'top',
-      }}
-    >
-      <Div
-        style={{
-          spacing: 25,
-          maxWidth: 350,
-          margin: '0 auto',
-          ...(small ? {} : { width: '50%', paddingRight: 40 }),
-        }}
-      >
-        <Txt style={styles.subtitle}>Befrienders</Txt>
-        <Txt style={testimonialStyle('yellow')}>
-          “He’s not an asylum seeker anymore, he’s Sanjal and he’s got a place
-          in our heart”
-        </Txt>
-        <Txt style={testimonialStyle('yellow')}>
-          “We do lots together but more than anything we have long, long talks.
-          We will always keep in touch”
-        </Txt>
-        <Txt style={testimonialStyle('yellow')}>
-          “Each thing we do together feels like a small step to letting her know
-          she’s welcomed and loved. It has been a privilege to help”
-        </Txt>
-        <Txt style={testimonialStyle('yellow')}>
-          “She’s so appreciative of everything and just needs some TLC”
-        </Txt>
-      </Div>
-      <Div
-        style={{
-          spacing: 25,
-          maxWidth: 350,
-          margin: '0 auto',
-          ...(small ? {} : { width: '50%', paddingLeft: 40 }),
-        }}
-      >
-        <Txt style={styles.subtitle}>Refugees</Txt>
-        <Txt style={testimonialStyle('purple')}>
-          “Through Mary I have had the best time of my life in England. She made
-          me realise I wasn't all by myself”
-        </Txt>
-        <Txt style={testimonialStyle('purple')}>
-          “He is the kindest person I have ever met”
-        </Txt>
-        <Txt style={testimonialStyle('purple')}>
-          “When I am with her I feel a deep peace and happiness without negative
-          thoughts or anxiety”
-        </Txt>
-        <Txt style={testimonialStyle('purple')}>
-          “It is such a wonderful thing to meet people who will welcome us into
-          their life”
-        </Txt>
-      </Div>
-    </Div>
-  </div>
-));
+  'setSizeElem',
+  ({ width = 0 }) => width <= 500,
+);
 
-export default lifecycle({
-  componentDidMount() {
-    this.setState({
-      photo: photos[Math.floor(Math.random() * photos.length)],
-    });
+export default enclose(
+  ({ setState }) => {
+    setTimeout(() =>
+      setState({ photo: photos[Math.floor(Math.random() * photos.length)] }),
+    );
+    return (props, state) => ({ ...props, ...state });
   },
-})(({ photo }: any) => (
+  { photo: null },
+)(({ photo }: any) => (
   <>
     <Helmet>
       <title>HostNation</title>
     </Helmet>
     <Div style={{ spacing: 50, padding: '50px 0' }}>
-      <Header />
+      <Wrap hoc={headerSize}>
+        {({ small, setSizeElem }) => (
+          <div ref={setSizeElem}>
+            <Div
+              style={{
+                layout: small ? 'stack' : 'bar',
+                width: '100%',
+                spacing: small ? 30 : 50,
+              }}
+            >
+              <div>
+                <img
+                  src={logoWide}
+                  style={{ maxWidth: 600, margin: '0 auto' }}
+                />
+              </div>
+              <Div style={{ width: 250, spacing: 10, margin: '0 auto' }}>
+                <Button
+                  to="/befriend"
+                  color="yellow"
+                  style={{ fontSize: 20, padding: 10 }}
+                >
+                  BEFRIEND A REFUGEE
+                </Button>
+                <Button
+                  to="/refer"
+                  color="purple"
+                  style={{ fontSize: 20, padding: 10 }}
+                >
+                  REFER A REFUGEE
+                </Button>
+              </Div>
+            </Div>
+          </div>
+        )}
+      </Wrap>
       <Div style={{ spacing: 10 }}>
         <Txt style={{ ...styles.text, fontSize: 24, fontWeight: 'bold' }}>
           HostNation believes every refugee deserves a friend.
@@ -201,15 +138,13 @@ export default lifecycle({
           If you like what we’re trying to do, but are not in London or don’t
           have the time to befriend, then please consider donating.
         </Txt>
-        <a
-          href="https://mydonate.bt.com/charities/hostnation"
-          target="_blank"
-          style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
+        <Button
+          to="https://mydonate.bt.com/charities/hostnation"
+          color="yellow"
+          style={{ margin: '0 auto' }}
         >
-          <Hover style={{ ...styles.button('yellow'), margin: '0 auto' }}>
-            <Txt>DONATE HERE</Txt>
-          </Hover>
-        </a>
+          DONATE HERE
+        </Button>
       </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <Div style={{ spacing: 25 }}>
@@ -221,15 +156,14 @@ export default lifecycle({
         </Txt>
         <Div style={{ spacing: 15 }}>
           <img src={guideIcon} style={{ width: 100, margin: '0 auto' }} />
-          <Link
+          <Button
             to="/guide.pdf"
-            target="_blank"
-            style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
+            newTab
+            color="black"
+            style={{ margin: '0 auto' }}
           >
-            <Hover style={{ ...styles.button('black'), margin: '0 auto' }}>
-              <Txt>READ THE GUIDE</Txt>
-            </Hover>
-          </Link>
+            READ THE GUIDE
+          </Button>
         </Div>
       </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -247,7 +181,73 @@ export default lifecycle({
             Read what recent friends have said about their experiences.
           </Txt>
         </Div>
-        <Testimonials />
+        <Wrap hoc={testimonialsSize}>
+          {({ small, setSizeElem }) => (
+            <div ref={setSizeElem}>
+              <Div
+                style={{
+                  layout: small ? 'stack' : 'bar',
+                  spacing: small && 40,
+                  width: '100%',
+                  verticalAlign: 'top',
+                }}
+              >
+                <Div
+                  style={{
+                    spacing: 25,
+                    maxWidth: 350,
+                    margin: '0 auto',
+                    ...(small ? {} : { width: '50%', paddingRight: 40 }),
+                  }}
+                >
+                  <Txt style={styles.subtitle}>Befrienders</Txt>
+                  <Txt style={testimonialStyle('yellow')}>
+                    “He’s not an asylum seeker anymore, he’s Sanjal and he’s got
+                    a place in our heart”
+                  </Txt>
+                  <Txt style={testimonialStyle('yellow')}>
+                    “We do lots together but more than anything we have long,
+                    long talks. We will always keep in touch”
+                  </Txt>
+                  <Txt style={testimonialStyle('yellow')}>
+                    “Each thing we do together feels like a small step to
+                    letting her know she’s welcomed and loved. It has been a
+                    privilege to help”
+                  </Txt>
+                  <Txt style={testimonialStyle('yellow')}>
+                    “She’s so appreciative of everything and just needs some
+                    TLC”
+                  </Txt>
+                </Div>
+                <Div
+                  style={{
+                    spacing: 25,
+                    maxWidth: 350,
+                    margin: '0 auto',
+                    ...(small ? {} : { width: '50%', paddingLeft: 40 }),
+                  }}
+                >
+                  <Txt style={styles.subtitle}>Refugees</Txt>
+                  <Txt style={testimonialStyle('purple')}>
+                    “Through Mary I have had the best time of my life in
+                    England. She made me realise I wasn't all by myself”
+                  </Txt>
+                  <Txt style={testimonialStyle('purple')}>
+                    “He is the kindest person I have ever met”
+                  </Txt>
+                  <Txt style={testimonialStyle('purple')}>
+                    “When I am with her I feel a deep peace and happiness
+                    without negative thoughts or anxiety”
+                  </Txt>
+                  <Txt style={testimonialStyle('purple')}>
+                    “It is such a wonderful thing to meet people who will
+                    welcome us into their life”
+                  </Txt>
+                </Div>
+              </Div>
+            </div>
+          )}
+        </Wrap>
       </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <div style={{ position: 'relative', paddingBottom: '55%' }}>
@@ -268,15 +268,14 @@ export default lifecycle({
       <Div style={{ spacing: 25 }}>
         <Div style={{ spacing: 15 }}>
           <img src={newsIcon} style={{ width: 100, margin: '0 auto' }} />
-          <a
-            href="https://hostnationblog.wordpress.com"
-            target="_blank"
-            style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
+          <Button
+            to="https://hostnationblog.wordpress.com"
+            newTab
+            color="purple"
+            style={{ margin: '0 auto' }}
           >
-            <Hover style={{ ...styles.button('purple'), margin: '0 auto' }}>
-              <Txt>NEWS UPDATES</Txt>
-            </Hover>
-          </a>
+            NEWS UPDATES
+          </Button>
         </Div>
         <Txt style={styles.body}>For the latest news from HostNation.</Txt>
       </Div>
@@ -292,44 +291,38 @@ export default lifecycle({
           </Txt>
         </Div>
         <Div style={{ spacing: 20 }}>
-          <a href="https://do-it.org" target="_blank">
-            <Hover style={linkStyle}>
-              <Div>
-                <img src={doIt} style={{ width: 100, margin: '0 auto' }} />
-                <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
-                  for volunteering opportunities in your area
-                </Txt>
-              </Div>
-            </Hover>
-          </a>
-          <a href="http://www.refugeesathome.org" target="_blank">
-            <Hover style={linkStyle}>
-              <Div>
-                <img
-                  src={refugeesAtHome}
-                  style={{ width: 100, margin: '0 auto' }}
-                />
-                <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
-                  connecting those with a spare room to refugees and asylum
-                  seekers in need of accommodation
-                </Txt>
-              </Div>
-            </Hover>
-          </a>
-          <a href="https://www.refugeecouncil.org.uk/services" target="_blank">
-            <Hover style={linkStyle}>
-              <Div>
-                <img
-                  src={refugeeCouncil}
-                  style={{ width: 100, margin: '0 auto' }}
-                />
-                <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
-                  a searchable database linking refugees and asylum seekers to
-                  support services in Greater London
-                </Txt>
-              </Div>
-            </Hover>
-          </a>
+          {[
+            {
+              link: 'https://do-it.org',
+              img: doIt,
+              text: 'for volunteering opportunities in your area',
+            },
+            {
+              link: 'http://www.refugeesathome.org',
+              img: refugeesAtHome,
+              text:
+                'connecting those with a spare room to refugees and asylum seekers in need of accommodation',
+            },
+            {
+              link: 'https://www.refugeecouncil.org.uk/services',
+              img: refugeeCouncil,
+              text:
+                'a searchable database linking refugees and asylum seekers to support services in Greater London',
+            },
+          ].map(({ link, img, text }, i) => (
+            <Wrap hoc={withHover} key={i}>
+              {({ isHovered, hoverProps }) => (
+                <a href={link} target="_blank">
+                  <Div {...hoverProps} style={linkStyle(isHovered)}>
+                    <img src={img} style={{ width: 100, margin: '0 auto' }} />
+                    <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
+                      {text}
+                    </Txt>
+                  </Div>
+                </a>
+              )}
+            </Wrap>
+          ))}
         </Div>
       </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -344,40 +337,35 @@ export default lifecycle({
           <Txt style={styles.subtitle}>info@hostnation.org.uk</Txt>
         </Div>
         <Div style={{ layout: 'bar', spacing: 40, margin: '0 auto' }}>
-          <Hover
-            style={{
-              display: 'block',
-              padding: 12,
-              margin: -5,
-              background: colors.purple,
-              borderRadius: 100,
-              hover: { background: colors.purpleDark },
-            }}
-          >
-            <a href="https://www.facebook.com/HostNationUK" target="_blank">
-              <Icon
-                {...icons.fbThin}
-                style={{ color: 'white', fontSize: 24 }}
-              />
-            </a>
-          </Hover>
-          <Hover
-            style={{
-              display: 'block',
-              padding: 12,
-              margin: -5,
-              background: colors.purple,
-              borderRadius: 100,
-              hover: { background: colors.purpleDark },
-            }}
-          >
-            <a href="https://twitter.com/hostnationuk" target="_blank">
-              <Icon
-                {...icons.twitter}
-                style={{ color: 'white', fontSize: 24 }}
-              />
-            </a>
-          </Hover>
+          {[
+            {
+              link: 'https://www.facebook.com/HostNationUK',
+              icon: icons.fbThin,
+            },
+            {
+              link: 'https://twitter.com/hostnationuk',
+              icon: icons.twitter,
+            },
+          ].map(({ link, icon }, i) => (
+            <Wrap hoc={withHover} key={i}>
+              {({ isHovered, hoverProps }) => (
+                <a
+                  href={link}
+                  target="_blank"
+                  {...hoverProps}
+                  style={{
+                    display: 'block',
+                    padding: 12,
+                    margin: -5,
+                    background: isHovered ? colors.purpleDark : colors.purple,
+                    borderRadius: 100,
+                  }}
+                >
+                  <Icon {...icon} style={{ color: 'white', fontSize: 24 }} />
+                </a>
+              )}
+            </Wrap>
+          ))}
         </Div>
       </Div>
     </Div>

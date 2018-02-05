@@ -63,7 +63,7 @@ const Profile = ({ small, image, name, role, bio }) => (
 const Profiles = withSize(
   'small',
   'setBoundsElem',
-  ({ width } = { width: 0 }) => width <= 600,
+  ({ width = 0 }) => width <= 600,
 )(({ small, setBoundsElem }) => (
   <div ref={setBoundsElem}>
     <Div style={{ spacing: 40 }}>

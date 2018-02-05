@@ -1,13 +1,6 @@
 import * as React from 'react';
-import {
-  branch,
-  compose,
-  renderComponent,
-  withHandlers,
-  withState,
-} from 'recompose';
+import { branch, compose, enclose, render, withHover, Wrap } from 'mishmash';
 import { Div, Txt } from 'elmnt';
-import { Hover } from 'mishmash';
 import Helmet from 'react-helmet';
 
 import * as logoWide from '../img/logo-wide.png';
@@ -18,11 +11,18 @@ import Box from '../core/Box';
 import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
 
-const ReferForm = compose<any, any>(
-  withState('complete', 'setComplete', false),
+const ReferForm = compose(
+  enclose(
+    ({ setState }) => (props, state) => ({
+      ...props,
+      ...state,
+      onSubmit: () => setState({ complete: true }),
+    }),
+    { complete: false },
+  ),
   branch(
-    ({ complete }: any) => complete,
-    renderComponent(() => (
+    ({ complete }) => complete,
+    render(() => (
       <Txt
         style={{
           ...styles.base,
@@ -38,9 +38,6 @@ const ReferForm = compose<any, any>(
       </Txt>
     )),
   ),
-  withHandlers({
-    onSubmit: ({ setComplete }: any) => () => setComplete(true),
-  }),
 )(({ onSubmit }) => (
   <Forms.Purple
     objects={{
@@ -196,17 +193,21 @@ export default () => (
           ‘breaching confidentiality’).
         </Txt>
         <a href="/privacy-policy.pdf" target="_blank">
-          <Hover
-            style={{
-              ...styles.boxText,
-              color: colors.purple,
-              display: 'inline-block',
-              fontWeight: 'bold',
-              hover: { color: colors.purpleDark },
-            }}
-          >
-            <Txt>Read our full privacy policy here.</Txt>
-          </Hover>
+          <Wrap hoc={withHover}>
+            {({ isHovered, hoverProps }) => (
+              <Txt
+                {...hoverProps}
+                style={{
+                  ...styles.boxText,
+                  color: isHovered ? colors.purpleDark : colors.purple,
+                  display: 'inline-block',
+                  fontWeight: 'bold',
+                }}
+              >
+                Read our full privacy policy here.
+              </Txt>
+            )}
+          </Wrap>
         </a>
       </Box>
 

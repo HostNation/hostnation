@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Txt } from 'elmnt';
 import rgo, { resolvers } from 'rgo';
 import { root } from 'common';
-import { resetCSS, StickyFooter } from 'common-client';
+import { cssBase, StickyFooter } from 'common-client';
 import Helmet from 'react-helmet';
 
 import Menu from '../core/Menu';
@@ -46,7 +46,7 @@ export default ({ location, children }) => (
       />
       <style>
         {`
-        ${resetCSS}
+        ${cssBase}
         html {
           background: #f6f6f6;
         }

@@ -1,19 +1,13 @@
 import * as React from 'react';
-import {
-  branch,
-  compose,
-  renderComponent,
-  withHandlers,
-  withState,
-} from 'recompose';
-import { Hover, renderLayer } from 'mishmash';
+import { branch, compose, enclose, render } from 'mishmash';
 import { Div, Input, Txt } from 'elmnt';
 import { Spinner } from 'common-client';
 
+import Button from '../core/Button';
 import styles, { colors } from '../core/styles';
 
-export default compose<any, any>(
-  renderLayer(({ children }) => (
+export default compose(
+  render(({ next }) => (
     <div style={{ height: '100%' }}>
       <div
         style={{
@@ -23,7 +17,7 @@ export default compose<any, any>(
           position: 'relative',
         }}
       >
-        {children}
+        {next()}
         <div style={{ height: 80 }} />
       </div>
       <div style={{ height: 80, padding: '0 100px', position: 'relative' }}>
@@ -31,16 +25,22 @@ export default compose<any, any>(
       </div>
     </div>
   )),
-  withState(
-    'token',
-    'setToken',
-    typeof sessionStorage !== 'undefined' &&
-      sessionStorage.getItem('authToken'),
+  enclose(
+    ({ setState }) => (props, state) => ({
+      ...props,
+      ...state,
+      setToken: token => setState({ token }),
+    }),
+    {
+      token:
+        typeof sessionStorage !== 'undefined' &&
+        sessionStorage.getItem('authToken'),
+    },
   ),
   branch(
-    ({ token }: any) => !token,
+    ({ token }) => !token,
     compose(
-      renderLayer(({ children }) => (
+      render(({ next }) => (
         <Div style={{ padding: '100px 0', spacing: 40 }}>
           <Txt
             style={{
@@ -52,39 +52,58 @@ export default compose<any, any>(
           >
             HostNation
           </Txt>
-          {children}
+          {next()}
         </Div>
       )),
-      withState('processing', 'setProcessing', false),
-      branch(
-        ({ processing }: any) => processing,
-        renderComponent(() => <Spinner style={{ color: colors.purple }} />),
+      enclose(
+        ({ setState }) => (props, state) => ({
+          ...props,
+          ...state,
+          setProcessing: processing => setState({ processing }),
+        }),
+        { processing: false },
       ),
-      withState('password', 'setPassword', null),
-      withHandlers({
-        submit: ({ setToken, setProcessing, password }: any) => async () => {
-          if (password) {
-            setProcessing(true);
-            const token = await (await fetch(`${process.env.DATA_URL!}/auth`, {
-              method: 'POST',
-              headers: new Headers({ 'Content-Type': 'text/plain' }),
-              body: password,
-            })).text();
-            if (token) {
-              sessionStorage.setItem('authToken', token);
-              setToken(token);
-            } else {
-              setProcessing(false);
-            }
-          }
+      branch(
+        ({ processing }) => processing,
+        render(() => <Spinner style={{ color: colors.purple }} />),
+      ),
+      enclose(
+        ({ setState }) => {
+          const setPassword = password => setState({ password });
+          return ({ setToken, setProcessing, ...props }, { password }) => {
+            const submit = async () => {
+              if (password) {
+                setProcessing(true);
+                const token = await (await fetch(
+                  `${process.env.DATA_URL!}/auth`,
+                  {
+                    method: 'POST',
+                    headers: new Headers({ 'Content-Type': 'text/plain' }),
+                    body: password,
+                  },
+                )).text();
+                if (token) {
+                  sessionStorage.setItem('authToken', token);
+                  setToken(token);
+                } else {
+                  setProcessing(false);
+                }
+              }
+            };
+            return {
+              ...props,
+              password,
+              setPassword,
+              submit,
+              onKeyDown: event => {
+                if (event.keyCode === 13) submit();
+              },
+            };
+          };
         },
-      }),
-      withHandlers({
-        onKeyDown: ({ submit }: any) => event => {
-          if (event.keyCode === 13) submit();
-        },
-      }),
-      renderComponent(({ password, setPassword, submit, onKeyDown }: any) => (
+        { password: null },
+      ),
+      render(({ password, setPassword, submit, onKeyDown }) => (
         <Div
           onKeyDown={onKeyDown}
           style={{
@@ -102,16 +121,17 @@ export default compose<any, any>(
             placeholder="Password"
             style={styles.field('purple', true)}
           />
-          <Hover
+          <Button
+            onClick={submit}
+            color="purple"
             style={{
-              ...styles.button('purple'),
               fontSize: 16,
               padding: 11,
               width: 100,
             }}
           >
-            <Txt onClick={submit}>Log in</Txt>
-          </Hover>
+            Log in
+          </Button>
         </Div>
       )),
     ),
