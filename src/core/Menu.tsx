@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Div, Icon, Txt } from 'elmnt';
-import { compose, enclose, withHover, withSize, Wrap } from 'mishmash';
-import { Link } from 'common-client';
+import { compose, enclose, map, withHover, Wrap } from 'mishmash';
+import { Link, withWidth } from 'common-client';
 
 import styles, { colors, icons } from '../core/styles';
 
@@ -44,7 +44,8 @@ const MenuLink = withHover(
 );
 
 export default compose(
-  withSize('small', 'setBoundsElem', ({ width = 0 }) => width <= 800),
+  withWidth(800),
+  map(({ small = true, ...props }) => ({ small, ...props })),
   enclose(
     ({ setState }) => {
       const toggle = () => setState(({ isOpen }) => ({ isOpen: !isOpen }));
@@ -56,7 +57,7 @@ export default compose(
     },
     { isOpen: false },
   ),
-)(({ active, isOpen, toggle, setClosed, small, setBoundsElem }) => (
+)(({ active, isOpen, toggle, setClosed, small, setWidthElem }) => (
   <div
     style={{
       background: colors.black,
@@ -66,7 +67,7 @@ export default compose(
       width: '100%',
       zIndex: 1000,
     }}
-    ref={setBoundsElem}
+    ref={setWidthElem}
   >
     <Div>
       <Div

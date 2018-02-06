@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { branch, compose, enclose, map, render, restyle } from 'mishmash';
 import { css, Mark, Txt } from 'elmnt';
-import { createBlock } from 'common-client';
+import { createForm } from 'common-client';
 import { root } from 'common';
 import * as debounce from 'lodash.debounce';
 
@@ -20,8 +20,13 @@ const codeAddress = async (address: string) => {
   return result.geometry.location;
 };
 
-export default (color: 'yellow' | 'purple', admin: boolean = false) => {
-  return createBlock(
+export default (
+  container,
+  color: 'yellow' | 'purple',
+  admin: boolean = false,
+) =>
+  createForm(
+    container,
     ['title', 'info'],
     branch(
       ({ fields }) => !fields,
@@ -52,15 +57,6 @@ export default (color: 'yellow' | 'purple', admin: boolean = false) => {
         render(),
       ),
     ),
-    {
-      ...styles.field(color, admin),
-      ...(admin ? { fontSize: 15, padding: 7 } : {}),
-      question: { fontWeight: 'bold' },
-      required: { color: colors.red },
-      prompt: { fontSize: 13, fontStyle: 'italic', color: '#888' },
-      column: { fontSize: 14, fontWeight: 'bold', fontStyle: 'italic' },
-    },
-    admin,
     compose(
       branch(
         ({ getAddress }) => getAddress !== undefined,
@@ -111,5 +107,13 @@ export default (color: 'yellow' | 'purple', admin: boolean = false) => {
         ),
       ),
     ),
+    {
+      ...styles.field(color, admin),
+      ...(admin ? { fontSize: 15, padding: 7 } : {}),
+      question: { fontWeight: 'bold' },
+      required: { color: colors.red },
+      prompt: { fontSize: 13, fontStyle: 'italic', color: '#888' },
+      column: { fontSize: 14, fontWeight: 'bold', fontStyle: 'italic' },
+    },
+    admin,
   );
-};

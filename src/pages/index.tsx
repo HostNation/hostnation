@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Div, Icon, Txt } from 'elmnt';
-import { enclose, withHover, withSize, Wrap } from 'mishmash';
+import { enclose, withHover, Wrap } from 'mishmash';
 import Helmet from 'react-helmet';
+import { withWidth } from 'common-client';
 
 import * as logoWide from '../img/logo-wide.png';
 
@@ -53,18 +54,6 @@ const linkStyle = hover => ({
   spacing: 15,
 });
 
-const headerSize = withSize(
-  'small',
-  'setSizeElem',
-  ({ width = 1000 }) => width <= 700,
-);
-
-const testimonialsSize = withSize(
-  'small',
-  'setSizeElem',
-  ({ width = 0 }) => width <= 500,
-);
-
 export default enclose(
   ({ setState }) => {
     setTimeout(() =>
@@ -79,9 +68,9 @@ export default enclose(
       <title>HostNation</title>
     </Helmet>
     <Div style={{ spacing: 50, padding: '50px 0' }}>
-      <Wrap hoc={headerSize}>
-        {({ small, setSizeElem }) => (
-          <div ref={setSizeElem}>
+      <Wrap hoc={withWidth(700)}>
+        {({ small = false, setWidthElem }) => (
+          <div ref={setWidthElem}>
             <Div
               style={{
                 layout: small ? 'stack' : 'bar',
@@ -181,13 +170,13 @@ export default enclose(
             Read what recent friends have said about their experiences.
           </Txt>
         </Div>
-        <Wrap hoc={testimonialsSize}>
-          {({ small, setSizeElem }) => (
-            <div ref={setSizeElem}>
+        <Wrap hoc={withWidth(500)}>
+          {({ small = true, setWidthElem }) => (
+            <div ref={setWidthElem}>
               <Div
                 style={{
                   layout: small ? 'stack' : 'bar',
-                  spacing: small && 40,
+                  spacing: small ? 40 : 0,
                   width: '100%',
                   verticalAlign: 'top',
                 }}

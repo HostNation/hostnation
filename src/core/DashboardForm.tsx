@@ -2,10 +2,10 @@ import * as React from 'react';
 import { Div } from 'elmnt';
 import { branch, compose, enclose, render } from 'mishmash';
 import { Redirect } from 'react-router-dom';
-import { createForm, Spinner } from 'common-client';
+import { Spinner } from 'common-client';
 
 import Button from '../core/Button';
-import createBlock from '../core/createBlock';
+import createForm from '../core/createForm';
 import { colors } from '../core/styles';
 
 const FormBar = ({ valid, button, submit }: any) => (
@@ -50,8 +50,8 @@ export default branch(
     ),
   ),
 )(
-  createForm<{ button?: string }>(
-    ({ HeightWrap, blocks, invalid, submit, button }) => (
+  createForm(
+    ({ setHeightElem, height, blocks, invalid, submit, button }) => (
       <div>
         <FormBar valid={blocks && !invalid} button={button} submit={submit} />
         <div
@@ -61,7 +61,10 @@ export default branch(
             padding: '40px 20px',
           }}
         >
-          <HeightWrap style={{ height: 60 }}>
+          <div
+            ref={setHeightElem}
+            style={{ position: 'relative', height, minHeight: 60 }}
+          >
             {blocks ? (
               <Div style={{ spacing: 20 }}>
                 {blocks.reduce(
@@ -96,11 +99,12 @@ export default branch(
                 }}
               />
             )}
-          </HeightWrap>
+          </div>
         </div>
         <FormBar valid={blocks && !invalid} button={button} submit={submit} />
       </div>
     ),
-    createBlock('purple', true),
+    'purple',
+    true,
   ),
 );

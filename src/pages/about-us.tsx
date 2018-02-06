@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Div, Txt } from 'elmnt';
-import { withSize } from 'mishmash';
 import Helmet from 'react-helmet';
+import { withWidth } from 'common-client';
 
 import * as logoWide from '../img/logo-wide.png';
 import * as phfLogo from '../img/phf-logo.jpg';
@@ -60,12 +60,8 @@ const Profile = ({ small, image, name, role, bio }) => (
   </Div>
 );
 
-const Profiles = withSize(
-  'small',
-  'setBoundsElem',
-  ({ width = 0 }) => width <= 600,
-)(({ small, setBoundsElem }) => (
-  <div ref={setBoundsElem}>
+const Profiles = withWidth(600)(({ small = true, setWidthElem }) => (
+  <div ref={setWidthElem}>
     <Div style={{ spacing: 40 }}>
       <Profile
         small={small}

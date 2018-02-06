@@ -19,7 +19,7 @@
     "common": "https://github.com/kalambo/common",
     "common-client": "https://github.com/kalambo/common-client",
     "elmnt": "^0.5.0",
-    "gatsby": "^1.9.178",
+    "gatsby": "^1.9.183",
     "gatsby-plugin-create-client-paths": "^1.0.4",
     "gatsby-plugin-react-helmet": "^2.0.4",
     "gatsby-plugin-react-next": "^1.0.8",

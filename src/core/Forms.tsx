@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Div, Icon, Txt } from 'elmnt';
-import { createForm, Spinner } from 'common-client';
+import { Spinner } from 'common-client';
 
 import Button from './Button';
-import createBlock from './createBlock';
+import createForm from './createForm';
 import styles, { colors, icons } from './styles';
 
 const errorStyle = {
@@ -14,7 +14,7 @@ const errorStyle = {
 };
 
 const buildForm = (color: 'yellow' | 'purple') =>
-  createForm<{ button?: string }>(
+  createForm(
     ({ blocks, attempted, submit, invalid, button }) => (
       <Div style={{ spacing: 50 }}>
         {blocks ? (
@@ -48,7 +48,7 @@ const buildForm = (color: 'yellow' | 'purple') =>
         )}
       </Div>
     ),
-    createBlock(color),
+    color,
   );
 
 export default {
