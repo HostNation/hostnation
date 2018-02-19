@@ -157,9 +157,7 @@ const Profiles = withWidth(600)(({ small = true, setWidthElem }) => (
 
 export default () => (
   <>
-    <Helmet>
-      <title>About Us | HostNation</title>
-    </Helmet>
+    <Helmet title="About Us | HostNation" />
     <Div style={{ spacing: 50, padding: '50px 0' }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ spacing: 20 }}>

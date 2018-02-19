@@ -20,7 +20,7 @@ root.rgo = rgo(
 
 export default ({ location, children }) => (
   <>
-    <Helmet>
+    <Helmet title="HostNation">
       <link
         rel="icon"
         type="image/png"

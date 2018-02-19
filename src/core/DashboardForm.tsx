@@ -36,14 +36,14 @@ const FormBar = ({ valid, button, submit }: any) => (
 export default branch(
   ({ redirect }) => redirect,
   compose(
-    enclose(
-      ({ setState }) => (props, state) => ({
+    enclose(({ setState }) => {
+      setState({ values: null });
+      return (props, state) => ({
         ...props,
         ...state,
         onSubmit: values => setState({ values }),
-      }),
-      { values: null },
-    ),
+      });
+    }),
     branch(
       ({ values }) => values,
       render(({ redirect, values }) => <Redirect to={redirect(values)} />),

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { branch, compose, enclose, render, withHover, Wrap } from 'mishmash';
+import { branch, compose, enclose, render, Use, withHover } from 'mishmash';
 import { Div, Txt } from 'elmnt';
 import Helmet from 'react-helmet';
 
@@ -12,14 +12,14 @@ import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
 
 const ReferForm = compose(
-  enclose(
-    ({ setState }) => (props, state) => ({
+  enclose(({ setState }) => {
+    setState({ complete: false });
+    return (props, state) => ({
       ...props,
       ...state,
       onSubmit: () => setState({ complete: true }),
-    }),
-    { complete: false },
-  ),
+    });
+  }),
   branch(
     ({ complete }) => complete,
     render(() => (
@@ -53,9 +53,7 @@ const ReferForm = compose(
 
 export default () => (
   <>
-    <Helmet>
-      <title>Refer | HostNation</title>
-    </Helmet>
+    <Helmet title="Refer | HostNation" />
     <Div style={{ spacing: 50, paddingTop: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
 
@@ -193,7 +191,7 @@ export default () => (
           ‘breaching confidentiality’).
         </Txt>
         <a href="/privacy-policy.pdf" target="_blank">
-          <Wrap hoc={withHover}>
+          <Use hoc={withHover}>
             {({ isHovered, hoverProps }) => (
               <Txt
                 {...hoverProps}
@@ -207,7 +205,7 @@ export default () => (
                 Read our full privacy policy here.
               </Txt>
             )}
-          </Wrap>
+          </Use>
         </a>
       </Box>
 

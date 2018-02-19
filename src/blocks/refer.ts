@@ -32,12 +32,12 @@ export default function(admin?: boolean) {
         : []),
       {
         text: 'Name',
-        bar: true,
         fields: [
           { field: 'refugee.firstname', placeholder: 'First' },
           { field: 'refugee.lastname', placeholder: 'Last' },
         ],
         optional: admin,
+        style: { layout: 'bar' },
       },
       {
         text: 'Date of birth',

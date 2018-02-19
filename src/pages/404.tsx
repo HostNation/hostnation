@@ -8,9 +8,7 @@ import styles from '../core/styles';
 
 export default () => (
   <Div style={{ spacing: 50, padding: '50px 0' }}>
-    <Helmet>
-      <title>Page Not Found | HostNation</title>
-    </Helmet>
+    <Helmet title="Page Not Found | HostNation" />
 
     <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
     <Txt style={{ ...styles.text, fontSize: 30, fontWeight: 'bold' }}>

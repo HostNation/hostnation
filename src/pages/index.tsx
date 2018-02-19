@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Div, Icon, Txt } from 'elmnt';
-import { enclose, withHover, Wrap } from 'mishmash';
+import { enclose, Use, withHover } from 'mishmash';
 import Helmet from 'react-helmet';
 import { withWidth } from 'common-client';
 
@@ -54,21 +54,17 @@ const linkStyle = hover => ({
   spacing: 15,
 });
 
-export default enclose(
-  ({ setState }) => {
-    setTimeout(() =>
-      setState({ photo: photos[Math.floor(Math.random() * photos.length)] }),
-    );
-    return (props, state) => ({ ...props, ...state });
-  },
-  { photo: null },
-)(({ photo }: any) => (
+export default enclose(({ setState }) => {
+  setState({ photo: null });
+  setTimeout(() =>
+    setState({ photo: photos[Math.floor(Math.random() * photos.length)] }),
+  );
+  return (props, state) => ({ ...props, ...state });
+})(({ photo }: any) => (
   <>
-    <Helmet>
-      <title>HostNation</title>
-    </Helmet>
+    <Helmet title="HostNation" />
     <Div style={{ spacing: 50, padding: '50px 0' }}>
-      <Wrap hoc={withWidth(700)}>
+      <Use hoc={withWidth(700)}>
         {({ small = false, setWidthElem }) => (
           <div ref={setWidthElem}>
             <Div
@@ -103,7 +99,7 @@ export default enclose(
             </Div>
           </div>
         )}
-      </Wrap>
+      </Use>
       <Div style={{ spacing: 10 }}>
         <Txt style={{ ...styles.text, fontSize: 24, fontWeight: 'bold' }}>
           HostNation believes every refugee deserves a friend.
@@ -170,7 +166,7 @@ export default enclose(
             Read what recent friends have said about their experiences.
           </Txt>
         </Div>
-        <Wrap hoc={withWidth(500)}>
+        <Use hoc={withWidth(500)}>
           {({ small = true, setWidthElem }) => (
             <div ref={setWidthElem}>
               <Div
@@ -236,7 +232,7 @@ export default enclose(
               </Div>
             </div>
           )}
-        </Wrap>
+        </Use>
       </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <div style={{ position: 'relative', paddingBottom: '55%' }}>
@@ -299,7 +295,7 @@ export default enclose(
                 'a searchable database linking refugees and asylum seekers to support services in Greater London',
             },
           ].map(({ link, img, text }, i) => (
-            <Wrap hoc={withHover} key={i}>
+            <Use hoc={withHover} key={i}>
               {({ isHovered, hoverProps }) => (
                 <a href={link} target="_blank">
                   <Div {...hoverProps} style={linkStyle(isHovered)}>
@@ -310,7 +306,7 @@ export default enclose(
                   </Div>
                 </a>
               )}
-            </Wrap>
+            </Use>
           ))}
         </Div>
       </Div>
@@ -336,7 +332,7 @@ export default enclose(
               icon: icons.twitter,
             },
           ].map(({ link, icon }, i) => (
-            <Wrap hoc={withHover} key={i}>
+            <Use hoc={withHover} key={i}>
               {({ isHovered, hoverProps }) => (
                 <a
                   href={link}
@@ -353,7 +349,7 @@ export default enclose(
                   <Icon {...icon} style={{ color: 'white', fontSize: 24 }} />
                 </a>
               )}
-            </Wrap>
+            </Use>
           ))}
         </Div>
       </Div>

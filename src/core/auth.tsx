@@ -7,7 +7,7 @@ import Button from '../core/Button';
 import styles, { colors } from '../core/styles';
 
 export default compose(
-  render(({ next }) => (
+  render(({ inner }) => (
     <div style={{ height: '100%' }}>
       <div
         style={{
@@ -17,7 +17,7 @@ export default compose(
           position: 'relative',
         }}
       >
-        {next()}
+        {inner()}
         <div style={{ height: 80 }} />
       </div>
       <div style={{ height: 80, padding: '0 100px', position: 'relative' }}>
@@ -25,22 +25,22 @@ export default compose(
       </div>
     </div>
   )),
-  enclose(
-    ({ setState }) => (props, state) => ({
-      ...props,
-      ...state,
-      setToken: token => setState({ token }),
-    }),
-    {
+  enclose(({ setState }) => {
+    setState({
       token:
         typeof sessionStorage !== 'undefined' &&
         sessionStorage.getItem('authToken'),
-    },
-  ),
+    });
+    return (props, state) => ({
+      ...props,
+      ...state,
+      setToken: token => setState({ token }),
+    });
+  }),
   branch(
     ({ token }) => !token,
     compose(
-      render(({ next }) => (
+      render(({ inner }) => (
         <Div style={{ padding: '100px 0', spacing: 40 }}>
           <Txt
             style={{
@@ -52,57 +52,55 @@ export default compose(
           >
             HostNation
           </Txt>
-          {next()}
+          {inner()}
         </Div>
       )),
-      enclose(
-        ({ setState }) => (props, state) => ({
+      enclose(({ setState }) => {
+        setState({ processing: false });
+        return (props, state) => ({
           ...props,
           ...state,
           setProcessing: processing => setState({ processing }),
-        }),
-        { processing: false },
-      ),
+        });
+      }),
       branch(
         ({ processing }) => processing,
         render(() => <Spinner style={{ color: colors.purple }} />),
       ),
-      enclose(
-        ({ setState }) => {
-          const setPassword = password => setState({ password });
-          return ({ setToken, setProcessing, ...props }, { password }) => {
-            const submit = async () => {
-              if (password) {
-                setProcessing(true);
-                const token = await (await fetch(
-                  `${process.env.DATA_URL!}/auth`,
-                  {
-                    method: 'POST',
-                    headers: new Headers({ 'Content-Type': 'text/plain' }),
-                    body: password,
-                  },
-                )).text();
-                if (token) {
-                  sessionStorage.setItem('authToken', token);
-                  setToken(token);
-                } else {
-                  setProcessing(false);
-                }
+      enclose(({ setState }) => {
+        setState({ password: null });
+        const setPassword = password => setState({ password });
+        return ({ setToken, setProcessing, ...props }, { password }) => {
+          const submit = async () => {
+            if (password) {
+              setProcessing(true);
+              const token = await (await fetch(
+                `${process.env.DATA_URL!}/auth`,
+                {
+                  method: 'POST',
+                  headers: new Headers({ 'Content-Type': 'text/plain' }),
+                  body: password,
+                },
+              )).text();
+              if (token) {
+                sessionStorage.setItem('authToken', token);
+                setToken(token);
+              } else {
+                setProcessing(false);
               }
-            };
-            return {
-              ...props,
-              password,
-              setPassword,
-              submit,
-              onKeyDown: event => {
-                if (event.keyCode === 13) submit();
-              },
-            };
+            }
           };
-        },
-        { password: null },
-      ),
+          return {
+            ...props,
+            password,
+            setPassword,
+            submit,
+            onKeyDown: event => {
+              if (event.keyCode === 13) submit();
+            },
+          };
+        };
+      }),
       render(({ password, setPassword, submit, onKeyDown }) => (
         <Div
           onKeyDown={onKeyDown}

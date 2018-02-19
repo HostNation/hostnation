@@ -5,8 +5,8 @@ import {
   enclose,
   map,
   render,
+  Use,
   withHover,
-  Wrap,
 } from 'mishmash';
 import { Div, Txt } from 'elmnt';
 import { encodeId } from 'common';
@@ -95,7 +95,7 @@ const MapMarker = ({
             </table>
             <div style={{ paddingTop: 15 }}>
               <Link to={link} route>
-                <Wrap hoc={withHover}>
+                <Use hoc={withHover}>
                   {({ isHovered, hoverProps }) => (
                     <Txt
                       {...hoverProps}
@@ -109,7 +109,7 @@ const MapMarker = ({
                       View details
                     </Txt>
                   )}
-                </Wrap>
+                </Use>
               </Link>
             </div>
           </Div>
@@ -154,9 +154,9 @@ export default compose(
     ({ data }) => !data,
     render(() => <Spinner style={{ color: colors.purple }} />),
   ),
-  render(({ next }) => (
+  render(({ inner }) => (
     <Div style={{ layout: 'stack', spacing: 30 }}>
-      {next()}
+      {inner()}
       <Div style={{ layout: 'stack', spacing: 5 }}>
         <Div style={{ layout: 'bar', spacing: 5 }}>
           <img src={icons.redQuestionLight} style={{ height: 20 }} />
@@ -249,16 +249,16 @@ export default compose(
   })),
   withScriptjs as any,
   withGoogleMap,
-  enclose(
-    ({ setState }) => (props, state) => ({
+  enclose(({ setState }) => {
+    setState({ openIndex: -1 });
+    return (props, state) => ({
       ...props,
       ...state,
       openInfo: index =>
         index !== props.openIndex && setState({ openIndex: index }),
       closeInfo: () => setState({ openIndex: -1 }),
-    }),
-    { openIndex: -1 },
-  ),
+    });
+  }),
 )(({ markers, openIndex, openInfo, closeInfo }) => (
   <GoogleMap
     defaultZoom={10}

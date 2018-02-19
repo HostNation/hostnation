@@ -39,12 +39,12 @@ export default function(admin?: boolean) {
         : []),
       {
         text: 'Name',
-        bar: true,
         fields: [
           { field: 'befriender.firstname', placeholder: 'First' },
           { field: 'befriender.lastname', placeholder: 'Last' },
         ],
         optional: admin,
+        style: { layout: 'bar' },
       },
       {
         text: 'Date of birth',

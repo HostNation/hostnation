@@ -1,22 +1,22 @@
 import * as React from 'react';
 import { Div, Icon, Txt } from 'elmnt';
-import { branch, enclose, withHover, Wrap } from 'mishmash';
+import { branch, enclose, Use, withHover } from 'mishmash';
 
 import styles, { colors, icons } from '../core/styles';
 
 export default branch(
   ({ toggle }) => toggle,
-  enclose(
-    ({ setState }) => (props, state) => ({
+  enclose(({ setState }) => {
+    setState({ isOpen: false });
+    return (props, state) => ({
       ...props,
       ...state,
       toggleIsOpen: () => setState(({ isOpen }) => ({ isOpen: !isOpen })),
-    }),
-    { isOpen: false },
-  ),
+    });
+  }),
 )(({ title, color = 'black', toggle, isOpen, toggleIsOpen, children }: any) => (
   <div>
-    <Wrap hoc={withHover}>
+    <Use hoc={withHover}>
       {({ isHovered, hoverProps }) => (
         <div
           onClick={toggleIsOpen}
@@ -45,7 +45,7 @@ export default branch(
           )}
         </div>
       )}
-    </Wrap>
+    </Use>
     <Div
       style={{
         display: !toggle || isOpen ? 'block' : 'none',

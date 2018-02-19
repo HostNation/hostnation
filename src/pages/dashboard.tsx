@@ -376,8 +376,7 @@ const Dashboard = compose(auth, withRouter('dashboard'))(({ breadcrumbs }) => (
 
 export default () => (
   <>
-    <Helmet title="HostNation">
-      <title>Dashboard | HostNation</title>
+    <Helmet title="Dashboard | HostNation">
       <style>{`
       html {
         background: white !important;

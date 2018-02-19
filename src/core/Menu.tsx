@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Div, Icon, Txt } from 'elmnt';
-import { compose, enclose, map, withHover, Wrap } from 'mishmash';
+import { compose, enclose, map, Use, withHover } from 'mishmash';
 import { Link, withWidth } from 'common-client';
 
 import styles, { colors, icons } from '../core/styles';
@@ -46,17 +46,15 @@ const MenuLink = withHover(
 export default compose(
   withWidth(800),
   map(({ small = true, ...props }) => ({ small, ...props })),
-  enclose(
-    ({ setState }) => {
-      const toggle = () => setState(({ isOpen }) => ({ isOpen: !isOpen }));
-      const setClosed = () => setState({ isOpen: false });
-      return (props, state) => {
-        if (state.isOpen && !props.small) setTimeout(setClosed);
-        return { ...props, ...state, toggle, setClosed };
-      };
-    },
-    { isOpen: false },
-  ),
+  enclose(({ setState }) => {
+    setState({ isOpen: false });
+    const toggle = () => setState(({ isOpen }) => ({ isOpen: !isOpen }));
+    const setClosed = () => setState({ isOpen: false });
+    return (props, state) => {
+      if (state.isOpen && !props.small) setTimeout(setClosed);
+      return { ...props, ...state, toggle, setClosed };
+    };
+  }),
 )(({ active, isOpen, toggle, setClosed, small, setWidthElem }) => (
   <div
     style={{
@@ -85,7 +83,7 @@ export default compose(
             onClick={setClosed}
             style={{ display: 'block', padding: 5, margin: -5 }}
           >
-            <Wrap hoc={withHover}>
+            <Use hoc={withHover}>
               {({ isHovered, hoverProps }) => (
                 <Txt
                   {...hoverProps}
@@ -98,14 +96,14 @@ export default compose(
                   HostNation
                 </Txt>
               )}
-            </Wrap>
+            </Use>
           </Link>
           <a
             href="https://www.facebook.com/HostNationUK"
             target="_blank"
             style={{ display: 'block', padding: 5, margin: -5 }}
           >
-            <Wrap hoc={withHover}>
+            <Use hoc={withHover}>
               {({ isHovered, hoverProps }) => (
                 <Icon
                   {...icons.fb}
@@ -118,14 +116,14 @@ export default compose(
                   }}
                 />
               )}
-            </Wrap>
+            </Use>
           </a>
           <a
             href="https://twitter.com/hostnationuk"
             target="_blank"
             style={{ display: 'block' }}
           >
-            <Wrap hoc={withHover}>
+            <Use hoc={withHover}>
               {({ isHovered, hoverProps }) => (
                 <Icon
                   {...icons.twitter}
@@ -138,11 +136,11 @@ export default compose(
                   }}
                 />
               )}
-            </Wrap>
+            </Use>
           </a>
         </Div>
         {small ? (
-          <Wrap hoc={withHover}>
+          <Use hoc={withHover}>
             {({ isHovered, hoverProps }) => (
               <Div
                 onClick={toggle}
@@ -161,7 +159,7 @@ export default compose(
                 <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />
               </Div>
             )}
-          </Wrap>
+          </Use>
         ) : (
           <Div style={{ layout: 'bar', spacing: 30, float: 'right' }}>
             <MenuLink text="About Us" to="/about-us" active={active} />
