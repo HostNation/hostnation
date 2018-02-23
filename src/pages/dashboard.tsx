@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
-import { compose, withHover } from 'mishmash';
+import m, { watchHover } from 'mishmash';
 import { Div, Mark, Txt } from 'elmnt';
 import { encodeId } from 'common';
 import {
@@ -27,28 +27,30 @@ const duration = (date?: Date) =>
     '\xa0',
   );
 
-const MarkLink = withHover<any>(({ to, text, isHovered, hoverProps }) => (
-  <Link to={to} route>
-    <div
-      {...hoverProps}
-      style={{
-        padding: 15,
-        background: isHovered ? colors.purpleDark : colors.purple,
-      }}
-    >
-      <Mark
+const MarkLink = m().enhance(watchHover)(
+  ({ to, text, isHovered, hoverProps }) => (
+    <Link to={to} route>
+      <div
+        {...hoverProps}
         style={{
-          ...styles.markdown,
-          fontSize: 16,
-          color: 'white',
-          heading: { fontSize: 30 },
+          padding: 15,
+          background: isHovered ? colors.purpleDark : colors.purple,
         }}
       >
-        {text}
-      </Mark>
-    </div>
-  </Link>
-));
+        <Mark
+          style={{
+            ...styles.markdown,
+            fontSize: 16,
+            color: 'white',
+            heading: { fontSize: 30 },
+          }}
+        >
+          {text}
+        </Mark>
+      </div>
+    </Link>
+  ),
+);
 
 const BefriendersLinksRoute = ({
   path,
@@ -356,7 +358,9 @@ const Content = routerPure(() => (
   </div>
 ));
 
-const Dashboard = compose(auth, withRouter('dashboard'))(({ breadcrumbs }) => (
+const Dashboard = m()
+  .merge(auth)
+  .merge(withRouter('dashboard'))(({ breadcrumbs }) => (
   <Div style={{ spacing: 15 }}>
     <Breadcrumbs
       breadcrumbs={breadcrumbs}

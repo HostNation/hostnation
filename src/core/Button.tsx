@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { withHover } from 'mishmash';
+import m, { watchHover } from 'mishmash';
 import { Txt } from 'elmnt';
 import st from 'style-transform';
 import { Link } from 'common-client';
 
 import styles from './styles';
 
-export default withHover<any>(
+export default m().enhance(watchHover)(
   ({
     to,
     newTab,

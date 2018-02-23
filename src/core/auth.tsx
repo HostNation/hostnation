@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { branch, compose, enclose, render } from 'mishmash';
+import m from 'mishmash';
 import { Div, Input, Txt } from 'elmnt';
 import { Spinner } from 'common-client';
 
 import Button from '../core/Button';
 import styles, { colors } from '../core/styles';
 
-export default compose(
-  render(({ inner }) => (
+export default m()
+  .render(({ next }) => (
     <div style={{ height: '100%' }}>
       <div
         style={{
@@ -17,15 +17,15 @@ export default compose(
           position: 'relative',
         }}
       >
-        {inner()}
+        {next()}
         <div style={{ height: 80 }} />
       </div>
       <div style={{ height: 80, padding: '0 100px', position: 'relative' }}>
         <div style={{ borderTop: '4px solid #e0e0e0', paddingTop: 13 }} />
       </div>
     </div>
-  )),
-  enclose(({ setState }) => {
+  ))
+  .enhance(({ setState }) => {
     setState({
       token:
         typeof sessionStorage !== 'undefined' &&
@@ -36,11 +36,11 @@ export default compose(
       ...state,
       setToken: token => setState({ token }),
     });
-  }),
-  branch(
+  })
+  .branch(
     ({ token }) => !token,
-    compose(
-      render(({ inner }) => (
+    m()
+      .render(({ next }) => (
         <Div style={{ padding: '100px 0', spacing: 40 }}>
           <Txt
             style={{
@@ -52,22 +52,22 @@ export default compose(
           >
             HostNation
           </Txt>
-          {inner()}
+          {next()}
         </Div>
-      )),
-      enclose(({ setState }) => {
+      ))
+      .enhance(({ setState }) => {
         setState({ processing: false });
         return (props, state) => ({
           ...props,
           ...state,
           setProcessing: processing => setState({ processing }),
         });
-      }),
-      branch(
+      })
+      .branch(
         ({ processing }) => processing,
-        render(() => <Spinner style={{ color: colors.purple }} />),
-      ),
-      enclose(({ setState }) => {
+        m().render(() => <Spinner style={{ color: colors.purple }} />),
+      )
+      .enhance(({ setState }) => {
         setState({ password: null });
         const setPassword = password => setState({ password });
         return ({ setToken, setProcessing, ...props }, { password }) => {
@@ -100,8 +100,8 @@ export default compose(
             },
           };
         };
-      }),
-      render(({ password, setPassword, submit, onKeyDown }) => (
+      })
+      .render(({ password, setPassword, submit, onKeyDown }) => (
         <Div
           onKeyDown={onKeyDown}
           style={{
@@ -132,6 +132,4 @@ export default compose(
           </Button>
         </Div>
       )),
-    ),
-  ),
-);
+  );

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Div, Icon, Txt } from 'elmnt';
-import { compose, enclose, map, Use, withHover } from 'mishmash';
+import m, { watchHover } from 'mishmash';
 import { Link, withWidth } from 'common-client';
 
 import styles, { colors, icons } from '../core/styles';
@@ -12,7 +12,11 @@ const textStyle = active => ({
   fontWeight: 'normal' as 'normal',
 });
 
-const MenuLink = withHover(
+const Hover = m()
+  .enhance(watchHover)
+  .toComp();
+
+const MenuLink = m().enhance(watchHover)(
   ({ text, to, newTab, active, setClosed, isHovered, hoverProps }: any) => (
     <Link
       to={to}
@@ -43,10 +47,10 @@ const MenuLink = withHover(
   ),
 );
 
-export default compose(
-  withWidth(800),
-  map(({ small = true, ...props }) => ({ small, ...props })),
-  enclose(({ setState }) => {
+export default m()
+  .merge(withWidth(800))
+  .map(({ small = true, ...props }) => ({ small, ...props }))
+  .enhance(({ setState }) => {
     setState({ isOpen: false });
     const toggle = () => setState(({ isOpen }) => ({ isOpen: !isOpen }));
     const setClosed = () => setState({ isOpen: false });
@@ -54,8 +58,7 @@ export default compose(
       if (state.isOpen && !props.small) setTimeout(setClosed);
       return { ...props, ...state, toggle, setClosed };
     };
-  }),
-)(({ active, isOpen, toggle, setClosed, small, setWidthElem }) => (
+  })(({ active, isOpen, toggle, setClosed, small, setWidthElem }) => (
   <div
     style={{
       background: colors.black,
@@ -83,7 +86,7 @@ export default compose(
             onClick={setClosed}
             style={{ display: 'block', padding: 5, margin: -5 }}
           >
-            <Use hoc={withHover}>
+            <Hover>
               {({ isHovered, hoverProps }) => (
                 <Txt
                   {...hoverProps}
@@ -96,14 +99,14 @@ export default compose(
                   HostNation
                 </Txt>
               )}
-            </Use>
+            </Hover>
           </Link>
           <a
             href="https://www.facebook.com/HostNationUK"
             target="_blank"
             style={{ display: 'block', padding: 5, margin: -5 }}
           >
-            <Use hoc={withHover}>
+            <Hover>
               {({ isHovered, hoverProps }) => (
                 <Icon
                   {...icons.fb}
@@ -116,14 +119,14 @@ export default compose(
                   }}
                 />
               )}
-            </Use>
+            </Hover>
           </a>
           <a
             href="https://twitter.com/hostnationuk"
             target="_blank"
             style={{ display: 'block' }}
           >
-            <Use hoc={withHover}>
+            <Hover>
               {({ isHovered, hoverProps }) => (
                 <Icon
                   {...icons.twitter}
@@ -136,11 +139,11 @@ export default compose(
                   }}
                 />
               )}
-            </Use>
+            </Hover>
           </a>
         </Div>
         {small ? (
-          <Use hoc={withHover}>
+          <Hover>
             {({ isHovered, hoverProps }) => (
               <Div
                 onClick={toggle}
@@ -159,7 +162,7 @@ export default compose(
                 <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />
               </Div>
             )}
-          </Use>
+          </Hover>
         ) : (
           <Div style={{ layout: 'bar', spacing: 30, float: 'right' }}>
             <MenuLink text="About Us" to="/about-us" active={active} />

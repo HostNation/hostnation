@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Div, Icon, Txt } from 'elmnt';
-import { enclose, Use, withHover } from 'mishmash';
+import m, { watchHover } from 'mishmash';
 import Helmet from 'react-helmet';
 import { withWidth } from 'common-client';
 
@@ -54,7 +54,18 @@ const linkStyle = hover => ({
   spacing: 15,
 });
 
-export default enclose(({ setState }) => {
+const Width500 = m()
+  .merge(withWidth(500))
+  .toComp();
+const Width700 = m()
+  .merge(withWidth(700))
+  .toComp();
+
+const Hover = m()
+  .enhance(watchHover)
+  .toComp();
+
+export default m().enhance(({ setState }) => {
   setState({ photo: null });
   setTimeout(() =>
     setState({ photo: photos[Math.floor(Math.random() * photos.length)] }),
@@ -64,7 +75,7 @@ export default enclose(({ setState }) => {
   <>
     <Helmet title="HostNation" />
     <Div style={{ spacing: 50, padding: '50px 0' }}>
-      <Use hoc={withWidth(700)}>
+      <Width700>
         {({ small = false, setWidthElem }) => (
           <div ref={setWidthElem}>
             <Div
@@ -99,7 +110,7 @@ export default enclose(({ setState }) => {
             </Div>
           </div>
         )}
-      </Use>
+      </Width700>
       <Div style={{ spacing: 10 }}>
         <Txt style={{ ...styles.text, fontSize: 24, fontWeight: 'bold' }}>
           HostNation believes every refugee deserves a friend.
@@ -166,7 +177,7 @@ export default enclose(({ setState }) => {
             Read what recent friends have said about their experiences.
           </Txt>
         </Div>
-        <Use hoc={withWidth(500)}>
+        <Width500>
           {({ small = true, setWidthElem }) => (
             <div ref={setWidthElem}>
               <Div
@@ -232,7 +243,7 @@ export default enclose(({ setState }) => {
               </Div>
             </div>
           )}
-        </Use>
+        </Width500>
       </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <div style={{ position: 'relative', paddingBottom: '55%' }}>
@@ -295,7 +306,7 @@ export default enclose(({ setState }) => {
                 'a searchable database linking refugees and asylum seekers to support services in Greater London',
             },
           ].map(({ link, img, text }, i) => (
-            <Use hoc={withHover} key={i}>
+            <Hover key={i}>
               {({ isHovered, hoverProps }) => (
                 <a href={link} target="_blank">
                   <Div {...hoverProps} style={linkStyle(isHovered)}>
@@ -306,7 +317,7 @@ export default enclose(({ setState }) => {
                   </Div>
                 </a>
               )}
-            </Use>
+            </Hover>
           ))}
         </Div>
       </Div>
@@ -332,7 +343,7 @@ export default enclose(({ setState }) => {
               icon: icons.twitter,
             },
           ].map(({ link, icon }, i) => (
-            <Use hoc={withHover} key={i}>
+            <Hover key={i}>
               {({ isHovered, hoverProps }) => (
                 <a
                   href={link}
@@ -349,7 +360,7 @@ export default enclose(({ setState }) => {
                   <Icon {...icon} style={{ color: 'white', fontSize: 24 }} />
                 </a>
               )}
-            </Use>
+            </Hover>
           ))}
         </Div>
       </Div>

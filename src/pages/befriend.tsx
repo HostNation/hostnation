@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { branch, compose, enclose, render, Use, withHover } from 'mishmash';
+import m, { watchHover } from 'mishmash';
 import { Div, Txt } from 'elmnt';
 import Helmet from 'react-helmet';
 
@@ -11,18 +11,22 @@ import Box from '../core/Box';
 import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
 
-const BefriendForm = compose(
-  enclose(({ setState }) => {
+const Hover = m()
+  .enhance(watchHover)
+  .toComp();
+
+const BefriendForm = m()
+  .enhance(({ setState }) => {
     setState({ complete: false });
     return (props, state) => ({
       ...props,
       ...state,
       onSubmit: () => setState({ complete: true }),
     });
-  }),
-  branch(
+  })
+  .branch(
     ({ complete }) => complete,
-    render(() => (
+    m().render(() => (
       <Txt
         style={{
           ...styles.base,
@@ -37,8 +41,7 @@ const BefriendForm = compose(
         Thanks for registering, we’ll be in touch soon!
       </Txt>
     )),
-  ),
-)(({ onSubmit }) => (
+  )(({ onSubmit }) => (
   <Forms.Yellow
     objects={{
       befriender: {
@@ -180,7 +183,7 @@ export default () => (
           ‘breaching confidentiality’).
         </Txt>
         <a href="/privacy-policy.pdf" target="_blank">
-          <Use hoc={withHover}>
+          <Hover>
             {({ isHovered, hoverProps }) => (
               <Txt
                 {...hoverProps}
@@ -194,7 +197,7 @@ export default () => (
                 Read our full privacy policy here.
               </Txt>
             )}
-          </Use>
+          </Hover>
         </a>
       </Box>
 

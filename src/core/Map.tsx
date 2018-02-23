@@ -1,13 +1,5 @@
 import * as React from 'react';
-import {
-  branch,
-  compose,
-  enclose,
-  map,
-  render,
-  Use,
-  withHover,
-} from 'mishmash';
+import m, { watchHover } from 'mishmash';
 import { Div, Txt } from 'elmnt';
 import { encodeId } from 'common';
 import { getData, Link, Spinner } from 'common-client';
@@ -20,6 +12,10 @@ import {
 } from 'react-google-maps';
 
 import styles, { colors } from '../core/styles';
+
+const Hover = m()
+  .enhance(watchHover)
+  .toComp();
 
 const icons = {
   redQuestionLight:
@@ -95,7 +91,7 @@ const MapMarker = ({
             </table>
             <div style={{ paddingTop: 15 }}>
               <Link to={link} route>
-                <Use hoc={withHover}>
+                <Hover>
                   {({ isHovered, hoverProps }) => (
                     <Txt
                       {...hoverProps}
@@ -109,7 +105,7 @@ const MapMarker = ({
                       View details
                     </Txt>
                   )}
-                </Use>
+                </Hover>
               </Link>
             </div>
           </Div>
@@ -119,44 +115,46 @@ const MapMarker = ({
   </Marker>
 );
 
-export default compose(
-  getData(
-    {
-      name: 'befrienders',
-      filter: ['AND', ['archived', null], ['mapaddress', '!=', null]],
-      fields: [
-        'id',
-        'firstname',
-        'lastname',
-        'address',
-        'postcode',
-        'mapaddress',
-        'sex',
-        'ready',
-        'match',
-      ],
-    },
-    {
-      name: 'refugees',
-      filter: ['mapaddress', '!=', null],
-      fields: [
-        'id',
-        'firstname',
-        'lastname',
-        'address',
-        'postcode',
-        'mapaddress',
-        'sex',
-      ],
-    },
-  ),
-  branch(
+export default m()
+  .merge(
+    getData(
+      {
+        name: 'befrienders',
+        filter: ['AND', ['archived', null], ['mapaddress', '!=', null]],
+        fields: [
+          'id',
+          'firstname',
+          'lastname',
+          'address',
+          'postcode',
+          'mapaddress',
+          'sex',
+          'ready',
+          'match',
+        ],
+      },
+      {
+        name: 'refugees',
+        filter: ['mapaddress', '!=', null],
+        fields: [
+          'id',
+          'firstname',
+          'lastname',
+          'address',
+          'postcode',
+          'mapaddress',
+          'sex',
+        ],
+      },
+    ),
+  )
+  .branch(
     ({ data }) => !data,
-    render(() => <Spinner style={{ color: colors.purple }} />),
-  ),
-  render(({ inner }) => (
+    m().render(() => <Spinner style={{ color: colors.purple }} />),
+  )
+  .render(({ next }) => (
     <Div style={{ layout: 'stack', spacing: 30 }}>
-      {inner()}
+      {next()}
       <Div style={{ layout: 'stack', spacing: 5 }}>
         <Div style={{ layout: 'bar', spacing: 5 }}>
           <img src={icons.redQuestionLight} style={{ height: 20 }} />
@@ -198,8 +196,8 @@ export default compose(
         </Txt>
       </Div>
     </Div>
-  )),
-  map(({ data: { befrienders, refugees }, ...props }) => ({
+  ))
+  .map(({ data: { befrienders, refugees }, ...props }) => ({
     ...props,
     markers: [
       ...befrienders.map(
@@ -246,10 +244,10 @@ export default compose(
     containerElement: <div style={{ height: 500 }} />,
     loadingElement: <Spinner style={{ color: colors.purple }} />,
     mapElement: <div style={{ height: '100%' }} />,
-  })),
-  withScriptjs as any,
-  withGoogleMap,
-  enclose(({ setState }) => {
+  }))
+  .merge(withScriptjs as any)
+  .merge(withGoogleMap)
+  .enhance(({ setState }) => {
     setState({ openIndex: -1 });
     return (props, state) => ({
       ...props,
@@ -258,8 +256,7 @@ export default compose(
         index !== props.openIndex && setState({ openIndex: index }),
       closeInfo: () => setState({ openIndex: -1 }),
     });
-  }),
-)(({ markers, openIndex, openInfo, closeInfo }) => (
+  })(({ markers, openIndex, openInfo, closeInfo }) => (
   <GoogleMap
     defaultZoom={10}
     defaultCenter={{ lat: 51.507614, lng: -0.127771 }}

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Div } from 'elmnt';
-import { branch, compose, enclose, render } from 'mishmash';
+import m from 'mishmash';
 import { Redirect } from 'react-router-dom';
 import { Spinner } from 'common-client';
 
@@ -33,22 +33,21 @@ const FormBar = ({ valid, button, submit }: any) => (
   </Div>
 );
 
-export default branch(
+export default m().branch(
   ({ redirect }) => redirect,
-  compose(
-    enclose(({ setState }) => {
+  m()
+    .enhance(({ setState }) => {
       setState({ values: null });
       return (props, state) => ({
         ...props,
         ...state,
         onSubmit: values => setState({ values }),
       });
-    }),
-    branch(
+    })
+    .branch(
       ({ values }) => values,
-      render(({ redirect, values }) => <Redirect to={redirect(values)} />),
+      m().render(({ redirect, values }) => <Redirect to={redirect(values)} />),
     ),
-  ),
 )(
   createForm(
     ({ setHeightElem, height, blocks, invalid, submit, button }) => (

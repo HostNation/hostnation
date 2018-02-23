@@ -1,12 +1,16 @@
 import * as React from 'react';
 import { Div, Icon, Txt } from 'elmnt';
-import { branch, enclose, Use, withHover } from 'mishmash';
+import m, { watchHover } from 'mishmash';
 
 import styles, { colors, icons } from '../core/styles';
 
-export default branch(
+const Hover = m()
+  .enhance(watchHover)
+  .toComp();
+
+export default m().branch(
   ({ toggle }) => toggle,
-  enclose(({ setState }) => {
+  m().enhance(({ setState }) => {
     setState({ isOpen: false });
     return (props, state) => ({
       ...props,
@@ -16,7 +20,7 @@ export default branch(
   }),
 )(({ title, color = 'black', toggle, isOpen, toggleIsOpen, children }: any) => (
   <div>
-    <Use hoc={withHover}>
+    <Hover>
       {({ isHovered, hoverProps }) => (
         <div
           onClick={toggleIsOpen}
@@ -45,7 +49,7 @@ export default branch(
           )}
         </div>
       )}
-    </Use>
+    </Hover>
     <Div
       style={{
         display: !toggle || isOpen ? 'block' : 'none',

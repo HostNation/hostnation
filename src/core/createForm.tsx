@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { branch, compose, enclose, map, render, restyle } from 'mishmash';
+import m from 'mishmash';
 import { css, Mark, Txt } from 'elmnt';
 import { createForm } from 'common-client';
 import { root } from 'common';
@@ -28,12 +28,12 @@ export default (
   createForm(
     container,
     ['title', 'info'],
-    branch(
+    m().branch(
       ({ fields }) => !fields,
-      compose(
-        branch(
+      m()
+        .branch(
           ({ title }) => title,
-          render(({ title }) => (
+          m().render(({ title }) => (
             <Txt
               style={{
                 ...styles.header,
@@ -45,22 +45,21 @@ export default (
               {title}
             </Txt>
           )),
-        ),
-        branch(
+        )
+        .branch(
           ({ info }) => info,
-          render(({ info }) => (
+          m().render(({ info }) => (
             <Mark style={{ ...styles.markdown(color), fontSize: 16 }}>
               {info}
             </Mark>
           )),
-        ),
-        render(),
-      ),
+        )
+        .render(),
     ),
-    compose(
-      branch(
+    m()
+      .branch(
         ({ getAddress }) => getAddress !== undefined,
-        enclose(({ initialProps: { field }, onProps }) => {
+        m().enhance(({ firstProps: { field }, onProps }) => {
           let unsubscribes = [] as (() => void)[];
           let first = true;
           const updateAddress = debounce(address => {
@@ -94,19 +93,17 @@ export default (
           onProps(props => !props && unsubscribes.forEach(u => u()));
           return props => props;
         }),
-      ),
-      branch(
+      )
+      .branch(
         ({ mapAddress }) => mapAddress,
-        compose(
-          map(restyle([['filter', ...css.groups.text]])),
-          render(({ value, style }) => (
+        m()
+          .style([['filter', ...css.groups.text]])
+          .render(({ value, style }) => (
             <Txt style={style}>
               {value === null ? 'No' : value === true ? 'Checking...' : 'Yes'}
             </Txt>
           )),
-        ),
       ),
-    ),
     {
       ...styles.field(color, admin),
       ...(admin ? { fontSize: 15, padding: 7 } : {}),
