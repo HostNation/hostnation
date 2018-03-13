@@ -4,6 +4,7 @@ import { css, Mark, Txt } from 'elmnt';
 import { createForm } from 'common-client';
 import { root } from 'common';
 import * as debounce from 'lodash.debounce';
+import st from 'style-transform';
 
 import styles, { colors } from './styles';
 
@@ -28,12 +29,11 @@ export default (
   createForm(
     container,
     ['title', 'info'],
-    m().branch(
+    m.doIf(
       ({ fields }) => !fields,
-      m()
-        .branch(
-          ({ title }) => title,
-          m().render(({ title }) => (
+      m.yield(
+        ({ title, info }) =>
+          title ? (
             <Txt
               style={{
                 ...styles.header,
@@ -44,61 +44,57 @@ export default (
             >
               {title}
             </Txt>
-          )),
-        )
-        .branch(
-          ({ info }) => info,
-          m().render(({ info }) => (
+          ) : info ? (
             <Mark style={{ ...styles.markdown(color), fontSize: 16 }}>
               {info}
             </Mark>
-          )),
-        )
-        .render(),
+          ) : null,
+      ),
     ),
-    m()
-      .branch(
+    m
+      .doIf(
         ({ getAddress }) => getAddress !== undefined,
-        m().enhance(({ firstProps: { field }, onProps }) => {
-          let unsubscribes = [] as (() => void)[];
+        m.merge('field', field => {
           let first = true;
-          const updateAddress = debounce(address => {
-            codeAddress(address).then(location => {
-              root.rgo.set({
-                key: [field.key[0], field.key[1], 'mapaddress'],
-                value: location,
-              });
+          const updateAddress = debounce(async address => {
+            const location = await codeAddress(address);
+            root.rgo.set({
+              key: [field.key[0], field.key[1], 'mapaddress'],
+              value: location,
             });
           }, 1000);
-          unsubscribes.push(updateAddress.cancel, root.rgo.query(
-            {
-              name: field.key[0],
-              filter: field.key[1],
-              fields: ['address', 'postcode'],
-            },
-            data => {
-              if (data) {
-                const { address, postcode } = data[field.key[0]][0];
-                if (!first) {
-                  root.rgo.set({
-                    key: [field.key[0], field.key[1], 'mapaddress'],
-                    value: true,
-                  });
+          return [
+            updateAddress.cancel,
+            root.rgo.query(
+              {
+                name: field.key[0],
+                filter: field.key[1],
+                fields: ['address', 'postcode'],
+              },
+              data => {
+                if (data) {
+                  const { address, postcode } = data[field.key[0]][0];
+                  if (!first) {
+                    root.rgo.set({
+                      key: [field.key[0], field.key[1], 'mapaddress'],
+                      value: true,
+                    });
+                  }
+                  first = false;
+                  updateAddress(`${address}, ${postcode}`);
                 }
-                first = false;
-                updateAddress(`${address}, ${postcode}`);
-              }
-            },
-          ) as any);
-          onProps(props => !props && unsubscribes.forEach(u => u()));
-          return props => props;
+              },
+            ),
+          ].forEach(u => u());
         }),
       )
-      .branch(
+      .doIf(
         ({ mapAddress }) => mapAddress,
-        m()
-          .style([['filter', ...css.groups.text]])
-          .render(({ value, style }) => (
+        m
+          .merge('style', style => ({
+            style: st(style).filter(...css.groups.text),
+          }))
+          .yield(({ value, style }) => (
             <Txt style={style}>
               {value === null ? 'No' : value === true ? 'Checking...' : 'Yes'}
             </Txt>

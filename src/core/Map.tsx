@@ -1,6 +1,6 @@
 import * as React from 'react';
-import m, { watchHover } from 'mishmash';
-import { Div, Txt } from 'elmnt';
+import m from 'mishmash';
+import { Div, Hover, Txt } from 'elmnt';
 import { encodeId } from 'common';
 import { getData, Link, Spinner } from 'common-client';
 import {
@@ -12,10 +12,6 @@ import {
 } from 'react-google-maps';
 
 import styles, { colors } from '../core/styles';
-
-const Hover = m()
-  .enhance(watchHover)
-  .toComp();
 
 const icons = {
   redQuestionLight:
@@ -91,17 +87,17 @@ const MapMarker = ({
             </table>
             <div style={{ paddingTop: 15 }}>
               <Link to={link} route>
-                <Hover>
-                  {({ isHovered, hoverProps }) => (
-                    <Txt
-                      {...hoverProps}
-                      style={{
-                        ...styles.base,
-                        fontSize: 18,
-                        fontWeight: 'bold',
-                        color: isHovered ? colors.purpleDark : colors.purple,
-                      }}
-                    >
+                <Hover
+                  style={{
+                    ...styles.base,
+                    fontSize: 18,
+                    fontWeight: 'bold',
+                    color: colors.purple,
+                    hover: { color: colors.purpleDark },
+                  }}
+                >
+                  {({ hoverProps, style }) => (
+                    <Txt {...hoverProps} style={style}>
                       View details
                     </Txt>
                   )}
@@ -115,8 +111,8 @@ const MapMarker = ({
   </Marker>
 );
 
-export default m()
-  .merge(
+export default m
+  .do(
     getData(
       {
         name: 'befrienders',
@@ -148,11 +144,11 @@ export default m()
       },
     ),
   )
-  .branch(
+  .doIf(
     ({ data }) => !data,
-    m().render(() => <Spinner style={{ color: colors.purple }} />),
+    m.yield(() => <Spinner style={{ color: colors.purple }} />),
   )
-  .render(({ next }) => (
+  .yield(({ next }) => (
     <Div style={{ layout: 'stack', spacing: 30 }}>
       {next()}
       <Div style={{ layout: 'stack', spacing: 5 }}>
@@ -197,8 +193,7 @@ export default m()
       </Div>
     </Div>
   ))
-  .map(({ data: { befrienders, refugees }, ...props }) => ({
-    ...props,
+  .merge('data', ({ befrienders, refugees }) => ({
     markers: [
       ...befrienders.map(
         ({
@@ -239,24 +234,21 @@ export default m()
         }),
       ),
     ],
+  }))
+  .merge({
     googleMapURL:
       'https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ8P7-0kTGz2_tkcHjOo0IUiMB_z9Bbp4',
     containerElement: <div style={{ height: 500 }} />,
     loadingElement: <Spinner style={{ color: colors.purple }} />,
     mapElement: <div style={{ height: '100%' }} />,
-  }))
-  .merge(withScriptjs as any)
-  .merge(withGoogleMap)
-  .enhance(({ setState }) => {
-    setState({ openIndex: -1 });
-    return (props, state) => ({
-      ...props,
-      ...state,
-      openInfo: index =>
-        index !== props.openIndex && setState({ openIndex: index }),
-      closeInfo: () => setState({ openIndex: -1 }),
-    });
-  })(({ markers, openIndex, openInfo, closeInfo }) => (
+  })
+  .do(withScriptjs as any)
+  .do(withGoogleMap)
+  .merge((_, push) => ({
+    openIndex: -1,
+    openInfo: index => push({ openIndex: index }),
+    closeInfo: () => push({ openIndex: -1 }),
+  }))(({ markers, openIndex, openInfo, closeInfo }) => (
   <GoogleMap
     defaultZoom={10}
     defaultCenter={{ lat: 51.507614, lng: -0.127771 }}

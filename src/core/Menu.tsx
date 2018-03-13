@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Div, Icon, Txt } from 'elmnt';
+import { Div, Hover, Icon, Txt } from 'elmnt';
 import m, { watchHover } from 'mishmash';
 import { Link, withWidth } from 'common-client';
 
@@ -12,11 +12,7 @@ const textStyle = active => ({
   fontWeight: 'normal' as 'normal',
 });
 
-const Hover = m()
-  .enhance(watchHover)
-  .toComp();
-
-const MenuLink = m().enhance(watchHover)(
+const MenuLink = m.do(watchHover)(
   ({ text, to, newTab, active, setClosed, isHovered, hoverProps }: any) => (
     <Link
       to={to}
@@ -47,18 +43,19 @@ const MenuLink = m().enhance(watchHover)(
   ),
 );
 
-export default m()
-  .merge(withWidth(800))
-  .map(({ small = true, ...props }) => ({ small, ...props }))
-  .enhance(({ setState }) => {
-    setState({ isOpen: false });
-    const toggle = () => setState(({ isOpen }) => ({ isOpen: !isOpen }));
-    const setClosed = () => setState({ isOpen: false });
-    return (props, state) => {
-      if (state.isOpen && !props.small) setTimeout(setClosed);
-      return { ...props, ...state, toggle, setClosed };
-    };
-  })(({ active, isOpen, toggle, setClosed, small, setWidthElem }) => (
+export default m
+  .do(withWidth(800))
+  .merge('small', (small = true) => ({ small }))
+  .merge((_, push) => ({
+    isOpen: false,
+    toggle: () => push(({ isOpen }) => ({ isOpen: !isOpen })),
+    setClosed: () => push({ isOpen: false }),
+  }))
+  .merge(
+    ({ small, isOpen }) => !small && isOpen,
+    'setClosed',
+    (shouldClose, setClosed) => shouldClose && setTimeout(setClosed),
+  )(({ active, isOpen, toggle, setClosed, small, setWidthElem }) => (
   <div
     style={{
       background: colors.black,
@@ -143,20 +140,18 @@ export default m()
           </a>
         </Div>
         {small ? (
-          <Hover>
-            {({ isHovered, hoverProps }) => (
-              <Div
-                onClick={toggle}
-                {...hoverProps}
-                style={{
-                  spacing: 5,
-                  float: 'right',
-                  padding: '8px 5px',
-                  margin: '-8px -5px',
-                  cursor: 'pointer',
-                  ...(isHovered ? { background: colors.blackLight } : {}),
-                }}
-              >
+          <Hover
+            style={{
+              spacing: 5,
+              float: 'right',
+              padding: '8px 5px',
+              margin: '-8px -5px',
+              cursor: 'pointer',
+              hover: { background: colors.blackLight },
+            }}
+          >
+            {({ hoverProps, style }) => (
+              <Div onClick={toggle} {...hoverProps} style={style}>
                 <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />
                 <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />
                 <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />

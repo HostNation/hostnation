@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Div, Icon, Txt } from 'elmnt';
-import m, { watchHover } from 'mishmash';
+import { Div, Hover, Icon, Txt } from 'elmnt';
+import m from 'mishmash';
 import Helmet from 'react-helmet';
 import { withWidth } from 'common-client';
 
@@ -46,32 +46,24 @@ const testimonialStyle = color => ({
   fontWeight: 'normal' as 'normal',
   color: colors[color],
 });
-const linkStyle = hover => ({
-  background: hover ? '#eee' : 'white',
+const linkStyle = {
+  background: 'white',
   maxWidth: 500,
   padding: 10,
   margin: '0 auto',
   spacing: 15,
-});
+  hover: { background: '#eee' },
+};
 
-const Width500 = m()
-  .merge(withWidth(500))
-  .toComp();
-const Width700 = m()
-  .merge(withWidth(700))
-  .toComp();
+const Width500 = withWidth(500).toComp();
+const Width700 = withWidth(700).toComp();
 
-const Hover = m()
-  .enhance(watchHover)
-  .toComp();
-
-export default m().enhance(({ setState }) => {
-  setState({ photo: null });
+export default m.merge((_, push) => {
+  push({ photo: null });
   setTimeout(() =>
-    setState({ photo: photos[Math.floor(Math.random() * photos.length)] }),
+    push({ photo: photos[Math.floor(Math.random() * photos.length)] }),
   );
-  return (props, state) => ({ ...props, ...state });
-})(({ photo }: any) => (
+})(({ photo }) => (
   <>
     <Helmet title="HostNation" />
     <Div style={{ spacing: 50, padding: '50px 0' }}>
@@ -306,10 +298,10 @@ export default m().enhance(({ setState }) => {
                 'a searchable database linking refugees and asylum seekers to support services in Greater London',
             },
           ].map(({ link, img, text }, i) => (
-            <Hover key={i}>
-              {({ isHovered, hoverProps }) => (
+            <Hover style={linkStyle} key={i}>
+              {({ hoverProps, style }) => (
                 <a href={link} target="_blank">
-                  <Div {...hoverProps} style={linkStyle(isHovered)}>
+                  <Div {...hoverProps} style={style}>
                     <img src={img} style={{ width: 100, margin: '0 auto' }} />
                     <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
                       {text}
@@ -343,20 +335,19 @@ export default m().enhance(({ setState }) => {
               icon: icons.twitter,
             },
           ].map(({ link, icon }, i) => (
-            <Hover key={i}>
-              {({ isHovered, hoverProps }) => (
-                <a
-                  href={link}
-                  target="_blank"
-                  {...hoverProps}
-                  style={{
-                    display: 'block',
-                    padding: 12,
-                    margin: -5,
-                    background: isHovered ? colors.purpleDark : colors.purple,
-                    borderRadius: 100,
-                  }}
-                >
+            <Hover
+              style={{
+                display: 'block',
+                padding: 12,
+                margin: -5,
+                background: colors.purple,
+                borderRadius: 100,
+                hover: { background: colors.purpleDark },
+              }}
+              key={i}
+            >
+              {({ hoverProps, style }) => (
+                <a href={link} target="_blank" {...hoverProps} style={style}>
                   <Icon {...icon} style={{ color: 'white', fontSize: 24 }} />
                 </a>
               )}

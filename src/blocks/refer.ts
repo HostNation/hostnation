@@ -311,27 +311,17 @@ export default function(admin?: boolean) {
             },
             {
               label:
-                'I consent to HostNation sharing some of the personal data with registered befrienders in order to match me with a befriender and put us in contact',
+                'I consent to HostNation sharing some of the personal data with registered befrienders in order to match me with a befriender and put us in contact and to get feedback after the three months',
               name: 'refugeesharing',
               scalar: 'boolean',
             },
-            {
-              info: '**Contact preferences:**',
-            },
           ]
         : []),
-      {
-        text: admin && 'Refugee contact preference',
-        label:
-          'I consent to future communications with HostNation for the purposes of giving feedback and receiving updates',
-        field: 'refugee.refugeecontact',
-        optional: true,
-      },
       ...(!admin
         ? [
             {
               info:
-                '*If you would like to withdraw your consent at any time, please email info@hostnation.org.uk. For further details on how we use your personal data, please see our privacy policy.*',
+                '*If you would like to withdraw your consent at any time, please email info@hostnation.org.uk. 12 months after your 3 month match through HostNation, your identifiable personal data will be removed from our database. For further details on how we use your personal data, please see our privacy policy.*',
             },
           ]
         : []),
@@ -474,7 +464,7 @@ export default function(admin?: boolean) {
         ? [
             {
               info:
-                '*If you would like to withdraw your consent at any time, please email info@hostnation.org.uk. For further details on how we use your personal data, please see our privacy policy.*',
+                '*If you would like to withdraw your consent at any time, please email info@hostnation.org.uk. 12 months after your 3 month match through HostNation, your identifiable personal data will be removed from our database. For further details on how we use your personal data, please see our privacy policy.*',
             },
           ]
         : []),

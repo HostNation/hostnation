@@ -27,30 +27,28 @@ const duration = (date?: Date) =>
     '\xa0',
   );
 
-const MarkLink = m().enhance(watchHover)(
-  ({ to, text, isHovered, hoverProps }) => (
-    <Link to={to} route>
-      <div
-        {...hoverProps}
+const MarkLink = m.do(watchHover)(({ to, text, isHovered, hoverProps }) => (
+  <Link to={to} route>
+    <div
+      {...hoverProps}
+      style={{
+        padding: 15,
+        background: isHovered ? colors.purpleDark : colors.purple,
+      }}
+    >
+      <Mark
         style={{
-          padding: 15,
-          background: isHovered ? colors.purpleDark : colors.purple,
+          ...styles.markdown,
+          fontSize: 16,
+          color: 'white',
+          heading: { fontSize: 30 },
         }}
       >
-        <Mark
-          style={{
-            ...styles.markdown,
-            fontSize: 16,
-            color: 'white',
-            heading: { fontSize: 30 },
-          }}
-        >
-          {text}
-        </Mark>
-      </div>
-    </Link>
-  ),
-);
+        {text}
+      </Mark>
+    </div>
+  </Link>
+));
 
 const BefriendersLinksRoute = ({
   path,
@@ -262,6 +260,7 @@ const Content = routerPure(() => (
         'Referral org',
         'Referrer',
         'Map',
+        'Sustained',
       ]}
       rows={[
         {
@@ -279,6 +278,7 @@ const Content = routerPure(() => (
             'contactorg',
             'contactname',
             'mapaddress',
+            'sustained',
           ],
         },
         ({ refugees }) =>
@@ -295,6 +295,7 @@ const Content = routerPure(() => (
             r.contactorg || '-',
             r.contactname || '-',
             r.mapaddress ? 'Y' : 'N',
+            r.sustained ? 'Y' : 'N',
           ]),
       ]}
     />
@@ -315,6 +316,11 @@ const Content = routerPure(() => (
                 text: 'Notes',
                 field: 'refugee.notes',
                 rows: 3,
+                optional: true,
+              },
+              {
+                text: 'Sustained',
+                field: 'refugee.sustained',
                 optional: true,
               },
             ],
@@ -358,9 +364,7 @@ const Content = routerPure(() => (
   </div>
 ));
 
-const Dashboard = m()
-  .merge(auth)
-  .merge(withRouter('dashboard'))(({ breadcrumbs }) => (
+const Dashboard = m.do(auth).do(withRouter('dashboard'))(({ breadcrumbs }) => (
   <Div style={{ spacing: 15 }}>
     <Breadcrumbs
       breadcrumbs={breadcrumbs}

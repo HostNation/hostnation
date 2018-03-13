@@ -1,6 +1,6 @@
 import * as React from 'react';
-import m, { watchHover } from 'mishmash';
-import { Div, Txt } from 'elmnt';
+import m from 'mishmash';
+import { Div, Hover, Txt } from 'elmnt';
 import Helmet from 'react-helmet';
 
 import * as logoWide from '../img/logo-wide.png';
@@ -11,22 +11,14 @@ import Box from '../core/Box';
 import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
 
-const Hover = m()
-  .enhance(watchHover)
-  .toComp();
-
-const BefriendForm = m()
-  .enhance(({ setState }) => {
-    setState({ complete: false });
-    return (props, state) => ({
-      ...props,
-      ...state,
-      onSubmit: () => setState({ complete: true }),
-    });
-  })
-  .branch(
-    ({ complete }) => complete,
-    m().render(() => (
+const BefriendForm = m
+  .merge((_, push) => ({
+    complete: false,
+    onSubmit: () => push({ complete: true }),
+  }))
+  .doIf(
+    'complete',
+    m.yield(() => (
       <Txt
         style={{
           ...styles.base,
@@ -183,17 +175,17 @@ export default () => (
           ‘breaching confidentiality’).
         </Txt>
         <a href="/privacy-policy.pdf" target="_blank">
-          <Hover>
-            {({ isHovered, hoverProps }) => (
-              <Txt
-                {...hoverProps}
-                style={{
-                  ...styles.boxText,
-                  color: isHovered ? colors.purpleDark : colors.purple,
-                  display: 'inline-block',
-                  fontWeight: 'bold',
-                }}
-              >
+          <Hover
+            style={{
+              ...styles.boxText,
+              color: colors.purple,
+              display: 'inline-block',
+              fontWeight: 'bold',
+              hover: { color: colors.purpleDark },
+            }}
+          >
+            {({ hoverProps, style }) => (
+              <Txt {...hoverProps} style={style}>
                 Read our full privacy policy here.
               </Txt>
             )}

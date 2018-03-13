@@ -6,8 +6,8 @@ import { Spinner } from 'common-client';
 import Button from '../core/Button';
 import styles, { colors } from '../core/styles';
 
-export default m()
-  .render(({ next }) => (
+export default m
+  .yield(({ next }) => (
     <div style={{ height: '100%' }}>
       <div
         style={{
@@ -25,22 +25,16 @@ export default m()
       </div>
     </div>
   ))
-  .enhance(({ setState }) => {
-    setState({
-      token:
-        typeof sessionStorage !== 'undefined' &&
-        sessionStorage.getItem('authToken'),
-    });
-    return (props, state) => ({
-      ...props,
-      ...state,
-      setToken: token => setState({ token }),
-    });
-  })
-  .branch(
+  .merge((_, push) => ({
+    token:
+      typeof sessionStorage !== 'undefined' &&
+      sessionStorage.getItem('authToken'),
+    setToken: token => push({ token }),
+  }))
+  .doIf(
     ({ token }) => !token,
-    m()
-      .render(({ next }) => (
+    m
+      .yield(({ next }) => (
         <Div style={{ padding: '100px 0', spacing: 40 }}>
           <Txt
             style={{
@@ -55,53 +49,40 @@ export default m()
           {next()}
         </Div>
       ))
-      .enhance(({ setState }) => {
-        setState({ processing: false });
-        return (props, state) => ({
-          ...props,
-          ...state,
-          setProcessing: processing => setState({ processing }),
-        });
-      })
-      .branch(
+      .merge((_, push) => ({
+        processing: false,
+        setProcessing: processing => push({ processing }),
+      }))
+      .doIf(
         ({ processing }) => processing,
-        m().render(() => <Spinner style={{ color: colors.purple }} />),
+        m.yield(() => <Spinner style={{ color: colors.purple }} />),
       )
-      .enhance(({ setState }) => {
-        setState({ password: null });
-        const setPassword = password => setState({ password });
-        return ({ setToken, setProcessing, ...props }, { password }) => {
-          const submit = async () => {
-            if (password) {
-              setProcessing(true);
-              const token = await (await fetch(
-                `${process.env.DATA_URL!}/auth`,
-                {
-                  method: 'POST',
-                  headers: new Headers({ 'Content-Type': 'text/plain' }),
-                  body: password,
-                },
-              )).text();
-              if (token) {
-                sessionStorage.setItem('authToken', token);
-                setToken(token);
-              } else {
-                setProcessing(false);
-              }
+      .merge((observe, push) => {
+        const submit = async () => {
+          const { setToken, setProcessing, $password } = observe();
+          if ($password) {
+            setProcessing(true);
+            const token = await (await fetch(`${process.env.DATA_URL!}/auth`, {
+              method: 'POST',
+              headers: new Headers({ 'Content-Type': 'text/plain' }),
+              body: $password,
+            })).text();
+            if (token) {
+              sessionStorage.setItem('authToken', token);
+              setToken(token);
+            } else {
+              setProcessing(false);
             }
-          };
-          return {
-            ...props,
-            password,
-            setPassword,
-            submit,
-            onKeyDown: event => {
-              if (event.keyCode === 13) submit();
-            },
-          };
+          }
+        };
+        return {
+          password: null,
+          setPassword: password => push({ password }),
+          submit,
+          onKeyDown: event => event.keyCode === 13 && submit(),
         };
       })
-      .render(({ password, setPassword, submit, onKeyDown }) => (
+      .yield(({ password, setPassword, submit, onKeyDown }) => (
         <Div
           onKeyDown={onKeyDown}
           style={{

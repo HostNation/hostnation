@@ -329,29 +329,45 @@ export default function(admin?: boolean) {
               scalar: 'boolean',
             },
             {
-              info:
-                '**Please select the ways in which you would be happy for us to contact you:**',
+              label:
+                'I consent to future communication with HostNation for the purpose of giving feedback on the match',
+              name: 'feedback',
+              scalar: 'boolean',
+            },
+            {
+              info: '**Contact preferences:**',
+            },
+          ]
+        : []),
+      ...(admin
+        ? [
+            {
+              text: admin && 'Contact preference (communications - old)',
+              label:
+                'I consent to future communications with HostNation for the purposes of giving feedback and receiving updates',
+              field: 'befriender.communication',
+              optional: true,
+            },
+            {
+              text: admin && 'Contact preference (fundraising - old)',
+              label:
+                'I consent to receiving emails regarding fundraising efforts',
+              field: 'befriender.fundraising',
+              optional: true,
             },
           ]
         : []),
       {
-        text: admin && 'Contact preference (communications)',
-        label:
-          'I consent to future communications with HostNation for the purposes of giving feedback and receiving updates',
-        field: 'befriender.communication',
-        optional: true,
-      },
-      {
-        text: admin && 'Contact preference (fundraising)',
-        label: 'I consent to receiving emails regarding fundraising efforts',
-        field: 'befriender.fundraising',
+        text: admin && 'Contact preference (general updates)',
+        label: 'I consent to occasional general updates from HostNation',
+        field: 'befriender.consentupdates',
         optional: true,
       },
       ...(!admin
         ? [
             {
               info:
-                '*If you would like to withdraw your consent at any time, please email info@hostnation.org.uk. For further details on how we use your personal data, please see our privacy policy.*',
+                '*If you would like to withdraw your consent at any time, please email info@hostnation.org.uk. Unless you have agreed to be available to be matched again, we will delete all identifiable personal data from our database 12 months after the end of your 3 month match through HostNation. For further details on how we use your personal data, please see our privacy policy.*',
             },
           ]
         : []),

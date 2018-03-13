@@ -33,20 +33,16 @@ const FormBar = ({ valid, button, submit }: any) => (
   </Div>
 );
 
-export default m().branch(
-  ({ redirect }) => redirect,
-  m()
-    .enhance(({ setState }) => {
-      setState({ values: null });
-      return (props, state) => ({
-        ...props,
-        ...state,
-        onSubmit: values => setState({ values }),
-      });
-    })
-    .branch(
-      ({ values }) => values,
-      m().render(({ redirect, values }) => <Redirect to={redirect(values)} />),
+export default m.doIf(
+  'redirect',
+  m
+    .merge((_, push) => ({
+      values: null,
+      onSubmit: values => push({ values }),
+    }))
+    .doIf(
+      'values',
+      m.yield(({ redirect, values }) => <Redirect to={redirect(values)} />),
     ),
 )(
   createForm(
