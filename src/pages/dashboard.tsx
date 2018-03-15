@@ -278,7 +278,7 @@ const Content = routerPure(() => (
             'contactorg',
             'contactname',
             'mapaddress',
-            'sustained',
+            // 'sustained',
           ],
         },
         ({ refugees }) =>
@@ -295,7 +295,7 @@ const Content = routerPure(() => (
             r.contactorg || '-',
             r.contactname || '-',
             r.mapaddress ? 'Y' : 'N',
-            r.sustained ? 'Y' : 'N',
+            // r.sustained ? 'Y' : 'N',
           ]),
       ]}
     />
@@ -318,11 +318,11 @@ const Content = routerPure(() => (
                 rows: 3,
                 optional: true,
               },
-              {
-                text: 'Sustained',
-                field: 'refugee.sustained',
-                optional: true,
-              },
+              // {
+              //   text: 'Sustained',
+              //   field: 'refugee.sustained',
+              //   optional: true,
+              // },
             ],
             [
               {
