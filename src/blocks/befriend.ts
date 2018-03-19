@@ -102,15 +102,16 @@ export default function(admin?: boolean) {
         optional: admin,
       },
       {
-        text: admin
-          ? 'Nearest town or city'
-          : 'What is the town or city that you live in or are nearest to?',
-        field: 'befriender.city',
-        optional: admin,
-      },
-      {
-        text: 'Region',
+        text: 'What area do you live in?',
         field: 'befriender.region',
+        options: [
+          'Central London',
+          'North London',
+          'East London',
+          'South London',
+          'West London',
+          'Other',
+        ],
         optional: admin,
         style: { layout: 'modal', maxWidth: 400 },
       },

@@ -96,15 +96,16 @@ export default function(admin?: boolean) {
         optional: true,
       },
       {
-        text: admin
-          ? 'Nearest town or city'
-          : 'Which town or city do you live in or are nearest to?',
-        field: 'refugee.city',
-        optional: admin,
-      },
-      {
-        text: 'Region',
+        text: 'What area do you live in?',
         field: 'refugee.region',
+        options: [
+          'Central London',
+          'North London',
+          'East London',
+          'South London',
+          'West London',
+          'Other',
+        ],
         optional: admin,
         style: { layout: 'modal', maxWidth: 400 },
       },
