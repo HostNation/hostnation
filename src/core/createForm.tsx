@@ -54,7 +54,7 @@ export default (
     m
       .doIf(
         ({ getAddress }) => getAddress !== undefined,
-        m.merge('field', field => {
+        m.merge('field', (field, _) => {
           let first = true;
           const updateAddress = debounce(async address => {
             const location = await codeAddress(address);
@@ -63,7 +63,7 @@ export default (
               value: location,
             });
           }, 1000);
-          return [
+          const unsubscribes = [
             updateAddress.cancel,
             root.rgo.query(
               {
@@ -85,7 +85,8 @@ export default (
                 }
               },
             ),
-          ].forEach(u => u());
+          ];
+          return () => unsubscribes.forEach(u => u());
         }),
       )
       .doIf(
