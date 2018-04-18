@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Div } from 'elmnt';
-import m from 'mishmash';
+import r from 'refluent';
 import { Redirect } from 'react-router-dom';
-import { Spinner } from 'common-client';
+import { branch, Spinner } from 'common-client';
 
 import Button from '../core/Button';
 import createForm from '../core/createForm';
@@ -33,73 +33,77 @@ const FormBar = ({ valid, button, submit }: any) => (
   </Div>
 );
 
-export default m.doIf(
-  'redirect',
-  m
-    .merge((_, push) => ({
-      values: null,
-      onSubmit: values => push({ values }),
-    }))
-    .doIf(
-      'values',
-      m.yield(({ redirect, values }) => <Redirect to={redirect(values)} />),
+export default r
+  .yield(
+    branch(
+      'redirect',
+      r
+        .do((_, push) => ({
+          values: null,
+          onSubmit: values => push({ values }),
+        }))
+        .yield(
+          ({ values, redirect, next }) =>
+            values ? <Redirect to={redirect(values)} /> : next(),
+        ),
     ),
-)(
-  createForm(
-    ({ setHeightElem, height, blocks, invalid, submit, button }) => (
-      <div>
-        <FormBar valid={blocks && !invalid} button={button} submit={submit} />
-        <div
-          style={{
-            background: '#eee',
-            borderLeft: '5px solid #bbb',
-            padding: '40px 20px',
-          }}
-        >
+  )
+  .yield(
+    createForm(
+      ({ setHeightElem, height, blocks, invalid, submit, button }) => (
+        <div>
+          <FormBar valid={blocks && !invalid} button={button} submit={submit} />
           <div
-            ref={setHeightElem}
-            style={{ position: 'relative', height, minHeight: 60 }}
+            style={{
+              background: '#eee',
+              borderLeft: '5px solid #bbb',
+              padding: '40px 20px',
+            }}
           >
-            {blocks ? (
-              <Div style={{ spacing: 20 }}>
-                {blocks.reduce(
-                  (res, blockSet, i) => [
-                    ...res,
-                    ...(i !== 0
-                      ? [
-                          <div
-                            style={{
-                              height: 4,
-                              background: '#bbb',
-                              margin: '20px 0',
-                            }}
-                            key={i}
-                          />,
-                        ]
-                      : []),
-                    ...blockSet,
-                  ],
-                  [],
-                )}
-              </Div>
-            ) : (
-              <Spinner
-                style={{
-                  color: colors.purple,
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-            )}
+            <div
+              ref={setHeightElem}
+              style={{ position: 'relative', height, minHeight: 60 }}
+            >
+              {blocks ? (
+                <Div style={{ spacing: 20 }}>
+                  {blocks.reduce(
+                    (res, blockSet, i) => [
+                      ...res,
+                      ...(i !== 0
+                        ? [
+                            <div
+                              style={{
+                                height: 4,
+                                background: '#bbb',
+                                margin: '20px 0',
+                              }}
+                              key={i}
+                            />,
+                          ]
+                        : []),
+                      ...blockSet,
+                    ],
+                    [],
+                  )}
+                </Div>
+              ) : (
+                <Spinner
+                  style={{
+                    color: colors.purple,
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                  }}
+                />
+              )}
+            </div>
           </div>
+          <FormBar valid={blocks && !invalid} button={button} submit={submit} />
         </div>
-        <FormBar valid={blocks && !invalid} button={button} submit={submit} />
-      </div>
+      ),
+      'purple',
+      true,
     ),
-    'purple',
-    true,
-  ),
-);
+  );

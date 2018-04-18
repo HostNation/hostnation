@@ -1,5 +1,5 @@
 import * as React from 'react';
-import m from 'mishmash';
+import r from 'refluent';
 import { Div, Hover, Txt } from 'elmnt';
 import Helmet from 'react-helmet';
 
@@ -11,40 +11,40 @@ import Box from '../core/Box';
 import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
 
-const BefriendForm = m
-  .merge((_, push) => ({
+const BefriendForm = r
+  .do((_, push) => ({
     complete: false,
     onSubmit: () => push({ complete: true }),
   }))
-  .doIf(
-    'complete',
-    m.yield(() => (
-      <Txt
-        style={{
-          ...styles.base,
-          fontSize: 30,
-          lineHeight: '40px',
-          fontWeight: 'bold',
-          textAlign: 'center',
-          padding: '50px 0',
-          color: colors.yellow,
-        }}
-      >
-        Thanks for registering, we’ll be in touch soon!
-      </Txt>
-    )),
-  )(({ onSubmit }) => (
-  <Forms.Yellow
-    objects={{
-      befriender: {
-        type: 'befrienders',
-        initial: { mapaddress: null },
-      },
-    }}
-    blocks={befriendBlocks()}
-    onSubmit={onSubmit}
-  />
-));
+  .yield(
+    ({ onSubmit, complete }) =>
+      complete ? (
+        <Txt
+          style={{
+            ...styles.base,
+            fontSize: 30,
+            lineHeight: '40px',
+            fontWeight: 'bold',
+            textAlign: 'center',
+            padding: '50px 0',
+            color: colors.yellow,
+          }}
+        >
+          Thanks for registering, we’ll be in touch soon!
+        </Txt>
+      ) : (
+        <Forms.Yellow
+          objects={{
+            befriender: {
+              type: 'befrienders',
+              initial: { mapaddress: null },
+            },
+          }}
+          blocks={befriendBlocks()}
+          onSubmit={onSubmit}
+        />
+      ),
+  );
 
 export default () => (
   <>

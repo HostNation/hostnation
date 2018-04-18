@@ -1,5 +1,5 @@
 import * as React from 'react';
-import m from 'mishmash';
+import r from 'refluent';
 import { Div, Hover, Txt } from 'elmnt';
 import { encodeId } from 'common';
 import { getData, Link, Spinner } from 'common-client';
@@ -111,7 +111,7 @@ const MapMarker = ({
   </Marker>
 );
 
-export default m
+export default r
   .do(
     getData(
       {
@@ -144,9 +144,9 @@ export default m
       },
     ),
   )
-  .doIf(
-    ({ data }) => !data,
-    m.yield(() => <Spinner style={{ color: colors.purple }} />),
+  .yield(
+    ({ data, next }) =>
+      data ? next() : <Spinner style={{ color: colors.purple }} />,
   )
   .yield(({ next }) => (
     <Div style={{ layout: 'stack', spacing: 30 }}>
@@ -193,7 +193,7 @@ export default m
       </Div>
     </Div>
   ))
-  .merge('data', ({ befrienders, refugees }) => ({
+  .do('data', ({ befrienders, refugees }) => ({
     markers: [
       ...befrienders.map(
         ({
@@ -221,7 +221,7 @@ export default m
             ['Ready', ready ? 'Yes' : 'No'],
             ['Match', match],
           ],
-          link: `/${match ? 'matched' : 'unmatched'}/${encodeId(id)}`,
+          link: `/dashboard/${match ? 'matched' : 'unmatched'}/${encodeId(id)}`,
         }),
       ),
       ...refugees.map(
@@ -230,39 +230,40 @@ export default m
           icon: icons[`yellowStar${sex === 'Male' ? 'Dark' : 'Light'}`],
           title: `${firstname} ${lastname}`,
           info: [['Address', `${address}\n${postcode}`], ['Sex', sex]],
-          link: `/referrals/${encodeId(id)}`,
+          link: `/dashboard/referrals/${encodeId(id)}`,
         }),
       ),
     ],
   }))
-  .merge({
+  .do(() => ({
     googleMapURL:
       'https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ8P7-0kTGz2_tkcHjOo0IUiMB_z9Bbp4',
     containerElement: <div style={{ height: 500 }} />,
     loadingElement: <Spinner style={{ color: colors.purple }} />,
     mapElement: <div style={{ height: '100%' }} />,
-  })
-  .do(withScriptjs as any)
-  .do(withGoogleMap)
-  .merge((_, push) => ({
+  }))
+  .transform(withScriptjs as any)
+  .transform(withGoogleMap as any)
+  .do((_, push) => ({
     openIndex: -1,
     openInfo: index => push({ openIndex: index }),
     closeInfo: () => push({ openIndex: -1 }),
-  }))(({ markers, openIndex, openInfo, closeInfo }) => (
-  <GoogleMap
-    defaultZoom={10}
-    defaultCenter={{ lat: 51.507614, lng: -0.127771 }}
-    onClick={closeInfo}
-  >
-    {markers.map((props, i) => (
-      <MapMarker
-        {...props}
-        index={i}
-        isOpen={openIndex === i}
-        openInfo={openInfo}
-        closeInfo={closeInfo}
-        key={i}
-      />
-    ))}
-  </GoogleMap>
-));
+  }))
+  .yield(({ markers, openIndex, openInfo, closeInfo }) => (
+    <GoogleMap
+      defaultZoom={10}
+      defaultCenter={{ lat: 51.507614, lng: -0.127771 }}
+      onClick={closeInfo}
+    >
+      {markers.map((props, i) => (
+        <MapMarker
+          {...props}
+          index={i}
+          isOpen={openIndex === i}
+          openInfo={openInfo}
+          closeInfo={closeInfo}
+          key={i}
+        />
+      ))}
+    </GoogleMap>
+  ));

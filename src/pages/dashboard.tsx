@@ -1,14 +1,16 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
-import m, { watchHover } from 'mishmash';
+import r from 'refluent';
 import { Div, Mark, Txt } from 'elmnt';
 import { encodeId } from 'common';
 import {
   Breadcrumbs,
+  getLocation,
   Link,
   Route,
-  routerPure,
-  withRouter,
+  watchHover,
+  withBreadcrumbs,
+  withLocation,
 } from 'common-client';
 import * as moment from 'moment';
 
@@ -27,28 +29,30 @@ const duration = (date?: Date) =>
     '\xa0',
   );
 
-const MarkLink = m.do(watchHover)(({ to, text, isHovered, hoverProps }) => (
-  <Link to={to} route>
-    <div
-      {...hoverProps}
-      style={{
-        padding: 15,
-        background: isHovered ? colors.purpleDark : colors.purple,
-      }}
-    >
-      <Mark
+const MarkLink = r
+  .do(watchHover)
+  .yield(({ to, text, isHovered, hoverProps }) => (
+    <Link to={to} route>
+      <div
+        {...hoverProps}
         style={{
-          ...styles.markdown,
-          fontSize: 16,
-          color: 'white',
-          heading: { fontSize: 30 },
+          padding: 15,
+          background: isHovered ? colors.purpleDark : colors.purple,
         }}
       >
-        {text}
-      </Mark>
-    </div>
-  </Link>
-));
+        <Mark
+          style={{
+            ...styles.markdown,
+            fontSize: 16,
+            color: 'white',
+            heading: { fontSize: 30 },
+          }}
+        >
+          {text}
+        </Mark>
+      </div>
+    </Link>
+  ));
 
 const BefriendersLinksRoute = ({
   path,
@@ -123,10 +127,10 @@ const BefriendersLinksRoute = ({
   />
 );
 
-const Content = routerPure(() => (
+const Content = r.yield(getLocation).yield(() => (
   <div>
     <Route
-      path="/"
+      path="/dashboard"
       exact
       label="HostNation"
       render={() => (
@@ -134,23 +138,23 @@ const Content = routerPure(() => (
           <Txt style={{ ...styles.header, fontSize: 50 }}>HostNation</Txt>
           <Div style={{ spacing: 15 }}>
             <Txt style={{ ...styles.header, fontSize: 30 }}>Befrienders</Txt>
-            <MarkLink to="/unmatched" text="# Unmatched" />
-            <MarkLink to="/matched" text="# Matched" />
-            <MarkLink to="/archived" text="# Archived" />
+            <MarkLink to="/dashboard/unmatched" text="# Unmatched" />
+            <MarkLink to="/dashboard/matched" text="# Matched" />
+            <MarkLink to="/dashboard/archived" text="# Archived" />
           </Div>
           <Div style={{ spacing: 15 }}>
             <Txt style={{ ...styles.header, fontSize: 30 }}>Refugees</Txt>
-            <MarkLink to="/referrals" text="# Referrals" />
+            <MarkLink to="/dashboard/referrals" text="# Referrals" />
           </Div>
           <Div style={{ spacing: 15 }}>
             <Txt style={{ ...styles.header, fontSize: 30 }}>Tools</Txt>
-            <MarkLink to="/map" text="# Map" />
+            <MarkLink to="/dashboard/map" text="# Map" />
           </Div>
         </Div>
       )}
     />
     <BefriendersLinksRoute
-      path="/unmatched"
+      path="/dashboard/unmatched"
       title="Unmatched"
       dateLabel="Registration date"
       dateField="createdat"
@@ -158,21 +162,21 @@ const Content = routerPure(() => (
       filter={['AND', ['match', '=', null], ['archived', '=', null]]}
     />
     <BefriendersLinksRoute
-      path="/matched"
+      path="/dashboard/matched"
       title="Matched"
       dateLabel="Start date"
       dateField="startdate"
       filter={['match', '!=', null]}
     />
     <BefriendersLinksRoute
-      path="/archived"
+      path="/dashboard/archived"
       title="Archived"
       dateLabel="Registration date"
       dateField="createdat"
       filter={['archived', '!=', null]}
     />
     <FormsRoute
-      path="/:path(unmatched|matched|archived)"
+      path="/dashboard/:path(unmatched|matched|archived)"
       type="befrienders"
       title={[
         ['firstname', 'lastname'],
@@ -248,7 +252,7 @@ const Content = routerPure(() => (
       ]}
     />
     <LinksRoute
-      path="/referrals"
+      path="/dashboard/referrals"
       title="Referrals"
       columns={[
         'Name',
@@ -300,7 +304,7 @@ const Content = routerPure(() => (
       ]}
     />
     <FormsRoute
-      path="/referrals"
+      path="/dashboard/referrals"
       type="refugees"
       title={[
         ['firstname', 'lastname'],
@@ -351,7 +355,7 @@ const Content = routerPure(() => (
       ]}
     />
     <Route
-      path="/map"
+      path="/dashboard/map"
       exact
       label="Map"
       render={() => (
@@ -364,23 +368,27 @@ const Content = routerPure(() => (
   </div>
 ));
 
-const Dashboard = m.do(auth).do(withRouter('dashboard'))(({ breadcrumbs }) => (
-  <Div style={{ spacing: 15 }}>
-    <Breadcrumbs
-      breadcrumbs={breadcrumbs}
-      style={{
-        ...styles.base,
-        fontWeight: 'bold',
-        fontStyle: 'italic',
-        link: {
-          color: colors.purple,
-          hover: { color: colors.purpleDark },
-        },
-      }}
-    />
-    <Content />
-  </Div>
-));
+const Dashboard = r
+  .yield(withLocation)
+  .yield(auth)
+  .yield(withBreadcrumbs('dashboard'))
+  .yield(({ breadcrumbs }) => (
+    <Div style={{ spacing: 15 }}>
+      <Breadcrumbs
+        breadcrumbs={breadcrumbs}
+        style={{
+          ...styles.base,
+          fontWeight: 'bold',
+          fontStyle: 'italic',
+          link: {
+            color: colors.purple,
+            hover: { color: colors.purpleDark },
+          },
+        }}
+      />
+      <Content />
+    </Div>
+  ));
 
 export default () => (
   <>

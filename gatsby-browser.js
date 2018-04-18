@@ -4,4 +4,4 @@ exports.onClientEntry = () => {
 };
 
 exports.shouldUpdateScroll = () => false;
-exports.onRouteUpdate = ({ location }) => window.scroll(0, 0);
+exports.onRouteUpdate = () => window.scroll(0, 0);

@@ -1,10 +1,9 @@
 import * as React from 'react';
-import m from 'mishmash';
+import r from 'refluent';
 import { css, Mark, Txt } from 'elmnt';
-import { createForm } from 'common-client';
+import { branch, createForm, restyle } from 'common-client';
 import { root } from 'common';
 import * as debounce from 'lodash.debounce';
-import st from 'style-transform';
 
 import styles, { colors } from './styles';
 
@@ -29,9 +28,9 @@ export default (
   createForm(
     container,
     ['title', 'info'],
-    m.doIf(
-      ({ fields }) => !fields,
-      m.yield(
+    r.yield(
+      branch(
+        ({ fields }) => !fields,
         ({ title, info }) =>
           title ? (
             <Txt
@@ -51,55 +50,57 @@ export default (
           ) : null,
       ),
     ),
-    m
-      .doIf(
-        ({ getAddress }) => getAddress !== undefined,
-        m.merge('field', (field, _) => {
-          let first = true;
-          const updateAddress = debounce(async address => {
-            const location = await codeAddress(address);
-            root.rgo.set({
-              key: [field.key[0], field.key[1], 'mapaddress'],
-              value: location,
-            });
-          }, 1000);
-          const unsubscribes = [
-            updateAddress.cancel,
-            root.rgo.query(
-              {
-                name: field.key[0],
-                filter: field.key[1],
-                fields: ['address', 'postcode'],
-              },
-              data => {
-                if (data) {
-                  const { address, postcode } = data[field.key[0]][0];
-                  if (!first) {
-                    root.rgo.set({
-                      key: [field.key[0], field.key[1], 'mapaddress'],
-                      value: true,
-                    });
+    r
+      .yield(
+        branch(
+          ({ getAddress }) => getAddress !== undefined,
+          r.do('field', (field, _) => {
+            let first = true;
+            const updateAddress = debounce(async address => {
+              const location = await codeAddress(address);
+              root.rgo.set({
+                key: [field.key[0], field.key[1], 'mapaddress'],
+                value: location,
+              });
+            }, 1000);
+            const unsubscribes = [
+              updateAddress.cancel,
+              root.rgo.query(
+                {
+                  name: field.key[0],
+                  filter: field.key[1],
+                  fields: ['address', 'postcode'],
+                },
+                data => {
+                  if (data) {
+                    const { address, postcode } = data[field.key[0]][0];
+                    if (!first) {
+                      root.rgo.set({
+                        key: [field.key[0], field.key[1], 'mapaddress'],
+                        value: true,
+                      });
+                    }
+                    first = false;
+                    updateAddress(`${address}, ${postcode}`);
                   }
-                  first = false;
-                  updateAddress(`${address}, ${postcode}`);
-                }
-              },
-            ),
-          ];
-          return () => unsubscribes.forEach(u => u());
-        }),
+                },
+              ),
+            ];
+            return () => unsubscribes.forEach(u => u());
+          }),
+        ),
       )
-      .doIf(
-        ({ mapAddress }) => mapAddress,
-        m
-          .merge('style', style => ({
-            style: st(style).filter(...css.groups.text),
-          }))
-          .yield(({ value, style }) => (
-            <Txt style={style}>
-              {value === null ? 'No' : value === true ? 'Checking...' : 'Yes'}
-            </Txt>
-          )),
+      .yield(
+        branch(
+          ({ mapAddress }) => mapAddress,
+          r
+            .do(restyle(style => style.filter(...css.groups.text)))
+            .yield(({ value, style }) => (
+              <Txt style={style}>
+                {value === null ? 'No' : value === true ? 'Checking...' : 'Yes'}
+              </Txt>
+            )),
+        ),
       ),
     {
       ...styles.field(color, admin),

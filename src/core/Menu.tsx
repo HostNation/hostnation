@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Div, Hover, Icon, Txt } from 'elmnt';
-import m, { watchHover } from 'mishmash';
-import { Link, withWidth } from 'common-client';
+import r from 'refluent';
+import { Link, watchHover, withWidth } from 'common-client';
 
 import styles, { colors, icons } from '../core/styles';
 
@@ -12,8 +12,9 @@ const textStyle = active => ({
   fontWeight: 'normal' as 'normal',
 });
 
-const MenuLink = m.do(watchHover)(
-  ({ text, to, newTab, active, setClosed, isHovered, hoverProps }: any) => (
+const MenuLink = r
+  .do(watchHover)
+  .yield(({ text, to, newTab, active, setClosed, isHovered, hoverProps }) => (
     <Link
       to={to}
       newTab={newTab}
@@ -40,180 +41,186 @@ const MenuLink = m.do(watchHover)(
         <Txt style={textStyle(isHovered || active === to)}>{text}</Txt>
       </div>
     </Link>
-  ),
-);
+  ));
 
-export default m
-  .do(withWidth(800))
-  .merge('small', (small = true) => ({ small }))
-  .merge((_, push) => ({
+export default r
+  .yield(withWidth(800))
+  .do('small', (small = true) => ({ small }))
+  .do((props$, push) => ({
     isOpen: false,
-    toggle: () => push(({ isOpen }) => ({ isOpen: !isOpen })),
+    toggle: () => push({ isOpen: !props$(true).isOpen }),
     setClosed: () => push({ isOpen: false }),
   }))
-  .merge(
+  .do(
     ({ small, isOpen }) => !small && isOpen,
     'setClosed',
     (shouldClose, setClosed) => shouldClose && setTimeout(setClosed),
-  )(({ active, isOpen, toggle, setClosed, small, setWidthElem }) => (
-  <div
-    style={{
-      background: colors.black,
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100%',
-      zIndex: 1000,
-    }}
-    ref={setWidthElem}
-  >
-    <Div>
-      <Div
-        style={{
-          layout: 'bar',
-          maxWidth: 850,
-          padding: '14px 15px 15px',
-          margin: '0 auto',
-          width: '100%',
-        }}
-      >
-        <Div style={{ layout: 'bar', spacing: 13 }}>
-          <Link
-            to="/"
-            onClick={setClosed}
-            style={{ display: 'block', padding: 5, margin: -5 }}
-          >
-            <Hover>
-              {({ isHovered, hoverProps }) => (
-                <Txt
-                  {...hoverProps}
-                  style={{
-                    ...textStyle(isHovered),
-                    fontSize: 21,
-                    marginRight: 20,
-                  }}
-                >
-                  HostNation
-                </Txt>
-              )}
-            </Hover>
-          </Link>
-          <a
-            href="https://www.facebook.com/HostNationUK"
-            target="_blank"
-            style={{ display: 'block', padding: 5, margin: -5 }}
-          >
-            <Hover>
-              {({ isHovered, hoverProps }) => (
-                <Icon
-                  {...icons.fb}
-                  {...hoverProps}
-                  style={{
-                    ...textStyle(isHovered),
-                    fontSize: 19,
-                    padding: 5,
-                    margin: -5,
-                  }}
-                />
-              )}
-            </Hover>
-          </a>
-          <a
-            href="https://twitter.com/hostnationuk"
-            target="_blank"
-            style={{ display: 'block' }}
-          >
-            <Hover>
-              {({ isHovered, hoverProps }) => (
-                <Icon
-                  {...icons.twitter}
-                  {...hoverProps}
-                  style={{
-                    ...textStyle(isHovered),
-                    fontSize: 19,
-                    padding: 5,
-                    margin: -5,
-                  }}
-                />
-              )}
-            </Hover>
-          </a>
-        </Div>
-        {small ? (
-          <Hover
-            style={{
-              spacing: 5,
-              float: 'right',
-              padding: '8px 5px',
-              margin: '-8px -5px',
-              cursor: 'pointer',
-              hover: { background: colors.blackLight },
-            }}
-          >
-            {({ hoverProps, style }) => (
-              <Div onClick={toggle} {...hoverProps} style={style}>
-                <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />
-                <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />
-                <div style={{ width: 28, height: 3, background: '#f2f2f2' }} />
-              </Div>
-            )}
-          </Hover>
-        ) : (
-          <Div style={{ layout: 'bar', spacing: 30, float: 'right' }}>
-            <MenuLink text="About Us" to="/about-us" active={active} />
-            <MenuLink text="Befriend" to="/befriend" active={active} />
-            <MenuLink text="Refer" to="/refer" active={active} />
-            <MenuLink text="Befrienders’ guide" to="/guide.pdf" newTab />
-            <MenuLink
-              text="News"
-              to="https://hostnationblog.wordpress.com"
-              newTab
-            />
-          </Div>
-        )}
-      </Div>
-      {small && (
-        <div
+  )
+  .yield(({ active, isOpen, toggle, setClosed, small, setWidthElem }) => (
+    <div
+      style={{
+        background: colors.black,
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        zIndex: 1000,
+      }}
+      ref={setWidthElem}
+    >
+      <Div>
+        <Div
           style={{
-            overflow: 'hidden',
-            transition: 'height 0.35s ease',
-            height: isOpen ? 213 : 0,
+            layout: 'bar',
+            maxWidth: 850,
+            padding: '14px 15px 15px',
+            margin: '0 auto',
+            width: '100%',
           }}
         >
-          <Div style={{ spacing: 20, padding: '20px 0' }}>
-            <MenuLink
-              text="About Us"
-              to="/about-us"
-              active={active}
-              setClosed={setClosed}
-            />
-            <MenuLink
-              text="Befriend"
-              to="/befriend"
-              active={active}
-              setClosed={setClosed}
-            />
-            <MenuLink
-              text="Refer"
-              to="/refer"
-              active={active}
-              setClosed={setClosed}
-            />
-            <MenuLink
-              text="Befrienders’ guide"
-              to="/guide.pdf"
-              newTab
-              setClosed={setClosed}
-            />
-            <MenuLink
-              text="News"
-              to="https://hostnationblog.wordpress.com"
-              newTab
-              setClosed={setClosed}
-            />
+          <Div style={{ layout: 'bar', spacing: 13 }}>
+            <Link
+              to="/"
+              onClick={setClosed}
+              style={{ display: 'block', padding: 5, margin: -5 }}
+            >
+              <Hover>
+                {({ isHovered, hoverProps }) => (
+                  <Txt
+                    {...hoverProps}
+                    style={{
+                      ...textStyle(isHovered),
+                      fontSize: 21,
+                      marginRight: 20,
+                    }}
+                  >
+                    HostNation
+                  </Txt>
+                )}
+              </Hover>
+            </Link>
+            <a
+              href="https://www.facebook.com/HostNationUK"
+              target="_blank"
+              style={{ display: 'block', padding: 5, margin: -5 }}
+            >
+              <Hover>
+                {({ isHovered, hoverProps }) => (
+                  <Icon
+                    {...icons.fb}
+                    {...hoverProps}
+                    style={{
+                      ...textStyle(isHovered),
+                      fontSize: 19,
+                      padding: 5,
+                      margin: -5,
+                    }}
+                  />
+                )}
+              </Hover>
+            </a>
+            <a
+              href="https://twitter.com/hostnationuk"
+              target="_blank"
+              style={{ display: 'block' }}
+            >
+              <Hover>
+                {({ isHovered, hoverProps }) => (
+                  <Icon
+                    {...icons.twitter}
+                    {...hoverProps}
+                    style={{
+                      ...textStyle(isHovered),
+                      fontSize: 19,
+                      padding: 5,
+                      margin: -5,
+                    }}
+                  />
+                )}
+              </Hover>
+            </a>
           </Div>
-        </div>
-      )}
-    </Div>
-  </div>
-));
+          {small ? (
+            <Hover
+              style={{
+                spacing: 5,
+                float: 'right',
+                padding: '8px 5px',
+                margin: '-8px -5px',
+                cursor: 'pointer',
+                hover: { background: colors.blackLight },
+              }}
+            >
+              {({ hoverProps, style }) => (
+                <Div onClick={toggle} {...hoverProps} style={style}>
+                  <div
+                    style={{ width: 28, height: 3, background: '#f2f2f2' }}
+                  />
+                  <div
+                    style={{ width: 28, height: 3, background: '#f2f2f2' }}
+                  />
+                  <div
+                    style={{ width: 28, height: 3, background: '#f2f2f2' }}
+                  />
+                </Div>
+              )}
+            </Hover>
+          ) : (
+            <Div style={{ layout: 'bar', spacing: 30, float: 'right' }}>
+              <MenuLink text="About Us" to="/about-us" active={active} />
+              <MenuLink text="Befriend" to="/befriend" active={active} />
+              <MenuLink text="Refer" to="/refer" active={active} />
+              <MenuLink text="Befrienders’ guide" to="/guide.pdf" newTab />
+              <MenuLink
+                text="News"
+                to="https://hostnationblog.wordpress.com"
+                newTab
+              />
+            </Div>
+          )}
+        </Div>
+        {small && (
+          <div
+            style={{
+              overflow: 'hidden',
+              transition: 'height 0.35s ease',
+              height: isOpen ? 213 : 0,
+            }}
+          >
+            <Div style={{ spacing: 20, padding: '20px 0' }}>
+              <MenuLink
+                text="About Us"
+                to="/about-us"
+                active={active}
+                setClosed={setClosed}
+              />
+              <MenuLink
+                text="Befriend"
+                to="/befriend"
+                active={active}
+                setClosed={setClosed}
+              />
+              <MenuLink
+                text="Refer"
+                to="/refer"
+                active={active}
+                setClosed={setClosed}
+              />
+              <MenuLink
+                text="Befrienders’ guide"
+                to="/guide.pdf"
+                newTab
+                setClosed={setClosed}
+              />
+              <MenuLink
+                text="News"
+                to="https://hostnationblog.wordpress.com"
+                newTab
+                setClosed={setClosed}
+              />
+            </Div>
+          </div>
+        )}
+      </Div>
+    </div>
+  ));

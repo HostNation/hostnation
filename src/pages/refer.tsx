@@ -1,5 +1,5 @@
 import * as React from 'react';
-import m from 'mishmash';
+import r from 'refluent';
 import { Div, Hover, Txt } from 'elmnt';
 import Helmet from 'react-helmet';
 
@@ -11,40 +11,40 @@ import Box from '../core/Box';
 import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
 
-const ReferForm = m
-  .merge((_, push) => ({
+const ReferForm = r
+  .do((_, push) => ({
     complete: false,
     onSubmit: () => push({ complete: true }),
   }))
-  .doIf(
-    'complete',
-    m.yield(() => (
-      <Txt
-        style={{
-          ...styles.base,
-          fontSize: 30,
-          lineHeight: '40px',
-          fontWeight: 'bold',
-          textAlign: 'center',
-          padding: '50px 0',
-          color: colors.purple,
-        }}
-      >
-        Thanks for completing your referral, we’ll be in touch soon!
-      </Txt>
-    )),
-  )(({ onSubmit }) => (
-  <Forms.Purple
-    objects={{
-      refugee: {
-        type: 'refugees',
-        initial: { mapaddress: null },
-      },
-    }}
-    blocks={referBlocks()}
-    onSubmit={onSubmit}
-  />
-));
+  .yield(
+    ({ onSubmit, complete }) =>
+      complete ? (
+        <Txt
+          style={{
+            ...styles.base,
+            fontSize: 30,
+            lineHeight: '40px',
+            fontWeight: 'bold',
+            textAlign: 'center',
+            padding: '50px 0',
+            color: colors.purple,
+          }}
+        >
+          Thanks for completing your referral, we’ll be in touch soon!
+        </Txt>
+      ) : (
+        <Forms.Purple
+          objects={{
+            refugee: {
+              type: 'refugees',
+              initial: { mapaddress: null },
+            },
+          }}
+          blocks={referBlocks()}
+          onSubmit={onSubmit}
+        />
+      ),
+  );
 
 export default () => (
   <>
