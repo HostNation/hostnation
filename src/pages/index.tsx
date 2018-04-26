@@ -189,21 +189,32 @@ export default r
                   >
                     <Txt style={styles.subtitle}>Befrienders</Txt>
                     <Txt style={testimonialStyle('yellow')}>
-                      “He’s not an asylum seeker anymore, he’s Sanjal and he’s
-                      got a place in our heart”
+                      “We are fast becoming good friends”
                     </Txt>
                     <Txt style={testimonialStyle('yellow')}>
-                      “We do lots together but more than anything we have long,
-                      long talks. We will always keep in touch”
+                      “She is such a lovely person to spend time with and I
+                      genuinely look forward to seeing her”
                     </Txt>
                     <Txt style={testimonialStyle('yellow')}>
-                      “Each thing we do together feels like a small step to
-                      letting her know she’s welcomed and loved. It has been a
-                      privilege to help”
+                      “I feel I’ve learnt so much by doing this. Its been really
+                      interesting and humbling”
                     </Txt>
                     <Txt style={testimonialStyle('yellow')}>
-                      “She’s so appreciative of everything and just needs some
-                      TLC”
+                      “This has opened a window of new interests and fulfilment
+                      for me that I find difficult to put into words. It’s been
+                      very enriching and positive”
+                    </Txt>
+                    <Txt style={testimonialStyle('yellow')}>
+                      “She’s impressive and inspiring and knowing her has
+                      enriched my and my family’s life”
+                    </Txt>
+                    <Txt style={testimonialStyle('yellow')}>
+                      “He and I are getting on great!”
+                    </Txt>
+                    <Txt style={testimonialStyle('yellow')}>
+                      “It’s a very good match. I’m really pleased by how well we
+                      get on given we come from such different cultures and
+                      speak different languages”
                     </Txt>
                   </Div>
                   <Div
@@ -216,19 +227,31 @@ export default r
                   >
                     <Txt style={styles.subtitle}>Refugees</Txt>
                     <Txt style={testimonialStyle('purple')}>
-                      “Through Mary I have had the best time of my life in
-                      England. She made me realise I wasn't all by myself”
+                      “I’m not feeling lonely any more”
                     </Txt>
                     <Txt style={testimonialStyle('purple')}>
-                      “He is the kindest person I have ever met”
+                      “To have someone I can go out with, someone who cares, who
+                      thinks of me, who calls me: …things like this make you
+                      feel human again”
                     </Txt>
                     <Txt style={testimonialStyle('purple')}>
-                      “When I am with her I feel a deep peace and happiness
-                      without negative thoughts or anxiety”
+                      “I don’t feel as scared to talk to English people now as I
+                      did before”
                     </Txt>
                     <Txt style={testimonialStyle('purple')}>
-                      “It is such a wonderful thing to meet people who will
-                      welcome us into their life”
+                      “I’ve been learning English slang like 'hanging out'”
+                    </Txt>
+                    <Txt style={testimonialStyle('purple')}>
+                      “It’s like having someone to do my life with”
+                    </Txt>
+                    <Txt style={testimonialStyle('purple')}>
+                      “The most important thing is that you feel more welcome
+                      and you are not isolated. There is someone there who cares
+                      about you”
+                    </Txt>
+                    <Txt style={testimonialStyle('purple')}>
+                      “I’ve been to many new places and feel much more confident
+                      about living in London”
                     </Txt>
                   </Div>
                 </Div>
