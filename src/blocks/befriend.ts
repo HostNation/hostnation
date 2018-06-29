@@ -156,7 +156,7 @@ export default function(admin?: boolean) {
       {
         text: admin
           ? 'Experience with refugees or vulnerable people'
-          : 'Do you have any experience of working with / volunteering to help / fundraising for any organisations supporting refugees or vulnerable people?',
+          : 'Do you have any experience of working with or volunteering with refugees or other vulnerable groups?',
         prompt: 'Please give details of organisation(s) and your involvement',
         field: 'befriender.experience',
         rows: 5,

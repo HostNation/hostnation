@@ -171,11 +171,7 @@ export default r
               <MenuLink text="Befriend" to="/befriend" active={active} />
               <MenuLink text="Refer" to="/refer" active={active} />
               <MenuLink text="Befrienders’ guide" to="/guide.pdf" newTab />
-              <MenuLink
-                text="News"
-                to="https://hostnationblog.wordpress.com"
-                newTab
-              />
+              <MenuLink text="Links" to="/links.pdf" newTab />
             </Div>
           )}
         </Div>
@@ -213,8 +209,8 @@ export default r
                 setClosed={setClosed}
               />
               <MenuLink
-                text="News"
-                to="https://hostnationblog.wordpress.com"
+                text="Links"
+                to="/links.pdf"
                 newTab
                 setClosed={setClosed}
               />

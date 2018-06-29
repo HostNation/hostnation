@@ -13,7 +13,6 @@ import * as mohamedJulia from '../img/photos/mohamed-julia.jpg';
 import * as oliviaAnna from '../img/photos/olivia-anna.jpg';
 import * as tobyLaurence from '../img/photos/toby-laurence.jpg';
 
-import * as darwinSashaBanner from '../img/banners/darwin-sasha-transparent.png';
 import * as nithiAndySueBanner from '../img/banners/nithi-andy-sue-transparent.png';
 import * as oliviaAnnaBanner from '../img/banners/olivia-anna-transparent.png';
 
@@ -22,10 +21,6 @@ import * as guideIcon from '../img/icons/guide.png';
 import * as linksIcon from '../img/icons/links.png';
 import * as newsIcon from '../img/icons/news.png';
 import * as testimonialsIcon from '../img/icons/testimonials.png';
-
-import * as doIt from '../img/links/do-it.jpg';
-import * as refugeeCouncil from '../img/links/refugee-council.png';
-import * as refugeesAtHome from '../img/links/refugees-at-home.png';
 
 import Button from '../core/Button';
 import styles, { colors, icons } from '../core/styles';
@@ -46,21 +41,15 @@ const testimonialStyle = color => ({
   fontWeight: 'normal' as 'normal',
   color: colors[color],
 });
-const linkStyle = {
-  background: 'white',
-  maxWidth: 500,
-  padding: 10,
-  margin: '0 auto',
-  spacing: 15,
-  hover: { background: '#eee' },
-};
 
 export default r
-  .do((_, push) => {
+  .do((_, push, commit) => {
     push({ photo: null });
-    setTimeout(() =>
-      push({ photo: photos[Math.floor(Math.random() * photos.length)] }),
-    );
+    if (commit) {
+      setTimeout(() =>
+        push({ photo: photos[Math.floor(Math.random() * photos.length)] }),
+      );
+    }
   })
   .yield(({ photo }) => (
     <>
@@ -102,7 +91,7 @@ export default r
             </div>
           ),
         })}
-        <Div style={{ spacing: 10 }}>
+        <Div style={{ spacing: 20 }}>
           <Txt style={{ ...styles.text, fontSize: 24, fontWeight: 'bold' }}>
             HostNation believes every refugee deserves a friend.
           </Txt>
@@ -110,15 +99,23 @@ export default r
             A digital means of connecting those offering friendship with those
             needing it.
           </Txt>
+          <Txt style={{ ...styles.text, fontSize: 24 }}>
+            Currently working in Greater London.
+          </Txt>
         </Div>
         <img src={photo} />
-        <Txt style={{ ...styles.text, fontSize: 24 }}>
-          We are a London-based introductory service dedicated to connecting
-          people in their communities. Befrienders are matched with and then
-          introduced to a refugee or asylum seeker in their area. They commit to
-          meeting socially for a minimum of 3 hours once a fortnight over a
-          period of 3 months.
-        </Txt>
+        <Div style={{ spacing: 20 }}>
+          <Txt style={{ ...styles.text, fontSize: 24 }}>
+            We are a London-based introductory service connecting residents to
+            newcomers in the city. Befrienders are matched with and then
+            introduced to a refugee or asylum seeker in their part of town. They
+            commit to being a London host once or twice a fortnight for a
+            minimum of 3 months.
+          </Txt>
+          <Txt style={{ ...styles.text, fontSize: 24, fontWeight: 'bold' }}>
+            London is a much friendlier place with a Londoner by your side.
+          </Txt>
+        </Div>
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Div style={{ spacing: 25 }}>
           <Txt style={styles.body}>
@@ -155,9 +152,33 @@ export default r
         </Div>
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <img
-          src={darwinSashaBanner}
+          src={nithiAndySueBanner}
           style={{ maxWidth: 650, margin: '0 auto' }}
         />
+        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+        <Div style={{ spacing: 25 }}>
+          <Txt style={styles.title}>
+            Support Organisations in London for Befrienders
+          </Txt>
+          <Txt style={styles.body}>
+            For a fairly comprehensive list of organisations that provide
+            refugee support - advice, casework, housing, legal, social, drop-in
+            centres - use our links and help befriendees find the support in the
+            capital that they need.
+          </Txt>
+          <Div style={{ spacing: 15 }}>
+            <img src={linksIcon} style={{ width: 100, margin: '0 auto' }} />
+            <Button
+              to="/links.pdf"
+              newTab
+              color="black"
+              style={{ margin: '0 auto' }}
+            >
+              SEE OUR SIGNPOSTING LINKS
+            </Button>
+          </Div>
+        </Div>
+        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Div style={{ spacing: 40, padding: 40, background: 'white' }}>
           <Div style={{ spacing: 10 }}>
             <img
@@ -294,55 +315,7 @@ export default r
           src={oliviaAnnaBanner}
           style={{ maxWidth: 650, margin: '0 auto' }}
         />
-        <Div style={{ spacing: 40, padding: 40, background: 'white' }}>
-          <Div style={{ spacing: 15 }}>
-            <img src={linksIcon} style={{ width: 100, margin: '0 auto' }} />
-            <Txt style={styles.title}>Links</Txt>
-            <Txt style={styles.body}>
-              Here are links to other online sites connecting refugees to host
-              communities.
-            </Txt>
-          </Div>
-          <Div style={{ spacing: 20 }}>
-            {[
-              {
-                link: 'https://do-it.org',
-                img: doIt,
-                text: 'for volunteering opportunities in your area',
-              },
-              {
-                link: 'http://www.refugeesathome.org',
-                img: refugeesAtHome,
-                text:
-                  'connecting those with a spare room to refugees and asylum seekers in need of accommodation',
-              },
-              {
-                link: 'https://www.refugeecouncil.org.uk/services',
-                img: refugeeCouncil,
-                text:
-                  'a searchable database linking refugees and asylum seekers to support services in Greater London',
-              },
-            ].map(({ link, img, text }, i) => (
-              <Hover style={linkStyle} key={i}>
-                {({ hoverProps, style }) => (
-                  <a href={link} target="_blank">
-                    <Div {...hoverProps} style={style}>
-                      <img src={img} style={{ width: 100, margin: '0 auto' }} />
-                      <Txt style={{ ...styles.text, fontWeight: 'bold' }}>
-                        {text}
-                      </Txt>
-                    </Div>
-                  </a>
-                )}
-              </Hover>
-            ))}
-          </Div>
-        </Div>
-        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-        <img
-          src={nithiAndySueBanner}
-          style={{ maxWidth: 650, margin: '0 auto' }}
-        />
+
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Div style={{ spacing: 35 }}>
           <Div style={{ spacing: 15 }}>

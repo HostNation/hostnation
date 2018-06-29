@@ -133,7 +133,7 @@ export default function(admin?: boolean) {
         optional: true,
       },
       {
-        text: 'Length of time in the UK',
+        text: 'Length of time in the UK (years)',
         field: 'refugee.ukduration',
         optional: admin,
         style: { layout: 'modal', maxWidth: 400 },
@@ -226,8 +226,8 @@ export default function(admin?: boolean) {
       },
       {
         text: admin
-          ? 'Reason for wanting local friend'
-          : 'Why would you like a local friend?',
+          ? 'Reason for wanting a befriender'
+          : 'Why would you like a befriender?',
         field: 'refugee.whyfriend',
         optional: admin,
         rows: 3,
@@ -235,7 +235,7 @@ export default function(admin?: boolean) {
       {
         text: admin
           ? 'Preferred activities'
-          : 'What would you hope to do together?',
+          : 'What would you like to see and do together?',
         field: 'refugee.activities',
         optional: admin,
         rows: 3,
