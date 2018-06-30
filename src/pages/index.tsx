@@ -157,9 +157,7 @@ export default r
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Div style={{ spacing: 25 }}>
-          <Txt style={styles.title}>
-            Support Organisations in London for Befrienders
-          </Txt>
+          <Txt style={styles.title}>Refugee Support Organisations</Txt>
           <Txt style={styles.body}>
             For a fairly comprehensive list of organisations that provide
             refugee support - advice, casework, housing, legal, social, drop-in
@@ -174,7 +172,7 @@ export default r
               color="black"
               style={{ margin: '0 auto' }}
             >
-              SEE OUR SIGNPOSTING LINKS
+              SIGNPOSTING LINKS
             </Button>
           </Div>
         </Div>
@@ -320,7 +318,21 @@ export default r
         <Div style={{ spacing: 35 }}>
           <Div style={{ spacing: 15 }}>
             <img src={contactIcon} style={{ width: 100, margin: '0 auto' }} />
-            <Txt style={styles.subtitle}>info@hostnation.org.uk</Txt>
+            <Hover
+              style={{
+                ...styles.subtitle,
+                color: colors.purple,
+                hover: { color: colors.purpleDark },
+              }}
+            >
+              {({ hoverProps, style }) => (
+                <a href="mailto:info@hostnation.org.uk">
+                  <Txt {...hoverProps} style={style}>
+                    info@hostnation.org.uk
+                  </Txt>
+                </a>
+              )}
+            </Hover>
           </Div>
           <Div style={{ layout: 'bar', spacing: 40, margin: '0 auto' }}>
             {[

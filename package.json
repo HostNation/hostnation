@@ -5,14 +5,16 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "prettier":
-      "prettier --single-quote --trailing-comma all --write \"src/**/*.{ts,tsx}\""
+    "prettier": "prettier --single-quote --trailing-comma all --write \"src/**/*.{ts,tsx}\""
   },
   "babel": {
-    "presets": ["env", "stage-0"]
+    "presets": [
+      "env",
+      "stage-0"
+    ]
   },
   "dependencies": {
-    "@types/react": "^16.4.5",
+    "@types/react": "^16.4.6",
     "@types/react-dom": "^16.0.6",
     "@types/react-router-dom": "^4.2.7",
     "babel-polyfill": "^6.26.0",
