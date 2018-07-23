@@ -1,11 +1,15 @@
 {
   "name": "hostnation",
   "version": "1.0.0",
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "prettier": "prettier --single-quote --trailing-comma all --write \"src/**/*.{ts,tsx}\""
+    "prettier": "prettier --write \"src/**/*.{ts,tsx}\""
   },
   "babel": {
     "presets": [
@@ -16,24 +20,24 @@
   "dependencies": {
     "@types/react": "^16.4.6",
     "@types/react-dom": "^16.0.6",
-    "@types/react-router-dom": "^4.2.7",
+    "@types/react-router-dom": "^4.3.0",
     "babel-polyfill": "^6.26.0",
     "common": "https://github.com/kalambo/common",
     "common-client": "https://github.com/kalambo/common-client",
-    "elmnt": "^0.6.1",
-    "gatsby": "^1.9.273",
+    "elmnt": "^0.6.2",
+    "gatsby": "^1.9.277",
     "gatsby-plugin-create-client-paths": "^1.0.8",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-react-next": "^1.0.11",
     "gatsby-plugin-typescript": "^1.4.20",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.22.2",
-    "node-fetch": "^2.1.2",
+    "node-fetch": "^2.2.0",
     "prettier": "^1.13.7",
     "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.3.1",
-    "refluent": "^0.1.0",
+    "refluent": "^0.2.0",
     "rgo": "^0.3.13",
     "style-transform": "^0.2.2",
     "typescript": "^2.9.2",

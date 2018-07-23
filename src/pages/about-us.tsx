@@ -11,6 +11,7 @@ import * as anneke from '../img/team/anneke.png';
 import * as rossana from '../img/team/rossana.png';
 import * as anthony from '../img/team/anthony.png';
 import * as magda from '../img/team/magda.png';
+import * as caroline from '../img/team/caroline.jpg';
 import * as jon from '../img/team/jon.png';
 import * as claudia from '../img/team/claudia.png';
 import * as olivia from '../img/team/olivia.png';
@@ -82,7 +83,7 @@ const Profiles = r
           small={small}
           image={rossana}
           name="Rossana Horsley"
-          role="HostNation Consultant"
+          role="HostNation Director"
           bio={[
             'Rossana worked for many years in documentary filmmaking, both in television and on non-broadcast pieces for NGOs, covering a wide range of subjects from the arts and culture to the environment. A major strand of her work focused on development issues, which took her filming to several continents.',
             'Although she now calls herself a Londoner, she grew up in different countries. She knows that, even when a move is not forced upon you, finding your feet in a new culture can be a daunting challenge. A long-term supporter of Freedom form Torture, she volunteered in 2005 to be part of their befriending project for unaccompanied minors; the relationship that grew out of that experience was enriching and positive on both sides. Knowing that many people, both from here and others who have sought refuge in this country, want to make a similar connection but are unsure how, she was keen to be a part of HN to help make that happen.',
@@ -93,7 +94,7 @@ const Profiles = r
           small={small}
           image={anthony}
           name="Anthony Berman"
-          role="HostNation Consultant"
+          role="HostNation Trustee"
           bio={[
             'Anthony worked as a root canal specialist until his retirement in 2016. He still does some part-time teaching at QMUL. He left his native South Africa at the age of 13 with his family to come to live in London. Although his circumstances were considerably more comfortable than those of the average refugee or asylum seeker, he still remembers the challenges involved in being uprooted from his home country to make a life in a new environment.',
             'Twelve years ago Anthony was part of a befriending project run by the organization, Freedom from Torture, matching UK citizens with children who had arrived in the country as unaccompanied minors. The aim of the project was to introduce some normality into the lives of these frequently damaged young people. The youngster that he was paired with has become part of Anthony’s family and it has been a richly rewarding experience all round. Anthony is also one of the coordinators for the New London Synagogue Drop-In Centre for destitute asylum seekers where he has been able to see first-hand the difficulties that these people face. It is also clear that there are many local citizens who are keen to make a connection with asylum seekers but are not sure how to go about it. He believes strongly that HostNation, in fostering these friendships, will provide a transformative experience for both sides.',
@@ -104,10 +105,21 @@ const Profiles = r
           small={small}
           image={magda}
           name="Magda Wolfe"
-          role="HostNation Consultant"
+          role="HostNation Trustee"
           bio={[
             'Magda is currently studying for a master’s degree in Social Policy and Social Research at University College London. She was raised in Poland where she studied Ethnology and Cultural Anthropology at the University of Wroclaw. She moved to the UK in 2002 and pursued a successful career in media and broadcasting.',
             'She is fascinated by observing the ever-changing social landscape and is passionate about driving positive change towards a fairer society. Her interest is in social inequality issues and the problems derived from economic disparity particularly those linked to migration and the forced displacement of people. She is very excited to be part of HostNation and working as part of the core team and as such being closely involved in all stages of the process.',
+          ]}
+        />
+        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+        <Profile
+          small={small}
+          image={caroline}
+          name="Caroline Heslop"
+          role="HostNation Consultant"
+          bio={[
+            'Caroline worked in music publishing, journalism and arts documentary film making before becoming a Music teacher working with students from pre-school to undergraduate. While continuing to teach, she spent two years at Trinity Laban Conservatoire of Music and Dance completing an MMus in Composing with a special focus on managing and curating performances of cross genre music in unusual spaces. She has always loved the multiculturalism of London and felt privileged as a teacher and as a creator to work together with people from different cultural backgrounds. Having produced an evening of music and words looking at the impact of war past and present in 2016 as a fundraiser for Safe Passage UK she was inspired by the initiative of HostNation and joined the team in 2017.',
+            'She has lived in France and Italy as well as the UK and is aware of the potential loneliness and isolation as a stranger in a new country even if it is through choice. Working with HostNation she hopes to help asylum seekers and refugees in the UK feel welcomed, supported and strengthened in order to be able to build their new lives here.',
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
