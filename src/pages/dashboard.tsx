@@ -3,24 +3,23 @@ import Helmet from 'react-helmet';
 import r from 'refluent';
 import { Div, Mark, Txt } from 'elmnt';
 import { encodeId } from 'common';
-import {
-  Breadcrumbs,
-  getLocation,
-  Link,
-  Route,
-  watchHover,
-  withBreadcrumbs,
-  withLocation,
-} from 'common-client';
 import * as moment from 'moment';
+import { Link, watchHover } from 'common-client';
 
 import befriendBlocks from '../blocks/befriend';
 import referBlocks from '../blocks/refer';
-import styles, { colors } from '../core/styles';
 
 import auth from '../core/auth';
 import Map from '../core/Map';
+import {
+  Breadcrumbs,
+  getLocation,
+  Route,
+  withBreadcrumbs,
+  withLocation,
+} from '../core/router';
 import { FormsRoute, LinksRoute } from '../core/Routes';
+import styles, { colors } from '../core/styles';
 
 const duration = (date?: Date) =>
   date &&

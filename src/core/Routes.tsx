@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { Div, Txt } from 'elmnt';
 import { decodeId } from 'common';
-import { Route, Spinner, TableLinks } from 'common-client';
+import { Spinner } from 'common-client';
 
+import { Route } from '../core/router';
 import styles, { colors } from '../core/styles';
+import TableLinks from '../core/tableLinks';
 
 import DashboardForm from './DashboardForm';
 
