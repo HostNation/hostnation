@@ -1,8 +1,7 @@
 import * as React from 'react';
-import r from 'refluent';
+import r, { branch } from 'refluent';
 import { css, Mark, Txt } from 'elmnt';
-import { branch, createForm, restyle } from 'common-client';
-import { root } from 'common';
+import { createForm, restyle, root } from 'common-client';
 import * as debounce from 'lodash.debounce';
 
 import styles, { colors } from './styles';

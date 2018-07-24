@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Div } from 'elmnt';
-import r from 'refluent';
+import r, { branch } from 'refluent';
 import { Redirect } from 'react-router-dom';
-import { branch, Spinner } from 'common-client';
+import { Spinner } from 'common-client';
 
 import Button from '../core/Button';
 import createForm from '../core/createForm';

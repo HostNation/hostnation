@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Txt } from 'elmnt';
 import rgo, { resolvers } from 'rgo';
-import { root } from 'common';
-import { cssBase, StickyFooter } from 'common-client';
+import { cssBase, StickyFooter, root } from 'common-client';
 import Helmet from 'react-helmet';
 
 import Menu from '../core/Menu';

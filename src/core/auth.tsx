@@ -1,7 +1,7 @@
 import * as React from 'react';
-import r from 'refluent';
+import r, { branch } from 'refluent';
 import { Div, Hover, Input, Modal, Txt } from 'elmnt';
-import { branch, Spinner } from 'common-client';
+import { Spinner } from 'common-client';
 
 import Button from '../core/Button';
 import styles, { colors } from '../core/styles';

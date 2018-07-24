@@ -42,17 +42,13 @@
   version "0.3.29"
   resolved "https://registry.yarnpkg.com/@types/mkdirp/-/mkdirp-0.3.29.tgz#7f2ad7ec55f914482fc9b1ec4bb1ae6028d46066"
 
-"@types/node@*":
+"@types/node@*", "@types/node@^10.5.2":
   version "10.5.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.2.tgz#f19f05314d5421fe37e74153254201a7bf00a707"
 
 "@types/node@^7.0.11":
   version "7.0.67"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.67.tgz#3aeacf429e24e08e14d7621039d37b7f53542ecf"
-
-"@types/node@^9.4.6":
-  version "9.6.23"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.23.tgz#fc429962c1b75f32bd66214a3997f660e8434f0d"
 
 "@types/react-dom@^16.0.6":
   version "16.0.6"
@@ -76,9 +72,9 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.4.6":
-  version "16.4.6"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.6.tgz#5024957c6bcef4f02823accf5974faba2e54fada"
+"@types/react@*", "@types/react@^16.4.6", "@types/react@^16.4.7":
+  version "16.4.7"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.7.tgz#f33f6d759a7e1833befa15224d68942d178a5a3f"
   dependencies:
     csstype "^2.2.0"
 
@@ -1814,22 +1810,23 @@ commander@2.9.0, commander@2.9.x:
 
 "common-client@https://github.com/kalambo/common-client":
   version "0.1.0"
-  resolved "https://github.com/kalambo/common-client#bb0780476d94f2723d8c51bafe8f72345111d0b1"
+  resolved "https://github.com/kalambo/common-client#d72317f784cbed2d6aaf109bdac462f8e52bcc43"
   dependencies:
+    "@types/node" "^10.5.2"
     common "https://github.com/kalambo/common"
     d3-selection "^1.3.0"
     deep-equal "^1.0.1"
-    elmnt "^0.6.1"
-    fast-memoize "^2.3.2"
-    gatsby-link "^1.6.44"
+    elmnt "^0.6.2"
+    fast-memoize "^2.5.1"
+    gatsby-link "^1.6.46"
     keys-to-object "^0.2.0"
     lodash.debounce "^4.0.8"
     lodash.set "^4.3.2"
-    moment "^2.22.1"
+    moment "^2.22.2"
     pegjs "^0.10.0"
     react-helmet "^5.2.0"
-    react-router-dom "^4.2.2"
-    refluent "^0.1.0"
+    react-router-dom "^4.3.1"
+    refluent "^0.2.0"
     rgo "^0.3.13"
     style-transform "^0.2.2"
 
@@ -1845,12 +1842,10 @@ common-tags@^1.4.0:
 
 "common@https://github.com/kalambo/common":
   version "0.1.0"
-  resolved "https://github.com/kalambo/common#aeb70647a02d2f0ee87a00e757d075f2b138ef56"
+  resolved "https://github.com/kalambo/common#cda4b6123cbf276c0c2269a651f74ec22c76ebea"
   dependencies:
-    "@types/node" "^9.4.6"
     base-x "^3.0.4"
-    moment "^2.20.1"
-    rgo "^0.3.9"
+    rgo "^0.3.13"
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -2517,7 +2512,7 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
-elmnt@^0.6.1, elmnt@^0.6.2:
+elmnt@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/elmnt/-/elmnt-0.6.2.tgz#70566c42219d0cabc57124c5c93620bf054505d4"
   dependencies:
@@ -2934,7 +2929,7 @@ fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
 
-fast-memoize@^2.3.2:
+fast-memoize@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/fast-memoize/-/fast-memoize-2.5.1.tgz#c3519241e80552ce395e1a32dcdde8d1fd680f5d"
 
@@ -3234,7 +3229,7 @@ gatsby-cli@^1.1.58:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-link@^1.6.44, gatsby-link@^1.6.46:
+gatsby-link@^1.6.46:
   version "1.6.46"
   resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.46.tgz#1f9f6bd7a4d448a856c2035e54f2263d7933f4fd"
   dependencies:
@@ -5036,7 +5031,7 @@ mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   dependencies:
     minimist "0.0.8"
 
-moment@2.x.x, moment@^2.16.0, moment@^2.20.1, moment@^2.22.1, moment@^2.22.2:
+moment@2.x.x, moment@^2.16.0, moment@^2.22.2:
   version "2.22.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
 
@@ -6477,7 +6472,7 @@ react-proxy@^3.0.0-alpha.0:
   dependencies:
     lodash "^4.6.1"
 
-react-router-dom@^4.1.1, react-router-dom@^4.2.2, react-router-dom@^4.3.1:
+react-router-dom@^4.1.1, react-router-dom@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.3.1.tgz#4c2619fc24c4fa87c9fd18f4fb4a43fe63fbd5c6"
   dependencies:
@@ -6665,13 +6660,6 @@ redux@^3.6.0:
     lodash-es "^4.2.1"
     loose-envify "^1.1.0"
     symbol-observable "^1.0.3"
-
-refluent@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/refluent/-/refluent-0.1.0.tgz#aa74ff04303f1bde400e6fd848f8e80452ebcb52"
-  dependencies:
-    keys-to-object "^0.2.0"
-    memize "^1.0.5"
 
 refluent@^0.2.0:
   version "0.2.0"
@@ -6950,7 +6938,7 @@ rgba-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/rgba-regex/-/rgba-regex-1.0.0.tgz#43374e2e2ca0968b0ef1523460b7d730ff22eeb3"
 
-rgo@^0.3.13, rgo@^0.3.9:
+rgo@^0.3.13:
   version "0.3.13"
   resolved "https://registry.yarnpkg.com/rgo/-/rgo-0.3.13.tgz#0f53955357d7d3fa0b6e9d005cee148d54f870ec"
   dependencies:
