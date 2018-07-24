@@ -2,7 +2,7 @@ import * as React from 'react';
 import r from 'refluent';
 import { Div, Hover, Txt } from 'elmnt';
 import { encodeId } from 'common';
-import { getData, Link, Spinner } from 'common-client';
+import { getData, Spinner } from 'common-client';
 import {
   GoogleMap,
   InfoWindow,
@@ -11,7 +11,8 @@ import {
   withScriptjs,
 } from 'react-google-maps';
 
-import styles, { colors } from '../core/styles';
+import { Link } from './router';
+import styles, { colors } from './styles';
 
 const icons = {
   redQuestionLight:

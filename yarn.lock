@@ -1810,14 +1810,13 @@ commander@2.9.0, commander@2.9.x:
 
 "common-client@https://github.com/kalambo/common-client":
   version "0.1.0"
-  resolved "https://github.com/kalambo/common-client#07a456b453d5ae269aadb2885ee021585d38bea6"
+  resolved "https://github.com/kalambo/common-client#db342d65061943e44d3bd00ac21b4f318de5a473"
   dependencies:
     "@types/node" "^10.5.2"
     common "https://github.com/kalambo/common"
     deep-equal "^1.0.1"
     elmnt "^0.6.2"
     fast-memoize "^2.5.1"
-    gatsby-link "^1.6.46"
     keys-to-object "^0.2.0"
     lodash.set "^4.3.2"
     moment "^2.22.2"

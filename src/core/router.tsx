@@ -170,3 +170,11 @@ export const Breadcrumbs = r
     </Div>
   ));
 
+export const Link = ({ to, newTab, route: _, ...props }: any) => {
+  const external = to.startsWith('http');
+  return external ? (
+    <a href={to} target="_blank" {...props} />
+  ) : (
+    <GatsbyLink to={to} {...(newTab ? { target: '_blank' } : {})} {...props} />
+  );
+};

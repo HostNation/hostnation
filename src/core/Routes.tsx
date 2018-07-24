@@ -3,11 +3,10 @@ import { Div, Txt } from 'elmnt';
 import { decodeId } from 'common';
 import { Spinner } from 'common-client';
 
-import { Route } from '../core/router';
-import styles, { colors } from '../core/styles';
-import TableLinks from '../core/tableLinks';
-
 import DashboardForm from './DashboardForm';
+import { Route } from './router';
+import styles, { colors } from './styles';
+import TableLinks from './tableLinks';
 
 export const LinksRoute = ({ path, title, columns, rows }) => (
   <Route

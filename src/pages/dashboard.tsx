@@ -4,7 +4,7 @@ import r from 'refluent';
 import { Div, Mark, Txt } from 'elmnt';
 import { encodeId } from 'common';
 import * as moment from 'moment';
-import { Link, watchHover } from 'common-client';
+import { watchHover } from 'common-client';
 
 import befriendBlocks from '../blocks/befriend';
 import referBlocks from '../blocks/refer';
@@ -14,6 +14,7 @@ import Map from '../core/Map';
 import {
   Breadcrumbs,
   getLocation,
+  Link,
   Route,
   withBreadcrumbs,
   withLocation,

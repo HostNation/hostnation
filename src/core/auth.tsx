@@ -3,8 +3,8 @@ import r, { branch } from 'refluent';
 import { Div, Hover, Input, Modal, Txt } from 'elmnt';
 import { Spinner } from 'common-client';
 
-import Button from '../core/Button';
-import styles, { colors } from '../core/styles';
+import Button from './Button';
+import styles, { colors } from './styles';
 
 export default r
   .yield(({ next }) => (

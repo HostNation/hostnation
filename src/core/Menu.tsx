@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Div, Hover, Icon, Txt } from 'elmnt';
 import r from 'refluent';
-import { Link, watchHover, withWidth } from 'common-client';
+import { watchHover, withWidth } from 'common-client';
 
-import styles, { colors, icons } from '../core/styles';
+import { Link } from './router';
+import styles, { colors, icons } from './styles';
 
 const textStyle = active => ({
   ...styles.text,

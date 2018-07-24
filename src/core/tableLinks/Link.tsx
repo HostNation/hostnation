@@ -1,7 +1,9 @@
 import * as React from 'react';
 import r from 'refluent';
 import { css, Txt } from 'elmnt';
-import { Link, restyle, watchHover } from 'common-client';
+import { restyle, watchHover } from 'common-client';
+
+import { Link } from '../router';
 
 export default r
   .do(watchHover)

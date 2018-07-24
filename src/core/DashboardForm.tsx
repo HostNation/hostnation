@@ -4,9 +4,9 @@ import r, { branch } from 'refluent';
 import { Redirect } from 'react-router-dom';
 import { Spinner } from 'common-client';
 
-import Button from '../core/Button';
-import createForm from '../core/createForm';
-import { colors } from '../core/styles';
+import Button from './Button';
+import createForm from './createForm';
+import { colors } from './styles';
 
 const FormBar = ({ valid, button, submit }: any) => (
   <Div
