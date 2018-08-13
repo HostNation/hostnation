@@ -11,7 +11,7 @@ import * as anneke from '../img/team/anneke.png';
 import * as rossana from '../img/team/rossana.png';
 import * as anthony from '../img/team/anthony.png';
 import * as magda from '../img/team/magda.png';
-import * as caroline from '../img/team/caroline.jpg';
+import * as caroline from '../img/team/caroline.png';
 import * as jon from '../img/team/jon.png';
 import * as claudia from '../img/team/claudia.png';
 import * as olivia from '../img/team/olivia.png';
