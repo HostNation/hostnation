@@ -74,6 +74,7 @@ const BefriendersLinksRoute = ({
       'Languages',
       'Map',
       ...(screened ? ['Screened'] : []),
+      ...(title === 'Matched' ? ['Match'] : []),
     ]}
     rows={[
       {
@@ -91,6 +92,7 @@ const BefriendersLinksRoute = ({
           'languages',
           'mapaddress',
           ...(screened ? ['notes', 'starrating'] : []),
+          ...(title === 'Matched' ? ['match'] : []),
         ],
       },
       ({ befrienders }) =>
@@ -121,6 +123,7 @@ const BefriendersLinksRoute = ({
             ...(screened
               ? [notes !== null || starrating !== null ? 'Y' : 'N']
               : []),
+            ...(title === 'Matched' ? [data.match] : []),
           ],
         ),
     ]}
