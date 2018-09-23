@@ -91,8 +91,7 @@ export default ({ location, children }) => (
                   fontWeight: 'normal' as 'normal',
                 }}
               >
-                HostNation is a restricted fund under the auspices of Prism the
-                Gift Fund, charity no. 1099682
+                HostNation is a charity. Registered charity number 1180004
               </Txt>
             </div>
           }

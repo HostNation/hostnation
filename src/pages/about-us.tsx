@@ -5,7 +5,9 @@ import Helmet from 'react-helmet';
 import { withWidth } from 'common-client';
 
 import * as logoWide from '../img/logo-wide.png';
-import * as phfLogo from '../img/phf-logo.jpg';
+import * as crLogo from '../img/logos/cr.png';
+import * as lcfLogo from '../img/logos/lcf.jpg';
+import * as phfLogo from '../img/logos/phf.jpg';
 
 import * as anneke from '../img/team/anneke.png';
 import * as rossana from '../img/team/rossana.png';
@@ -181,9 +183,8 @@ export default () => (
           HostNation came into being at the start of 2017.
         </Txt>
         <Txt style={styles.body}>
-          We are a not-for-profit social enterprise and we are registered as a
-          restricted fund under the auspices of Prism the Gift Fund, UK charity
-          no. 1099682.
+          We are a Charitable Incorporated Organisation (CIO) registered with
+          the Charity Commission. UK Charity number 1180004.
         </Txt>
       </Div>
       <Div style={{ spacing: 20 }}>
@@ -213,11 +214,38 @@ export default () => (
         </Div>
         <Txt style={styles.body}>
           We are also very grateful to the Freshfields Bruckhaus Deringer Pro
-          Bono Team for their legal support and to the Paul Hamlyn Ideas and
-          Pioneers Fund for the faith they have placed in our work and for
-          funding our start up.
+          Bono Team for their legal support, to the Paul Hamlyn Ideas and
+          Pioneers Fund for funding our start up and to The London Community
+          Foundation for awarding us a Comic Relief Core Strength Local
+          Communities Grant.
         </Txt>
-        <img src={phfLogo} style={{ maxWidth: 400, margin: '0 auto' }} />
+        {withWidth(700)({
+          next: ({ small = false, setWidthElem }) => (
+            <div ref={setWidthElem}>
+              <Div
+                style={{
+                  layout: small ? 'stack' : 'bar',
+                  spacing: 20,
+                  paddingTop: 20,
+                  margin: '0 auto',
+                }}
+              >
+                <img
+                  src={phfLogo}
+                  style={{ height: 80, width: 'auto', margin: '0 auto' }}
+                />
+                <img
+                  src={lcfLogo}
+                  style={{ height: 100, width: 'auto', margin: '0 auto' }}
+                />
+                <img
+                  src={crLogo}
+                  style={{ height: 100, width: 'auto', margin: '0 auto' }}
+                />
+              </Div>
+            </div>
+          ),
+        })}
       </Div>
       <Box title="MEET THE TEAM BEHIND HOSTNATION">
         <Profiles />
