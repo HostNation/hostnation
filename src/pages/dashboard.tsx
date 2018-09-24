@@ -75,6 +75,7 @@ const BefriendersLinksRoute = ({
       'Map',
       ...(screened ? ['Screened'] : []),
       ...(title === 'Matched' ? ['Match'] : []),
+      ...(title === 'Unmatched' ? ['Repeat'] : []),
     ]}
     rows={[
       {
@@ -93,6 +94,7 @@ const BefriendersLinksRoute = ({
           'mapaddress',
           ...(screened ? ['notes', 'starrating'] : []),
           ...(title === 'Matched' ? ['match'] : []),
+          ...(title === 'Unmatched' ? ['review1month', 'review3months'] : []),
         ],
       },
       ({ befrienders }) =>
@@ -124,6 +126,13 @@ const BefriendersLinksRoute = ({
               ? [notes !== null || starrating !== null ? 'Y' : 'N']
               : []),
             ...(title === 'Matched' ? [data.match] : []),
+            ...(title === 'Unmatched'
+              ? [
+                  data.review1month !== null || data.review3months !== null
+                    ? 'Y'
+                    : 'N',
+                ]
+              : []),
           ],
         ),
     ]}
