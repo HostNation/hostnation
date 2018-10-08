@@ -134,8 +134,8 @@ export default r
             push({ isOpen: true, countdown: 60 });
             countdownTimer = setInterval(() => {
               const current = props$(true).countdown;
-              if (current === 1) props$().logout();
-              else push({ countdown: props$(true).countdown - 1 });
+              if (current <= 1) props$().logout();
+              else push({ countdown: current - 1 });
             }, 1000);
           };
           push({

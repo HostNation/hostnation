@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Div, Txt } from 'elmnt';
 import { decodeId } from 'common';
 import { Spinner } from 'common-client';
+import r from 'refluent';
+import { Redirect } from 'react-router-dom';
 
 import DashboardForm from './DashboardForm';
 import { Route } from './router';
@@ -26,6 +28,47 @@ export const LinksRoute = ({ path, title, columns, rows }) => (
     )}
   />
 );
+
+const DeleteButton = r
+  .do('dataKey', (dataKey, push) => ({
+    deleted: false,
+    onClick: () => {
+      if (
+        window.confirm(
+          'This action is permanent - are you sure you want to delete this record?',
+        )
+      ) {
+        push({ deleted: true });
+        window.rgo.set({ key: dataKey, value: null });
+        window.rgo.commit(dataKey);
+      }
+    },
+  }))
+  .yield(
+    ({ deleted, onClick }) =>
+      deleted ? (
+        <Redirect
+          to={window.location.pathname.substring(
+            0,
+            window.location.pathname.lastIndexOf('/'),
+          )}
+        />
+      ) : (
+        <Txt
+          onClick={onClick}
+          style={{
+            ...styles.subtitle,
+            color: 'white',
+            background: 'red',
+            padding: 10,
+            width: 300,
+            cursor: 'pointer',
+          }}
+        >
+          DELETE RECORD
+        </Txt>
+      ),
+  );
 
 export const FormsRoute = ({ path, type, title, forms }) => (
   <Route
@@ -53,6 +96,7 @@ export const FormsRoute = ({ path, type, title, forms }) => (
             />
           </Div>
         ))}
+        <DeleteButton dataKey={[type, data[type][0].id]} />
       </Div>
     )}
   />

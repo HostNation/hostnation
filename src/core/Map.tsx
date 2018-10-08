@@ -10,6 +10,7 @@ import {
   withGoogleMap,
   withScriptjs,
 } from 'react-google-maps';
+import * as moment from 'moment';
 
 import { Link } from './router';
 import styles, { colors } from './styles';
@@ -128,6 +129,7 @@ export default r
           'sex',
           'ready',
           'match',
+          'dob',
         ],
       },
       {
@@ -141,6 +143,7 @@ export default r
           'postcode',
           'mapaddress',
           'sex',
+          'dob',
         ],
       },
     ),
@@ -207,6 +210,7 @@ export default r
           sex,
           ready,
           match,
+          dob,
         }) => ({
           position: mapaddress,
           icon:
@@ -221,16 +225,40 @@ export default r
             ['Sex', sex],
             ['Ready', ready ? 'Yes' : 'No'],
             ['Match', match],
+            [
+              'Age',
+              dob
+                ? `${Math.floor(moment().diff(moment(dob), 'y') / 10) * 10}s`
+                : '-',
+            ],
           ],
           link: `/dashboard/${match ? 'matched' : 'unmatched'}/${encodeId(id)}`,
         }),
       ),
       ...refugees.map(
-        ({ id, firstname, lastname, address, postcode, mapaddress, sex }) => ({
+        ({
+          id,
+          firstname,
+          lastname,
+          address,
+          postcode,
+          mapaddress,
+          sex,
+          dob,
+        }) => ({
           position: mapaddress,
           icon: icons[`yellowStar${sex === 'Male' ? 'Dark' : 'Light'}`],
           title: `${firstname} ${lastname}`,
-          info: [['Address', `${address}\n${postcode}`], ['Sex', sex]],
+          info: [
+            ['Address', `${address}\n${postcode}`],
+            ['Sex', sex],
+            [
+              'Age',
+              dob
+                ? `${Math.floor(moment().diff(moment(dob), 'y') / 10) * 10}s`
+                : '-',
+            ],
+          ],
           link: `/dashboard/referrals/${encodeId(id)}`,
         }),
       ),

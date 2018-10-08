@@ -34,7 +34,7 @@ const Help = r
   .yield(({ type, style }) => (
     <Div
       style={{
-        height: ' 100%',
+        height: 500,
         background: 'white',
         boxShadow: '0 2px 20px 5px rgba(0,0,0,0.4)',
         borderRadius: 3,
@@ -133,7 +133,7 @@ export default r
     push({
       schemaLoaded: false,
       isOpen: false,
-      toggleIsOpen: () => push({ isOpen: !props$(true).isOpen }),
+      toggleOpen: () => push({ isOpen: !props$(true).isOpen }),
     });
     let mounted = true;
     root.rgo.query().then(() => mounted && push({ schemaLoaded: true }));
