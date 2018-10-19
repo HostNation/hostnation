@@ -6,10 +6,10 @@ import { withWidth } from 'common-client';
 
 import * as logoWide from '../img/logo-wide.png';
 
-import * as adelSophia from '../img/photos/adel-sophia.jpg';
-import * as darwinSasha from '../img/photos/darwin-sasha.jpg';
+// import * as adelSophia from '../img/photos/adel-sophia.jpg';
+// import * as darwinSasha from '../img/photos/darwin-sasha.jpg';
 import * as florenceLucy from '../img/photos/florence-lucy.jpg';
-import * as mohamedJulia from '../img/photos/mohamed-julia.jpg';
+// import * as mohamedJulia from '../img/photos/mohamed-julia.jpg';
 import * as oliviaAnna from '../img/photos/olivia-anna.jpg';
 import * as tobyLaurence from '../img/photos/toby-laurence.jpg';
 
@@ -26,10 +26,10 @@ import Button from '../core/Button';
 import styles, { colors, icons } from '../core/styles';
 
 const photos = [
-  adelSophia,
-  darwinSasha,
+  // adelSophia,
+  // darwinSasha,
   florenceLucy,
-  mohamedJulia,
+  // mohamedJulia,
   oliviaAnna,
   tobyLaurence,
 ];
