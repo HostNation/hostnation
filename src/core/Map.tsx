@@ -15,24 +15,26 @@ import * as moment from 'moment';
 import { Link } from './router';
 import styles, { colors } from './styles';
 
-const icons = {
-  redQuestionLight:
-    'https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1594-help_4x.png&highlight=ff000000,FF5252,ff000000&scale=2.0',
-  redQuestionDark:
-    'https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1594-help_4x.png&highlight=ff000000,C2185B,ff000000&scale=2.0',
-  yellowStarLight:
-    'https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1502-shape_star_4x.png&highlight=ff000000,FFEA00,ff000000&scale=2.0',
-  yellowStarDark:
-    'https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1502-shape_star_4x.png&highlight=ff000000,FBC02D,ff000000&scale=2.0',
-  greenStarLight:
-    'https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1502-shape_star_4x.png&highlight=ff000000,7CB342,ff000000&scale=2.0',
-  greenStarDark:
-    'https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1502-shape_star_4x.png&highlight=ff000000,097138,ff000000&scale=2.0',
-  blueStarLight:
-    'https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1502-shape_star_4x.png&highlight=ff000000,0288D1,ff000000&scale=2.0',
-  blueStarDark:
-    'https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1502-shape_star_4x.png&highlight=ff000000,01579B,ff000000&scale=2.0',
+const mapMarkers = {
+  question: '1594-help_4x.png',
+  star: '1502-shape_star_4x.png',
 };
+const mapColors = {
+  redlight: 'e84118',
+  reddark: 'a32d10',
+  yellowlight: 'ffea00',
+  yellowdark: 'fbc02d',
+  greenlight: '4cd137',
+  greendark: '339823',
+  bluelight: '00a8ff',
+  bluedark: '0076b3',
+  purplelight: '8c7ae6',
+  purpledark: '543ada',
+};
+const icon = (marker, color, tint) =>
+  `https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/${
+    mapMarkers[marker]
+  }&highlight=ff000000,${mapColors[`${color}${tint}`]},ff000000&scale=2.0`;
 
 const MapMarker = ({
   index,
@@ -126,6 +128,9 @@ export default r
           'address',
           'postcode',
           'mapaddress',
+          'address2',
+          'postcode2',
+          'mapaddress2',
           'sex',
           'ready',
           'match',
@@ -157,29 +162,36 @@ export default r
       {next()}
       <Div style={{ layout: 'stack', spacing: 5 }}>
         <Div style={{ layout: 'bar', spacing: 5 }}>
-          <img src={icons.redQuestionLight} style={{ height: 20 }} />
-          <img src={icons.redQuestionDark} style={{ height: 20 }} />
+          <img src={icon('question', 'red', 'light')} style={{ height: 20 }} />
+          <img src={icon('question', 'red', 'dark')} style={{ height: 20 }} />
           <Txt style={{ ...styles.base, fontSize: 14, paddingLeft: 10 }}>
             Unready
           </Txt>
         </Div>
         <Div style={{ layout: 'bar', spacing: 5 }}>
-          <img src={icons.blueStarLight} style={{ height: 20 }} />
-          <img src={icons.blueStarDark} style={{ height: 20 }} />
+          <img src={icon('star', 'blue', 'light')} style={{ height: 20 }} />
+          <img src={icon('star', 'blue', 'dark')} style={{ height: 20 }} />
           <Txt style={{ ...styles.base, fontSize: 14, paddingLeft: 10 }}>
             Ready
           </Txt>
         </Div>
         <Div style={{ layout: 'bar', spacing: 5 }}>
-          <img src={icons.greenStarLight} style={{ height: 20 }} />
-          <img src={icons.greenStarDark} style={{ height: 20 }} />
+          <img src={icon('star', 'purple', 'light')} style={{ height: 20 }} />
+          <img src={icon('star', 'purple', 'dark')} style={{ height: 20 }} />
+          <Txt style={{ ...styles.base, fontSize: 14, paddingLeft: 10 }}>
+            Ready (secondary)
+          </Txt>
+        </Div>
+        <Div style={{ layout: 'bar', spacing: 5 }}>
+          <img src={icon('star', 'green', 'light')} style={{ height: 20 }} />
+          <img src={icon('star', 'green', 'dark')} style={{ height: 20 }} />
           <Txt style={{ ...styles.base, fontSize: 14, paddingLeft: 10 }}>
             Matched
           </Txt>
         </Div>
         <Div style={{ layout: 'bar', spacing: 5 }}>
-          <img src={icons.yellowStarLight} style={{ height: 20 }} />
-          <img src={icons.yellowStarDark} style={{ height: 20 }} />
+          <img src={icon('star', 'yellow', 'light')} style={{ height: 20 }} />
+          <img src={icon('star', 'yellow', 'dark')} style={{ height: 20 }} />
           <Txt style={{ ...styles.base, fontSize: 14, paddingLeft: 10 }}>
             Refugee
           </Txt>
@@ -213,15 +225,49 @@ export default r
           dob,
         }) => ({
           position: mapaddress,
-          icon:
-            icons[
-              `${ready ? (match ? 'greenStar' : 'blueStar') : 'redQuestion'}${
-                sex === 'Male' ? 'Dark' : 'Light'
-              }`
-            ],
+          icon: icon(
+            ready ? 'star' : 'question',
+            ready ? (match ? 'green' : 'blue') : 'red',
+            sex === 'Male' ? 'dark' : 'light',
+          ),
           title: `${firstname} ${lastname}`,
           info: [
             ['Address', `${address}\n${postcode}`],
+            ['Sex', sex],
+            ['Ready', ready ? 'Yes' : 'No'],
+            ['Match', match],
+            [
+              'Age',
+              dob
+                ? `${Math.floor(moment().diff(moment(dob), 'y') / 10) * 10}s`
+                : '-',
+            ],
+          ],
+          link: `/dashboard/${match ? 'matched' : 'unmatched'}/${encodeId(id)}`,
+        }),
+      ),
+      ...befrienders.map(
+        ({
+          id,
+          firstname,
+          lastname,
+          address2,
+          postcode2,
+          mapaddress2,
+          sex,
+          ready,
+          match,
+          dob,
+        }) => ({
+          position: mapaddress2,
+          icon: icon(
+            ready ? 'star' : 'question',
+            ready ? (match ? 'green' : 'purple') : 'red',
+            sex === 'Male' ? 'dark' : 'light',
+          ),
+          title: `${firstname} ${lastname}`,
+          info: [
+            ['Address', `${address2}\n${postcode2}`],
             ['Sex', sex],
             ['Ready', ready ? 'Yes' : 'No'],
             ['Match', match],
@@ -247,7 +293,7 @@ export default r
           dob,
         }) => ({
           position: mapaddress,
-          icon: icons[`yellowStar${sex === 'Male' ? 'Dark' : 'Light'}`],
+          icon: icon('star', 'yellow', sex === 'Male' ? 'dark' : 'light'),
           title: `${firstname} ${lastname}`,
           info: [
             ['Address', `${address}\n${postcode}`],
@@ -262,7 +308,7 @@ export default r
           link: `/dashboard/referrals/${encodeId(id)}`,
         }),
       ),
-    ],
+    ].filter(x => x.position),
   }))
   .do(() => ({
     googleMapURL:

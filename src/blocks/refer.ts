@@ -72,7 +72,7 @@ export default function(admin?: boolean) {
         text: 'Postcode',
         field: 'refugee.postcode',
         optional: admin,
-        getAddress: admin || false,
+        getAddress: ['address', 'postcode', 'mapaddress'],
       },
       ...(admin
         ? [

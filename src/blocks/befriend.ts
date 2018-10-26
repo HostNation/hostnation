@@ -73,13 +73,49 @@ export default function(admin?: boolean) {
         text: 'Postcode',
         field: 'befriender.postcode',
         optional: admin,
-        getAddress: admin || false,
+        getAddress: ['address', 'postcode', 'mapaddress'],
       },
       ...(admin
         ? [
             {
               text: 'Valid map address',
               field: 'befriender.mapaddress',
+              optional: true,
+              mapAddress: true,
+              view: true,
+            },
+          ]
+        : []),
+      ...(!admin
+        ? [
+            {
+              info:
+                '**We match by geography, if there is a second (fairly permanent) address where you would be happy to be matched from (ie. place of work or parental home) please add it here with the full postcode:**',
+            },
+          ]
+        : []),
+      {
+        text: 'Secondary address',
+        field: 'befriender.address2',
+        optional: true,
+        rows: 3,
+      },
+      {
+        text: 'Secondary postcode',
+        field: 'befriender.postcode2',
+        optional: true,
+        getAddress: ['address2', 'postcode2', 'mapaddress2'],
+      },
+      {
+        text: 'Secondary address type',
+        field: 'befriender.address2type',
+        optional: true,
+      },
+      ...(admin
+        ? [
+            {
+              text: 'Valid secondary map address',
+              field: 'befriender.mapaddress2',
               optional: true,
               mapAddress: true,
               view: true,

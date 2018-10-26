@@ -8,6 +8,7 @@ import * as logoWide from '../img/logo-wide.png';
 import * as crLogo from '../img/logos/cr.png';
 import * as lcfLogo from '../img/logos/lcf.jpg';
 import * as phfLogo from '../img/logos/phf.jpg';
+import * as tflLogo from '../img/logos/tfl.png';
 
 import * as anneke from '../img/team/anneke.png';
 import * as rossana from '../img/team/rossana.png';
@@ -217,7 +218,9 @@ export default () => (
           Bono Team for their legal support, to the Paul Hamlyn Ideas and
           Pioneers Fund for funding our start up and to The London Community
           Foundation for awarding us a Comic Relief Core Strength Local
-          Communities Grant.
+          Communities Grant. Trust for London have also confirmed a generous
+          Connected Communities grant towards our core costs over the next two
+          years.
         </Txt>
         {withWidth(700)({
           next: ({ small = false, setWidthElem }) => (
@@ -240,6 +243,10 @@ export default () => (
                 />
                 <img
                   src={crLogo}
+                  style={{ height: 100, width: 'auto', margin: '0 auto' }}
+                />
+                <img
+                  src={tflLogo}
                   style={{ height: 100, width: 'auto', margin: '0 auto' }}
                 />
               </Div>

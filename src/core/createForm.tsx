@@ -53,40 +53,49 @@ export default (
       .yield(
         branch(
           ({ getAddress }) => getAddress !== undefined,
-          r.do('field', (field, _) => {
-            let first = true;
-            const updateAddress = debounce(async address => {
-              const location = await codeAddress(address);
-              root.rgo.set({
-                key: [field.key[0], field.key[1], 'mapaddress'],
-                value: location,
-              });
-            }, 1000);
-            const unsubscribes = [
-              updateAddress.cancel,
-              root.rgo.query(
-                {
-                  name: field.key[0],
-                  filter: field.key[1],
-                  fields: ['address', 'postcode'],
-                },
-                data => {
-                  if (data) {
-                    const { address, postcode } = data[field.key[0]][0];
-                    if (!first) {
-                      root.rgo.set({
-                        key: [field.key[0], field.key[1], 'mapaddress'],
-                        value: true,
-                      });
+          r.do(
+            'field',
+            'getAddress',
+            (field, [addressField, postcodeField, mapAddressField], _) => {
+              let first = true;
+              const updateAddress = debounce(async address => {
+                const location = await codeAddress(address);
+                root.rgo.set({
+                  key: [field.key[0], field.key[1], mapAddressField],
+                  value: location,
+                });
+              }, 1000);
+              const unsubscribes = [
+                updateAddress.cancel,
+                root.rgo.query(
+                  {
+                    name: field.key[0],
+                    filter: field.key[1],
+                    fields: [addressField, postcodeField],
+                  },
+                  data => {
+                    if (data) {
+                      const {
+                        [addressField]: address,
+                        [postcodeField]: postcode,
+                      } = data[field.key[0]][0];
+                      if (address || postcode) {
+                        if (!first) {
+                          root.rgo.set({
+                            key: [field.key[0], field.key[1], mapAddressField],
+                            value: true,
+                          });
+                        }
+                        first = false;
+                        updateAddress(`${address}, ${postcode}`);
+                      }
                     }
-                    first = false;
-                    updateAddress(`${address}, ${postcode}`);
-                  }
-                },
-              ),
-            ];
-            return () => unsubscribes.forEach(u => u());
-          }),
+                  },
+                ),
+              ];
+              return () => unsubscribes.forEach(u => u());
+            },
+          ),
         ),
       )
       .yield(
