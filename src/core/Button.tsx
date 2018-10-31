@@ -15,10 +15,12 @@ export default r
   )
   .yield(
     ({ to, newTab, onClick, style, hoverProps, children }) =>
-      onClick ? (
-        <Txt onClick={onClick} {...hoverProps} style={style}>
-          {children}
-        </Txt>
+      !to || onClick ? (
+        <div style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}>
+          <Txt onClick={onClick} {...hoverProps} style={style}>
+            {children}
+          </Txt>
+        </div>
       ) : (
         <Link
           to={to}

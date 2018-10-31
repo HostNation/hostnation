@@ -122,11 +122,11 @@ export default r
             If you like what we’re trying to do, but are not in London or don’t
             have the time to befriend, then please consider donating.
           </Txt>
-          <Button
-            to="https://mydonate.bt.com/charities/hostnation"
-            color="yellow"
-            style={{ margin: '0 auto' }}
-          >
+          <Txt style={{ ...styles.body, fontWeight: 'bold' }}>
+            Donations currently inactive - we are setting up a new donations
+            platform and hope to be able to receive donations again soon.
+          </Txt>
+          <Button color="grey" style={{ margin: '0 auto' }}>
             DONATE HERE
           </Button>
         </Div>

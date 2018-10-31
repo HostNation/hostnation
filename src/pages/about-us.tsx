@@ -14,10 +14,10 @@ import * as anneke from '../img/team/anneke.png';
 import * as rossana from '../img/team/rossana.png';
 import * as anthony from '../img/team/anthony.png';
 import * as magda from '../img/team/magda.png';
+import * as danny from '../img/team/danny.png';
 import * as caroline from '../img/team/caroline.png';
 import * as jon from '../img/team/jon.png';
 import * as claudia from '../img/team/claudia.png';
-import * as olivia from '../img/team/olivia.png';
 import * as abu from '../img/team/abu.png';
 
 import Box from '../core/Box';
@@ -117,6 +117,18 @@ const Profiles = r
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Profile
           small={small}
+          image={danny}
+          name="Daniel Silverstone"
+          role="HostNation Trustee (Chair)"
+          bio={[
+            "Danny is a Londoner with a 40 year executive career in the public and charitable sector culminating in CEO roles at London Boroughs Grants, the Commission for Racial Equality, London Remade, a green social enterprise and Interights, an international human rights charity.  A major linking thread in Danny's professional career has been a focus on improving opportunities and expanding rights for our most disadvantaged communities. He contributed to path finding race equality programmes in local government and led the  implementation of the amended Race Relations Act while at the CRE.  Danny has held a number of non-executive roles including 5 years as a member of the Big Lottery's England Committee which invested £400m. a year in England's not-for-profit sector.",
+            'Danny is chair of governors at Parliament Hill Girls school and chairs Rene Cassin the Jewish human rights charity.',
+            "Danny's mother arrived in London in 1939 on the Kindertransport and he grew up within a family marked by his mother's experiences as a child refugee.  Danny became a HostNation befriender in 2017. He was immediately impressed by the quality of HostNation's work. When the decision was taken to achieve charitable status he was delighted to become HostNation's chair in October 2018.",
+          ]}
+        />
+        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+        <Profile
+          small={small}
           image={caroline}
           name="Caroline Heslop"
           role="HostNation Consultant"
@@ -145,17 +157,6 @@ const Profiles = r
           role="Art Director"
           bio={[
             'Claudia is an art director and works for United Business Media in London, specialising in corporate identity and brand design. Using the iVolunteer scheme at UBM, she created the HostNation logo, website, social media pages, and visual comms. Claudia is in charge of how HostNation looks and has previously volunteered for community centres in North London, offering design advice and services.',
-          ]}
-        />
-        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-        <Profile
-          small={small}
-          image={olivia}
-          name="Olivia Field"
-          role="Refugee Sector Advisor"
-          bio={[
-            'Olivia is currently advocacy and policy manager at British Red Cross: as part of this role she has been exploring how to tackle loneliness and social isolation across the UK. During her five years at the Red Cross she has worked on several advocacy campaigns focussing on changing government policy and practice negatively affecting asylum seekers and refugees in the UK. She has worked with refugees in various capacities over the last decade – from mentoring asylum seeking teenagers in the UK to volunteering in Northern France’s refugee camps. Before the Red Cross, she was a member of STAR (student activism for refugees) and Bristol City of Sanctuary. She is currently doing a Masters in Global Migration at UCL.',
-            'Olivia is HostNation’s ambassador within the refugee sector, advising on how to build trust within the sector and acting as a bridgehead to refugee referrals from major refugee service providers.',
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />

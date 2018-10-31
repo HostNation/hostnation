@@ -16,6 +16,9 @@ export const colors = {
   blackDark: '#1a1e26',
   blackLight: '#444e62',
 
+  grey: '#aaa',
+  greyDark: '#aaa',
+
   white: '#fff',
   processing: 'rgba(255,255,255,.4)',
 };
