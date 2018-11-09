@@ -3,6 +3,7 @@ import r from 'refluent';
 import { Div, Hover, Txt } from 'elmnt';
 import Helmet from 'react-helmet';
 
+import * as mapImage from '../img/map.jpg';
 import * as logoWide from '../img/logo-wide.png';
 import * as aiLingPattie from '../img/banners/ai-ling-pattie.png';
 
@@ -126,8 +127,21 @@ export default () => (
         </Txt>
         <Txt style={styles.boxText}>
           Depending on where you live and the referrals we receive, it may be a
-          few weeks or several months before we match you. Meanwhile please
-          follow us on
+          few weeks or several months before we match you. This is driven, to a
+          large extent by geography — where befrienders live and where our
+          refugee friends are housed — as the map below illustrates:
+        </Txt>
+        <img src={mapImage} />
+        <Txt style={styles.boxText}>
+          We are currently seeking befrienders who live in Greater London zones
+          3-6 which is where most refugees and asylum seekers are housed. If you
+          live in the outer zones but within the M25, we would love to have you
+          on board. We are also keen to recruit more men to join HostNation. If
+          you’re female, we still want you, but please spread the word amongst
+          men you know who might also be interested in registering!
+        </Txt>
+        <Txt style={styles.boxText}>
+          Meanwhile please follow us on
           <Link to="https://www.facebook.com/HostNationUK/" newTab>
             <Txt
               style={{
@@ -143,14 +157,6 @@ export default () => (
             </Txt>
           </Link>
           where we’ll keep you posted on our progress.
-        </Txt>
-        <Txt style={styles.boxText}>
-          We are currently seeking befrienders who live in Greater London zones
-          3-6 which is where most refugees and asylum seekers are housed. If you
-          live in the outer zones but within the M25, we would love to have you
-          on board. We are also keen to recruit more men to join HostNation. If
-          you’re female, we still want you, but please spread the word amongst
-          men you know who might also be interested in registering!
         </Txt>
         <Txt
           style={{ ...styles.boxText, fontWeight: 'bold', fontStyle: 'italic' }}
