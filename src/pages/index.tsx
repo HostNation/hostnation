@@ -115,6 +115,49 @@ export default r
           <Txt style={{ ...styles.text, fontSize: 24, fontWeight: 'bold' }}>
             London is a much friendlier place with a Londoner by your side.
           </Txt>
+          <Div
+            style={{
+              spacing: 10,
+              maxWidth: 550,
+              margin: '20px auto 0',
+              padding: 20,
+              background:
+                'linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%)',
+            }}
+          >
+            <Txt
+              style={{
+                ...styles.text,
+                fontSize: 24,
+                fontWeight: 'bold',
+                color: colors.purple,
+              }}
+            >
+              Total number of HostNation befriender hours
+            </Txt>
+            <Txt style={{ ...styles.text }}>
+              in the first 3 months of befriending
+            </Txt>
+            <Div style={{ layout: 'bar', spacing: 10, margin: '10px auto 0' }}>
+              {'4116'.split('').map((d, i) => (
+                <Txt
+                  style={{
+                    ...styles.text,
+                    fontSize: 50,
+                    fontWeight: 'bold',
+                    color: colors.yellow,
+                    padding: 10,
+                    width: 70,
+                    borderRadius: 100,
+                    background: colors.black,
+                  }}
+                  key={i}
+                >
+                  {d}
+                </Txt>
+              ))}
+            </Div>
+          </Div>
         </Div>
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Div style={{ spacing: 25 }}>
@@ -126,7 +169,7 @@ export default r
           <Button
             to="https://www.totalgiving.co.uk/donate/hostnation"
             newTab
-            color="black"
+            color="yellow"
             style={{ margin: '0 auto' }}
           >
             DONATE HERE
