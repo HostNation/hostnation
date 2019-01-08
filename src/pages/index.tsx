@@ -6,12 +6,10 @@ import { withWidth } from 'common-client';
 
 import * as logoWide from '../img/logo-wide.png';
 
-// import * as adelSophia from '../img/photos/adel-sophia.jpg';
-// import * as darwinSasha from '../img/photos/darwin-sasha.jpg';
-import * as florenceLucy from '../img/photos/florence-lucy.jpg';
-// import * as mohamedJulia from '../img/photos/mohamed-julia.jpg';
-import * as oliviaAnna from '../img/photos/olivia-anna.jpg';
-import * as tobyLaurence from '../img/photos/toby-laurence.jpg';
+import * as photos1 from '../img/photos/photos1.png';
+import * as photos2 from '../img/photos/photos2.png';
+import * as photos3 from '../img/photos/photos3.png';
+import * as photos4 from '../img/photos/photos4.png';
 
 import * as nithiAndySueBanner from '../img/banners/nithi-andy-sue-transparent.png';
 import * as oliviaAnnaBanner from '../img/banners/olivia-anna-transparent.png';
@@ -25,14 +23,7 @@ import * as testimonialsIcon from '../img/icons/testimonials.png';
 import Button from '../core/Button';
 import styles, { colors, icons } from '../core/styles';
 
-const photos = [
-  // adelSophia,
-  // darwinSasha,
-  florenceLucy,
-  // mohamedJulia,
-  oliviaAnna,
-  tobyLaurence,
-];
+const photos = [photos1, photos2, photos3, photos4];
 
 const testimonialStyle = color => ({
   ...styles.text,
@@ -118,9 +109,9 @@ export default r
           <Div
             style={{
               spacing: 10,
-              maxWidth: 550,
+              maxWidth: 600,
               margin: '20px auto 0',
-              padding: 20,
+              padding: 25,
               background:
                 'linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%)',
             }}
@@ -139,7 +130,7 @@ export default r
               in the first 3 months of befriending
             </Txt>
             <Div style={{ layout: 'bar', spacing: 10, margin: '10px auto 0' }}>
-              {'4116'.split('').map((d, i) => (
+              {'4312'.split('').map((d, i) => (
                 <Txt
                   style={{
                     ...styles.text,
@@ -158,6 +149,41 @@ export default r
               ))}
             </Div>
           </Div>
+        </Div>
+        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+        <Div style={{ spacing: 25, maxWidth: 600, margin: '0 auto' }}>
+          <Txt style={styles.body}>
+            To get a feel for befriending watch our two new shorts starring
+            Suzy, Hakim, Sue and Stella:
+          </Txt>
+          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/309771300?title=0&byline=0&portrait=0"
+              frameBorder="0"
+              allowFullScreen
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+              }}
+            />
+          </div>
+          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/309762034?title=0&byline=0&portrait=0"
+              frameBorder="0"
+              allowFullScreen
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+              }}
+            />
+          </div>
         </Div>
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Div style={{ spacing: 25 }}>
@@ -324,20 +350,22 @@ export default r
           })}
         </Div>
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-        <div style={{ position: 'relative', paddingBottom: '55%' }}>
-          <iframe
-            src="https://www.youtube.com/embed/A7xW4w3CTcM?rel=0"
-            frameBorder="0"
-            allowFullScreen
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-            }}
-          />
-        </div>
+        <Div style={{ spacing: 25, maxWidth: 600, margin: '0 auto' }}>
+          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+            <iframe
+              src="https://www.youtube.com/embed/A7xW4w3CTcM?rel=0"
+              frameBorder="0"
+              allowFullScreen
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+              }}
+            />
+          </div>
+        </Div>
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Div style={{ spacing: 25 }}>
           <Div style={{ spacing: 15 }}>
