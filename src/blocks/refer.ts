@@ -130,7 +130,6 @@ export default function(admin?: boolean) {
           'If you do, please give names and the age of any children including if you are expecting a child',
         field: 'refugee.family',
         rows: 3,
-        optional: true,
       },
       {
         text: 'Length of time in the UK (years)',

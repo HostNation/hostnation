@@ -349,7 +349,10 @@ export default r
             ),
           })}
         </Div>
-        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+        <div
+          id="videos"
+          style={{ background: colors.black, height: 3, borderRadius: 3 }}
+        />
         <Div style={{ spacing: 25, maxWidth: 600, margin: '0 auto' }}>
           <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
             <iframe
