@@ -11,7 +11,6 @@ import * as photos2 from '../img/photos/photos2.png';
 import * as photos3 from '../img/photos/photos3.png';
 import * as photos4 from '../img/photos/photos4.png';
 
-import * as nithiAndySueBanner from '../img/banners/nithi-andy-sue-transparent.png';
 import * as oliviaAnnaBanner from '../img/banners/olivia-anna-transparent.png';
 
 import * as contactIcon from '../img/icons/contact.png';
@@ -130,7 +129,7 @@ export default r
               in the first 3 months of befriending
             </Txt>
             <Div style={{ layout: 'bar', spacing: 10, margin: '10px auto 0' }}>
-              {'4312'.split('').map((d, i) => (
+              {'4508'.split('').map((d, i) => (
                 <Txt
                   style={{
                     ...styles.text,
@@ -221,11 +220,6 @@ export default r
             </Button>
           </Div>
         </Div>
-        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-        <img
-          src={nithiAndySueBanner}
-          style={{ maxWidth: 650, margin: '0 auto' }}
-        />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Div style={{ spacing: 25 }}>
           <Txt style={styles.title}>Refugee Support Organisations</Txt>
