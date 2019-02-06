@@ -53,8 +53,12 @@ export const withBreadcrumbs = base =>
       </BreadcrumbContext.Provider>
     )) as r;
 
-const RouteComponent = ({ component: Comp, render, data, props }) =>
-  Comp ? <Comp data={data} {...props} /> : render({ data, ...props });
+const RouteComponent = ({ component: Comp, render, data, location, props }) =>
+  Comp ? (
+    <Comp data={data} location={location} {...props} />
+  ) : (
+    render({ data, location, ...props })
+  );
 
 const Breadcrumb = r
   .yield(
@@ -83,7 +87,7 @@ const Breadcrumb = r
   .do('label', 'match', 'setBreadcrumb', (label, match, setBreadcrumb) => {
     setTimeout(() => setBreadcrumb(match.url, label));
   })
-  .yield(({ path, loader, component, render, routeProps, data }) => (
+  .yield(({ path, loader, component, render, routeProps, data, location }) => (
     <RouteBase
       path={path}
       {...routeProps}
@@ -93,6 +97,7 @@ const Breadcrumb = r
             component={component}
             render={render}
             data={data}
+            location={location}
             props={props}
           />
         ) : (

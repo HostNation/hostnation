@@ -70,6 +70,32 @@ const DeleteButton = r
       ),
   );
 
+const MapButton = r
+  .do('dataId', (dataId, push) => ({
+    mapId: null,
+    onClick: () => push({ mapId: dataId }),
+  }))
+  .yield(
+    ({ mapId, onClick }) =>
+      mapId ? (
+        <Redirect push to={`/dashboard/map?id=${mapId}`} />
+      ) : (
+        <Txt
+          onClick={onClick}
+          style={{
+            ...styles.subtitle,
+            color: 'white',
+            background: colors.purple,
+            padding: 10,
+            width: 300,
+            cursor: 'pointer',
+          }}
+        >
+          VIEW ON MAP
+        </Txt>
+      ),
+  );
+
 export const FormsRoute = ({ path, type, title, forms }) => (
   <Route
     path={`${path}/:id`}
@@ -87,6 +113,7 @@ export const FormsRoute = ({ path, type, title, forms }) => (
         <Txt style={{ ...styles.header, fontSize: 50 }}>
           {title[1](data[type][0])}
         </Txt>
+        <MapButton dataId={data[type][0].id} />
         {forms.map(({ title, object, blocks }, i) => (
           <Div style={{ spacing: 15 }} key={i}>
             <Txt style={styles.header}>{title}</Txt>

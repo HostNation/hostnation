@@ -209,6 +209,14 @@ export default r
       </Div>
     </Div>
   ))
+  .do('data', 'id', ({ befrienders, refugees }, id) => {
+    if (id) {
+      const befriender = befrienders.find(b => b.id === id);
+      if (befriender) return { centre: befriender.mapaddress };
+      const refugee = refugees.find(r => r.id === id);
+      if (refugee) return { centre: refugee.mapaddress };
+    }
+  })
   .do('data', ({ befrienders, refugees }) => ({
     markers: [
       ...befrienders.map(
@@ -324,10 +332,10 @@ export default r
     openInfo: index => push({ openIndex: index }),
     closeInfo: () => push({ openIndex: -1 }),
   }))
-  .yield(({ markers, openIndex, openInfo, closeInfo }) => (
+  .yield(({ centre, markers, openIndex, openInfo, closeInfo }) => (
     <GoogleMap
-      defaultZoom={10}
-      defaultCenter={{ lat: 51.507614, lng: -0.127771 }}
+      defaultZoom={centre ? 13 : 10}
+      defaultCenter={centre || { lat: 51.507614, lng: -0.127771 }}
       onClick={closeInfo}
     >
       {markers.map((props, i) => (

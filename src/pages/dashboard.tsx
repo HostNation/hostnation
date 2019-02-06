@@ -370,10 +370,10 @@ const Content = r.yield(getLocation).yield(() => (
       path="/dashboard/map"
       exact
       label="Map"
-      render={() => (
+      render={({ location }) => (
         <Div style={{ spacing: 40 }}>
           <Txt style={{ ...styles.header, fontSize: 50 }}>HostNation Map</Txt>
-          <Map />
+          <Map id={location.search.slice(4)} />
         </Div>
       )}
     />
