@@ -9,6 +9,7 @@ import * as crLogo from '../img/logos/cr.png';
 import * as lcfLogo from '../img/logos/lcf.jpg';
 import * as phfLogo from '../img/logos/phf.jpg';
 import * as tflLogo from '../img/logos/tfl.png';
+import * as cfLogo from '../img/logos/cf.png';
 
 import * as anneke from '../img/team/anneke.png';
 import * as rossana from '../img/team/rossana.png';
@@ -221,35 +222,50 @@ export default () => (
           Foundation for awarding us a Comic Relief Core Strength Local
           Communities Grant. Trust for London have also confirmed a generous
           Connected Communities grant towards our core costs over the next two
-          years.
+          years. And 2019 started with another successful grant bid from the
+          National Lottery Community Fund. Thank you to all our funders for
+          making our work sustainable!
         </Txt>
         {withWidth(700)({
           next: ({ small = false, setWidthElem }) => (
             <div ref={setWidthElem}>
-              <Div
-                style={{
-                  layout: small ? 'stack' : 'bar',
-                  spacing: 20,
-                  paddingTop: 20,
-                  margin: '0 auto',
-                }}
-              >
-                <img
-                  src={phfLogo}
-                  style={{ height: 80, width: 'auto', margin: '0 auto' }}
-                />
-                <img
-                  src={lcfLogo}
-                  style={{ height: 100, width: 'auto', margin: '0 auto' }}
-                />
-                <img
-                  src={crLogo}
-                  style={{ height: 100, width: 'auto', margin: '0 auto' }}
-                />
-                <img
-                  src={tflLogo}
-                  style={{ height: 100, width: 'auto', margin: '0 auto' }}
-                />
+              <Div style={{ layout: 'stack', spacing: 20, paddingTop: 20 }}>
+                <Div
+                  style={{
+                    layout: small ? 'stack' : 'bar',
+                    spacing: 20,
+                    margin: '0 auto',
+                  }}
+                >
+                  <img
+                    src={phfLogo}
+                    style={{ height: 80, width: 'auto', margin: '0 auto' }}
+                  />
+                  <img
+                    src={lcfLogo}
+                    style={{ height: 100, width: 'auto', margin: '0 auto' }}
+                  />
+                  <img
+                    src={crLogo}
+                    style={{ height: 100, width: 'auto', margin: '0 auto' }}
+                  />
+                </Div>
+                <Div
+                  style={{
+                    layout: small ? 'stack' : 'bar',
+                    spacing: 20,
+                    margin: '0 auto',
+                  }}
+                >
+                  <img
+                    src={tflLogo}
+                    style={{ height: 100, width: 'auto', margin: '0 auto' }}
+                  />
+                  <img
+                    src={cfLogo}
+                    style={{ height: 100, width: 'auto', margin: '0 auto' }}
+                  />
+                </Div>
               </Div>
             </div>
           ),
