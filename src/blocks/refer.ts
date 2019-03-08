@@ -86,8 +86,19 @@ export default function(admin?: boolean) {
           ]
         : []),
       {
+        text: 'How long are you likely to be at this address',
+        field: 'refugee.addresstime',
+        style: { layout: 'stack' },
+        optional: admin,
+      },
+      {
         text: 'Mobile no',
         field: 'refugee.mobile',
+        optional: admin,
+      },
+      {
+        text: admin ? 'On WhatsApp' : 'Are you on WhatsApp?',
+        field: 'refugee.whatsapp',
         optional: admin,
       },
       {
@@ -224,20 +235,32 @@ export default function(admin?: boolean) {
         optional: admin,
         style: { layout: 'stack' },
       },
+      ...(admin
+        ? [
+            {
+              text: 'Reason for wanting a befriender (old)',
+              field: 'refugee.whyfriend',
+              optional: admin,
+              rows: 3,
+            },
+          ]
+        : []),
       {
         text: admin
-          ? 'Reason for wanting a befriender'
-          : 'Why would you like a befriender?',
-        field: 'refugee.whyfriend',
+          ? 'Preferred activities (list)'
+          : 'Why would you like a befriender? Please tick as many as you like:',
+        field: 'refugee.activitieslist',
+        style: { layout: 'stack' },
         optional: admin,
         rows: 3,
       },
       {
         text: admin
-          ? 'Preferred activities'
-          : 'What would you like to see and do together?',
+          ? 'Preferred activities (other)'
+          : 'Is there anything else that you are particularly keen to do or see with a befriender?',
         field: 'refugee.activities',
-        optional: admin,
+        vertical: true,
+        optional: true,
         rows: 3,
       },
       ...(admin
@@ -284,9 +307,8 @@ export default function(admin?: boolean) {
               title: '3. Refugee Declaration',
             },
             {
-              info: `**Referrers: please ensure that the person you are referring understands the nature of this declaration and of befriending. Befrienders offer time spent together to listen, to talk, to practice English, to explore the area and to make visits. They are not experts or social workers and cannot solve asylum or housing issues. The commitment is for regular social contact (at least once every two weeks) over 3 months.**
-
-**We may connect your referral to someone of the same or opposite sex (unless otherwise stated). Please ensure that they understand that this is not a service for people looking for romance or to find a partner nor is it appropriate to expect financial support from their befriender.**
+              info: `**Referrers: please ensure that the person you are referring understands the nature of
+              this declaration and of befriending.**
 
 **Please tell the person you are referring that HostNation will be in contact with them by phone or by email in the next few weeks.**
 
@@ -306,6 +328,12 @@ export default function(admin?: boolean) {
             },
             {
               label:
+                'I confirm that I understand that the commitment is to meet once or twice every 2 weeks for at least 3 months',
+              name: 'refugeecommitment',
+              scalar: 'boolean',
+            },
+            {
+              label:
                 'I consent to the use and storage of my personal data by HostNation',
               name: 'refugeedata',
               scalar: 'boolean',
@@ -314,6 +342,34 @@ export default function(admin?: boolean) {
               label:
                 'I consent to HostNation sharing some of the personal data with registered befrienders in order to match me with a befriender and put us in contact and to get feedback after the three months',
               name: 'refugeesharing',
+              scalar: 'boolean',
+            },
+            {
+              info: `**Please tick the following boxes to show that you understand that a befriender is NOT:**`,
+            },
+            {
+              label: 'NOT someone who might become a girlfriend or boyfriend',
+              name: 'refugeenotdating',
+              scalar: 'boolean',
+            },
+            {
+              label: 'NOT someone who can find you a job',
+              name: 'refugeenotjob',
+              scalar: 'boolean',
+            },
+            {
+              label: 'NOT someone who can sort out your housing',
+              name: 'refugeenothousing',
+              scalar: 'boolean',
+            },
+            {
+              label: 'NOT someone who can help you get asylum in the UK',
+              name: 'refugeenotasylum',
+              scalar: 'boolean',
+            },
+            {
+              label: 'NOT someone who can provide you with financial support',
+              name: 'refugeenotfinancial',
               scalar: 'boolean',
             },
           ]

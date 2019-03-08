@@ -258,11 +258,19 @@ export default function(admin?: boolean) {
       },
       {
         text: admin
-          ? 'Preferred activities'
-          : 'Please describe the sort of activities you might choose to do if you were to befriend a refugee:',
-        vertical: true,
-        field: 'befriender.activities',
+          ? 'Preferred activities (list)'
+          : 'Please describe the sort of activities you would be happy to do together: You may tick as many as you like:',
+        style: { layout: 'stack' },
+        field: 'befriender.activitieslist',
         optional: admin,
+      },
+      {
+        text: admin
+          ? 'Preferred activities (other)'
+          : 'Is there anything else that you are particularly keen to introduce a refugee to or to share with them?',
+        field: 'befriender.activities',
+        vertical: true,
+        optional: true,
         rows: 3,
       },
       {
