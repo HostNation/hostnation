@@ -198,6 +198,15 @@ export default function(admin?: boolean) {
         rows: 2,
       },
       {
+        text: admin
+          ? 'Preferred activities (list)'
+          : 'Why would you like a London befriender? Please tick as many as you like:',
+        field: 'refugee.activitieslist',
+        style: { layout: 'stack' },
+        optional: admin,
+        rows: 3,
+      },
+      {
         text: admin ? 'Religion' : 'What religion if any do you have?',
         field: 'refugee.religion',
         style: { layout: 'modal', maxWidth: 400 },
@@ -207,6 +216,7 @@ export default function(admin?: boolean) {
         text: admin
           ? 'Personality'
           : 'Please describe your personality as fully as possible',
+        prompt: 'Eg. shy, social, curious, happy...',
         field: 'refugee.personality',
         optional: admin,
         rows: 3,
@@ -247,15 +257,6 @@ export default function(admin?: boolean) {
         : []),
       {
         text: admin
-          ? 'Preferred activities (list)'
-          : 'Why would you like a befriender? Please tick as many as you like:',
-        field: 'refugee.activitieslist',
-        style: { layout: 'stack' },
-        optional: admin,
-        rows: 3,
-      },
-      {
-        text: admin
           ? 'Preferred activities (other)'
           : 'Is there anything else that you are particularly keen to do or see with a befriender?',
         field: 'refugee.activities',
@@ -270,6 +271,38 @@ export default function(admin?: boolean) {
               field: 'refugee.happywith',
               style: { layout: 'stack' },
               optional: true,
+            },
+          ]
+        : []),
+      ...(!admin
+        ? [
+            {
+              info: `**Please tick the following boxes to show that you understand that a befriender is NOT:**`,
+            },
+            {
+              label: 'NOT someone who might become a girlfriend or boyfriend',
+              name: 'refugeenotdating',
+              scalar: 'boolean',
+            },
+            {
+              label: 'NOT someone who can find you a job',
+              name: 'refugeenotjob',
+              scalar: 'boolean',
+            },
+            {
+              label: 'NOT someone who can sort out your housing',
+              name: 'refugeenothousing',
+              scalar: 'boolean',
+            },
+            {
+              label: 'NOT someone who can help you get asylum in the UK',
+              name: 'refugeenotasylum',
+              scalar: 'boolean',
+            },
+            {
+              label: 'NOT someone who can provide you with financial support',
+              name: 'refugeenotfinancial',
+              scalar: 'boolean',
             },
           ]
         : []),
@@ -322,12 +355,6 @@ export default function(admin?: boolean) {
             },
             {
               label:
-                'I confirm that I understand the scope of services being provided by HostNation (see below)',
-              name: 'refugeescope',
-              scalar: 'boolean',
-            },
-            {
-              label:
                 'I confirm that I understand that the commitment is to meet once or twice every 2 weeks for at least 3 months',
               name: 'refugeecommitment',
               scalar: 'boolean',
@@ -342,34 +369,6 @@ export default function(admin?: boolean) {
               label:
                 'I consent to HostNation sharing some of the personal data with registered befrienders in order to match me with a befriender and put us in contact and to get feedback after the three months',
               name: 'refugeesharing',
-              scalar: 'boolean',
-            },
-            {
-              info: `**Please tick the following boxes to show that you understand that a befriender is NOT:**`,
-            },
-            {
-              label: 'NOT someone who might become a girlfriend or boyfriend',
-              name: 'refugeenotdating',
-              scalar: 'boolean',
-            },
-            {
-              label: 'NOT someone who can find you a job',
-              name: 'refugeenotjob',
-              scalar: 'boolean',
-            },
-            {
-              label: 'NOT someone who can sort out your housing',
-              name: 'refugeenothousing',
-              scalar: 'boolean',
-            },
-            {
-              label: 'NOT someone who can help you get asylum in the UK',
-              name: 'refugeenotasylum',
-              scalar: 'boolean',
-            },
-            {
-              label: 'NOT someone who can provide you with financial support',
-              name: 'refugeenotfinancial',
               scalar: 'boolean',
             },
           ]

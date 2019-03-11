@@ -240,14 +240,6 @@ export default function(admin?: boolean) {
       },
       {
         text: admin
-          ? 'Reason for wanting to befriend'
-          : 'Why do you wish to befriend a refugee?',
-        field: 'befriender.whyfriend',
-        optional: admin,
-        rows: 3,
-      },
-      {
-        text: admin
           ? 'Match preference'
           : 'Do you have a strong preference for who you are matched with?',
         prompt:
@@ -255,6 +247,14 @@ export default function(admin?: boolean) {
         field: 'befriender.preferences',
         optional: admin,
         style: { layout: 'stack' },
+      },
+      {
+        text: admin
+          ? 'Reason for wanting to befriend'
+          : 'Why do you wish to befriend a refugee?',
+        field: 'befriender.whyfriend',
+        optional: admin,
+        rows: 3,
       },
       {
         text: admin
