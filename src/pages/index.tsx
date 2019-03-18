@@ -129,7 +129,7 @@ export default r
               in the first 3 months of befriending
             </Txt>
             <Div style={{ layout: 'bar', spacing: 10, margin: '10px auto 0' }}>
-              {'4844'.split('').map((d, i) => (
+              {'4872'.split('').map((d, i) => (
                 <Txt
                   style={{
                     ...styles.text,
@@ -148,6 +148,22 @@ export default r
               ))}
             </Div>
           </Div>
+        </Div>
+        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+        <Div style={{ spacing: 25 }}>
+          <Txt style={styles.body}>
+            If you like what we’re trying to do, but are not in London or don’t
+            have the time to befriend, then please consider a one-off or
+            recurring donation.
+          </Txt>
+          <Button
+            to="https://www.totalgiving.co.uk/donate/hostnation"
+            newTab
+            color="yellow"
+            style={{ margin: '0 auto' }}
+          >
+            DONATE HERE
+          </Button>
         </Div>
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Div style={{ spacing: 25, maxWidth: 600, margin: '0 auto' }}>
@@ -183,22 +199,6 @@ export default r
               }}
             />
           </div>
-        </Div>
-        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-        <Div style={{ spacing: 25 }}>
-          <Txt style={styles.body}>
-            If you like what we’re trying to do, but are not in London or don’t
-            have the time to befriend, then please consider a one-off or
-            recurring donation.
-          </Txt>
-          <Button
-            to="https://www.totalgiving.co.uk/donate/hostnation"
-            newTab
-            color="yellow"
-            style={{ margin: '0 auto' }}
-          >
-            DONATE HERE
-          </Button>
         </Div>
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Div style={{ spacing: 25 }}>

@@ -171,7 +171,12 @@ export default r
               <MenuLink text="About Us" to="/about-us" active={active} />
               <MenuLink text="Befriend" to="/befriend" active={active} />
               <MenuLink text="Refer" to="/refer" active={active} />
-              <MenuLink text="Befrienders’ guide" to="/guide.pdf" newTab />
+              <MenuLink
+                text="Donate"
+                to="https://www.totalgiving.co.uk/donate/hostnation"
+                newTab
+              />
+              <MenuLink text="Guide" to="/guide.pdf" newTab />
               <MenuLink text="Links" to="/links.pdf" newTab />
             </Div>
           )}
@@ -181,7 +186,7 @@ export default r
             style={{
               overflow: 'hidden',
               transition: 'height 0.35s ease',
-              height: isOpen ? 213 : 0,
+              height: isOpen ? 251 : 0,
             }}
           >
             <Div style={{ spacing: 20, padding: '20px 0' }}>
@@ -204,7 +209,13 @@ export default r
                 setClosed={setClosed}
               />
               <MenuLink
-                text="Befrienders’ guide"
+                text="Donate"
+                to="https://www.totalgiving.co.uk/donate/hostnation"
+                newTab
+                setClosed={setClosed}
+              />
+              <MenuLink
+                text="Guide"
                 to="/guide.pdf"
                 newTab
                 setClosed={setClosed}
