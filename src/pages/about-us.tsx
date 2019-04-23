@@ -16,7 +16,7 @@ import * as rossana from '../img/team/rossana.png';
 import * as anthony from '../img/team/anthony.png';
 import * as magda from '../img/team/magda.png';
 import * as danny from '../img/team/danny.png';
-import * as caroline from '../img/team/caroline.png';
+import * as dina from '../img/team/dina.png';
 import * as jon from '../img/team/jon.png';
 import * as claudia from '../img/team/claudia.png';
 import * as abu from '../img/team/abu.png';
@@ -24,7 +24,7 @@ import * as abu from '../img/team/abu.png';
 import Box from '../core/Box';
 import styles, { colors } from '../core/styles';
 
-const Profile = ({ small, image, name, role, bio }) => (
+const Profile = ({ small, image, name, role, bio, credit }: any) => (
   <Div style={{ spacing: 30 }}>
     <Div
       style={{
@@ -34,9 +34,12 @@ const Profile = ({ small, image, name, role, bio }) => (
         spacing: small ? 30 : 40,
       }}
     >
-      <div>
+      <Div style={{ layout: 'stack', spacing: 5 }}>
         <img src={image} style={{ maxWidth: 400 }} />
-      </div>
+        {credit && (
+          <Txt style={{ ...styles.boxText, fontSize: 14 }}>{credit}</Txt>
+        )}
+      </Div>
       <Div style={{ spacing: 15, width: '50%' }}>
         <Txt
           style={{
@@ -130,12 +133,13 @@ const Profiles = r
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Profile
           small={small}
-          image={caroline}
-          name="Caroline Heslop"
-          role="HostNation Consultant"
+          image={dina}
+          name="Dina Nayeri"
+          credit="Photo credit: Anna Leader"
+          role="HostNation Trustee"
           bio={[
-            'Caroline worked in music publishing, journalism and arts documentary film making before becoming a Music teacher working with students from pre-school to undergraduate. While continuing to teach, she spent two years at Trinity Laban Conservatoire of Music and Dance completing an MMus in Composing with a special focus on managing and curating performances of cross genre music in unusual spaces. She has always loved the multiculturalism of London and felt privileged as a teacher and as a creator to work together with people from different cultural backgrounds. Having produced an evening of music and words looking at the impact of war past and present in 2016 as a fundraiser for Safe Passage UK she was inspired by the initiative of HostNation and joined the team in 2017.',
-            'She has lived in France and Italy as well as the UK and is aware of the potential loneliness and isolation as a stranger in a new country even if it is through choice. Working with HostNation she hopes to help asylum seekers and refugees in the UK feel welcomed, supported and strengthened in order to be able to build their new lives here.',
+            'Dina Nayeri was born during the Iranian revolution and fled at eight. She lived as a refugee for two years before being granted asylum in the United States. She writes fiction and nonfiction on displacement, the refugee crisis, and Iranian diaspora. Her acclaimed Guardian Long Read “The Ungrateful Refugee” was one of the most widely read essays of 2017 and anthologized by Viet Nguyen in The Displaced and is now taught in schools across Germany. Dina is a prize-winning author and her work also appears in The New York Times, The Guardian, LA Times, New Yorker, Wall Street Journal and Granta amongst others. Her first book of narrative nonfiction, The Ungrateful Refugee, is available now from Canongate Books.',
+            "Dina joined the Board of HostNation in 2019. She says: “HostNation is one of the rare charities that understands that the struggle of being a refugee doesn't end the moment one is granted asylum, or even citizenship. To be a refugee is to be forever separated from home, always alert to one's differences. I'm honoured to join an organisation that prioritises the many social and psychological needs that others may consider secondary --- as a refugee and a writer, I have found these needs vital enough to devote my entire artistic life to them. I hope together we can bring some of the joys of home to the displaced people who have become our neighbours.”",
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />

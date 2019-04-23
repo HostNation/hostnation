@@ -277,31 +277,12 @@ export default function(admin?: boolean) {
       ...(!admin
         ? [
             {
-              info: `**Please tick the following boxes to show that you understand that a befriender is NOT:**`,
+              info: '**Please confirm:**',
             },
             {
-              label: 'NOT someone who might become a girlfriend or boyfriend',
-              name: 'refugeenotdating',
-              scalar: 'boolean',
-            },
-            {
-              label: 'NOT someone who can find you a job',
-              name: 'refugeenotjob',
-              scalar: 'boolean',
-            },
-            {
-              label: 'NOT someone who can sort out your housing',
-              name: 'refugeenothousing',
-              scalar: 'boolean',
-            },
-            {
-              label: 'NOT someone who can help you get asylum in the UK',
-              name: 'refugeenotasylum',
-              scalar: 'boolean',
-            },
-            {
-              label: 'NOT someone who can provide you with financial support',
-              name: 'refugeenotfinancial',
+              label:
+                'I understand that a befriender is not someone who can help me get asylum in the UK or find me a job or sort out my housing.  I also understand that a befriender is not someone who might become a boyfriend or girlfriend.',
+              name: 'refugeenot',
               scalar: 'boolean',
             },
           ]
