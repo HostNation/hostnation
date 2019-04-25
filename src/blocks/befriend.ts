@@ -284,6 +284,15 @@ export default function(admin?: boolean) {
       },
       {
         text: admin
+          ? 'Availability'
+          : 'When are you most likely to be available to meet up with your befriendee?',
+        vertical: true,
+        field: 'befriender.availability',
+        optional: admin,
+        style: { layout: 'stack' },
+      },
+      {
+        text: admin
           ? 'Recent photo'
           : 'Please upload a recent photograph of yourself.',
         prompt:

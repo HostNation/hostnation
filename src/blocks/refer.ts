@@ -180,6 +180,15 @@ export default function(admin?: boolean) {
         rows: 2,
         optional: true,
       },
+      {
+        text: admin
+          ? 'Availability'
+          : 'When are you most likely to be available to meet up with your befriender?',
+        vertical: true,
+        field: 'refugee.availability',
+        optional: admin,
+        style: { layout: 'stack' },
+      },
     ],
     [
       ...(!admin
