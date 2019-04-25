@@ -264,16 +264,6 @@ export default function(admin?: boolean) {
         optional: true,
         rows: 3,
       },
-      ...(admin
-        ? [
-            {
-              text: 'Match preference (old)',
-              field: 'refugee.happywith',
-              style: { layout: 'stack' },
-              optional: true,
-            },
-          ]
-        : []),
       ...(!admin
         ? [
             {

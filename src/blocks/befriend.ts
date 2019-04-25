@@ -284,17 +284,6 @@ export default function(admin?: boolean) {
       },
       {
         text: admin
-          ? 'Availability for introduction'
-          : 'When, in principle, would you be available to be introduced to the refugee you are matched with?',
-        vertical: true,
-        prompt:
-          'It helps if you are flexible and can meet during the working week at the refugee referral agency',
-        field: 'befriender.availability',
-        optional: admin,
-        style: { layout: 'stack' },
-      },
-      {
-        text: admin
           ? 'Recent photo'
           : 'Please upload a recent photograph of yourself.',
         prompt:
