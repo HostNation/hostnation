@@ -70,6 +70,151 @@ const DeleteButton = r
       ),
   );
 
+const partialDeleteFields = {
+  befrienders: [
+    'firstname',
+    'lastname',
+    'dob',
+    'sex',
+    'nationality',
+    'address',
+    'postcode',
+    'mapaddress',
+    'address2',
+    'postcode2',
+    'mapaddress2',
+    'address2type',
+    'mobile',
+    'landline',
+    'email',
+    'city',
+    'region',
+    'duration',
+    'passport',
+    'children',
+    'workstatus',
+    'profession',
+    'experience',
+    'dbsdate',
+    'dbsscan',
+    'languages',
+    'religion',
+    'interests',
+    'whyfriend',
+    'preferences',
+    'activitieslist',
+    'activities',
+    'additional',
+    'availability',
+    'photo',
+    'referee1',
+    'referee1email',
+    'referee2',
+    'referee2email',
+    'communication',
+    'fundraising',
+    'consentupdates',
+  ],
+  refugees: [
+    'firstname',
+    'lastname',
+    'dob',
+    'sex',
+    'country',
+    'languages',
+    'address',
+    'postcode',
+    'mapaddress',
+    'addresstime',
+    'mobile',
+    'whatsapp',
+    'email',
+    'city',
+    'region',
+    'status',
+    'financial',
+    'family',
+    'ukduration',
+    'englishskill',
+    'professionaltraining',
+    'occupation',
+    'otherorg',
+    'availability',
+    'interests',
+    'religion',
+    'personality',
+    'healthissues',
+    'regulartreatment',
+    'attitudes',
+    'ratepositivity',
+    'rateconfidence',
+    'ratelondon',
+    'whyfriend',
+    'activitieslist',
+    'activities',
+    'unhappywith',
+    'additional',
+    'refugeecontact',
+    'contactintroduce',
+    'contactintroduceinfo',
+    'contactorg',
+    'contactaddress',
+    'contacttime',
+    'contactname',
+    'contactemail',
+    'contactmobile',
+    'contactphone',
+    'contactrelation',
+    'contactrelationother',
+    'referrercontact',
+  ],
+};
+const PartialDeleteButton = r
+  .do('dataKey', (dataKey, push) => ({
+    deleted: false,
+    onClick: () => {
+      if (
+        window.confirm(
+          `This action is permanent - are you sure you want to delete this ${
+            dataKey[0] === 'befrienders' ? 'registration' : 'referral'
+          }?`,
+        )
+      ) {
+        push({ deleted: true });
+        const keys = partialDeleteFields[dataKey[0]].map(f => [...dataKey, f]);
+        window.rgo.set(...keys.map(key => ({ key, value: null })));
+        window.rgo.commit(...keys);
+      }
+    },
+  }))
+  .yield(
+    ({ dataKey, deleted, onClick }) =>
+      deleted ? (
+        <Redirect
+          to={window.location.pathname.substring(
+            0,
+            window.location.pathname.lastIndexOf('/'),
+          )}
+        />
+      ) : (
+        <Txt
+          onClick={onClick}
+          style={{
+            ...styles.subtitle,
+            color: 'white',
+            background: 'red',
+            padding: 10,
+            width: 300,
+            cursor: 'pointer',
+          }}
+        >
+          {`DELETE ${
+            dataKey[0] === 'befrienders' ? 'REGISTRATION' : 'REFERRAL'
+          }`}
+        </Txt>
+      ),
+  );
+
 const MapButton = r
   .do('dataId', (dataId, push) => ({
     mapId: null,
@@ -123,7 +268,13 @@ export const FormsRoute = ({ path, type, title, forms }) => (
             />
           </Div>
         ))}
-        <DeleteButton dataKey={[type, data[type][0].id]} />
+        <Div style={{ layout: 'bar', spacing: 50 }}>
+          <DeleteButton dataKey={[type, data[type][0].id]} />
+          {data[type][0].firstname ||
+            (data[type][0].lastname && (
+              <PartialDeleteButton dataKey={[type, data[type][0].id]} />
+            ))}
+        </Div>
       </Div>
     )}
   />

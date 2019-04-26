@@ -80,7 +80,11 @@ const BefriendersLinksRoute = ({
     rows={[
       {
         name: 'befrienders',
-        filter,
+        filter: [
+          'AND',
+          filter,
+          ['OR', ['firstname', '!=', null], ['lastname', '!=', null]],
+        ],
         sort: [`-${dateField}`, 'firstname', 'lastname'],
         fields: [
           'id',
@@ -153,10 +157,12 @@ const Content = r.yield(getLocation).yield(() => (
             <MarkLink to="/dashboard/unmatched" text="# Unmatched" />
             <MarkLink to="/dashboard/matched" text="# Matched" />
             <MarkLink to="/dashboard/archived" text="# Archived" />
+            <MarkLink to="/dashboard/befrienders-record" text="# Record" />
           </Div>
           <Div style={{ spacing: 15 }}>
             <Txt style={{ ...styles.header, fontSize: 30 }}>Refugees</Txt>
             <MarkLink to="/dashboard/referrals" text="# Referrals" />
+            <MarkLink to="/dashboard/referrals-record" text="# Record" />
           </Div>
           <Div style={{ spacing: 15 }}>
             <Txt style={{ ...styles.header, fontSize: 30 }}>Tools</Txt>
@@ -264,6 +270,89 @@ const Content = r.yield(getLocation).yield(() => (
       ]}
     />
     <LinksRoute
+      path="/dashboard/befrienders-record"
+      title="Befrienders Record"
+      columns={['Id']}
+      rows={[
+        {
+          name: 'befrienders',
+          sort: ['-createdat'],
+          filter: ['AND', ['firstname', '=', null], ['lastname', '=', null]],
+          fields: ['id'],
+        },
+        ({ befrienders }) =>
+          befrienders.map(b => [encodeId(b.id), encodeId(b.id)]),
+      ]}
+    />
+    <FormsRoute
+      path="/dashboard/befrienders-record"
+      type="befrienders"
+      title={[['id'], ({ id }) => `Befriender: ${encodeId(id)}`]}
+      forms={[
+        {
+          title: 'Internal info',
+          object: 'befriender',
+          blocks: [
+            [
+              {
+                text: 'Notes',
+                field: 'befriender.notes',
+                rows: 3,
+                optional: true,
+              },
+              {
+                text: 'Star rating',
+                field: 'befriender.starrating',
+                optional: true,
+              },
+              {
+                text: 'Ready',
+                field: 'befriender.ready',
+                options: { on: true },
+                optional: true,
+              },
+              {
+                text: 'Archived',
+                field: 'befriender.archived',
+                optional: true,
+              },
+            ],
+            [
+              {
+                text: 'Start date',
+                field: 'befriender.startdate',
+                optional: true,
+              },
+              {
+                text: 'Match',
+                field: 'befriender.match',
+                optional: true,
+              },
+              {
+                text: 'Matched by',
+                field: 'befriender.matchedby',
+                optional: true,
+              },
+            ],
+            [
+              {
+                text: '1 month review',
+                field: 'befriender.review1month',
+                rows: 3,
+                optional: true,
+              },
+              {
+                text: '3 months review',
+                field: 'befriender.review3months',
+                rows: 3,
+                optional: true,
+              },
+            ],
+          ],
+        },
+      ]}
+    />
+    <LinksRoute
       path="/dashboard/referrals"
       title="Referrals"
       columns={[
@@ -282,6 +371,7 @@ const Content = r.yield(getLocation).yield(() => (
         {
           name: 'refugees',
           sort: ['-createdat', 'firstname', 'lastname'],
+          filter: ['OR', ['firstname', '!=', null], ['lastname', '!=', null]],
           fields: [
             'id',
             'firstname',
@@ -363,6 +453,63 @@ const Content = r.yield(getLocation).yield(() => (
           title: 'Referral',
           object: 'refugee',
           blocks: referBlocks(true),
+        },
+      ]}
+    />
+    <LinksRoute
+      path="/dashboard/referrals-record"
+      title="Referrals Record"
+      columns={['Id']}
+      rows={[
+        {
+          name: 'refugees',
+          sort: ['-createdat'],
+          filter: ['AND', ['firstname', '=', null], ['lastname', '=', null]],
+          fields: ['id'],
+        },
+        ({ refugees }) => refugees.map(r => [encodeId(r.id), encodeId(r.id)]),
+      ]}
+    />
+    <FormsRoute
+      path="/dashboard/referrals-record"
+      type="refugees"
+      title={[['id'], ({ id }) => `Referral: ${encodeId(id)}`]}
+      forms={[
+        {
+          title: 'Internal info',
+          object: 'refugee',
+          blocks: [
+            [
+              {
+                text: 'Notes',
+                field: 'refugee.notes',
+                rows: 3,
+                optional: true,
+              },
+              {
+                text: 'Sustained',
+                field: 'refugee.sustained',
+                optional: true,
+              },
+            ],
+            [
+              {
+                text: 'Start date',
+                field: 'refugee.startdate',
+                optional: true,
+              },
+              {
+                text: 'Match',
+                field: 'refugee.match',
+                optional: true,
+              },
+              {
+                text: 'Matched by',
+                field: 'refugee.matchedby',
+                optional: true,
+              },
+            ],
+          ],
         },
       ]}
     />

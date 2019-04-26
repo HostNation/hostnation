@@ -120,7 +120,12 @@ export default r
     getData(
       {
         name: 'befrienders',
-        filter: ['AND', ['archived', null], ['mapaddress', '!=', null]],
+        filter: [
+          'AND',
+          ['archived', null],
+          ['mapaddress', '!=', null],
+          ['OR', ['firstname', '!=', null], ['lastname', '!=', null]],
+        ],
         fields: [
           'id',
           'firstname',
@@ -139,7 +144,11 @@ export default r
       },
       {
         name: 'refugees',
-        filter: ['mapaddress', '!=', null],
+        filter: [
+          'AND',
+          ['mapaddress', '!=', null],
+          ['OR', ['firstname', '!=', null], ['lastname', '!=', null]],
+        ],
         fields: [
           'id',
           'firstname',
