@@ -270,10 +270,9 @@ export const FormsRoute = ({ path, type, title, forms }) => (
         ))}
         <Div style={{ layout: 'bar', spacing: 50 }}>
           <DeleteButton dataKey={[type, data[type][0].id]} />
-          {data[type][0].firstname ||
-            (data[type][0].lastname && (
-              <PartialDeleteButton dataKey={[type, data[type][0].id]} />
-            ))}
+          {(data[type][0].firstname || data[type][0].lastname) && (
+            <PartialDeleteButton dataKey={[type, data[type][0].id]} />
+          )}
         </Div>
       </Div>
     )}
