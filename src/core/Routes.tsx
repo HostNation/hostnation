@@ -65,7 +65,7 @@ const DeleteButton = r
             cursor: 'pointer',
           }}
         >
-          DELETE RECORD
+          DELETE
         </Txt>
       ),
   );
@@ -188,7 +188,7 @@ const PartialDeleteButton = r
     },
   }))
   .yield(
-    ({ dataKey, deleted, onClick }) =>
+    ({ deleted, onClick }) =>
       deleted ? (
         <Redirect
           to={window.location.pathname.substring(
@@ -208,9 +208,7 @@ const PartialDeleteButton = r
             cursor: 'pointer',
           }}
         >
-          {`DELETE ${
-            dataKey[0] === 'befrienders' ? 'REGISTRATION' : 'REFERRAL'
-          }`}
+          RECORD
         </Txt>
       ),
   );
