@@ -18,6 +18,7 @@ import * as magda from '../img/team/magda.png';
 import * as danny from '../img/team/danny.png';
 import * as dina from '../img/team/dina.png';
 import * as emiljan from '../img/team/emiljan.jpg';
+import * as joanna from '../img/team/joanna.png';
 import * as jon from '../img/team/jon.png';
 import * as claudia from '../img/team/claudia.png';
 import * as abu from '../img/team/abu.png';
@@ -152,6 +153,18 @@ const Profiles = r
           bio={[
             "Emiljan has called London home for over 10 years now. He was born in Albania and has been a refugee in various countries, most prominently the Republic of Ireland where he was raised and where he proudly holds citizenship. He works in the strategy consulting and executive search space which came about after completing his undergraduate studies in History at King's College London and his postgraduate studies in Economic History at The London School of Economics.",
             "Emiljan has deep personal interests in politics, business best practice and history. When he's not working he likes to play tennis and squash, read everything he can get his hands on as well as go for long walks. He also volunteers widely at such institutions as The Prince's Trust and Brightside mentoring, which builds on his previous work leading a schools outreach programme at university. He is very excited about joining the HostNation team and helping to scale the organisation and better the lives of so many people. Emiljan believes that HostNation is a rare charity that underscores the need for renewed social provisions in this city and country, and is at the forefront of demonstrating that London and the UK really are progressive communities.",
+          ]}
+        />
+        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+        <Profile
+          small={small}
+          image={joanna}
+          name="Joanna Winterbottom"
+          role="HostNation Trustee"
+          bio={[
+            'Jo was a reporter and editor with Reuters news agency for over 20 years, gaining an in-depth knowledge of the news and conirnunications business. She has worked around the world, including assignnients in Italy, India, South Africa and the United States. In Januaryr 2018, she embarked on a freelance career, giving her more time for voluntary work, which had been a long-term goal. She now trains journalists with the Reuters Foundation, and has travelled in this role to destinations as far apart as Kazakhstan and Jamaica. She also continues to write and edit as a freelancer.',
+            'Her voluntary work has included giving practical advice to asylum seekers in London and men-taring immigrants in language skills.',
+            "Jo is very happy to be working with HostNation and values its aims of giving refugees a warm and supportive welcome to their new home. Jo's own experiences in moving countries has been cushioned by her employee's infrastructure, but she is still aware of the challenges of uprooting your life, creating social networks and getting to grips with a new environment.",
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
