@@ -7,16 +7,79 @@ export default function(admin?: boolean) {
               title: '1. Refugee referral criteria',
             },
             {
-              info: `**You must be:**
-- An asylum seeker, refugee or migrant living in the UK
-- Over the age of 18
-- Not a vulnerable adult with high mental health needs, at risk of abuse or in need of care
-- Not currently suffering from alcohol or drug dependency
-- Able to speak reasonably good English`,
+              info: `**IMPORTANT PLEASE READ THIS FIRST:**
+
+HostNation is a befriending service that connects people in Greater London.
+
+It is for asylum seekers and refugees who are lonely, relatively new to London or still curious to discover and see more of the city. It is for people who would like to connect more with London and Londoners.
+
+If this is you, and you are prepared to commit to a three month befriending programme, then please fill in this form together with your referrer.
+
+To fill in this form you need to be online with a secure connection. All information given is treated as highly confidential and securely encrypted. Only the starred questions are essential but the more personal and background information you can provide, the better the match we can make.`,
             },
             {
-              label: 'I confirm that I satisfy the above criteria',
-              name: 'criteria',
+              info: `**You need to confirm all of the following statements before we can consider you for befriending. If you do not meet all the criteria below please DO NOT continue with the referral but get back in touch with HostNation when your circumstances change.**`,
+            },
+            {
+              label: 'I am over 18',
+              name: 'check1',
+              scalar: 'boolean',
+            },
+            {
+              label:
+                'I am an asylum seeker, refugee or migrant living in Greater London (within the M25)',
+              name: 'check2',
+              scalar: 'boolean',
+            },
+            {
+              label: 'I can understand and speak English',
+              name: 'check3',
+              scalar: 'boolean',
+            },
+            {
+              label:
+                'I am NOT at risk of abuse, in need of care or with high mental health needs',
+              name: 'check4',
+              scalar: 'boolean',
+            },
+            {
+              label:
+                'I am NOT currently in crisis with my asylum case (ie. facing deportation or detention)',
+              name: 'check5',
+              scalar: 'boolean',
+            },
+            {
+              label:
+                'I am NOT homeless, destitute or in temporary accommodation (ie. likely to move out of the area in the next 3 months)',
+              name: 'check6',
+              scalar: 'boolean',
+            },
+            {
+              label: 'I sometimes feel lonely and isolated',
+              name: 'check7',
+              scalar: 'boolean',
+            },
+            {
+              label:
+                'I would like to meet working Londoners who are not refugees or migrants',
+              name: 'check8',
+              scalar: 'boolean',
+            },
+            {
+              label: 'I am curious to see and do more in London',
+              name: 'check9',
+              scalar: 'boolean',
+            },
+            {
+              label:
+                'I understand that a befriender is not someone who can help me get asylum in the UK or find me a job or sort out my housing.',
+              name: 'check10',
+              scalar: 'boolean',
+            },
+            {
+              label:
+                'I understand that a befriender is not someone who might become a boyfriend or girlfriend.',
+              name: 'check11',
               scalar: 'boolean',
             },
           ],
@@ -26,7 +89,7 @@ export default function(admin?: boolean) {
       ...(!admin
         ? [
             {
-              title: '2. Questions to the refugee',
+              title: '2. Contact details and personal information',
             },
           ]
         : []),
@@ -62,8 +125,6 @@ export default function(admin?: boolean) {
       },
       {
         text: 'Address',
-        prompt:
-          'If this is a temporary address please include how long you are likely to be here',
         field: 'refugee.address',
         optional: admin,
         rows: 2,
@@ -86,12 +147,6 @@ export default function(admin?: boolean) {
           ]
         : []),
       {
-        text: 'How long are you likely to be at this address',
-        field: 'refugee.addresstime',
-        style: { layout: 'stack' },
-        optional: admin,
-      },
-      {
         text: 'Mobile no',
         field: 'refugee.mobile',
         optional: admin,
@@ -107,20 +162,6 @@ export default function(admin?: boolean) {
         optional: true,
       },
       {
-        text: 'What area do you live in?',
-        field: 'refugee.region',
-        options: [
-          'Central London',
-          'North London',
-          'East London',
-          'South London',
-          'West London',
-          'Other',
-        ],
-        optional: admin,
-        style: { layout: 'modal', maxWidth: 400 },
-      },
-      {
         text: 'Immigration status',
         field: 'refugee.status',
         optional: admin,
@@ -129,7 +170,8 @@ export default function(admin?: boolean) {
       {
         text: admin
           ? 'Financial support'
-          : 'What financial support do you get?',
+          : 'What, if any, financial support do you get from the state?',
+        prompt: 'Eg. NASS, Universal credit, JSA, none',
         field: 'refugee.financial',
         optional: true,
       },
@@ -152,6 +194,11 @@ export default function(admin?: boolean) {
       {
         text: admin ? 'English ability' : 'How good is your English?',
         field: 'refugee.englishskill',
+        options: [
+          'My English is good',
+          'My English is quite good',
+          'My English is not very good',
+        ],
         optional: admin,
         style: { layout: 'modal', maxWidth: 400 },
       },
@@ -165,8 +212,7 @@ export default function(admin?: boolean) {
       },
       {
         text: 'Current occupation in UK',
-        prompt:
-          'Eg. studying, training, working, volunteering (please give details), none',
+        prompt: 'Eg. studying, training, working, volunteering, none',
         field: 'refugee.occupation',
         optional: admin,
       },
@@ -174,8 +220,7 @@ export default function(admin?: boolean) {
         text: admin
           ? 'Other organisation attended regularly'
           : 'Do you attend any other organisation or centre on a regular basis?',
-        prompt:
-          'If yes, please give name of place, location, day(s) of the week and time when you attend',
+        prompt: 'If yes, please give name and when you attend',
         field: 'refugee.otherorg',
         rows: 2,
         optional: true,
@@ -184,6 +229,7 @@ export default function(admin?: boolean) {
         text: admin
           ? 'Availability'
           : 'When are you most likely to be available to meet up with your befriender?',
+        prompt: 'Please tick as many as you can',
         field: 'refugee.availability',
         optional: admin,
         style: { layout: 'stack' },
@@ -194,7 +240,7 @@ export default function(admin?: boolean) {
         ? [
             {
               info:
-                'We would now like to ask you some personal questions in order to be better able to match you.  This also allows us to tell your befriender a bit more about you as a person.',
+                'We would now like to ask you some personal questions in order to be better able to match you. This also allows us to tell your befriender a bit more about you as a person.',
             },
           ]
         : []),
@@ -209,7 +255,7 @@ export default function(admin?: boolean) {
         text: admin
           ? 'Preferred activities (list)'
           : 'Why would you like a London befriender? Please tick as many as you like:',
-        field: 'refugee.activitieslist',
+        field: 'refugee.activitieslist2',
         style: { layout: 'stack' },
         optional: admin,
         rows: 3,
@@ -223,7 +269,7 @@ export default function(admin?: boolean) {
       {
         text: admin
           ? 'Personality'
-          : 'Please describe your personality as fully as possible',
+          : 'Please describe your personality in a few words',
         prompt: 'Eg. shy, social, curious, happy...',
         field: 'refugee.personality',
         optional: admin,
@@ -247,11 +293,11 @@ export default function(admin?: boolean) {
       },
       {
         text: admin
-          ? 'Current life and attitudes'
-          : 'Which of the following statements describes your current life and attitudes to living in the UK (you can choose more than one):',
-        field: 'refugee.attitudes',
-        optional: admin,
-        style: { layout: 'stack' },
+          ? 'Additional information'
+          : 'Please tell us anything else about yourself that you think will help us to match you with a suitable befriender',
+        field: 'refugee.additional',
+        optional: true,
+        rows: 3,
       },
       ...(admin
         ? [
@@ -260,28 +306,6 @@ export default function(admin?: boolean) {
               field: 'refugee.whyfriend',
               optional: admin,
               rows: 3,
-            },
-          ]
-        : []),
-      {
-        text: admin
-          ? 'Preferred activities (other)'
-          : 'Is there anything else that you are particularly keen to do or see with a befriender?',
-        field: 'refugee.activities',
-        vertical: true,
-        optional: true,
-        rows: 3,
-      },
-      ...(!admin
-        ? [
-            {
-              info: '**Please confirm:**',
-            },
-            {
-              label:
-                'I understand that a befriender is not someone who can help me get asylum in the UK or find me a job or sort out my housing.  I also understand that a befriender is not someone who might become a boyfriend or girlfriend.',
-              name: 'refugeenot',
-              scalar: 'boolean',
             },
           ]
         : []),
@@ -303,28 +327,13 @@ export default function(admin?: boolean) {
       },
     ],
     [
-      {
-        text: admin
-          ? 'Additional information'
-          : 'Please provide any further information or background that you think will help us to match you with a suitable befriender',
-        field: 'refugee.additional',
-        optional: true,
-        rows: 3,
-      },
-    ],
-    [
       ...(!admin
         ? [
             {
               title: '3. Refugee Declaration',
             },
             {
-              info: `**Referrers: please ensure that the person you are referring understands the nature of
-              this declaration and of befriending.**
-
-**Please tell the person you are referring that HostNation will be in contact with them by phone or by email in the next few weeks.**
-
-**By submitting this application:**`,
+              info: `**By submitting this application:**`,
             },
             {
               label:
@@ -340,13 +349,7 @@ export default function(admin?: boolean) {
             },
             {
               label:
-                'I consent to the use and storage of my personal data by HostNation',
-              name: 'refugeedata',
-              scalar: 'boolean',
-            },
-            {
-              label:
-                'I consent to HostNation sharing some of the personal data with registered befrienders in order to match me with a befriender and put us in contact and to get feedback after the three months',
+                'I consent to the use and storage of my personal data by HostNation in order to match me with a befriender',
               name: 'refugeesharing',
               scalar: 'boolean',
             },
@@ -355,8 +358,10 @@ export default function(admin?: boolean) {
       ...(!admin
         ? [
             {
-              info:
-                '*If you would like to withdraw your consent at any time, please email info@hostnation.org.uk. 12 months after your 3 month match through HostNation, your identifiable personal data will be removed from our database. For further details on how we use your personal data, please see our privacy policy.*',
+              info: `**Thank you for your referral!**
+HostNation will be in contact with you by post, phone or email in the next few weeks.
+
+*If you would like to withdraw your consent at any time, please email info@hostnation.org.uk. 12 months after your 3 month match through HostNation, your identifiable personal data will be removed from our database. For further details on how we use your personal data, please see our privacy policy.*`,
             },
           ]
         : []),
@@ -399,10 +404,8 @@ export default function(admin?: boolean) {
         text: admin
           ? 'Referrer meeting place'
           : 'The address & postcode of where you meet',
-        prompt:
-          'If you are not part of an organisation or group then please just enter your name',
         field: 'refugee.contactaddress',
-        optional: admin,
+        optional: true,
         rows: 2,
       },
       {
@@ -473,7 +476,7 @@ export default function(admin?: boolean) {
             },
             {
               label:
-                'I confirm that the person(s) I am referring understands the scope of services being provided by HostNation (see below)',
+                'I confirm that the person(s) I am referring understands the scope of services being provided by HostNation',
               name: 'referrerscope',
               scalar: 'boolean',
             },

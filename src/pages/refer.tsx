@@ -141,30 +141,6 @@ export default () => (
       </Box>
 
       <Box title="REFUGEE & REFERRER REGISTRATION FORM" color="purple">
-        <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>
-          IMPORTANT PLEASE READ THIS FIRST:
-        </Txt>
-        <Txt style={styles.boxText}>
-          HostNation is a befriending service that connects people in Greater
-          London.
-        </Txt>
-        <Txt style={styles.boxText}>
-          It is for asylum seekers and refugees who are lonely, relatively new
-          to London or still curious to discover and see more of the city. It is
-          for people who would like to connect more with London and Londoners.
-        </Txt>
-        <Txt style={styles.boxText}>
-          If this is you, and you are prepared to commit to a three month
-          befriending programme, then please fill in this form together with
-          your referrer.
-        </Txt>
-        <Txt style={styles.boxText}>
-          To fill in this form you need to be online with a secure connection.
-          All information given is treated as highly confidential and securely
-          encrypted. Only the starred questions are essential but the more
-          personal and background information you can provide, the better the
-          match we can make.
-        </Txt>
         <ReferForm />
       </Box>
 
