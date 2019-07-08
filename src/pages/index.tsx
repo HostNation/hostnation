@@ -368,7 +368,7 @@ export default r
           <Div style={{ spacing: 15 }}>
             <img src={newsIcon} style={{ width: 100, margin: '0 auto' }} />
             <Button
-              to="https://hostnationblog.wordpress.com"
+              to="https://us19.campaign-archive.com/home/?u=cb14839efac03c56ff20ec9b9&id=08cc528166"
               newTab
               color="purple"
               style={{ margin: '0 auto' }}
@@ -376,7 +376,9 @@ export default r
               NEWS UPDATES
             </Button>
           </Div>
-          <Txt style={styles.body}>For the latest news from HostNation.</Txt>
+          <Txt style={styles.body}>
+            News, events and opportunities in London for our refugee friends.
+          </Txt>
         </Div>
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <img

@@ -167,7 +167,7 @@ export default r
               )}
             </Hover>
           ) : (
-            <Div style={{ layout: 'bar', spacing: 30, float: 'right' }}>
+            <Div style={{ layout: 'bar', spacing: 25, float: 'right' }}>
               <MenuLink text="About Us" to="/about-us" active={active} />
               <MenuLink text="Befriend" to="/befriend" active={active} />
               <MenuLink text="Refer" to="/refer" active={active} />
@@ -178,6 +178,11 @@ export default r
               />
               <MenuLink text="Guide" to="/guide.pdf" newTab />
               <MenuLink text="Links" to="/links.pdf" newTab />
+              <MenuLink
+                text="News"
+                to="https://us19.campaign-archive.com/home/?u=cb14839efac03c56ff20ec9b9&id=08cc528166"
+                newTab
+              />
             </Div>
           )}
         </Div>
@@ -186,7 +191,7 @@ export default r
             style={{
               overflow: 'hidden',
               transition: 'height 0.35s ease',
-              height: isOpen ? 251 : 0,
+              height: isOpen ? 290 : 0,
             }}
           >
             <Div style={{ spacing: 20, padding: '20px 0' }}>
@@ -223,6 +228,12 @@ export default r
               <MenuLink
                 text="Links"
                 to="/links.pdf"
+                newTab
+                setClosed={setClosed}
+              />
+              <MenuLink
+                text="News"
+                to="https://us19.campaign-archive.com/home/?u=cb14839efac03c56ff20ec9b9&id=08cc528166"
                 newTab
                 setClosed={setClosed}
               />
