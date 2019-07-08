@@ -373,7 +373,7 @@ export default r
               color="purple"
               style={{ margin: '0 auto' }}
             >
-              NEWS UPDATES
+              NEWSLETTERS
             </Button>
           </Div>
           <Txt style={styles.body}>
