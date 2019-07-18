@@ -103,7 +103,7 @@ const Profiles = r
           small={small}
           image={anthony}
           name="Anthony Berman"
-          role="HostNation Trustee"
+          role="Operations Manager"
           bio={[
             'Anthony worked as a root canal specialist until his retirement in 2016. He still does some part-time teaching at QMUL. He left his native South Africa at the age of 13 with his family to come to live in London. Although his circumstances were considerably more comfortable than those of the average refugee or asylum seeker, he still remembers the challenges involved in being uprooted from his home country to make a life in a new environment.',
             'Twelve years ago Anthony was part of a befriending project run by the organization, Freedom from Torture, matching UK citizens with children who had arrived in the country as unaccompanied minors. The aim of the project was to introduce some normality into the lives of these frequently damaged young people. The youngster that he was paired with has become part of Anthony’s family and it has been a richly rewarding experience all round. Anthony is also one of the coordinators for the New London Synagogue Drop-In Centre for destitute asylum seekers where he has been able to see first-hand the difficulties that these people face. It is also clear that there are many local citizens who are keen to make a connection with asylum seekers but are not sure how to go about it. He believes strongly that HostNation, in fostering these friendships, will provide a transformative experience for both sides.',
@@ -114,7 +114,7 @@ const Profiles = r
           small={small}
           image={magda}
           name="Magda Wolfe"
-          role="HostNation Trustee"
+          role="Evaluation Manager"
           bio={[
             'Magda is currently studying for a master’s degree in Social Policy and Social Research at University College London. She was raised in Poland where she studied Ethnology and Cultural Anthropology at the University of Wroclaw. She moved to the UK in 2002 and pursued a successful career in media and broadcasting.',
             'She is fascinated by observing the ever-changing social landscape and is passionate about driving positive change towards a fairer society. Her interest is in social inequality issues and the problems derived from economic disparity particularly those linked to migration and the forced displacement of people. She is very excited to be part of HostNation and working as part of the core team and as such being closely involved in all stages of the process.',

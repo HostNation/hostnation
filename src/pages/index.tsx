@@ -129,7 +129,7 @@ export default r
               in the first 3 months of befriending
             </Txt>
             <Div style={{ layout: 'bar', spacing: 10, margin: '10px auto 0' }}>
-              {'5880'.split('').map((d, i) => (
+              {'6076'.split('').map((d, i) => (
                 <Txt
                   style={{
                     ...styles.text,
