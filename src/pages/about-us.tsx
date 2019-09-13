@@ -162,9 +162,9 @@ const Profiles = r
           name="Joanna Winterbottom"
           role="HostNation Trustee"
           bio={[
-            'Jo was a reporter and editor with Reuters news agency for over 20 years, gaining an in-depth knowledge of the news and conirnunications business. She has worked around the world, including assignnients in Italy, India, South Africa and the United States. In Januaryr 2018, she embarked on a freelance career, giving her more time for voluntary work, which had been a long-term goal. She now trains journalists with the Reuters Foundation, and has travelled in this role to destinations as far apart as Kazakhstan and Jamaica. She also continues to write and edit as a freelancer.',
-            'Her voluntary work has included giving practical advice to asylum seekers in London and men-taring immigrants in language skills.',
-            "Jo is very happy to be working with HostNation and values its aims of giving refugees a warm and supportive welcome to their new home. Jo's own experiences in moving countries has been cushioned by her employee's infrastructure, but she is still aware of the challenges of uprooting your life, creating social networks and getting to grips with a new environment.",
+            'Jo was a reporter and editor with Reuters news agency for over 20 years, gaining an in-depth knowledge of the news and communications business. She has worked around the world, including assignments in Italy, India, South Africa and the United States. In January 2018, she embarked on a freelance career, giving her more time for voluntary work, which had been a long-term goal. She now trains journalists with the Reuters Foundation, and has travelled in this role to destinations as far apart as Kazakhstan and Jamaica. She also continues to write and edit as a freelancer.',
+            'Her voluntary work has included giving practical advice to asylum seekers in London and mentoring immigrants in language skills.',
+            "Jo is very happy to be working with HostNation and values its aims of giving refugees a warm and supportive welcome to their new home. Jo's own experiences in moving countries has been cushioned by her employer's infrastructure, but she is still aware of the challenges of uprooting your life, creating social networks and getting to grips with a new environment.",
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
