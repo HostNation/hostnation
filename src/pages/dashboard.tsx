@@ -326,6 +326,13 @@ const Content = r.yield(getLocation).yield(() => (
                 options: ['Yes', 'No', null],
                 labels: ['Yes', 'No', 'DK'],
               },
+              {
+                text: 'Still in contact after 12 months',
+                field: 'befriender.stillincontact1',
+                optional: true,
+                options: ['Yes', 'No', null],
+                labels: ['Yes', 'No', 'DK'],
+              },
             ],
             [
               { info: '## Befriendee 2' },
@@ -389,6 +396,13 @@ const Content = r.yield(getLocation).yield(() => (
               {
                 text: 'Sustained',
                 field: 'befriender.sustained2',
+                optional: true,
+                options: ['Yes', 'No', null],
+                labels: ['Yes', 'No', 'DK'],
+              },
+              {
+                text: 'Still in contact after 12 months',
+                field: 'befriender.stillincontact2',
                 optional: true,
                 options: ['Yes', 'No', null],
                 labels: ['Yes', 'No', 'DK'],
