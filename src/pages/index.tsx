@@ -383,23 +383,6 @@ export default r
           </div>
         </Div>
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-        <Div style={{ spacing: 25 }}>
-          <Div style={{ spacing: 15 }}>
-            <img src={newsIcon} style={{ width: 100, margin: '0 auto' }} />
-            <Button
-              to="https://us19.campaign-archive.com/home/?u=cb14839efac03c56ff20ec9b9&id=08cc528166"
-              newTab
-              color="purple"
-              style={{ margin: '0 auto' }}
-            >
-              NEWSLETTERS
-            </Button>
-          </Div>
-          <Txt style={styles.body}>
-            News, events and opportunities in London for our refugee friends.
-          </Txt>
-        </Div>
-        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <img
           src={oliviaAnnaBanner}
           style={{ maxWidth: 650, margin: '0 auto' }}
