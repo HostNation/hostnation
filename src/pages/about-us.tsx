@@ -10,6 +10,7 @@ import * as lcfLogo from '../img/logos/lcf.jpg';
 import * as phfLogo from '../img/logos/phf.jpg';
 import * as tflLogo from '../img/logos/tfl.png';
 import * as cfLogo from '../img/logos/cf.png';
+import * as molLogo from '../img/logos/mol.png';
 
 import * as anneke from '../img/team/anneke.png';
 import * as rossana from '../img/team/rossana.png';
@@ -258,11 +259,11 @@ export default () => (
         {withWidth(700)({
           next: ({ small = false, setWidthElem }) => (
             <div ref={setWidthElem}>
-              <Div style={{ layout: 'stack', spacing: 20, paddingTop: 20 }}>
+              <Div style={{ layout: 'stack', spacing: 25, paddingTop: 20 }}>
                 <Div
                   style={{
                     layout: small ? 'stack' : 'bar',
-                    spacing: 20,
+                    spacing: 25,
                     margin: '0 auto',
                   }}
                 >
@@ -282,7 +283,7 @@ export default () => (
                 <Div
                   style={{
                     layout: small ? 'stack' : 'bar',
-                    spacing: 20,
+                    spacing: 25,
                     margin: '0 auto',
                   }}
                 >
@@ -293,6 +294,18 @@ export default () => (
                   <img
                     src={cfLogo}
                     style={{ height: 100, width: 'auto', margin: '0 auto' }}
+                  />
+                </Div>
+                <Div
+                  style={{
+                    layout: small ? 'stack' : 'bar',
+                    spacing: 25,
+                    margin: '0 auto',
+                  }}
+                >
+                  <img
+                    src={molLogo}
+                    style={{ height: 45, width: 'auto', margin: '0 auto' }}
                   />
                 </Div>
               </Div>
