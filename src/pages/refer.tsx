@@ -4,7 +4,6 @@ import { Div, Hover, Txt } from 'elmnt';
 import Helmet from 'react-helmet';
 
 import * as logoWide from '../img/logo-wide.png';
-import * as florenceLucy from '../img/banners/florence-lucy.png';
 
 import referBlocks from '../blocks/refer';
 import Box from '../core/Box';
@@ -49,7 +48,7 @@ const ReferForm = r
 export default () => (
   <>
     <Helmet title="Refer | HostNation" />
-    <Div style={{ spacing: 50, paddingTop: 50 }}>
+    <Div style={{ spacing: 50, paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
 
       <Box title="SCREENING & SAFEGUARDING" toggle>
@@ -179,8 +178,6 @@ export default () => (
           </Hover>
         </a>
       </Box>
-
-      <img src={florenceLucy} />
     </Div>
   </>
 );

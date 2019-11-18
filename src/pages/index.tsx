@@ -11,12 +11,9 @@ import * as photos2 from '../img/photos/photos2.png';
 import * as photos3 from '../img/photos/photos3.png';
 import * as photos4 from '../img/photos/photos4.png';
 
-import * as oliviaAnnaBanner from '../img/banners/olivia-anna-transparent.png';
-
 import * as contactIcon from '../img/icons/contact.png';
 import * as guideIcon from '../img/icons/guide.png';
 import * as linksIcon from '../img/icons/links.png';
-import * as newsIcon from '../img/icons/news.png';
 import * as testimonialsIcon from '../img/icons/testimonials.png';
 
 import Button from '../core/Button';
@@ -382,12 +379,6 @@ export default r
             />
           </div>
         </Div>
-        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-        <img
-          src={oliviaAnnaBanner}
-          style={{ maxWidth: 650, margin: '0 auto' }}
-        />
-
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Div style={{ spacing: 35 }}>
           <Div style={{ spacing: 15 }}>

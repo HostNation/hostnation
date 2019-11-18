@@ -5,7 +5,6 @@ import Helmet from 'react-helmet';
 
 import * as mapImage from '../img/map.jpg';
 import * as logoWide from '../img/logo-wide.png';
-import * as aiLingPattie from '../img/banners/ai-ling-pattie.png';
 
 import befriendBlocks from '../blocks/befriend';
 import Box from '../core/Box';
@@ -81,7 +80,7 @@ const BefriendForm = r
 export default () => (
   <>
     <Helmet title="Befriend | HostNation" />
-    <Div style={{ spacing: 50, paddingTop: 50 }}>
+    <Div style={{ spacing: 50, paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
 
       <Box title="WHY WE NEED TO ASK A LOT OF YOU" toggle>
@@ -263,8 +262,6 @@ export default () => (
           </Hover>
         </a>
       </Box>
-
-      <img src={aiLingPattie} />
     </Div>
   </>
 );
