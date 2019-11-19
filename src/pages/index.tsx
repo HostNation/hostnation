@@ -166,7 +166,7 @@ export default r
         <Div style={{ spacing: 25, maxWidth: 600, margin: '0 auto' }}>
           <Txt style={styles.body}>
             To get a feel for befriending watch our two new shorts starring
-            Suzy, Hakim, Sue and Stella:
+            Suzy, Hakim, Sue and Julie:
           </Txt>
           <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
             <iframe
