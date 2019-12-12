@@ -113,11 +113,10 @@ export default () => (
           Thank you for your interest in HostNation refugee befriending.
         </Txt>
         <Txt style={styles.boxText}>
-          We are currently only seeking befrienders who live in Greater London
-          zones 3-6 which is where most refugees and asylum seekers are housed.
-          If you live in the outer zones but within the M25, we would love to
-          have you on board. We are also keen to recruit more men to join
-          HostNation.
+          We are seeking befrienders who live in Greater London zones 3-6 which
+          is where most refugees and asylum seekers are housed. If you live in
+          the outer zones but within the M25, we would love to have you on
+          board. We are also keen to recruit more men to join HostNation.
         </Txt>
         <Txt style={styles.boxText}>
           By registering you commit to being a London host to a socially

@@ -191,6 +191,18 @@ export default function(admin?: boolean) {
       },
       {
         text: admin
+          ? 'Via Team London'
+          : 'Have you come to us via Team London (Mayor of London) volunteering?',
+        field: 'befriender.teamlondon',
+      },
+      {
+        text: admin
+          ? 'Volunteered in last 12 months'
+          : 'Have you done any volunteering in the last 12 months?',
+        field: 'befriender.volunteerbefore',
+      },
+      {
+        text: admin
           ? 'Experience with refugees or vulnerable people'
           : 'Do you have any experience of working with or volunteering with refugees or other vulnerable groups?',
         prompt: 'Please give details of organisation(s) and your involvement',
