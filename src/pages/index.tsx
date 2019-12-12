@@ -6,10 +6,10 @@ import { withWidth } from 'common-client';
 
 import * as logoWide from '../img/logo-wide.png';
 
-import * as photos1 from '../img/photos/photos1.png';
-import * as photos2 from '../img/photos/photos2.png';
-import * as photos3 from '../img/photos/photos3.png';
-import * as photos4 from '../img/photos/photos4.png';
+import * as photos1 from '../img/photos/party1.png';
+import * as photos2 from '../img/photos/party2.png';
+import * as photos3 from '../img/photos/party3.png';
+import * as photos4 from '../img/photos/party4.png';
 
 import * as contactIcon from '../img/icons/contact.png';
 import * as guideIcon from '../img/icons/guide.png';
