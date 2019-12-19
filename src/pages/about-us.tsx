@@ -253,8 +253,9 @@ export default () => (
           Communities Grant. Trust for London have also confirmed a generous
           Connected Communities grant towards our core costs over the next two
           years. And 2019 started with another successful grant bid from the
-          National Lottery Community Fund. Thank you to all our funders for
-          making our work sustainable!
+          National Lottery Community Fund and ended with a social prescribing
+          grant from Team London and the Mayor of London's office. Thank you to
+          all our funders for making our work sustainable!
         </Txt>
         {withWidth(700)({
           next: ({ small = false, setWidthElem }) => (
