@@ -18,7 +18,25 @@ If this is you, and you are prepared to commit to a three month befriending prog
 To fill in this form you need to be online with a secure connection. All information given is treated as highly confidential and securely encrypted. Only the starred questions are essential but the more personal and background information you can provide, the better the match we can make.`,
             },
             {
-              info: `**You need to confirm all of the following statements before we can consider you for befriending. If you do not meet all the criteria below please DO NOT continue with the referral but get back in touch with HostNation when your circumstances change.**`,
+              info: `**You and your referrer need to confirm all of the following statements before we can consider you for befriending. If you do not meet all the criteria below please DO NOT continue with the referral but get back in touch with HostNation when your circumstances change.**`,
+            },
+            {
+              info: `**For the referrer:**`,
+            },
+            {
+              label:
+                'The person I am referring does not have high or complex mental health needs',
+              name: 'checkR1',
+              scalar: 'boolean',
+            },
+            {
+              label:
+                'In my opinion, this person is sufficiently robust psychologically to embark on a befriending relationship',
+              name: 'checkR2',
+              scalar: 'boolean',
+            },
+            {
+              info: `**For the refugee / asylum seeker:**`,
             },
             {
               label: 'I am over 18',
@@ -201,6 +219,13 @@ To fill in this form you need to be online with a secure connection. All informa
         ],
         optional: admin,
         style: { layout: 'modal', maxWidth: 400 },
+      },
+      {
+        text: admin
+          ? 'Simple English'
+          : 'Can you read and write simple English, e.g. text messages / WhatsApp?',
+        field: 'refugee.simpleenglish',
+        optional: admin,
       },
       {
         text: admin
