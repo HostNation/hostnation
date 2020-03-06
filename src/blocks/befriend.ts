@@ -194,12 +194,14 @@ export default function(admin?: boolean) {
           ? 'Via Team London'
           : 'Have you come to us via Team London (Mayor of London) volunteering?',
         field: 'befriender.teamlondon',
+        optional: admin,
       },
       {
         text: admin
           ? 'Volunteered in last 12 months'
           : 'Have you done any volunteering in the last 12 months?',
         field: 'befriender.volunteerbefore',
+        optional: admin,
       },
       {
         text: admin
