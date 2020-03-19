@@ -1,49 +1,49 @@
 import * as React from 'react';
-import r from 'refluent';
+// import r from 'refluent';
 import { Div, Hover, Txt } from 'elmnt';
 import Helmet from 'react-helmet';
 
 import * as logoWide from '../img/logo-wide.png';
 
-import referBlocks from '../blocks/refer';
+// import referBlocks from '../blocks/refer';
 import Box from '../core/Box';
-import Forms from '../core/Forms';
+// import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
 
-const ReferForm = r
-  .do((_, push) => ({
-    complete: false,
-    onSubmit: () => push({ complete: true }),
-  }))
-  .yield(
-    ({ onSubmit, complete }) =>
-      complete ? (
-        <Txt
-          style={{
-            ...styles.base,
-            fontSize: 30,
-            lineHeight: '40px',
-            fontWeight: 'bold',
-            textAlign: 'center',
-            padding: '50px 0',
-            color: colors.purple,
-          }}
-        >
-          Thanks for completing your referral, we’ll be in touch soon!
-        </Txt>
-      ) : (
-        <Forms.Purple
-          objects={{
-            refugee: {
-              type: 'refugees',
-              initial: { mapaddress: null },
-            },
-          }}
-          blocks={referBlocks()}
-          onSubmit={onSubmit}
-        />
-      ),
-  );
+// const ReferForm = r
+//   .do((_, push) => ({
+//     complete: false,
+//     onSubmit: () => push({ complete: true }),
+//   }))
+//   .yield(
+//     ({ onSubmit, complete }) =>
+//       complete ? (
+//         <Txt
+//           style={{
+//             ...styles.base,
+//             fontSize: 30,
+//             lineHeight: '40px',
+//             fontWeight: 'bold',
+//             textAlign: 'center',
+//             padding: '50px 0',
+//             color: colors.purple,
+//           }}
+//         >
+//           Thanks for completing your referral, we’ll be in touch soon!
+//         </Txt>
+//       ) : (
+//         <Forms.Purple
+//           objects={{
+//             refugee: {
+//               type: 'refugees',
+//               initial: { mapaddress: null },
+//             },
+//           }}
+//           blocks={referBlocks()}
+//           onSubmit={onSubmit}
+//         />
+//       ),
+//   );
 
 export default () => (
   <>
@@ -140,8 +140,15 @@ export default () => (
       </Box>
 
       <Box title="REFUGEE & REFERRER REGISTRATION FORM" color="purple">
-        <ReferForm />
+        <Txt style={styles.boxText}>
+          Due to the Coronavirus we are not taking referrals or making new
+          matches until further notice.
+        </Txt>
       </Box>
+
+      {/* <Box title="REFUGEE & REFERRER REGISTRATION FORM" color="purple">
+        <ReferForm />
+      </Box> */}
 
       <Box title="HOSTNATION PRIVACY POLICY" toggle>
         <Txt style={styles.boxText}>
