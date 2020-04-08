@@ -17,6 +17,7 @@ import * as linksIcon from '../img/icons/links.png';
 import * as testimonialsIcon from '../img/icons/testimonials.png';
 
 import Button from '../core/Button';
+import { Link } from '../core/router';
 import styles, { colors, icons } from '../core/styles';
 
 const photos = [photos1, photos2, photos3, photos4];
@@ -88,6 +89,65 @@ export default r
           </Txt>
           <Txt style={{ ...styles.text, fontSize: 24 }}>
             Currently working in Greater London.
+          </Txt>
+        </Div>
+        <Div
+          style={{
+            spacing: 20,
+            background: 'white',
+            padding: '40px',
+            border: `2px solid ${colors.black}`,
+          }}
+        >
+          <Txt style={{ ...styles.text, fontSize: 16, fontWeight: 'bold' }}>
+            Sadly, HostNation has had to suspend its befriending service during
+            this lockdown period. In the meantime we plan to post messages of
+            solidarity and support from our community of befrienders and refugee
+            friends as well as from the wider world. So please check in from
+            time to time to see what we’ve posted and when we re-open for
+            matching and follow us on
+            <Link to="https://www.facebook.com/HostNationUK/" newTab>
+              <Txt
+                style={{
+                  ...styles.text,
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: colors.yellow,
+                  display: 'inline-block',
+                  padding: '0 5px',
+                  textDecoration: 'underline',
+                }}
+              >
+                Facebook
+              </Txt>
+            </Link>
+            . Thank you and keep safe!
+          </Txt>
+          <Txt style={{ ...styles.text, fontSize: 16, fontWeight: 'bold' }}>
+            Here is an article by Rebecca Solnit about hope. She describes
+            moments of immense change when:
+          </Txt>
+          <Txt
+            style={{
+              ...styles.text,
+              fontSize: 16,
+              fontStyle: 'italic',
+              fontWeight: 'bold',
+            }}
+          >
+            We see what’s strong, what’s weak, what’s corrupt, what matters and
+            what doesn’t.
+            <br />I often think of these times as akin to a spring thaw: it’s as
+            if the pack ice has broken up, the water starts flowing again and
+            boats can move through places they could not during winter. The ice
+            was the arrangement of power relations that we call the status quo –
+            it seems to be stable, and those who benefit from it often insist
+            that it’s unchangeable. Then it changes fast and dramatically, and
+            that can be exhilarating, terrifying, or both.
+          </Txt>
+          <Txt style={{ ...styles.text, fontSize: 16, fontWeight: 'bold' }}>
+            This is an image I imagine many of our refugee friends can identify
+            with when they arrive on our shores.
           </Txt>
         </Div>
         <img src={photo} />
