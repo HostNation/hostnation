@@ -124,8 +124,27 @@ export default r
             . Thank you and keep safe!
           </Txt>
           <Txt style={{ ...styles.text, fontSize: 16, fontWeight: 'bold' }}>
-            Here is an article by Rebecca Solnit about hope. She describes
-            moments of immense change when:
+            Here is{' '}
+            <Link
+              to="https://www.theguardian.com/world/2020/apr/07/what-coronavirus-can-teach-us-about-hope-rebecca-solnit"
+              newTab
+            >
+              <Txt
+                style={{
+                  ...styles.text,
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: colors.yellow,
+                  display: 'inline-block',
+                  padding: '0 5px',
+                  textDecoration: 'underline',
+                }}
+              >
+                an article
+              </Txt>
+            </Link>{' '}
+            by Rebecca Solnit about hope. She describes moments of immense
+            change when:
           </Txt>
           <Txt
             style={{
@@ -146,7 +165,7 @@ export default r
             that can be exhilarating, terrifying, or both.
           </Txt>
           <Txt style={{ ...styles.text, fontSize: 16, fontWeight: 'bold' }}>
-            This is an image I imagine many of our refugee friends can identify
+            This is an image we imagine many of our refugee friends can identify
             with when they arrive on our shores.
           </Txt>
         </Div>
