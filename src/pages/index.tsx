@@ -17,7 +17,6 @@ import * as linksIcon from '../img/icons/links.png';
 import * as testimonialsIcon from '../img/icons/testimonials.png';
 
 import Button from '../core/Button';
-import { Link } from '../core/router';
 import styles, { colors, icons } from '../core/styles';
 
 const photos = [photos1, photos2, photos3, photos4];
@@ -101,72 +100,35 @@ export default r
         >
           <Txt style={{ ...styles.text, fontSize: 16, fontWeight: 'bold' }}>
             Sadly, HostNation has had to suspend its befriending service during
-            this lockdown period. In the meantime we plan to post messages of
-            solidarity and support from our community of befrienders and refugee
-            friends as well as from the wider world. So please check in from
-            time to time to see what we’ve posted and when we re-open for
-            matching and follow us on
-            <Link to="https://www.facebook.com/HostNationUK/" newTab>
-              <Txt
-                style={{
-                  ...styles.text,
-                  fontSize: 16,
-                  fontWeight: 'bold',
-                  color: colors.yellow,
-                  display: 'inline-block',
-                  padding: '0 5px',
-                  textDecoration: 'underline',
-                }}
-              >
-                Facebook
-              </Txt>
-            </Link>
-            . Thank you and keep safe!
+            lockdown.
+            <br />
+            But we’re not standing still.
           </Txt>
           <Txt style={{ ...styles.text, fontSize: 16, fontWeight: 'bold' }}>
-            Here is{' '}
-            <Link
-              to="https://www.theguardian.com/world/2020/apr/07/what-coronavirus-can-teach-us-about-hope-rebecca-solnit"
-              newTab
-            >
-              <Txt
-                style={{
-                  ...styles.text,
-                  fontSize: 16,
-                  fontWeight: 'bold',
-                  color: colors.yellow,
-                  display: 'inline-block',
-                  padding: '0 5px',
-                  textDecoration: 'underline',
-                }}
-              >
-                an article
-              </Txt>
-            </Link>{' '}
-            by Rebecca Solnit about hope. She describes moments of immense
-            change when:
+            Our wonderful volunteer befrienders are stepping into the breach to
+            help battle isolation and poor mental health during the crisis. They
+            have been a lifeline for their befriendees. They are rising to the
+            challenge of treating their refugee befriendees as a part of their
+            extended family as well as a part of the HostNation community. We
+            are immensely grateful for their small acts of kindness, inclusion
+            and friendship.
           </Txt>
           <Txt
             style={{
               ...styles.text,
               fontSize: 16,
-              fontStyle: 'italic',
               fontWeight: 'bold',
+              fontStyle: 'italic',
             }}
           >
-            We see what’s strong, what’s weak, what’s corrupt, what matters and
-            what doesn’t.
-            <br />I often think of these times as akin to a spring thaw: it’s as
-            if the pack ice has broken up, the water starts flowing again and
-            boats can move through places they could not during winter. The ice
-            was the arrangement of power relations that we call the status quo –
-            it seems to be stable, and those who benefit from it often insist
-            that it’s unchangeable. Then it changes fast and dramatically, and
-            that can be exhilarating, terrifying, or both.
+            “I’m not feeling good at the moment, but Jo is helping a lot. She
+            picked up my medication and my shopping. She texts me constantly.
+            Even though she is white and I am black, she makes me feel like
+            we're the same. She is amazing. It is a match from heaven.” (Lily,
+            refugee from DRC).
           </Txt>
           <Txt style={{ ...styles.text, fontSize: 16, fontWeight: 'bold' }}>
-            This is an image we imagine many of our refugee friends can identify
-            with when they arrive on our shores.
+            We hope to open again soon.
           </Txt>
         </Div>
         <img src={photo} />
