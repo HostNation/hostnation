@@ -90,7 +90,7 @@ export default r
             Currently working in Greater London.
           </Txt>
         </Div>
-        <Div
+        {/* <Div
           style={{
             spacing: 20,
             background: 'white',
@@ -130,7 +130,7 @@ export default r
           <Txt style={{ ...styles.text, fontSize: 16, fontWeight: 'bold' }}>
             We hope to open again soon.
           </Txt>
-        </Div>
+        </Div> */}
         <img src={photo} />
         <Div style={{ spacing: 20 }}>
           <Txt style={{ ...styles.text, fontSize: 24 }}>
@@ -167,7 +167,7 @@ export default r
               in the first 3 months of befriending
             </Txt>
             <Div style={{ layout: 'bar', spacing: 10, margin: '10px auto 0' }}>
-              {'6720'.split('').map((d, i) => (
+              {'6832'.split('').map((d, i) => (
                 <Txt
                   style={{
                     ...styles.text,
