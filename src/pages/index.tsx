@@ -17,6 +17,7 @@ import * as linksIcon from '../img/icons/links.png';
 import * as testimonialsIcon from '../img/icons/testimonials.png';
 
 import Button from '../core/Button';
+import { Link } from '../core/router';
 import styles, { colors, icons } from '../core/styles';
 
 const photos = [photos1, photos2, photos3, photos4];
@@ -41,7 +42,48 @@ export default r
   .yield(({ photo }) => (
     <>
       <Helmet title="HostNation" />
-      <Div style={{ spacing: 50, padding: '50px 0' }}>
+      <div
+        style={{
+          background: 'white',
+          borderBottom: '3px solid #2f3644',
+          position: 'fixed',
+          zIndex: 100,
+          width: '100%',
+          top: 50,
+          left: 0,
+        }}
+      >
+        <div
+          style={{
+            margin: '0 auto',
+            padding: '15px',
+            maxWidth: 850,
+          }}
+        >
+          <Txt style={{ ...styles.text, fontSize: 20, fontWeight: 'bold' }}>
+            Loneliness is a legacy of Covid-19.
+            <br />
+            Please support our live crowdfunder to help refugees and asylum
+            seekers -
+            <Link to="https://www.avivacommunityfund.co.uk/hostnation" newTab>
+              <Txt
+                style={{
+                  ...styles.text,
+                  fontWeight: 'bold',
+                  color: colors.yellow,
+                  display: 'inline-block',
+                  padding: '0 5px',
+                  textDecoration: 'underline',
+                }}
+              >
+                click here
+              </Txt>
+            </Link>
+            .
+          </Txt>
+        </div>
+      </div>
+      <Div style={{ spacing: 50, padding: '130px 0' }}>
         {withWidth(700)({
           next: ({ small = false, setWidthElem }) => (
             <div ref={setWidthElem}>
