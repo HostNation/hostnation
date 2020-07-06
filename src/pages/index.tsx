@@ -177,10 +177,12 @@ export default r
         <Div style={{ spacing: 20 }}>
           <Txt style={{ ...styles.text, fontSize: 24 }}>
             We are a London-based introductory service connecting residents to
-            newcomers in the city. Befrienders are matched with and then
-            introduced to a refugee or asylum seeker in their part of town. They
-            commit to being a London host once or twice a fortnight for a
-            minimum of 3 months.
+            refugees in the city. As a result of Covid we now offer ‘smart’
+            befriending where matching, introductions and initial befriending is
+            online. Weekly video-calls are followed by face-to-face meet ups in
+            the city when both parties feel ready. We ask for a minimum
+            commitment of three months but many matches tell us they have become
+            friends for life.
           </Txt>
           <Txt style={{ ...styles.text, fontSize: 24, fontWeight: 'bold' }}>
             London is a much friendlier place with a Londoner by your side.

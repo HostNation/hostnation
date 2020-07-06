@@ -86,42 +86,6 @@ export default function(admin?: boolean) {
             },
           ]
         : []),
-      ...(!admin
-        ? [
-            {
-              info:
-                '**We match by geography, if there is a second (fairly permanent) address where you would be happy to be matched from (ie. place of work or parental home) please add it here with the full postcode:**',
-            },
-          ]
-        : []),
-      {
-        text: 'Secondary address',
-        field: 'befriender.address2',
-        optional: true,
-        rows: 3,
-      },
-      {
-        text: 'Secondary postcode',
-        field: 'befriender.postcode2',
-        optional: true,
-        getAddress: ['address2', 'postcode2', 'mapaddress2'],
-      },
-      {
-        text: 'Secondary address type',
-        field: 'befriender.address2type',
-        optional: true,
-      },
-      ...(admin
-        ? [
-            {
-              text: 'Valid secondary map address',
-              field: 'befriender.mapaddress2',
-              optional: true,
-              mapAddress: true,
-              view: true,
-            },
-          ]
-        : []),
       {
         text: 'Mobile no.',
         field: 'befriender.mobile',
@@ -295,15 +259,6 @@ export default function(admin?: boolean) {
         field: 'befriender.additional',
         rows: 3,
         optional: true,
-      },
-      {
-        text: admin
-          ? 'Availability'
-          : 'When are you most likely to be available to meet up with your befriendee?',
-        vertical: true,
-        field: 'befriender.availability',
-        optional: admin,
-        style: { layout: 'stack' },
       },
       {
         text: admin

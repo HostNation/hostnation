@@ -3,7 +3,7 @@ import r from 'refluent';
 import { Div, Hover, Txt } from 'elmnt';
 import Helmet from 'react-helmet';
 
-import * as mapImage from '../img/map.jpg';
+// import * as mapImage from '../img/map.jpg';
 import * as logoWide from '../img/logo-wide.png';
 
 import befriendBlocks from '../blocks/befriend';
@@ -113,30 +113,43 @@ export default () => (
           Thank you for your interest in HostNation refugee befriending.
         </Txt>
         <Txt style={styles.boxText}>
-          We are seeking befrienders who live in Greater London zones 3-6 which
-          is where most refugees and asylum seekers are housed. If you live in
-          the outer zones but within the M25, we would love to have you on
-          board. We are also keen to recruit more men to join HostNation.
+          As we emerge from Covid we are introducing ‘smart’ befriending which
+          is a hybrid of online and face to face. Whilst we still hope our
+          befrienders will be able to show a socially isolated refugee or asylum
+          seeker how to enjoy London and have new, positive experiences cheaply
+          and often for free, we are conscious that many places remain closed
+          and refugees are socially anxious about going out and using public
+          transport. We may also face a second wave of the virus.
         </Txt>
         <Txt style={styles.boxText}>
-          By registering you commit to being a London host to a socially
-          isolated refugee or asylum seeker, who may be recently arrived or have
-          lived here 10+ years, but has experienced little of what London has to
-          offer. We hope you will show them more of our great city and how they
-          can enjoy London and have new, positive experiences cheaply and often
-          for free. London is a much friendlier city with a Londoner by your
-          side. You must be able to offer at least 3-4 hours of time to spend
-          together once or twice a fortnight. Befriending is a service and a
-          commitment of time but it can grow into a mutual and personal
-          friendship.
+          For this reason we plan to make introductions and facilitate online
+          befriending via What’s App video, FaceTime, FaceBook Messenger or
+          Zoom. Once introduced, we ask befrienders to make weekly calls to
+          check in, chat and help their befriendee practise their English. When
+          both sides feel ready to meet face-to-face, then we encourage making a
+          plan to visit a park, market or museum and to continue to explore and
+          experience London together at least once a fortnight. But, if both
+          parties feel more comfortable carrying on meeting virtually, that’s
+          fine too.
         </Txt>
         <Txt style={styles.boxText}>
-          Depending on where you live and the referrals we receive, it may be a
-          few weeks or several months before we match you. This is driven, to a
-          large extent by geography — where befrienders live and where our
-          refugee friends are housed — as the map below illustrates:
+          We will be making matches based more on demographics and shared
+          interests than geography – although we will still try to match people
+          who live in the same general part of London (ie. North, East, South or
+          West). However, we remain interested to hear from volunteers who live
+          in Greater London zones 3-6 which is where most refugees and asylum
+          seekers are housed. We are also keen to recruit more men to join
+          HostNation.
         </Txt>
-        <img src={mapImage} />
+        <Txt style={styles.boxText}>
+          We always start the matching process with the needs of the refugee who
+          has been referred, foremost. This could mean it will be a few weeks or
+          even several months before we match you.
+        </Txt>
+        <Txt style={styles.boxText}>
+          Befriending is a service and a commitment of time but it can grow into
+          a mutual and personal friendship.
+        </Txt>
         <Txt style={styles.boxText}>
           Meanwhile please follow us on
           <Link to="https://www.facebook.com/HostNationUK/" newTab>
