@@ -1,49 +1,49 @@
 import * as React from 'react';
-import r from 'refluent';
+// import r from 'refluent';
 import { Div, Hover, Txt } from 'elmnt';
 import Helmet from 'react-helmet';
 
 import * as logoWide from '../img/logo-wide.png';
 
-import referBlocks from '../blocks/refer';
+// import referBlocks from '../blocks/refer';
 import Box from '../core/Box';
-import Forms from '../core/Forms';
+// import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
 
-const ReferForm = r
-  .do((_, push) => ({
-    complete: false,
-    onSubmit: () => push({ complete: true }),
-  }))
-  .yield(
-    ({ onSubmit, complete }) =>
-      complete ? (
-        <Txt
-          style={{
-            ...styles.base,
-            fontSize: 30,
-            lineHeight: '40px',
-            fontWeight: 'bold',
-            textAlign: 'center',
-            padding: '50px 0',
-            color: colors.purple,
-          }}
-        >
-          Thanks for completing your referral, we’ll be in touch soon!
-        </Txt>
-      ) : (
-        <Forms.Purple
-          objects={{
-            refugee: {
-              type: 'refugees',
-              initial: { mapaddress: null },
-            },
-          }}
-          blocks={referBlocks()}
-          onSubmit={onSubmit}
-        />
-      ),
-  );
+// const ReferForm = r
+//   .do((_, push) => ({
+//     complete: false,
+//     onSubmit: () => push({ complete: true }),
+//   }))
+//   .yield(
+//     ({ onSubmit, complete }) =>
+//       complete ? (
+//         <Txt
+//           style={{
+//             ...styles.base,
+//             fontSize: 30,
+//             lineHeight: '40px',
+//             fontWeight: 'bold',
+//             textAlign: 'center',
+//             padding: '50px 0',
+//             color: colors.purple,
+//           }}
+//         >
+//           Thanks for completing your referral, we’ll be in touch soon!
+//         </Txt>
+//       ) : (
+//         <Forms.Purple
+//           objects={{
+//             refugee: {
+//               type: 'refugees',
+//               initial: { mapaddress: null },
+//             },
+//           }}
+//           blocks={referBlocks()}
+//           onSubmit={onSubmit}
+//         />
+//       ),
+//   );
 
 export default () => (
   <>
@@ -147,7 +147,18 @@ export default () => (
       </Box> */}
 
       <Box title="REFUGEE & REFERRER REGISTRATION FORM" color="purple">
-        <ReferForm />
+        <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js" />
+        <iframe
+          className="airtable-embed airtable-dynamic-height"
+          src="https://airtable.com/embed/shrUoKOEAjMBTsXiL?prefill_Type=Refugee&backgroundColor=orange"
+          frameBorder="0"
+          width="100%"
+          height="5500"
+          style={{
+            background: 'transparent',
+            border: '1px solid #ccc',
+          }}
+        />
       </Box>
 
       <Box title="HOSTNATION PRIVACY POLICY" toggle>
