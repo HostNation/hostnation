@@ -147,18 +147,20 @@ export default () => (
       </Box> */}
 
       <Box title="REFUGEE & REFERRER REGISTRATION FORM" color="purple">
-        <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js" />
-        <iframe
-          className="airtable-embed airtable-dynamic-height"
-          src="https://airtable.com/embed/shrUoKOEAjMBTsXiL?prefill_Type=Refugee&backgroundColor=orange"
-          frameBorder="0"
-          width="100%"
-          height="5500"
-          style={{
-            background: 'transparent',
-            border: '1px solid #ccc',
-          }}
-        />
+        <div>
+          <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js" />
+          <iframe
+            className="airtable-embed airtable-dynamic-height"
+            src="https://airtable.com/embed/shrUoKOEAjMBTsXiL?prefill_Type=Refugee&backgroundColor=orange"
+            frameBorder="0"
+            width="100%"
+            height="6446"
+            style={{
+              background: 'transparent',
+              border: '1px solid #ccc',
+            }}
+          />
+        </div>
       </Box>
 
       <Box title="HOSTNATION PRIVACY POLICY" toggle>
