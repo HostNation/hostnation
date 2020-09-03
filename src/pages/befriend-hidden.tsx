@@ -176,20 +176,17 @@ export default () => (
         </Txt>
         <Txt style={styles.boxText}>Many thanks, HostNation team</Txt>
 
-        <div>
-          <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js" />
-          <iframe
-            className="airtable-embed airtable-dynamic-height"
-            src="https://airtable.com/embed/shrEs9XBHYuJxLEaP?prefill_Type=Befriender&backgroundColor=orange"
-            frameBorder="0"
-            width="100%"
-            height="9130"
-            style={{
-              background: 'transparent',
-              border: '1px solid #ccc',
-            }}
-          />
-        </div>
+        <iframe
+          className="airtable-embed "
+          src="https://airtable.com/embed/shrEs9XBHYuJxLEaP?prefill_Type=Befriender&backgroundColor=orange"
+          frameBorder="0"
+          width="100%"
+          height="533"
+          style={{
+            background: 'transparent',
+            border: '1px solid #ccc',
+          }}
+        />
       </Box>
 
       <Box title="SCOPE OF SERVICES AND EXCLUSION OF LIABILITY" toggle>
