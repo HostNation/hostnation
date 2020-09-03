@@ -16,6 +16,8 @@ import * as guideIcon from '../img/icons/guide.png';
 import * as linksIcon from '../img/icons/links.png';
 import * as testimonialsIcon from '../img/icons/testimonials.png';
 
+import * as anthonyStory from '../img/anthony-story.png';
+
 import Button from '../core/Button';
 import { Link } from '../core/router';
 import styles, { colors, icons } from '../core/styles';
@@ -63,9 +65,9 @@ export default r
           <Txt style={{ ...styles.text, fontSize: 20, fontWeight: 'bold' }}>
             Loneliness is a legacy of Covid-19.
             <br />
-            Please support our live crowdfunder to help refugees and asylum
-            seekers -
-            <Link to="https://www.avivacommunityfund.co.uk/hostnation" newTab>
+            Please help us tackle the social isolation of refugees and asylum
+            seekers with a small monthly donation -
+            <Link to="https://www.totalgiving.co.uk/donate/hostnation" newTab>
               <Txt
                 style={{
                   ...styles.text,
@@ -83,7 +85,7 @@ export default r
           </Txt>
         </div>
       </div>
-      <Div style={{ spacing: 50, padding: '130px 0' }}>
+      <Div style={{ spacing: 50, padding: '150px 0' }}>
         {withWidth(700)({
           next: ({ small = false, setWidthElem }) => (
             <div ref={setWidthElem}>
@@ -467,20 +469,27 @@ export default r
           style={{ background: colors.black, height: 3, borderRadius: 3 }}
         />
         <Div style={{ spacing: 25, maxWidth: 600, margin: '0 auto' }}>
-          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-            <iframe
-              src="https://www.youtube.com/embed/A7xW4w3CTcM?rel=0"
-              frameBorder="0"
-              allowFullScreen
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-              }}
-            />
-          </div>
+          <Txt style={{ ...styles.title, fontSize: 30 }}>
+            Loving the Stranger in the Time of Coronavirus: The HostNation Story
+          </Txt>
+          <Div style={{ layout: 'bar', spacing: 40 }}>
+            <div style={{ width: 200 }}>
+              <img src={anthonyStory} />
+            </div>
+            <Txt style={{ ...styles.body, textAlign: 'left' }}>
+              Anthony Berman gives a personal account of HostNation, before and
+              after COVID-19, and the benefits it has brought to refugees and
+              asylum seekers and their befrienders.
+            </Txt>
+          </Div>
+          <Button
+            to="/the-hostnation-story.pdf"
+            newTab
+            color="black"
+            style={{ margin: '0 auto' }}
+          >
+            READ THE BLOG
+          </Button>
         </Div>
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Div style={{ spacing: 35 }}>

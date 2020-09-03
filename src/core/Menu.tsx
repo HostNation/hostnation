@@ -167,7 +167,7 @@ export default r
               )}
             </Hover>
           ) : (
-            <Div style={{ layout: 'bar', spacing: 25, float: 'right' }}>
+            <Div style={{ layout: 'bar', spacing: 20, float: 'right' }}>
               <MenuLink text="About Us" to="/about-us" active={active} />
               <MenuLink text="Befriend" to="/befriend" active={active} />
               <MenuLink text="Refer" to="/refer" active={active} />
@@ -177,6 +177,7 @@ export default r
                 newTab
               />
               <MenuLink text="Guide" to="/guide.pdf" newTab />
+              <MenuLink text="HN Story" to="/the-hostnation-story.pdf" newTab />
               <MenuLink text="Links" to="/links.pdf" newTab />
             </Div>
           )}
@@ -186,7 +187,7 @@ export default r
             style={{
               overflow: 'hidden',
               transition: 'height 0.35s ease',
-              height: isOpen ? 251 : 0,
+              height: isOpen ? 290 : 0,
             }}
           >
             <Div style={{ spacing: 20, padding: '20px 0' }}>
@@ -217,6 +218,12 @@ export default r
               <MenuLink
                 text="Guide"
                 to="/guide.pdf"
+                newTab
+                setClosed={setClosed}
+              />
+              <MenuLink
+                text="HN Story"
+                to="/the-hostnation-story.pdf"
                 newTab
                 setClosed={setClosed}
               />
