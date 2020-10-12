@@ -63,13 +63,9 @@ export default r
           }}
         >
           <Txt style={{ ...styles.text, fontSize: 20, fontWeight: 'bold' }}>
-            Loneliness is a legacy of Covid-19.
-            <br />
-            Please help us tackle the social isolation of refugees and asylum
-seekers with a small monthly donation -
-
-
-            <Link to="https://www.totalgiving.co.uk/donate/hostnation" newTab>
+            HostNation are excited to announce that we’re now working in
+            partnership with
+            <Link to="https://i-p-c.org/" newTab>
               <Txt
                 style={{
                   ...styles.text,
@@ -80,10 +76,10 @@ seekers with a small monthly donation -
                   textDecoration: 'underline',
                 }}
               >
-                click here
+                IPC
               </Txt>
             </Link>
-            .
+            to provide refugee befriending in the North East from 2021.
           </Txt>
         </div>
       </div>
@@ -133,7 +129,7 @@ seekers with a small monthly donation -
             needing it.
           </Txt>
           <Txt style={{ ...styles.text, fontSize: 24 }}>
-            Currently working in Greater London.
+            Currently working in Greater London &amp; Teesside.
           </Txt>
         </Div>
         {/* <Div
@@ -180,16 +176,18 @@ seekers with a small monthly donation -
         <img src={photo} />
         <Div style={{ spacing: 20 }}>
           <Txt style={{ ...styles.text, fontSize: 24 }}>
-            We are a London-based introductory service connecting residents to
-            refugees in the city. As a result of Covid we now offer ‘smart’
-            befriending where matching, introductions and initial befriending is
-            online. Weekly video-calls are followed by face-to-face meet ups in
-            the city when both parties feel ready. We ask for a minimum
-            commitment of three months but many matches tell us they have become
-            friends for life.
+            We are a city &amp; town-based introductory service connecting
+            residents to refugees through small acts of kindness, inclusion and
+            friendship. As a result of Covid we now offer ‘smart’ befriending
+            where matching, introductions and initial befriending can also take
+            place online. Regular video-calls are followed by face-to-face meet
+            ups when both parties feel ready. We ask for a minimum commitment of
+            three months but many matches tell us they have become friends for
+            life.
           </Txt>
           <Txt style={{ ...styles.text, fontSize: 24, fontWeight: 'bold' }}>
-            London is a much friendlier place with a Londoner by your side.
+            Our towns and cities are much friendlier places with a local by your
+            side.
           </Txt>
           <Div
             style={{
@@ -238,9 +236,9 @@ seekers with a small monthly donation -
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Div style={{ spacing: 25 }}>
           <Txt style={styles.body}>
-            If you like what we’re trying to do, but are not in London or don’t
-            have the time to befriend, then please consider a one-off or
-            recurring donation.
+            If you like what we’re trying to do, but are not in London or
+            Teesside or don’t have the time to befriend, then please consider a
+            one-off or recurring donation.
           </Txt>
           <Button
             to="https://www.totalgiving.co.uk/donate/hostnation"

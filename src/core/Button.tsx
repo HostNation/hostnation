@@ -13,23 +13,22 @@ export default r
       style.defaults(styles.button(color)).mergeKeys({ hover: isHovered }),
     ),
   )
-  .yield(
-    ({ to, newTab, onClick, style, hoverProps, children }) =>
-      !to || onClick ? (
-        <div style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}>
-          <Txt onClick={onClick} {...hoverProps} style={style}>
-            {children}
-          </Txt>
-        </div>
-      ) : (
-        <Link
-          to={to}
-          newTab={newTab}
-          style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
-        >
-          <Txt {...hoverProps} style={style}>
-            {children}
-          </Txt>
-        </Link>
-      ),
+  .yield(({ to, newTab, onClick, style, hoverProps, children }) =>
+    !to || onClick ? (
+      <div style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}>
+        <Txt onClick={onClick} {...hoverProps} style={style}>
+          {children}
+        </Txt>
+      </div>
+    ) : (
+      <Link
+        to={to}
+        newTab={newTab}
+        style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
+      >
+        <Txt {...hoverProps} style={style}>
+          {children}
+        </Txt>
+      </Link>
+    ),
   );

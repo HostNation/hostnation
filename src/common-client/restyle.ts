@@ -8,7 +8,12 @@ export default (...args) => {
       if (style.expandFor) return { style: map(...values, style) };
       const keys = Object.keys(style);
       if (keys.length && keys.every(k => typeof style[k] === 'object')) {
-        return { style: map(...values, keysToObject(keys, k => st(style[k]))) };
+        return {
+          style: map(
+            ...values,
+            keysToObject(keys, k => st(style[k])),
+          ),
+        };
       }
       return { style: map(...values, st(style)) };
     });
