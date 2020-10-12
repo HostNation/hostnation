@@ -2,7 +2,7 @@ import * as React from 'react';
 import r from 'refluent';
 import { Div, Txt } from 'elmnt';
 import Helmet from 'react-helmet';
-import { withWidth } from 'common-client';
+import { withWidth } from '../common-client';
 
 import * as logoWide from '../img/logo-wide.png';
 import * as crLogo from '../img/logos/cr.png';

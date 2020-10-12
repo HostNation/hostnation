@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Div, Hover, Icon, Txt } from 'elmnt';
 import r from 'refluent';
-import { watchHover, withWidth } from 'common-client';
+import { watchHover, withWidth } from '../common-client';
 
 import { Link } from './router';
 import styles, { colors, icons } from './styles';

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import r from 'refluent';
 import { Txt } from 'elmnt';
-import { restyle, watchHover } from 'common-client';
+import { restyle, watchHover } from '../common-client';
 
 import { Link } from './router';
 import styles from './styles';

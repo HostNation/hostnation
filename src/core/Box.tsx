@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Div, Icon, Txt } from 'elmnt';
 import r, { branch } from 'refluent';
-import { restyle, watchHover } from 'common-client';
+import { restyle, watchHover } from '../common-client';
 
 import styles, { colors, icons } from './styles';
 

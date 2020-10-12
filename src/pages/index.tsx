@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Div, Hover, Icon, Txt } from 'elmnt';
 import r from 'refluent';
 import Helmet from 'react-helmet';
-import { withWidth } from 'common-client';
+import { withWidth } from '../common-client';
 
 import * as logoWide from '../img/logo-wide.png';
 
@@ -66,7 +66,9 @@ export default r
             Loneliness is a legacy of Covid-19.
             <br />
             Please help us tackle the social isolation of refugees and asylum
-            seekers with a small monthly donation -
+seekers with a small monthly donation -
+
+
             <Link to="https://www.totalgiving.co.uk/donate/hostnation" newTab>
               <Txt
                 style={{

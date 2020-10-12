@@ -6,7 +6,7 @@ import {
 import GatsbyLink from 'gatsby-link';
 import r, { branch } from 'refluent';
 import { Div, Hover, Icon, Txt } from 'elmnt';
-import { getData, restyle } from 'common-client';
+import { getData, restyle } from '../common-client';
 
 const LocationContext = (React as any).createContext();
 const BreadcrumbContext = (React as any).createContext();

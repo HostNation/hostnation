@@ -1,81 +1,81 @@
 import * as React from 'react';
-import r from 'refluent';
+// import r from 'refluent';
 import { Div, Hover, Txt } from 'elmnt';
 import Helmet from 'react-helmet';
 
 // import * as mapImage from '../img/map.jpg';
 import * as logoWide from '../img/logo-wide.png';
 
-import befriendBlocks from '../blocks/befriend';
+// import befriendBlocks from '../blocks/befriend';
 import Box from '../core/Box';
-import Forms from '../core/Forms';
+// import Forms from '../core/Forms';
 import { Link } from '../core/router';
 import styles, { colors } from '../core/styles';
 
-const BefriendForm = r
-  .do((_, push) => ({
-    complete: false,
-    onSubmit: () => push({ complete: true }),
-  }))
-  .yield(
-    ({ onSubmit, complete }) =>
-      complete ? (
-        <Div style={{ spacing: 40, padding: '50px 0' }}>
-          <Txt
-            style={{
-              ...styles.base,
-              fontSize: 30,
-              lineHeight: '40px',
-              fontWeight: 'bold',
-              textAlign: 'center',
-              color: colors.yellow,
-            }}
-          >
-            Thanks for registering!
-          </Txt>
-          <Txt
-            style={{
-              ...styles.text,
-              fontWeight: 'bold',
-              color: colors.yellow,
-            }}
-          >
-            One of the HostNation team will be in touch shortly to arrange a
-            call to talk to you about being a befriender. Please check your
-            inbox (and junk mail) for an email from HostNation. Depending on
-            where you live and the referrals we receive, it may be a few weeks
-            or several months before we match you. In the meantime, please
-            follow us on
-            <Link to="https://www.facebook.com/HostNationUK/" newTab>
-              <Txt
-                style={{
-                  ...styles.text,
-                  fontWeight: 'bold',
-                  color: colors.yellow,
-                  display: 'inline-block',
-                  padding: '0 5px',
-                  textDecoration: 'underline',
-                }}
-              >
-                Facebook
-              </Txt>
-            </Link>
-            and we’ll keep you posted on our progress.
-          </Txt>
-        </Div>
-      ) : (
-        <Forms.Yellow
-          objects={{
-            befriender: {
-              type: 'befrienders',
-              initial: { mapaddress: null },
-            },
-          }}
-          blocks={befriendBlocks()}
-          onSubmit={onSubmit}
-        />
-      ),
-  );
+// const BefriendForm = r
+//   .do((_, push) => ({
+//     complete: false,
+//     onSubmit: () => push({ complete: true }),
+//   }))
+//   .yield(
+//     ({ onSubmit, complete }) =>
+//       complete ? (
+//         <Div style={{ spacing: 40, padding: '50px 0' }}>
+//           <Txt
+//             style={{
+//               ...styles.base,
+//               fontSize: 30,
+//               lineHeight: '40px',
+//               fontWeight: 'bold',
+//               textAlign: 'center',
+//               color: colors.yellow,
+//             }}
+//           >
+//             Thanks for registering!
+//           </Txt>
+//           <Txt
+//             style={{
+//               ...styles.text,
+//               fontWeight: 'bold',
+//               color: colors.yellow,
+//             }}
+//           >
+//             One of the HostNation team will be in touch shortly to arrange a
+//             call to talk to you about being a befriender. Please check your
+//             inbox (and junk mail) for an email from HostNation. Depending on
+//             where you live and the referrals we receive, it may be a few weeks
+//             or several months before we match you. In the meantime, please
+//             follow us on
+//             <Link to="https://www.facebook.com/HostNationUK/" newTab>
+//               <Txt
+//                 style={{
+//                   ...styles.text,
+//                   fontWeight: 'bold',
+//                   color: colors.yellow,
+//                   display: 'inline-block',
+//                   padding: '0 5px',
+//                   textDecoration: 'underline',
+//                 }}
+//               >
+//                 Facebook
+//               </Txt>
+//             </Link>
+//             and we’ll keep you posted on our progress.
+//           </Txt>
+//         </Div>
+//       ) : (
+//         <Forms.Yellow
+//           objects={{
+//             befriender: {
+//               type: 'befrienders',
+//               initial: { mapaddress: null },
+//             },
+//           }}
+//           blocks={befriendBlocks()}
+//           onSubmit={onSubmit}
+//         />
+//       ),
+//   );
 
 export default () => (
   <>
