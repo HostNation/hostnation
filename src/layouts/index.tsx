@@ -1,21 +1,10 @@
 import * as React from 'react';
 import { Txt } from 'elmnt';
-import rgo, { resolvers } from 'rgo';
-import { cssBase, StickyFooter, root } from '../common-client';
+import { cssBase, StickyFooter } from '../common-client';
 import Helmet from 'react-helmet';
 
 import Menu from '../core/Menu';
 import styles, { colors } from '../core/styles';
-
-root.rgo = rgo(
-  resolvers.fetch(process.env.DATA_URL!, () => {
-    const token =
-      typeof sessionStorage !== 'undefined' &&
-      sessionStorage.getItem('authToken');
-    return token ? { Authorization: `Bearer ${token}` } : null;
-  }),
-  process.env.NODE_ENV !== 'production',
-);
 
 export default ({ location, children }) => (
   <>

@@ -113,11 +113,43 @@ export default () => (
         <Txt style={styles.boxText}>
           Thank you for your interest in HostNation refugee befriending.
         </Txt>
+        <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>North East</Txt>
         <Txt style={styles.boxText}>
-          We have temporarily closed our registration. Currently, we are only
-          looking for befrienders in certain postcodes, in order to complement
-          our existing database. If you are interested in becoming a HostNation
-          befriender please email us at{' '}
+          We are currently recruiting befrienders in the North East of England
+          to befriend asylum seekers and refugees living in Middlesbrough and
+          Stockton-on-Teesin Teesside. Please click on the link below if you are
+          interested in befriending in the North East in 2021.
+        </Txt>
+        <a
+          href="https://airtable.com/shr1yuiiDpPylNm8u?prefill_Type=Befriender"
+          target="_blank"
+        >
+          <Hover
+            style={{
+              ...styles.boxText,
+              color: colors.yellow,
+              display: 'inline-block',
+              fontWeight: 'bold',
+              hover: { color: colors.yellowDark },
+            }}
+          >
+            {({ hoverProps, style }) => (
+              <Txt {...hoverProps} style={style}>
+                North East: Befriender Registration Form &raquo;
+              </Txt>
+            )}
+          </Hover>
+        </a>
+        <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>London</Txt>
+        <Txt style={styles.boxText}>
+          Thank you for your interest in befriending in London. So many kind
+          people in the capital have offered to befriend refugees that we have
+          registered over 500 and matched 300 already. Due to this success, we
+          need to slow registration in order not to keep people waiting too long
+          for a match. For this reason, our online registration has closed.
+          However we do need to top up our pool of befrienders from time to time
+          so if you’re keen to become a HostNation befriender in London and
+          consent to us keeping in touch, please email us at{' '}
           <Hover
             style={{
               ...styles.boxText,
@@ -135,9 +167,11 @@ export default () => (
               </a>
             )}
           </Hover>{' '}
-          with a few details about who you are and where you live.
+          with a few details about who you are and where you live in London.
         </Txt>
-        <Txt style={styles.boxText}>Many thanks, HostNation.</Txt>
+        <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>
+          Many thanks, HostNation.
+        </Txt>
       </Box>
 
       {/* <Box title="BEFRIENDER REGISTRATION FORM" color="yellow">
