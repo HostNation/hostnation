@@ -116,9 +116,9 @@ export default () => (
         <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>North East</Txt>
         <Txt style={styles.boxText}>
           We are currently recruiting befrienders in the North East of England
-          to befriend asylum seekers and refugees living in Middlesbrough and
-          Stockton-on-Teesin Teesside. Please click on the link below if you are
-          interested in befriending in the North East in 2021.
+          to befriend asylum seekers and refugees living in Teesside. Please
+          click on the link below if you are interested in befriending in the
+          North East in 2021.
         </Txt>
         <a
           href="https://airtable.com/shr1yuiiDpPylNm8u?prefill_Type=Befriender"
