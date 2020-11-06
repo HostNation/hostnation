@@ -64,7 +64,7 @@ export default r
         >
           <Txt style={{ ...styles.text, fontSize: 20, fontWeight: 'bold' }}>
             HostNation are excited to announce that we’re now working in
-            partnership with
+            partnership with{' '}
             <Link to="https://i-p-c.org/" newTab>
               <Txt
                 style={{
@@ -72,18 +72,43 @@ export default r
                   fontWeight: 'bold',
                   color: colors.yellow,
                   display: 'inline-block',
-                  padding: '0 5px',
                   textDecoration: 'underline',
                 }}
               >
                 IPC
               </Txt>
-            </Link>
+            </Link>{' '}
             to provide refugee befriending in the North East from 2021.
           </Txt>
         </div>
+        <div style={{ borderBottom: '3px solid #2f3644' }}></div>
+        <div
+          style={{
+            margin: '0 auto',
+            padding: '15px',
+            maxWidth: 850,
+          }}
+        >
+          <Txt style={{ ...styles.text, fontSize: 20, fontWeight: 'bold' }}>
+            Recruiting Trustee with experience of charity finance:{' '}
+            <Link to="/hostnation-treasurer.pdf" newTab>
+              <Txt
+                style={{
+                  ...styles.text,
+                  fontWeight: 'bold',
+                  color: colors.yellow,
+                  display: 'inline-block',
+                  textDecoration: 'underline',
+                }}
+              >
+                more info
+              </Txt>
+            </Link>
+            , closing date 18th Dec.
+          </Txt>
+        </div>
       </div>
-      <Div style={{ spacing: 50, padding: '150px 0' }}>
+      <Div style={{ spacing: 50, padding: '200px 0' }}>
         {withWidth(700)({
           next: ({ small = false, setWidthElem }) => (
             <div ref={setWidthElem}>
