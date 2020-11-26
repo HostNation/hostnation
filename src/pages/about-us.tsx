@@ -240,6 +240,7 @@ export default () => (
             'Marion Gough and Martin Hill',
             'Rebecca and Henry Tinsley',
             'Whitehead Family',
+            'Frances Mayo',
           ].map((name, i) => (
             <Txt style={{ ...styles.body, fontWeight: 'normal' }} key={i}>
               {name}
