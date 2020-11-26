@@ -43,7 +43,7 @@ export default r
   })
   .yield(({ photo }) => (
     <>
-      <Helmet title="HostNation" />
+      <Helmet title="HostNation | Helping refugees through friendship" />
       <div
         style={{
           background: 'white',
