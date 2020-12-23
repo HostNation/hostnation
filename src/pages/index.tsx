@@ -90,8 +90,7 @@ export default r
           }}
         >
           <Txt style={{ ...styles.text, fontSize: 20, fontWeight: 'bold' }}>
-            Recruiting Trustee with experience of charity finance:{' '}
-            <Link to="/hostnation-treasurer.pdf" newTab>
+            <Link to="/hostnation-annual-report.pdf" newTab>
               <Txt
                 style={{
                   ...styles.text,
@@ -101,10 +100,9 @@ export default r
                   textDecoration: 'underline',
                 }}
               >
-                more info
+                Click here for our 2019-2020 annual report
               </Txt>
             </Link>
-            , closing date 18th Dec.
           </Txt>
         </div>
       </div>
