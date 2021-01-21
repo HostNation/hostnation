@@ -19,7 +19,7 @@ import * as testimonialsIcon from '../img/icons/testimonials.png';
 import * as anthonyStory from '../img/anthony-story.png';
 
 import Button from '../core/Button';
-import { Link } from '../core/router';
+// import { Link } from '../core/router';
 import styles, { colors, icons } from '../core/styles';
 
 const photos = [photos1, photos2, photos3, photos4];
@@ -44,7 +44,7 @@ export default r
   .yield(({ photo }) => (
     <>
       <Helmet title="HostNation | Helping refugees through friendship" />
-      <div
+      {/* <div
         style={{
           background: 'white',
           borderBottom: '3px solid #2f3644',
@@ -105,8 +105,8 @@ export default r
             </Link>
           </Txt>
         </div>
-      </div>
-      <Div style={{ spacing: 50, padding: '200px 0' }}>
+      </div> */}
+      <Div style={{ spacing: 50, padding: '50px 0' }}>
         {withWidth(700)({
           next: ({ small = false, setWidthElem }) => (
             <div ref={setWidthElem}>
