@@ -176,7 +176,7 @@ export const Breadcrumbs = r
   ));
 
 export const Link = ({ to, newTab, route: _, ...props }: any) => {
-  const external = to.startsWith('http');
+  const external = to.startsWith('http') || to.startsWith('mailto');
   return external ? (
     <a href={to} target="_blank" {...props} />
   ) : (

@@ -171,13 +171,13 @@ export default r
               <MenuLink text="About Us" to="/about-us" active={active} />
               <MenuLink text="Befriend" to="/befriend" active={active} />
               <MenuLink text="Refer" to="/refer" active={active} />
+              <MenuLink text="Refugee" to="/refugee" active={active} />
               <MenuLink
                 text="Donate"
                 to="https://www.totalgiving.co.uk/donate/hostnation"
                 newTab
               />
               <MenuLink text="Guide" to="/guide.pdf" newTab />
-              <MenuLink text="HN Story" to="/the-hostnation-story.pdf" newTab />
               <MenuLink text="Links" to="/links.pdf" newTab />
             </Div>
           )}
@@ -210,6 +210,12 @@ export default r
                 setClosed={setClosed}
               />
               <MenuLink
+                text="Refugee"
+                to="/refugee"
+                active={active}
+                setClosed={setClosed}
+              />
+              <MenuLink
                 text="Donate"
                 to="https://www.totalgiving.co.uk/donate/hostnation"
                 newTab
@@ -218,12 +224,6 @@ export default r
               <MenuLink
                 text="Guide"
                 to="/guide.pdf"
-                newTab
-                setClosed={setClosed}
-              />
-              <MenuLink
-                text="HN Story"
-                to="/the-hostnation-story.pdf"
                 newTab
                 setClosed={setClosed}
               />

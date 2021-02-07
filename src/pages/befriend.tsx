@@ -5,7 +5,8 @@ import Helmet from 'react-helmet';
 
 // import * as mapImage from '../img/map.jpg';
 import * as logoWide from '../img/logo-wide.png';
-import * as aiLingPattie from '../img/banners/ai-ling-pattie.png';
+import * as laylaSue from '../img/banners/layla-sue.png';
+import * as nickAli from '../img/banners/nick-ali.png';
 
 // import befriendBlocks from '../blocks/befriend';
 import Box from '../core/Box';
@@ -83,8 +84,9 @@ export default () => (
     <Helmet title="Befriend | HostNation" />
     <Div style={{ spacing: 50, paddingTop: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
+      <img src={laylaSue} />
 
-      <Box title="WHY WE NEED TO ASK A LOT OF YOU" toggle>
+      <Box title="WHAT WE ASK OF YOU" toggle>
         <Txt style={styles.boxText}>
           HostNation recognise that whilst asylum seekers and refugees over the
           age of 18 are not technically classified in legal terms as vulnerable
@@ -117,8 +119,8 @@ export default () => (
         <Txt style={styles.boxText}>
           We are currently recruiting befrienders in the North East of England
           to befriend asylum seekers and refugees living in Middlesbrough and
-          Stockton in Teesside. Please click on the link below if you are
-          interested in befriending in the North East in 2021.
+          Stockton-on-Tees. Please click on the link below if you are interested
+          in befriending in the North East in 2021.
         </Txt>
         <a
           href="https://airtable.com/shr1yuiiDpPylNm8u?prefill_Type=Befriender"
@@ -329,7 +331,7 @@ export default () => (
         </a>
       </Box>
 
-      <img src={aiLingPattie} />
+      <img src={nickAli} />
     </Div>
   </>
 );

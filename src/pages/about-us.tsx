@@ -12,19 +12,24 @@ import * as tflLogo from '../img/logos/tfl.png';
 import * as cfLogo from '../img/logos/cf.png';
 import * as molLogo from '../img/logos/mol.png';
 
-import * as anneke from '../img/team/anneke.png';
+import * as anneke from '../img/team/anneke.jpg';
 import * as rossana from '../img/team/rossana.png';
 import * as anthony from '../img/team/anthony.png';
 import * as magda from '../img/team/magda.png';
+import * as peteBini from '../img/team/pete-bini.jpg';
 import * as danny from '../img/team/danny.png';
 import * as dina from '../img/team/dina.png';
 import * as emiljan from '../img/team/emiljan.jpg';
 import * as joanna from '../img/team/joanna.png';
+import * as olivia from '../img/team/olivia.jpg';
 import * as jon from '../img/team/jon.png';
 import * as claudia from '../img/team/claudia.png';
 import * as abu from '../img/team/abu.png';
 
+import * as anthonyStory from '../img/anthony-story.png';
+
 import Box from '../core/Box';
+import Button from '../core/Button';
 import styles, { colors } from '../core/styles';
 
 const Profile = ({ small, image, name, role, bio, credit }: any) => (
@@ -81,11 +86,10 @@ const Profiles = r
           small={small}
           image={anneke}
           name="Anneke Elwes"
-          role="Founder and Director of HostNation"
+          role="Founder and Director"
           bio={[
-            'After 20 years of running a market research consultancy and 6 years of voluntary work in the refugee sector, Anneke took an MA at SOAS specialising in ‘humanitarianism at home’ and the private practice of hosting refugees and asylum seekers. She first worked with refugees as a volunteer through ICRC in refugee camps for Vietnamese boat people in SE Asia back in the 1980s. More recently Anneke has been a volunteer member of staff at Freedom from Torture (formerly The Medical Foundation) where she trained as a befriender and has befriended young, unaccompanied asylum seekers. She also co-runs their holiday scheme and has started a conversation group to help service users practice their English.',
-            "The idea of a national online befriending scheme was born out of the Freedom from Torture holiday scheme where approx. 100 clients from 5 regional offices across the UK are referred annually for a holiday and benefit from transformative experiences, new supportive social networks and genuine on-going friendship from British families. Anneke soon realised that few asylum seekers or refugees have any British friends or offers of friendship and most are very alone. Through her research dissertation and as a result of co-founding Camden City of Sanctuary, a grassroots refugee support network, Anneke also realised that there were many ordinary people, like her, who want to help and offer friendship, but don't know how.",
-            'Through HostNation Anneke hopes to make it easier for others to have the same rewarding experience that she has had through befriending asylum seekers, and to provide a simple mechanism for bringing citizens and refugees together in local communities through small acts of kindness, hospitality and companionship.',
+            'After 20 years running a market research consultancy and six years volunteering in the refugee sector, Anneke took an MA at SOAS specialising in ‘humanitarianism at home’ and the private practice of hosting refugees and asylum seekers. She first volunteered through ICRC in refugee camps for Vietnamese boat people in SE Asia. For nearly a decade Anneke volunteered at Freedom from Torture, where she befriended young asylum seekers, helped run a holiday scheme and started an English conversation group.',
+            'Social outreach schemes like these have been the victim of cuts as the refugee sector has had to focus on crisis and casework. Anneke realised that few asylum seekers or refugees have British friends and most are very isolated. She saw that there are many ordinary people who want to help and offer friendship, and just need the right channel. HostNation was the answer. Anneke founded the charity to provide a simple way for citizens and refugees to make friends and share rewarding social experiences, making local communities stronger in the process.',
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -93,10 +97,10 @@ const Profiles = r
           small={small}
           image={rossana}
           name="Rossana Horsley"
-          role="HostNation Director"
+          role="Director"
           bio={[
-            'Rossana worked for many years in documentary filmmaking, both in television and on non-broadcast pieces for NGOs, covering a wide range of subjects from the arts and culture to the environment. A major strand of her work focused on development issues, which took her filming to several continents.',
-            'Although she now calls herself a Londoner, she grew up in different countries. She knows that, even when a move is not forced upon you, finding your feet in a new culture can be a daunting challenge. A long-term supporter of Freedom form Torture, she volunteered in 2005 to be part of their befriending project for unaccompanied minors; the relationship that grew out of that experience was enriching and positive on both sides. Knowing that many people, both from here and others who have sought refuge in this country, want to make a similar connection but are unsure how, she was keen to be a part of HN to help make that happen.',
+            'Rossana’s background is in documentary filmmaking, both for television and NGOs, covering a wide range of subjects from arts to the environment. A major strand of her work focused on development issues, which took her filming to several continents. Although she now calls herself a Londoner, she grew up in different countries. She knows that finding your feet in a new culture can be a daunting challenge, even when that choice is made freely.',
+            'A long-term supporter of Freedom from Torture, in 2005 Rossana volunteered to be part of their befriending project for unaccompanied minors. Finding this an enriching experience and aware that many people would like to make a similar connection, she was keen to be a part of HostNation to help encourage more such relationships between locals and people looking for a safe refuge in this country.',
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -106,8 +110,8 @@ const Profiles = r
           name="Anthony Berman"
           role="Operations Manager"
           bio={[
-            'Anthony worked as a root canal specialist until his retirement in 2016. He still does some part-time teaching at QMUL. He left his native South Africa at the age of 13 with his family to come to live in London. Although his circumstances were considerably more comfortable than those of the average refugee or asylum seeker, he still remembers the challenges involved in being uprooted from his home country to make a life in a new environment.',
-            'Twelve years ago Anthony was part of a befriending project run by the organization, Freedom from Torture, matching UK citizens with children who had arrived in the country as unaccompanied minors. The aim of the project was to introduce some normality into the lives of these frequently damaged young people. The youngster that he was paired with has become part of Anthony’s family and it has been a richly rewarding experience all round. Anthony is also one of the coordinators for the New London Synagogue Drop-In Centre for destitute asylum seekers where he has been able to see first-hand the difficulties that these people face. It is also clear that there are many local citizens who are keen to make a connection with asylum seekers but are not sure how to go about it. He believes strongly that HostNation, in fostering these friendships, will provide a transformative experience for both sides.',
+            'A retired root canal specialist, Anthony still teaches part time at QMUL. He came to London with his family from his native South Africa at the age of 13. Although his circumstances were considerably more comfortable than those of the average refugee or asylum seeker, he still remembers the challenges involved in being uprooted from his home to start a new life.',
+            'Twelve years ago Anthony became a volunteer befriender with Freedom from Torture for children who had arrived unaccompanied in the UK. The aim was to introduce some normality into the lives of these frequently damaged young people. The young person with whom he was paired has become part of Anthony’s family and it has been a richly rewarding experience all round. Anthony is also one of the coordinators for the New London Synagogue Drop-In Centre for destitute asylum seekers. He believes strongly that HostNation provides a transformative experience for both sides of the friendships it fosters.',
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -117,8 +121,19 @@ const Profiles = r
           name="Magda Wolfe"
           role="Evaluation Manager"
           bio={[
-            'Magda is currently studying for a master’s degree in Social Policy and Social Research at University College London. She was raised in Poland where she studied Ethnology and Cultural Anthropology at the University of Wroclaw. She moved to the UK in 2002 and pursued a successful career in media and broadcasting.',
-            'She is fascinated by observing the ever-changing social landscape and is passionate about driving positive change towards a fairer society. Her interest is in social inequality issues and the problems derived from economic disparity particularly those linked to migration and the forced displacement of people. She is very excited to be part of HostNation and working as part of the core team and as such being closely involved in all stages of the process.',
+            'Magda holds a master’s degree in Social Policy and Social Research at University College London. She was raised in Poland where she studied Ethnology and Cultural Anthropology at the University of Wroclaw. She moved to the UK in 2002 and pursued a successful career in media and broadcasting.',
+            'She is fascinated by observing the ever-changing social landscape and is passionate about driving positive change towards a fairer society. Her interest is in social inequality issues and the problems derived from economic disparity particularly those linked to migration and the forced displacement of people. She joined HostNation in its early days as she strongly believes in the positive impact of intercultural relationships on building cohesive communities.',
+          ]}
+        />
+        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+        <Profile
+          small={small}
+          image={peteBini}
+          name="Pete Widlinski &amp; Biniam Araia"
+          role="North East Co&#8209;ordinators"
+          bio={[
+            'Bini is a founding member of IPC (https://i-p-c.org), our partner organisation in the North East, operating in both Middlesbrough and Newcastle. From a refugee background himself, Bini has dedicated over 15 years to supporting the economic and social inclusion of refugee and asylum seeker communities both through IPC (a registered charity) and The Other Perspective (a social enterprise employing vulnerable immigrants). He knows from experience how challenging integration can be and is a strong advocate of celebrating our differences and bringing greater cultural understanding by working together.',
+            'Pete managed the North of England Refugee Service office in Teesside for 18 years,  running a very successful mentoring programme. He then helped to establish and manage Justice First, assisting people who have been refused asylum to re-engage with the legal process. Pete also chairs The Mary Thompson hardship fund, which raises over £40k per year for asylum seekers and refugees and runs a support drop-in.  Pete has been an active campaigner and advocate for refugee rights for decades and has worked closely with Bini and IPC in the past. Through HostNation, Pete hopes to engage more closely with individuals rather than organisations.',
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -126,11 +141,10 @@ const Profiles = r
           small={small}
           image={danny}
           name="Daniel Silverstone"
-          role="HostNation Trustee (Chair)"
+          role="Trustee (Chair)"
           bio={[
-            "Danny is a Londoner with a 40 year executive career in the public and charitable sector culminating in CEO roles at London Boroughs Grants, the Commission for Racial Equality, London Remade, a green social enterprise and Interights, an international human rights charity.  A major linking thread in Danny's professional career has been a focus on improving opportunities and expanding rights for our most disadvantaged communities. He contributed to path finding race equality programmes in local government and led the  implementation of the amended Race Relations Act while at the CRE.  Danny has held a number of non-executive roles including 5 years as a member of the Big Lottery's England Committee which invested £400m. a year in England's not-for-profit sector.",
-            'Danny is chair of governors at Parliament Hill Girls school and chairs Rene Cassin the Jewish human rights charity.',
-            "Danny's mother arrived in London in 1939 on the Kindertransport and he grew up within a family marked by his mother's experiences as a child refugee.  Danny became a HostNation befriender in 2017. He was immediately impressed by the quality of HostNation's work. When the decision was taken to achieve charitable status he was delighted to become HostNation's chair in October 2018.",
+            "Danny is a Londoner with a 40-year career in the public and charitable sector culminating in CEO roles at London Boroughs Grants, the Commission for Racial Equality, London Remade – a green social enterprise – and the international human rights charity Interights.  Improving opportunities and rights for our most disadvantaged communities has been a linking thread through his career. He contributed to pathfinding race equality programmes in local government and led the implementation of the amended Race Relations Act while at the CRE. Danny has held a number of non-executive roles including five years on the Big Lottery's England Committee, which invested £400m a year in England's non-profit sector. He chairs the Jewish human rights charity Rene Cassin.",
+            "Danny's mother arrived in London in 1939 on the Kindertransport and he grew up in a family marked by his mother's experiences as a child refugee. Danny became a HostNation befriender in 2017. Impressed by the quality of HostNation's work, he was delighted to become HostNation's chair in October 2018.",
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -139,10 +153,10 @@ const Profiles = r
           image={dina}
           name="Dina Nayeri"
           credit="Photo credit: Anna Leader"
-          role="HostNation Trustee"
+          role="Trustee"
           bio={[
-            'Dina Nayeri was born during the Iranian revolution and fled at eight. She lived as a refugee for two years before being granted asylum in the United States. She writes fiction and nonfiction on displacement, the refugee crisis, and Iranian diaspora. Her acclaimed Guardian Long Read “The Ungrateful Refugee” was one of the most widely read essays of 2017 and anthologized by Viet Nguyen in The Displaced and is now taught in schools across Germany. Dina is a prize-winning author and her work also appears in The New York Times, The Guardian, LA Times, New Yorker, Wall Street Journal and Granta amongst others. Her first book of narrative nonfiction, The Ungrateful Refugee, is available now from Canongate Books.',
-            "Dina joined the Board of HostNation in 2019. She says: “HostNation is one of the rare charities that understands that the struggle of being a refugee doesn't end the moment one is granted asylum, or even citizenship. To be a refugee is to be forever separated from home, always alert to one's differences. I'm honoured to join an organisation that prioritises the many social and psychological needs that others may consider secondary --- as a refugee and a writer, I have found these needs vital enough to devote my entire artistic life to them. I hope together we can bring some of the joys of home to the displaced people who have become our neighbours.”",
+            'Prize-winning author Dina Nayeri was born during the Iranian revolution and fled when she was eight. She lived as a refugee for two years before being granted asylum in the United States. She writes fiction and nonfiction on displacement, the refugee crisis, and Iranian diaspora. Her work appears in the New York Times, Guardian, LA Times, New Yorker, Wall Street Journal and Granta amongst others. Her acclaimed Guardian Long Read “The Ungrateful Refugee” was one of the most widely-read essays of 2017. Anthologized by Viet Nguyen in The Displaced, it is now taught in schools across Germany. Her book of the same name is published by Canongate Books.',
+            "Dina joined the HostNation Board in 2019. She says: “HostNation is one of the rare charities that understands that the struggle of being a refugee doesn't end the moment one is granted asylum, or even citizenship. To be a refugee is to be forever separated from home, always alert to one's differences. I hope together we can bring some of the joys of home to the displaced people who have become our neighbours.”",
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -150,10 +164,10 @@ const Profiles = r
           small={small}
           image={emiljan}
           name="Emiljan Gega"
-          role="HostNation Trustee"
+          role="Trustee"
           bio={[
-            "Emiljan has called London home for over 10 years now. He was born in Albania and has been a refugee in various countries, most prominently the Republic of Ireland where he was raised and where he proudly holds citizenship. He works in the strategy consulting and executive search space which came about after completing his undergraduate studies in History at King's College London and his postgraduate studies in Economic History at The London School of Economics.",
-            "Emiljan has deep personal interests in politics, business best practice and history. When he's not working he likes to play tennis and squash, read everything he can get his hands on as well as go for long walks. He also volunteers widely at such institutions as The Prince's Trust and Brightside mentoring, which builds on his previous work leading a schools outreach programme at university. He is very excited about joining the HostNation team and helping to scale the organisation and better the lives of so many people. Emiljan believes that HostNation is a rare charity that underscores the need for renewed social provisions in this city and country, and is at the forefront of demonstrating that London and the UK really are progressive communities.",
+            "Emiljan has called London home for over ten years. Born in Albania, he has been a refugee in various countries, including the Republic of Ireland where he now proudly holds citizenship. He works in strategy consulting and executive search, having graduated from King's College London and the London School of Economics.",
+            "Emiljan is deeply interested in politics, business best practice and history. He volunteers at such institutions as The Prince's Trust and Brightside mentoring, building on his previous work leading a schools outreach programme at university. He believes HostNation to be a rare charity that underscores the need for renewed social provision in this country, and that it is at the forefront of demonstrating a progressive approach to communities.",
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -161,11 +175,21 @@ const Profiles = r
           small={small}
           image={joanna}
           name="Joanna Winterbottom"
-          role="HostNation Trustee"
+          role="Trustee"
           bio={[
-            'Jo was a reporter and editor with Reuters news agency for over 20 years, gaining an in-depth knowledge of the news and communications business. She has worked around the world, including assignments in Italy, India, South Africa and the United States. In January 2018, she embarked on a freelance career, giving her more time for voluntary work, which had been a long-term goal. She now trains journalists with the Reuters Foundation, and has travelled in this role to destinations as far apart as Kazakhstan and Jamaica. She also continues to write and edit as a freelancer.',
-            'Her voluntary work has included giving practical advice to asylum seekers in London and mentoring immigrants in language skills.',
-            "Jo is very happy to be working with HostNation and values its aims of giving refugees a warm and supportive welcome to their new home. Jo's own experiences in moving countries has been cushioned by her employer's infrastructure, but she is still aware of the challenges of uprooting your life, creating social networks and getting to grips with a new environment.",
+            'Jo was a reporter and editor with Reuters news agency for over 20 years, gaining an in-depth knowledge of the news and communications business. She has worked around the world, including in Italy, India, South Africa and the United States. In 2018 she embarked on a freelance career, dedicating more time to voluntary work – a long-term goal. Her voluntary work has included giving practical advice to asylum seekers in London and mentoring immigrants in language skills. In her freelance role she trains journalists with the Reuters Foundation, travelling to destinations as far apart as Kazakhstan and Jamaica. She continues to write and edit.',
+            "Jo values HostNation’s aim of giving refugees a warm and supportive welcome to their new home. Jo's own experiences in moving countries have been cushioned by her employer, but have nevertheless given her an insight into the challenges of uprooting your life, creating new social networks and getting to grips with an unfamiliar environment.",
+          ]}
+        />
+        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+        <Profile
+          small={small}
+          image={olivia}
+          name="Olivia Petie"
+          role="Trustee"
+          bio={[
+            'Olivia is a social researcher and evaluator. In her role as Senior Evaluation Officer for the UK government’s Chevening Scholarship Programme, Olivia is involved with research, monitoring and evaluation for this initiative awarding foreign students the chance to study at UK universities. Previously as Research and Evaluation Project Manager at Renaisi (a refugee service provider), Olivia worked with a wide range of community projects including Hackney Borough Council’s Integrated Communities Project and North and South London Cares. Her voluntary experience includes having been a Refugee Guide through the Helen Bamber Foundation.',
+            'Olivia was thrilled to join the HostNation board, after a wonderful experience befriending through them. She has been impressed by their human approach, which allows authentic friendships to form, and feels their work has never been more needed. She is looking forward to being part of their future development.',
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -175,9 +199,8 @@ const Profiles = r
           name="Jon Whitehead"
           role="Digital Architect"
           bio={[
-            'Since graduating from Cambridge with a First in Maths, Jon has specialised in working in the not for profit sector to build efficient digital platforms to automate and scale up humanitarian and volunteering projects.',
-            'For 6 years he worked with Student Hubs, which supports student volunteers to tackle social and environmental challenges, first in Cambridge and then for the national network based in Oxford. His jobs evolved from Digital Communications Manager, to Digital Analyst, and finally to Digital Architect with core responsibility for helping the charity develop and implement new robust digital systems to improve the effectiveness and efficiency of its programmes. Alongside website and database development he developed an online case management system for Safe Passage, which helps unaccompanied child refugees and vulnerable adults in Europe find safe, legal routes to the UK. This consisted of a secure online dashboard for searching and managing existing refugee cases, along with a public form for the submission of new cases.',
-            'Jon has developed a secure digital infrastructure for HostNation to create an effective online referral system and is managing HostNation’s database.',
+            'Since graduating from Cambridge, Jon has specialised in working in the non-profit sector to build efficient digital platforms to automate and scale up humanitarian and volunteering projects. For six years he worked with Student Hubs, which supports student volunteers to tackle social and environmental challenges. His jobs evolved from Digital Communications Manager, to Digital Analyst, and finally to Digital Architect with responsibility for helping the charity develop new digital systems.',
+            'Alongside website and database development Jon developed an online case management system for Safe Passage, which helps unaccompanied child refugees and vulnerable adults in Europe find safe, legal routes to the UK. Jon has developed a secure digital infrastructure for HostNation to create an effective online referral system and manages their digital platform.',
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -187,7 +210,17 @@ const Profiles = r
           name="Claudia Möller"
           role="Art Director"
           bio={[
-            'Claudia is an art director and works for United Business Media in London, specialising in corporate identity and brand design. Using the iVolunteer scheme at UBM, she created the HostNation logo, website, social media pages, and visual comms. Claudia is in charge of how HostNation looks and has previously volunteered for community centres in North London, offering design advice and services.',
+            'Claudia is a freelance graphic designer and previously worked for United Business Media in London, specialising in corporate identity and brand design. Using the iVolunteer scheme at UBM, she created the HostNation logo, website, social media pages, and visual comms. Claudia is in charge of how HostNation looks and has previously volunteered for community centres in North London, offering design advice and services.',
+          ]}
+        />
+        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+        <Profile
+          small={small}
+          name="Harriet Paterson"
+          role="Communications Manager"
+          bio={[
+            'Harriet is a communications specialist in the non-profit sector, with special focus on international development. She has created a wide range of materials for NGOs including CAFOD, Caritas Internationalis and Christian Aid. An experienced humanitarian reporter, she has written many features and educational resources telling the human story behind the global refugee crisis – from the violent expulsion of the Rohingya from Myanmar to the flight of 6.6 million Syrians during the country’s ongoing civil war.',
+            'This made Harriet immediately interested in the simple yet powerful proposal of HostNation, to find friends for people torn from their homes and communities. She is proud to be part of the operational team, as well as a befriender.',
           ]}
         />
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -197,8 +230,8 @@ const Profiles = r
           name="Abu Haron"
           role="Refugee Advisor"
           bio={[
-            'Abu fled the Darfur genocide in Sudan as a child and after a harrowing journey arrived in the UK aged 16 with no family, no friends, no money and no English. Aged 17 he was matched with a befriender through Freedom from Torture’s unaccompanied minors’ befriending scheme. Abu gained refugee status in 2015, is a fluent Arabic speaker, speaks Level 2 English, has acted as a community interpreter, has volunteered for the Children’s Radio Foundation, has given talks at the British Red Cross and has done a 4 week intensive internship at the BBC where he worked on news programmes and BBC Arabic in the World Service.',
-            'Abu’s experience as an asylum seeker in the UK and the benefit he received from being befriended, is the inspiration behind HostNation. He is a strong advocate of the scheme and is helping to promote it as well as acting as an ambassador amongst refugee (and Arabic-speaking) communities.',
+            'Abu fled the Darfur genocide in Sudan as a child and after a harrowing journey arrived in the UK aged 16 with no family, no friends, no money and no English. At 17 he was matched with a befriender through Freedom from Torture’s befriending scheme. Abu gained refugee status in 2015, is a fluent Arabic speaker, speaks Level 2 English, has acted as a community interpreter, has volunteered for the Children’s Radio Foundation, has given talks at the British Red Cross and has done an internship at the BBC.',
+            'Abu’s experience as an asylum seeker in the UK and the benefit he received from being befriended, is the inspiration behind HostNation. He helps to promote it as well as acting as an ambassador amongst refugee (and Arabic-speaking) communities.',
           ]}
         />
       </Div>
@@ -213,51 +246,66 @@ export default () => (
       <Div style={{ spacing: 20 }}>
         <Txt style={styles.title}>Who Are We?</Txt>
         <Txt style={{ ...styles.body, fontWeight: 'bold' }}>
-          HostNation came into being at the start of 2017.
+          HostNation came into being in 2017.
         </Txt>
         <Txt style={styles.body}>
           We are a Charitable Incorporated Organisation (CIO) registered with
           the Charity Commission. UK Charity number 1180004.
         </Txt>
       </Div>
-      <Div style={{ spacing: 20 }}>
-        <Txt style={styles.title}>Friends of HostNation</Txt>
-        <Txt style={styles.body}>
-          Thank you to the following people for giving us especially generous
-          financial support or the benefit of your expertise (or both!):
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+      <Div style={{ spacing: 25, maxWidth: 600, margin: '0 auto' }}>
+        <Txt style={{ ...styles.title, fontSize: 30 }}>
+          Loving the Stranger in the Time of Coronavirus: The HostNation Story
         </Txt>
-        <Div style={{ spacing: 15, padding: '15px 0' }}>
-          {[
-            'Martin and Bud Sandbrook',
-            'Sue Odell',
-            'Imogen Wall',
-            'Mark Sutcliffe',
-            'Alex Graham',
-            'Makena Lohr',
-            'Anthony Fawcett',
-            'David Crook',
-            'Norma O’Flynn',
-            'Marion Gough and Martin Hill',
-            'Rebecca and Henry Tinsley',
-            'Whitehead Family',
-            'Frances Mayo',
-          ].map((name, i) => (
-            <Txt style={{ ...styles.body, fontWeight: 'normal' }} key={i}>
-              {name}
-            </Txt>
-          ))}
+        <Div style={{ layout: 'bar', spacing: 40 }}>
+          <div style={{ width: 200 }}>
+            <img src={anthonyStory} />
+          </div>
+          <Txt style={{ ...styles.body, textAlign: 'left' }}>
+            Anthony Berman gives a personal account of HostNation, before and
+            after COVID-19, and the benefits it has brought to refugees and
+            asylum seekers and their befrienders.
+          </Txt>
         </Div>
-        <Txt style={styles.body}>
-          We are also very grateful to the Freshfields Bruckhaus Deringer Pro
-          Bono Team for their legal support, to the Paul Hamlyn Ideas and
-          Pioneers Fund for funding our start up and to The London Community
-          Foundation for awarding us a Comic Relief Core Strength Local
-          Communities Grant. Trust for London have also confirmed a generous
-          Connected Communities grant towards our core costs over the next two
-          years. And 2019 started with another successful grant bid from the
-          National Lottery Community Fund and ended with a social prescribing
-          grant from Team London and the Mayor of London's office. Thank you to
-          all our funders for making our work sustainable!
+        <Button
+          to="/the-hostnation-story.pdf"
+          newTab
+          color="black"
+          style={{ margin: '0 auto' }}
+        >
+          READ THE BLOG
+        </Button>
+      </Div>
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+      <Txt style={styles.title}>Funders and Friends of HostNation</Txt>
+      <Div style={{ spacing: 20 }}>
+        <Txt style={{ ...styles.body, textAlign: 'left' }}>
+          We are very grateful to the Freshfields Bruckhaus Deringer Pro Bono
+          Team for their legal support, to the Paul Hamlyn Ideas and Pioneers
+          Fund for funding our start up, to The London Community Foundation for
+          awarding us a Comic Relief Core Strength Local Communities Grant and
+          to Trust for London for funding our core costs through a Connected
+          Communities grant 2018-2020.
+        </Txt>
+        <Txt style={{ ...styles.body, textAlign: 'left' }}>
+          2019 started well with another successful grant bid from the National
+          Lottery Community Fund and ended with a social prescribing grant from
+          Team London and the Mayor of London's office.
+        </Txt>
+        <Txt style={{ ...styles.body, textAlign: 'left' }}>
+          2020 was challenging for all small charities and we are hugely
+          grateful to our existing funders for helping us again when we needed
+          it the most. Paul Hamlyn Foundation and the School for Social
+          Entrepreneurs provided us with a package of financial and mentoring
+          support and funded our regional expansion. Trust for London have
+          continued their core funding for a further two years (2020-2022) and
+          The National Lottery/DCMS provided emergency Covid-19 funding through
+          the Coronavirus Community Support Fund (CCSF). By the end of 2020 we
+          also had confirmation of three years funding from City Bridge Trust.
+        </Txt>
+        <Txt style={{ ...styles.body, textAlign: 'left' }}>
+          Thank you to all our funders for believing in us and the work we do.
         </Txt>
         {withWidth(700)({
           next: ({ small = false, setWidthElem }) => (
@@ -315,6 +363,35 @@ export default () => (
             </div>
           ),
         })}
+        <Txt style={{ ...styles.body, paddingTop: 30 }}>
+          And thank you to the following people for giving us especially
+          generous financial support or the benefit of your expertise (or
+          both!):
+        </Txt>
+        <Div style={{ spacing: 15, padding: '15px 0' }}>
+          {[
+            'Martin and Bud Sandbrook',
+            'Sue Odell',
+            'Imogen Wall',
+            'Mark Sutcliffe',
+            'Alex Graham',
+            'Makena Lohr',
+            'Anthony Fawcett',
+            'David Crook',
+            'Norma O’Flynn',
+            'Marion Gough and Martin Hill',
+            'Rebecca and Henry Tinsley',
+            'Whitehead Family',
+            'Frances Mayo',
+            'Debbie Forster, MBE',
+            'Leah Selinger',
+            'Liz Pepler',
+          ].map((name, i) => (
+            <Txt style={{ ...styles.body, fontWeight: 'normal' }} key={i}>
+              {name}
+            </Txt>
+          ))}
+        </Div>
       </Div>
       <Box title="MEET THE TEAM BEHIND HOSTNATION">
         <Profiles />

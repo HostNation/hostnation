@@ -4,9 +4,12 @@ import { Div, Hover, Txt } from 'elmnt';
 import Helmet from 'react-helmet';
 
 import * as logoWide from '../img/logo-wide.png';
+import * as bettinaQuote from '../img/quotes/quote-bettina.png';
+import * as orlaQuote from '../img/quotes/quote-orla.png';
 
 // import referBlocks from '../blocks/refer';
 import Box from '../core/Box';
+import Button from '../core/Button';
 // import Forms from '../core/Forms';
 import styles, { colors } from '../core/styles';
 
@@ -48,7 +51,7 @@ import styles, { colors } from '../core/styles';
 export default () => (
   <>
     <Helmet title="Refer | HostNation" />
-    <Div style={{ spacing: 50, paddingTop: 50, paddingBottom: 50 }}>
+    <Div style={{ spacing: 50, paddingTop: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
 
       <Box title="SCREENING & SAFEGUARDING" toggle>
@@ -139,6 +142,8 @@ export default () => (
         </Txt>
       </Box>
 
+      <img src={bettinaQuote} />
+
       {/* <Box title="REFUGEE & REFERRER REGISTRATION FORM" color="purple">
         <Txt style={styles.boxText}>
           Due to the Coronavirus we are not taking referrals or making new
@@ -146,18 +151,30 @@ export default () => (
         </Txt>
       </Box> */}
 
-      <Box title="REFUGEE & REFERRER REGISTRATION FORM" color="purple">
-        <iframe
-          className="airtable-embed"
-          src="https://airtable.com/embed/shrUoKOEAjMBTsXiL?prefill_Type=Refugee&backgroundColor=orange"
-          frameBorder="0"
-          width="100%"
-          height="533"
-          style={{
-            background: 'transparent',
-            border: '1px solid #ccc',
-          }}
-        />
+      <Box title="REFUGEE & REFERRER REGISTRATION FORMS" color="purple">
+        <Txt style={styles.body}>
+          Thank you for referring someone to HostNation
+        </Txt>
+        <Button
+          to="https://airtable.com/shrUoKOEAjMBTsXiL?prefill_Type=Refugee&backgroundColor=orange"
+          newTab
+          color="purple"
+          style={{ margin: '0 auto' }}
+        >
+          London:
+          <br />
+          Referral Form
+        </Button>
+        <Button
+          to="https://airtable.com/shrP5uN9KbQWRarwV?prefill_Type=Refugee&backgroundColor=orange"
+          newTab
+          color="yellow"
+          style={{ margin: '0 auto' }}
+        >
+          North East:
+          <br />
+          Referral Form
+        </Button>
       </Box>
 
       <Box title="HOSTNATION PRIVACY POLICY" toggle>
@@ -195,6 +212,8 @@ export default () => (
           </Hover>
         </a>
       </Box>
+
+      <img src={orlaQuote} />
     </Div>
   </>
 );
