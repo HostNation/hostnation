@@ -92,7 +92,7 @@ export default () => (
         </Txt>
         <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>
           Send them to our website to fill in our referral form.
-          <Link to="/refugee" newTab>
+          <Link to="/refer">
             <Txt
               style={{
                 ...styles.boxText,
@@ -103,7 +103,7 @@ export default () => (
                 textDecoration: 'underline',
               }}
             >
-              https://www.hostnation.org.uk/refugee
+              https://www.hostnation.org.uk/refer
             </Txt>
           </Link>
         </Txt>
