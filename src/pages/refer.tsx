@@ -51,7 +51,7 @@ import styles, { colors } from '../core/styles';
 export default () => (
   <>
     <Helmet title="Refer | HostNation" />
-    <Div style={{ spacing: 50, paddingTop: 50 }}>
+    <Div style={{ spacing: 50, paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
 
       <Box title="SCREENING & SAFEGUARDING" toggle>

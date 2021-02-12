@@ -11,6 +11,8 @@ import * as phfLogo from '../img/logos/phf.jpg';
 import * as tflLogo from '../img/logos/tfl.png';
 import * as cfLogo from '../img/logos/cf.png';
 import * as molLogo from '../img/logos/mol.png';
+import * as cbtLogo from '../img/logos/cbt.jpg';
+import * as sseLogo from '../img/logos/sse.jpg';
 
 import * as anneke from '../img/team/anneke.jpg';
 import * as rossana from '../img/team/rossana.png';
@@ -24,6 +26,7 @@ import * as joanna from '../img/team/joanna.png';
 import * as olivia from '../img/team/olivia.jpg';
 import * as jon from '../img/team/jon.png';
 import * as claudia from '../img/team/claudia.png';
+import * as harriet from '../img/team/harriet.jpg';
 import * as abu from '../img/team/abu.png';
 
 import * as anthonyStory from '../img/anthony-story.png';
@@ -216,6 +219,7 @@ const Profiles = r
         <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
         <Profile
           small={small}
+          image={harriet}
           name="Harriet Paterson"
           role="Communications Manager"
           bio={[
@@ -246,11 +250,26 @@ export default () => (
       <Div style={{ spacing: 20 }}>
         <Txt style={styles.title}>Who Are We?</Txt>
         <Txt style={{ ...styles.body, fontWeight: 'bold' }}>
-          HostNation came into being in 2017.
+          HostNation was founded in 2017 to offer friendship and social
+          opportunities to asylum seekers and refugees. We wanted to give
+          refugees – who are often very isolated – a way into our society
+          through the kindness of local residents.
+        </Txt>
+        <Txt style={{ ...styles.body, fontWeight: 'bold' }}>
+          Our founder, Anneke Elwes, was experienced in befriending refugees and
+          knew there were many altruistic people willing to step up. So
+          HostNation was born: a digital platform for matching friendly locals
+          to lonely refugees, which has fast become a wide family of flourishing
+          social connections.
+        </Txt>
+        <Txt style={{ ...styles.body, fontWeight: 'bold' }}>
+          We won charitable status in 2020 and a network of refugee referrers
+          are now alerting us to refugees in need of friendship in London and
+          across the north-east of England.
         </Txt>
         <Txt style={styles.body}>
-          We are a Charitable Incorporated Organisation (CIO) registered with
-          the Charity Commission. UK Charity number 1180004.
+          HostNation is a CIO registered with the Charity Commission. UK charity
+          no. 1180004.
         </Txt>
       </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -344,6 +363,22 @@ export default () => (
                   />
                   <img
                     src={cfLogo}
+                    style={{ height: 100, width: 'auto', margin: '0 auto' }}
+                  />
+                </Div>
+                <Div
+                  style={{
+                    layout: small ? 'stack' : 'bar',
+                    spacing: 25,
+                    margin: '0 auto',
+                  }}
+                >
+                  <img
+                    src={cbtLogo}
+                    style={{ height: 100, width: 'auto', margin: '0 auto' }}
+                  />
+                  <img
+                    src={sseLogo}
                     style={{ height: 100, width: 'auto', margin: '0 auto' }}
                   />
                 </Div>

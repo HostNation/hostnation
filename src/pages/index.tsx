@@ -178,7 +178,7 @@ export default r
           <Button
             to="https://www.totalgiving.co.uk/donate/hostnation"
             newTab
-            color="yellow"
+            color="purple"
             style={{ margin: '0 auto' }}
           >
             DONATE HERE
@@ -282,7 +282,7 @@ export default r
               color="black"
               style={{ width: 320, fontSize: 20, margin: '0 auto' }}
             >
-              Email: info@hostnation.org.uk
+              info@hostnation.org.uk
               <br />
               for updates or enquiries
             </Button>

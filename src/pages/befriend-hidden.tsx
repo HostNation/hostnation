@@ -125,7 +125,7 @@ export default () => (
           For this reason we plan to make introductions and facilitate online
           befriending via What’s App video, FaceTime, FaceBook Messenger or
           Zoom. Once introduced, we ask befrienders to make weekly calls to
-          check in, chat and help their befriendee practise their English. When
+          check in, chat and help their befriendee practice their English. When
           both sides feel ready to meet face-to-face, then we encourage making a
           plan to visit a park, market or museum and to continue to explore and
           experience London together at least once a fortnight. But, if both
