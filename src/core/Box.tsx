@@ -35,6 +35,7 @@ export default r
     ({
       title,
       toggle,
+      border,
       isOpen,
       toggleIsOpen,
       hoverProps = {},
@@ -63,8 +64,15 @@ export default r
           style={{
             display: !toggle || isOpen ? 'block' : 'none',
             spacing: 30,
-            padding: 40,
+            padding: 50,
             background: 'white',
+            ...(border
+              ? {
+                  border: '2px solid black',
+                  borderColor: colors.black,
+                  borderTop: 0,
+                }
+              : {}),
           }}
         >
           {children}

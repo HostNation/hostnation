@@ -193,7 +193,7 @@ export default {
     ...textStyle,
     fontSize: 18,
     textAlign: 'left',
-    fontWeight: 'normal' as 'normal',
+    // fontWeight: 'normal' as 'normal',
   },
   header: {
     ...baseStyle,

@@ -84,7 +84,7 @@ export default () => (
     <Helmet title="Befriend | HostNation" />
     <Div style={{ spacing: 50, paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
-      <img src={laylaSue} />
+      <img src={nickAli} />
 
       <Box title="WHAT WE ASK OF YOU" toggle>
         <Txt style={styles.boxText}>
@@ -115,12 +115,14 @@ export default () => (
         <Txt style={styles.boxText}>
           Thank you for your interest in HostNation refugee befriending.
         </Txt>
-        <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>North East</Txt>
+        <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+          North East
+        </Txt>
         <Txt style={styles.boxText}>
           We are currently recruiting befrienders in the North East of England
-          to befriend asylum seekers and refugees living in Middlesbrough and
-          Stockton-on-Tees. Please click on the link below if you are interested
-          in befriending in the North East in 2021.
+          to befriend asylum seekers and refugees living in Teesside. Please
+          click on the link below if you are interested in befriending in the
+          North East in 2021.
         </Txt>
         <a
           href="https://airtable.com/shr1yuiiDpPylNm8u?prefill_Type=Befriender"
@@ -142,7 +144,9 @@ export default () => (
             )}
           </Hover>
         </a>
-        <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>London</Txt>
+        <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+          London
+        </Txt>
         <Txt style={styles.boxText}>
           Thank you for your interest in befriending in London. So many kind
           people in the capital have offered to befriend refugees that we have
@@ -236,7 +240,7 @@ export default () => (
       </Box> */}
 
       <Box title="SCOPE OF SERVICES AND EXCLUSION OF LIABILITY" toggle>
-        <Txt style={{ ...styles.boxText, fontSize: 22, fontWeight: 'bold' }}>
+        <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
           Scope of Services
         </Txt>
         <Txt style={styles.boxText}>
@@ -279,18 +283,18 @@ export default () => (
           best to respond as quickly as we can, but we are unable to provide a
           full support service.
         </Txt>
-        <Txt style={{ ...styles.boxText, fontSize: 22, fontWeight: 'bold' }}>
+        <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
           Exclusion of Liability
         </Txt>
         <Txt style={styles.boxText}>
           As HostNation is an introductory service, we do not accept
           responsibility for any relationships formed as a result of using our
-          web site. To that end, please note that we hereby exclude all and any
+          website. To that end, please note that we hereby exclude all and any
           losses, liabilities, claims, damages, expenses or costs (whether as a
           consequence of our negligence or otherwise) arising directly or
           indirectly in connection with any content on or provided through the
-          web site (including any relationship which is initiated by or results
-          from use of the web site). New volunteers should contact us for
+          website (including any relationship which is initiated by or results
+          from use of the website). New volunteers should contact us for
           information regarding our liability insurance for active befrienders.
         </Txt>
       </Box>
@@ -331,7 +335,7 @@ export default () => (
         </a>
       </Box>
 
-      <img src={nickAli} />
+      <img src={laylaSue} />
     </Div>
   </>
 );

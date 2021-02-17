@@ -91,7 +91,7 @@ export default () => (
       </Box>
 
       <Box title="SCOPE OF SERVICES AND EXCLUSION OF LIABILITY" toggle>
-        <Txt style={{ ...styles.boxText, fontSize: 22, fontWeight: 'bold' }}>
+        <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
           Scope of Services
         </Txt>
         <Txt style={styles.boxText}>
@@ -127,18 +127,18 @@ export default () => (
           relationship at 1 month and 3 month intervals with both referrer and
           befriender.
         </Txt>
-        <Txt style={{ ...styles.boxText, fontSize: 22, fontWeight: 'bold' }}>
+        <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
           Exclusion of Liability
         </Txt>
         <Txt style={styles.boxText}>
           As HostNation is an introductory service, we do not accept
           responsibility for any relationships formed as a result of using our
-          web site.  To that end, please note that we hereby exclude all and any
+          website.  To that end, please note that we hereby exclude all and any
           losses, liabilities, claims, damages, expenses or costs (whether as a
           consequence of our negligence or otherwise) arising directly or
           indirectly in connection with any content on or provided through the
-          web site (including any relationship which is initiated by or results
-          from use of the web site).
+          website (including any relationship which is initiated by or results
+          from use of the website).
         </Txt>
       </Box>
 
