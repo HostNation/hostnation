@@ -17,7 +17,7 @@ export default () => (
     <Div style={{ paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ padding: '50px 75px', spacing: 20 }}>
-        <Txt style={{ ...styles.title, fontSize: 30 }}>
+        <Txt style={{ ...styles.title, fontSize: 24 }}>
           Welcome to asylum seekers and refugees
         </Txt>
       </Div>
@@ -104,53 +104,63 @@ export default () => (
           girlfriend or boyfriend.
         </Txt>
       </Div>
-      <Box title="YOU CAN APPLY IF:" border>
-        <ul
-          style={{
-            ...(styles.boxText as any),
-            lineHeight: 1.5,
-            listStyleType: 'disc',
-            paddingLeft: 50,
-          }}
-        >
-          <li style={{ margin: '5px 0' }}>
-            You are an asylum seeker or refugee.
-          </li>
-          <li style={{ margin: '5px 0' }}>
-            You live in Greater London or Teesside.
-          </li>
-          <li style={{ margin: '5px 0' }}>You are over 18.</li>
-          <li style={{ margin: '5px 0' }}>
-            You speak some English and have a mobile phone.
-          </li>
-          <li style={{ margin: '5px 0' }}>
-            You have someone who can refer you to us.
-          </li>
-          <li style={{ margin: '5px 0' }}>
-            You are not in crisis with your asylum case, mental health or
-            housing.
-          </li>
-          <li style={{ margin: '5px 0' }}>
-            You are going to be living in the same area for the next six months.
-          </li>
-          <li style={{ margin: '5px 0' }}>
-            You like the idea of making a new friend and finding out more about
-            your new home.
-          </li>
-        </ul>
-      </Box>
-      <Div style={{ padding: '50px 75px', spacing: 30, background: 'white' }}>
+      <Div style={{ padding: '50px 75px', spacing: 30 }}>
+        <Box title="YOU CAN APPLY IF:" border>
+          <ul
+            style={{
+              ...(styles.boxText as any),
+              lineHeight: 1.5,
+              listStyleType: 'disc',
+              paddingLeft: 20,
+            }}
+          >
+            <li style={{ margin: '5px 0' }}>
+              You are an asylum seeker or refugee.
+            </li>
+            <li style={{ margin: '5px 0' }}>
+              You live in Greater London or Teesside.
+            </li>
+            <li style={{ margin: '5px 0' }}>You are over 18.</li>
+            <li style={{ margin: '5px 0' }}>
+              You speak some English and have a mobile phone.
+            </li>
+            <li style={{ margin: '5px 0' }}>
+              You have someone who can refer you to us.
+            </li>
+            <li style={{ margin: '5px 0' }}>
+              You are not in crisis with your asylum case, mental health or
+              housing.
+            </li>
+            <li style={{ margin: '5px 0' }}>
+              You are going to be living in the same area for the next six
+              months.
+            </li>
+            <li style={{ margin: '5px 0' }}>
+              You like the idea of making a new friend and finding out more
+              about your new home.
+            </li>
+          </ul>
+        </Box>
         <Txt
           style={{
             ...styles.boxText,
             color: colors.purple,
             fontWeight: 'bold',
-            fontSize: 30,
+            fontSize: 24,
+            textAlign: 'center',
+            paddingTop: 18,
           }}
         >
           We are looking forward to meeting you!
         </Txt>
-        <Txt style={{ ...styles.boxText, fontWeight: 'bold', fontSize: 30 }}>
+        <Txt
+          style={{
+            ...styles.boxText,
+            fontWeight: 'bold',
+            fontSize: 24,
+            textAlign: 'center',
+          }}
+        >
           It can be very hard moving to a new country. You will feel more at
           home with a local friend by your side.
         </Txt>

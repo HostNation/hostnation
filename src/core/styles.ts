@@ -176,7 +176,7 @@ export default {
   text: textStyle,
   title: {
     ...textStyle,
-    fontSize: 50,
+    fontSize: 30,
     fontWeight: 'bold' as 'bold',
   },
   subtitle: {

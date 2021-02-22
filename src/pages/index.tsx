@@ -184,7 +184,7 @@ export default () => (
         </Div>
       </div>
       <Div style={{ spacing: 25 }}>
-        <Txt style={{ ...styles.title, fontSize: 40 }}>
+        <Txt style={{ ...styles.title, fontSize: 30 }}>
           For more information on HostNation:
         </Txt>
         <Div style={{ spacing: 15, layout: 'bar', margin: '0 auto' }}>

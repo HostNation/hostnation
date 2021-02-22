@@ -157,21 +157,21 @@ const Profiles = r
           }}
         >
           <Profile
-            image={magda}
-            name="Magda Wolfe"
-            role="Evaluation Manager"
-            bio={[
-              'Magda holds a master’s degree in Social Policy and Social Research at University College London. She was raised in Poland where she studied Ethnology and Cultural Anthropology at the University of Wroclaw. She moved to the UK in 2002 and pursued a successful career in media and broadcasting.',
-              'She is fascinated by observing the ever-changing social landscape and is passionate about driving positive change towards a fairer society. Her interest is in social inequality issues and the problems derived from economic disparity particularly those linked to migration and the forced displacement of people. She joined HostNation in its early days as she strongly believes in the positive impact of intercultural relationships on building cohesive communities.',
-            ]}
-          />
-          <Profile
             image={anthony}
             name="Anthony Berman"
             role="Operations Manager"
             bio={[
               'A retired root canal specialist, Anthony still teaches part time at QMUL. He came to London with his family from his native South Africa at the age of 13. Although his circumstances were considerably more comfortable than those of the average refugee or asylum seeker, he still remembers the challenges involved in being uprooted from his home to start a new life.',
               'Twelve years ago Anthony became a volunteer befriender with Freedom from Torture for children who had arrived unaccompanied in the UK. The aim was to introduce some normality into the lives of these frequently damaged young people. The young person with whom he was paired has become part of Anthony’s family and it has been a richly rewarding experience all round. Anthony is also one of the coordinators for the New London Synagogue Drop-In Centre for destitute asylum seekers. He believes strongly that HostNation provides a transformative experience for both sides of the friendships it fosters.',
+            ]}
+          />
+          <Profile
+            image={magda}
+            name="Magda Wolfe"
+            role="Evaluation Manager"
+            bio={[
+              'Magda holds a master’s degree in Social Policy and Social Research at University College London. She was raised in Poland where she studied Ethnology and Cultural Anthropology at the University of Wroclaw. She moved to the UK in 2002 and pursued a successful career in media and broadcasting.',
+              'She is fascinated by observing the ever-changing social landscape and is passionate about driving positive change towards a fairer society. Her interest is in social inequality issues and the problems derived from economic disparity particularly those linked to migration and the forced displacement of people. She joined HostNation in its early days as she strongly believes in the positive impact of intercultural relationships on building cohesive communities.',
             ]}
           />
         </Div>
@@ -189,7 +189,31 @@ const Profiles = r
             name="Pete Widlinski &amp; Biniam Araia"
             role="North East Co&#8209;ordinators"
             bio={[
-              'Bini is a founding member of IPC (https://i-p-c.org), our partner organisation in the North East, operating in both Middlesbrough and Newcastle. From a refugee background himself, Bini has dedicated over 15 years to supporting the economic and social inclusion of refugee and asylum seeker communities both through IPC (a registered charity) and The Other Perspective (a social enterprise employing vulnerable immigrants). He knows from experience how challenging integration can be and is a strong advocate of celebrating our differences and bringing greater cultural understanding by working together.',
+              <span style={styles.boxText as any}>
+                Bini is a founding member of IPC (
+                <a
+                  href="https://i-p-c.org"
+                  target="_blank"
+                  style={
+                    {
+                      ...styles.boxText,
+                      color: colors.purple,
+                      fontWeight: 'bold',
+                    } as any
+                  }
+                >
+                  https://i-p-c.org
+                </a>
+                ), our partner organisation in the North East, operating in both
+                Middlesbrough and Newcastle. From a refugee background himself,
+                Bini has dedicated over 15 years to supporting the economic and
+                social inclusion of refugee and asylum seeker communities both
+                through IPC (a registered charity) and The Other Perspective (a
+                social enterprise employing vulnerable immigrants). He knows
+                from experience how challenging integration can be and is a
+                strong advocate of celebrating our differences and bringing
+                greater cultural understanding by working together.
+              </span>,
               'Pete managed the North of England Refugee Service office in Teesside for 18 years,  running a very successful mentoring programme. He then helped to establish and manage Justice First, assisting people who have been refused asylum to re-engage with the legal process. Pete also chairs The Mary Thompson hardship fund, which raises over £40k per year for asylum seekers and refugees and runs a support drop-in.  Pete has been an active campaigner and advocate for refugee rights for decades and has worked closely with Bini and IPC in the past. Through HostNation, Pete hopes to engage more closely with individuals rather than organisations.',
             ]}
           />
@@ -271,20 +295,20 @@ const Profiles = r
           }}
         >
           <Profile
+            image={claudia}
+            name="Claudia Möller"
+            role="Art Director"
+            bio={[
+              'Claudia is a freelance graphic designer and previously worked for United Business Media in London, specialising in corporate identity and brand design. Using the iVolunteer scheme at UBM, she created the HostNation logo, website, social media pages, and visual comms. Claudia is in charge of how HostNation looks and has previously volunteered for community centres in North London, offering design advice and services.',
+            ]}
+          />
+          <Profile
             image={jon}
             name="Jon Whitehead"
             role="Digital Architect"
             bio={[
               'Since graduating from Cambridge, Jon has specialised in working in the non-profit sector to build efficient digital platforms to automate and scale up humanitarian and volunteering projects. For six years he worked with Student Hubs, which supports student volunteers to tackle social and environmental challenges. His jobs evolved from Digital Communications Manager, to Digital Analyst, and finally to Digital Architect with responsibility for helping the charity develop new digital systems.',
               'Alongside website and database development Jon developed an online case management system for Safe Passage, which helps unaccompanied child refugees and vulnerable adults in Europe find safe, legal routes to the UK. Jon has developed a secure digital infrastructure for HostNation to create an effective online referral system and manages their digital platform.',
-            ]}
-          />
-          <Profile
-            image={claudia}
-            name="Claudia Möller"
-            role="Art Director"
-            bio={[
-              'Claudia is a freelance graphic designer and previously worked for United Business Media in London, specialising in corporate identity and brand design. Using the iVolunteer scheme at UBM, she created the HostNation logo, website, social media pages, and visual comms. Claudia is in charge of how HostNation looks and has previously volunteered for community centres in North London, offering design advice and services.',
             ]}
           />
         </Div>

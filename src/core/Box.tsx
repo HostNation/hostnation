@@ -64,7 +64,7 @@ export default r
           style={{
             display: !toggle || isOpen ? 'block' : 'none',
             spacing: 30,
-            padding: 50,
+            padding: border ? 30 : 50,
             background: 'white',
             ...(border
               ? {
