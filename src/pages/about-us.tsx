@@ -373,7 +373,7 @@ export default () => (
           social connections.
         </Txt>
         <Txt style={styles.boxText}>
-          We won charitable status in 2020 and a network of refugee referrers
+          We gained charitable status in 2018 and a network of refugee referrers
           are now alerting us to refugees in need of friendship in London and
           across the north-east of England.
         </Txt>

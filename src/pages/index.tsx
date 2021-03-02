@@ -77,21 +77,28 @@ export default () => (
       <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ spacing: 50, background: 'white' }}>
         <img src={partyImg} />
-        <Txt
-          style={{
-            ...styles.body,
-            fontSize: 24,
-            padding: '0 15px',
-          }}
-        >
-          We are a city &amp; town-based introductory service connecting
-          residents to refugees through small acts of kindness, inclusion and
-          friendship. As a result of Covid we now offer ‘smart’ befriending,
-          with first steps taking place online. Regular video-calls are followed
-          by one-to-one meet-ups when covid restrictions allow. We ask for a
-          minimum commitment of three months but many matches become firm
-          friends.
-        </Txt>
+
+        {withWidth(700)({
+          next: ({ small = false, setWidthElem }) => (
+            <div ref={setWidthElem}>
+              <Txt
+                style={{
+                  ...styles.body,
+                  fontSize: small ? 20 : 24,
+                  padding: '0 15px',
+                }}
+              >
+                We are a city &amp; town-based introductory service connecting
+                residents to refugees through small acts of kindness, inclusion
+                and friendship. As a result of Covid we now offer ‘smart’
+                befriending, with first steps taking place online. Regular
+                video-calls are followed by one-to-one meet-ups when covid
+                restrictions allow. We ask for a minimum commitment of three
+                months but many matches become firm friends.
+              </Txt>
+            </div>
+          ),
+        })}
         <img src={statsImg} style={{ maxWidth: 600, margin: '0 auto 50px' }} />
       </Div>
       <Div style={{ spacing: 25 }}>
