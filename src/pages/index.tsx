@@ -57,20 +57,33 @@ export default () => (
         ),
       })}
       <Div style={{ spacing: 20 }}>
-        <Txt style={{ ...styles.text, fontSize: 24, fontWeight: 'bold' }}>
+        <Txt
+          style={{
+            ...styles.text,
+            textAlign: 'center',
+            fontSize: 24,
+            fontWeight: 'bold',
+          }}
+        >
           HostNation believes every refugee deserves a friend.
         </Txt>
-        <Txt style={{ ...styles.text, fontSize: 24 }}>
+        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 24 }}>
           We connect those offering friendship with those needing it.
         </Txt>
-        <Txt style={{ ...styles.text, fontSize: 24 }}>
+        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 24 }}>
           Now matching friends across Greater London and Teesside.
         </Txt>
       </Div>
       <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ spacing: 50, background: 'white' }}>
         <img src={partyImg} />
-        <Txt style={{ ...styles.text, fontSize: 24, padding: '0 50px' }}>
+        <Txt
+          style={{
+            ...styles.body,
+            fontSize: 24,
+            padding: '0 15px',
+          }}
+        >
           We are a city &amp; town-based introductory service connecting
           residents to refugees through small acts of kindness, inclusion and
           friendship. As a result of Covid we now offer ‘smart’ befriending,
@@ -107,7 +120,7 @@ export default () => (
         </Button>
       </Div>
       <div style={{ background: 'white', padding: '50px 0' }}>
-        <Div style={{ spacing: 25, maxWidth: 600, margin: '0 auto' }}>
+        <Div style={{ spacing: 25 }}>
           <Txt style={styles.body}>
             To get a feel for befriending watch our short films starring Suzy,
             Hakim, Sue and Julie:
@@ -115,100 +128,121 @@ export default () => (
           <Txt style={styles.body}>
             Film 1: “Befriending is an amazing thing to do.”
           </Txt>
-          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/309771300?title=0&byline=0&portrait=0"
-              frameBorder="0"
-              allowFullScreen
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-              }}
-            />
+          <div style={{ maxWidth: 600, margin: '0 auto' }}>
+            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/309771300?title=0&byline=0&portrait=0"
+                frameBorder="0"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+              />
+            </div>
           </div>
           <Txt style={styles.body}>Film 2: “It really makes me happy.”</Txt>
-          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/309762034?title=0&byline=0&portrait=0"
-              frameBorder="0"
-              allowFullScreen
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-              }}
-            />
+          <div style={{ maxWidth: 600, margin: '0 auto' }}>
+            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/309762034?title=0&byline=0&portrait=0"
+                frameBorder="0"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+              />
+            </div>
           </div>
           <Txt style={styles.body}>
             Watch Hanifah telling her befriender, Helen, what a difference
             befriending has made:
           </Txt>
-          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/391708540?title=0&byline=0&portrait=0"
-              frameBorder="0"
-              allowFullScreen
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-              }}
-            />
+          <div style={{ maxWidth: 600, margin: '0 auto' }}>
+            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/391708540?title=0&byline=0&portrait=0"
+                frameBorder="0"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+              />
+            </div>
           </div>
           <Txt style={styles.body}>
             And here’s HostNation’s founder, Anneke, discussing the value of
             befriending with one of our Trustees, Dina, who fled Iran as a
             child.
           </Txt>
-          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/360358161?title=0&byline=0&portrait=0"
-              frameBorder="0"
-              allowFullScreen
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-              }}
-            />
+          <div style={{ maxWidth: 600, margin: '0 auto' }}>
+            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/360358161?title=0&byline=0&portrait=0"
+                frameBorder="0"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+              />
+            </div>
           </div>
         </Div>
       </div>
+
       <Div style={{ spacing: 25 }}>
         <Txt style={{ ...styles.title, fontSize: 30 }}>
           For more information on HostNation:
         </Txt>
-        <Div style={{ spacing: 15, layout: 'bar', margin: '0 auto' }}>
-          <Button
-            to="/hostnation-annual-report.pdf"
-            newTab
-            color="black"
-            style={{ width: 320, fontSize: 20, margin: '0 auto' }}
-          >
-            Read our latest
-            <br />
-            annual report
-          </Button>
-          <Button
-            to="mailto:info@hostnation.org.uk"
-            newTab
-            color="black"
-            style={{ width: 320, fontSize: 20, margin: '0 auto' }}
-          >
-            info@hostnation.org.uk
-            <br />
-            for updates or enquiries
-          </Button>
-        </Div>
+        {withWidth(700)({
+          next: ({ small = false, setWidthElem }) => (
+            <div ref={setWidthElem}>
+              <Div
+                style={{
+                  spacing: 15,
+                  layout: small ? 'stack' : 'bar',
+                  margin: '0 auto',
+                }}
+              >
+                <Button
+                  to="/hostnation-annual-report.pdf"
+                  newTab
+                  color="black"
+                  style={{ width: 320, fontSize: 20, margin: '0 auto' }}
+                >
+                  Read our latest
+                  <br />
+                  annual report
+                </Button>
+                <Button
+                  to="mailto:info@hostnation.org.uk"
+                  newTab
+                  color="black"
+                  style={{ width: 320, fontSize: 20, margin: '0 auto' }}
+                >
+                  info@hostnation.org.uk
+                  <br />
+                  for updates or enquiries
+                </Button>
+              </Div>
+            </div>
+          ),
+        })}
       </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <Div style={{ spacing: 25 }}>

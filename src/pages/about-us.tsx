@@ -77,13 +77,13 @@ const Profile = r
         <Div style={{ layout: 'stack', spacing: 5 }}>
           <img src={image} style={{ width: 340 }} />
           {credit && (
-            <Txt style={{ ...styles.boxText, fontSize: 14 }}>{credit}</Txt>
+            <Txt style={{ ...styles.text, fontSize: 14 }}>{credit}</Txt>
           )}
         </Div>
         <Div style={{ spacing: 10 }}>
           <Txt
             style={{
-              ...styles.boxText,
+              ...styles.text,
               fontSize: 30,
               color: colors.yellow,
               fontWeight: 'bold',
@@ -93,7 +93,7 @@ const Profile = r
           </Txt>
           <Txt
             style={{
-              ...styles.boxText,
+              ...styles.text,
               fontSize: 24,
               fontWeight: 'bold',
             }}
@@ -107,7 +107,7 @@ const Profile = r
       </Div>
       {isOpen &&
         bio.map((text, i) => (
-          <Txt style={styles.boxText} key={i}>
+          <Txt style={{ ...styles.boxText, padding: 0 }} key={i}>
             {text}
           </Txt>
         ))}
@@ -115,10 +115,17 @@ const Profile = r
   ));
 
 const Profiles = r
-  .yield(withWidth(680))
+  .yield(withWidth(750))
   .yield(({ small = true, setWidthElem }) => (
     <div ref={setWidthElem}>
-      <Div style={{ spacing: 40 }}>
+      <Div
+        style={{
+          spacing: 40,
+          maxWidth: 750,
+          margin: '0 auto',
+          padding: '0 15px',
+        }}
+      >
         <Div
           style={{
             layout: small ? 'stack' : 'bar',
@@ -189,7 +196,7 @@ const Profiles = r
             name="Pete Widlinski &amp; Biniam Araia"
             role="North East Co&#8209;ordinators"
             bio={[
-              <span style={styles.boxText as any}>
+              <span style={{ ...styles.boxText, padding: 0 } as any}>
                 Bini is a founding member of IPC (
                 <a
                   href="https://i-p-c.org"
@@ -197,6 +204,7 @@ const Profiles = r
                   style={
                     {
                       ...styles.boxText,
+                      padding: 0,
                       color: colors.purple,
                       fontWeight: 'bold',
                     } as any
@@ -349,7 +357,7 @@ export default () => (
     <Helmet title="About Us | HostNation" />
     <Div style={{ spacing: 50, padding: '50px 0' }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
-      <Div style={{ spacing: 25, background: 'white', padding: 50 }}>
+      <Div style={{ spacing: 25, background: 'white', padding: '50px 0' }}>
         <Txt style={styles.title}>Who Are We?</Txt>
         <Txt style={styles.boxText}>
           HostNation was founded in 2017 to offer friendship and social
@@ -382,16 +390,27 @@ export default () => (
           <Txt style={{ ...styles.title, fontSize: 30 }}>
             Loving the Stranger in the Time of Coronavirus: The HostNation Story
           </Txt>
-          <Div style={{ layout: 'bar', spacing: 40 }}>
-            <div style={{ width: 200 }}>
-              <img src={anthonyStory} />
-            </div>
-            <Txt style={styles.boxText}>
-              Anthony Berman gives a personal account of HostNation, before and
-              after COVID-19, and the benefits it has brought to refugees and
-              asylum seekers and their befrienders.
-            </Txt>
-          </Div>
+          {withWidth(550)({
+            next: ({ small = false, setWidthElem }) => (
+              <div ref={setWidthElem}>
+                <Div
+                  style={{
+                    layout: small ? 'stack' : 'bar',
+                    spacing: small ? 25 : 40,
+                  }}
+                >
+                  <div style={{ width: 200, margin: '0 auto' }}>
+                    <img src={anthonyStory} />
+                  </div>
+                  <Txt style={styles.boxText}>
+                    Anthony Berman gives a personal account of HostNation,
+                    before and after COVID-19, and the benefits it has brought
+                    to refugees and asylum seekers and their befrienders.
+                  </Txt>
+                </Div>
+              </div>
+            ),
+          })}
           <Button
             to="/the-hostnation-story.pdf"
             newTab
@@ -402,7 +421,7 @@ export default () => (
           </Button>
         </Div>
       </Div>
-      <Div style={{ spacing: 25, background: 'white', padding: 50 }}>
+      <Div style={{ spacing: 25, background: 'white', padding: '50px 0' }}>
         <Txt style={{ ...styles.title, fontSize: 30 }}>
           Funders and Friends of HostNation
         </Txt>

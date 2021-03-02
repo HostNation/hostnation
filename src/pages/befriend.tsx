@@ -132,7 +132,6 @@ export default () => (
             style={{
               ...styles.boxText,
               color: colors.yellow,
-              display: 'inline-block',
               fontWeight: 'bold',
               hover: { color: colors.yellowDark },
             }}
@@ -160,6 +159,7 @@ export default () => (
             style={{
               ...styles.boxText,
               fontWeight: 'bold',
+              padding: 0,
               color: colors.yellow,
               hover: { color: colors.yellowDark },
               display: 'inline',
@@ -321,7 +321,6 @@ export default () => (
             style={{
               ...styles.boxText,
               color: colors.purple,
-              display: 'inline-block',
               fontWeight: 'bold',
               hover: { color: colors.purpleDark },
             }}

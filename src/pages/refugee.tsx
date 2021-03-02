@@ -16,13 +16,13 @@ export default () => (
     <Helmet title="Befriend | HostNation" />
     <Div style={{ paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
-      <Div style={{ padding: '50px 75px', spacing: 20 }}>
-        <Txt style={{ ...styles.title, fontSize: 24 }}>
+      <Div style={{ padding: '50px 0', spacing: 20 }}>
+        <Txt style={{ ...styles.title, fontSize: 30 }}>
           Welcome to asylum seekers and refugees
         </Txt>
       </Div>
       <img src={maryAmira} />
-      <Div style={{ padding: '50px 50px', spacing: 30, background: 'white' }}>
+      <Div style={{ padding: '50px 0', spacing: 30, background: 'white' }}>
         <Txt style={styles.boxText}>
           If you are an asylum seeker or refugee over 18 and you live in London,
           Middlesbrough or Stockton-on-Tees, then HostNation is here for you.
@@ -62,7 +62,7 @@ export default () => (
         </Txt>
       </Div>
       <img src={johnAmin} />
-      <Div style={{ padding: '50px 75px', spacing: 30, background: 'white' }}>
+      <Div style={{ padding: '50px 0', spacing: 30, background: 'white' }}>
         <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
           How to apply for a friend
         </Txt>
@@ -82,6 +82,7 @@ export default () => (
                 display: 'block',
                 padding: '5px 0',
                 textDecoration: 'underline',
+                wordBreak: 'break-word',
               }}
             >
               https://www.hostnation.org.uk/refer
@@ -104,14 +105,14 @@ export default () => (
           girlfriend or boyfriend.
         </Txt>
       </Div>
-      <Div style={{ padding: '50px 75px', spacing: 30 }}>
+      <Div style={{ padding: '50px 0', spacing: 30 }}>
         <Box title="YOU CAN APPLY IF:" border>
           <ul
             style={{
               ...(styles.boxText as any),
               lineHeight: 1.5,
               listStyleType: 'disc',
-              paddingLeft: 20,
+              paddingLeft: 40,
             }}
           >
             <li style={{ margin: '5px 0' }}>

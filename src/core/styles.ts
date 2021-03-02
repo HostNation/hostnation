@@ -60,13 +60,14 @@ const baseStyle = {
   fontFamily: 'Lato, sans-serif',
   fontSize: 16,
   color: colors.black,
+  lineHeight: 1.4,
 };
 
 const textStyle = {
   ...baseStyle,
   fontSize: 20,
   fontWeight: 300 as 300,
-  textAlign: 'center',
+  textAlign: 'left',
 };
 
 const fieldStyle = (color: 'yellow' | 'purple', admin?: boolean) => ({
@@ -178,27 +179,35 @@ export default {
     ...textStyle,
     fontSize: 30,
     fontWeight: 'bold' as 'bold',
+    textAlign: 'center',
+    padding: '0 15px',
   },
   subtitle: {
     ...textStyle,
     fontSize: 24,
     fontWeight: 'bold' as 'bold',
+    textAlign: 'center',
+    padding: '0 15px',
   },
   body: {
     ...textStyle,
-    maxWidth: 650,
+    textAlign: 'center',
+    maxWidth: 630,
     margin: '0 auto',
+    padding: '0 15px',
   },
   boxText: {
     ...textStyle,
-    fontSize: 18,
-    textAlign: 'left',
-    // fontWeight: 'normal' as 'normal',
+    // fontSize: 18,
+    maxWidth: 750,
+    margin: '0 auto',
+    padding: '0 15px',
   },
   header: {
     ...baseStyle,
     fontSize: 30,
     fontWeight: 'bold' as 'bold',
+    textAlign: 'center',
   },
   markdown: (color: 'yellow' | 'purple') => ({
     ...baseStyle,

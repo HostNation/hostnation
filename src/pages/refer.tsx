@@ -199,7 +199,6 @@ export default () => (
             style={{
               ...styles.boxText,
               color: colors.purple,
-              display: 'inline-block',
               fontWeight: 'bold',
               hover: { color: colors.purpleDark },
             }}
