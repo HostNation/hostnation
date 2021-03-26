@@ -146,35 +146,25 @@ export default () => (
         <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
           London
         </Txt>
-        <Txt style={styles.boxText}>
-          Thank you for your interest in befriending in London. So many kind
-          people in the capital have offered to befriend refugees that we have
-          registered over 500 and matched 300 already. Due to this success, we
-          need to slow registration in order not to keep people waiting too long
-          for a match. For this reason, our online registration has closed.
-          However we do need to top up our pool of befrienders from time to time
-          so if you’re keen to become a HostNation befriender in London and
-          consent to us keeping in touch, please email us at{' '}
+        <a
+          href="https://airtable.com/shrEs9XBHYuJxLEaP?prefill_Type=Befriender"
+          target="_blank"
+        >
           <Hover
             style={{
               ...styles.boxText,
-              fontWeight: 'bold',
-              padding: 0,
               color: colors.yellow,
+              fontWeight: 'bold',
               hover: { color: colors.yellowDark },
-              display: 'inline',
             }}
           >
             {({ hoverProps, style }) => (
-              <a href="mailto:info@hostnation.org.uk">
-                <Txt {...hoverProps} style={style}>
-                  info@hostnation.org.uk
-                </Txt>
-              </a>
+              <Txt {...hoverProps} style={style}>
+                London: Befriender Registration Form &raquo;
+              </Txt>
             )}
-          </Hover>{' '}
-          with a few details about who you are and where you live in London.
-        </Txt>
+          </Hover>
+        </a>
         <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>
           Many thanks, HostNation.
         </Txt>
