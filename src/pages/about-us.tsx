@@ -65,54 +65,70 @@ const Profile = r
     isOpen: false,
     toggleIsOpen: () => push({ isOpen: !props$(true).isOpen }),
   }))
-  .yield(({ image, name, role, bio, credit, isOpen, toggleIsOpen }: any) => (
-    <Div style={{ spacing: 30, width: 340 }}>
-      <Div
-        style={{
-          width: '100%',
-          verticalAlign: 'bottom',
-          spacing: 20,
-        }}
-      >
-        <Div style={{ layout: 'stack', spacing: 5 }}>
-          <img src={image} style={{ width: 340 }} />
-          {credit && (
-            <Txt style={{ ...styles.text, fontSize: 14 }}>{credit}</Txt>
-          )}
-        </Div>
-        <Div style={{ spacing: 10 }}>
-          <Txt
+  .yield(withWidth(340))
+  .yield(
+    ({
+      image,
+      name,
+      role,
+      bio,
+      credit,
+      isOpen,
+      toggleIsOpen,
+      small = true,
+      setWidthElem,
+    }: any) => (
+      <div ref={setWidthElem}>
+        <Div style={{ spacing: 30, width: '100%' }}>
+          <Div
             style={{
-              ...styles.text,
-              fontSize: 30,
-              color: colors.yellow,
-              fontWeight: 'bold',
+              width: small ? '100%' : 340,
+              maxWidth: 340,
+              verticalAlign: 'bottom',
+              spacing: 20,
             }}
           >
-            {name}
-          </Txt>
-          <Txt
-            style={{
-              ...styles.text,
-              fontSize: 24,
-              fontWeight: 'bold',
-            }}
-          >
-            {role}
-          </Txt>
-          <OpenButton color="purple" onClick={toggleIsOpen}>
-            {isOpen ? 'CLOSE' : 'READ MORE »'}
-          </OpenButton>
+            <Div style={{ layout: 'stack', spacing: 5 }}>
+              <img src={image} style={{ width: '100%' }} />
+              {credit && (
+                <Txt style={{ ...styles.text, fontSize: 14 }}>{credit}</Txt>
+              )}
+            </Div>
+            <Div style={{ spacing: 10 }}>
+              <Txt
+                style={{
+                  ...styles.text,
+                  fontSize: 30,
+                  color: colors.yellow,
+                  fontWeight: 'bold',
+                }}
+              >
+                {name}
+              </Txt>
+              <Txt
+                style={{
+                  ...styles.text,
+                  fontSize: 24,
+                  fontWeight: 'bold',
+                }}
+              >
+                {role}
+              </Txt>
+              <OpenButton color="purple" onClick={toggleIsOpen}>
+                {isOpen ? 'CLOSE' : 'READ MORE »'}
+              </OpenButton>
+            </Div>
+          </Div>
+          {isOpen &&
+            bio.map((text, i) => (
+              <Txt style={{ ...styles.boxText, padding: 0 }} key={i}>
+                {text}
+              </Txt>
+            ))}
         </Div>
-      </Div>
-      {isOpen &&
-        bio.map((text, i) => (
-          <Txt style={{ ...styles.boxText, padding: 0 }} key={i}>
-            {text}
-          </Txt>
-        ))}
-    </Div>
-  ));
+      </div>
+    ),
+  );
 
 const Profiles = r
   .yield(withWidth(750))
@@ -132,7 +148,7 @@ const Profiles = r
             spacing: 40,
             verticalAlign: 'top',
             margin: '0 auto',
-            width: small ? 340 : '100%',
+            maxWidth: small ? 340 : '100%',
           }}
         >
           <Profile
@@ -160,7 +176,7 @@ const Profiles = r
             spacing: 40,
             verticalAlign: 'top',
             margin: '0 auto',
-            width: small ? 340 : '100%',
+            maxWidth: small ? 340 : '100%',
           }}
         >
           <Profile
@@ -188,7 +204,7 @@ const Profiles = r
             spacing: 40,
             verticalAlign: 'top',
             margin: '0 auto',
-            width: small ? 340 : '100%',
+            maxWidth: small ? 340 : '100%',
           }}
         >
           <Profile
@@ -241,7 +257,7 @@ const Profiles = r
             spacing: 40,
             verticalAlign: 'top',
             margin: '0 auto',
-            width: small ? 340 : '100%',
+            maxWidth: small ? 340 : '100%',
           }}
         >
           <Profile
@@ -270,7 +286,7 @@ const Profiles = r
             spacing: 40,
             verticalAlign: 'top',
             margin: '0 auto',
-            width: small ? 340 : '100%',
+            maxWidth: small ? 340 : '100%',
           }}
         >
           <Profile
@@ -299,7 +315,7 @@ const Profiles = r
             spacing: 40,
             verticalAlign: 'top',
             margin: '0 auto',
-            width: small ? 340 : '100%',
+            maxWidth: small ? 340 : '100%',
           }}
         >
           <Profile
@@ -326,7 +342,7 @@ const Profiles = r
             spacing: 40,
             verticalAlign: 'top',
             margin: '0 auto',
-            width: small ? 340 : '100%',
+            maxWidth: small ? 340 : '100%',
           }}
         >
           <Profile
@@ -385,7 +401,7 @@ export default () => (
       <Box title="MEET THE TEAM BEHIND HOSTNATION">
         <Profiles />
       </Box>
-      <Div style={{ spacing: 25, background: 'white', padding: 50 }}>
+      <Div style={{ spacing: 25, background: 'white', padding: '50px 0' }}>
         <Div style={{ spacing: 25, maxWidth: 600, margin: '0 auto' }}>
           <Txt style={{ ...styles.title, fontSize: 30 }}>
             Loving the Stranger in the Time of Coronavirus: The HostNation Story
@@ -411,14 +427,16 @@ export default () => (
               </div>
             ),
           })}
-          <Button
-            to="/the-hostnation-story.pdf"
-            newTab
-            color="black"
-            style={{ margin: '0 auto' }}
-          >
-            READ THE BLOG
-          </Button>
+          <div style={{ padding: '0 15px' }}>
+            <Button
+              to="/the-hostnation-story.pdf"
+              newTab
+              color="black"
+              style={{ margin: '0 auto' }}
+            >
+              READ THE BLOG
+            </Button>
+          </div>
         </Div>
       </Div>
       <Div style={{ spacing: 25, background: 'white', padding: '50px 0' }}>
@@ -491,7 +509,11 @@ export default () => (
                     />
                     <img
                       src={cfLogo}
-                      style={{ height: 100, width: 'auto', margin: '0 auto' }}
+                      style={{
+                        height: small ? 80 : 100,
+                        width: 'auto',
+                        margin: '0 auto',
+                      }}
                     />
                   </Div>
                   <Div
@@ -526,7 +548,9 @@ export default () => (
               </div>
             ),
           })}
-          <Txt style={{ ...styles.boxText, paddingTop: 30 }}>
+          <Txt
+            style={{ ...styles.boxText, paddingTop: 30, textAlign: 'center' }}
+          >
             And thank you to the following people for giving us especially
             generous financial support or the benefit of your expertise (or
             both!):

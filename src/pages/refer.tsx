@@ -155,26 +155,30 @@ export default () => (
         <Txt style={styles.body}>
           Thank you for referring someone to HostNation
         </Txt>
-        <Button
-          to="https://airtable.com/shrUoKOEAjMBTsXiL?prefill_Type=Refugee&backgroundColor=orange"
-          newTab
-          color="purple"
-          style={{ margin: '0 auto' }}
-        >
-          London:
-          <br />
-          Referral Form
-        </Button>
-        <Button
-          to="https://airtable.com/shrP5uN9KbQWRarwV?prefill_Type=Refugee&backgroundColor=orange"
-          newTab
-          color="yellow"
-          style={{ margin: '0 auto' }}
-        >
-          North East:
-          <br />
-          Referral Form
-        </Button>
+        <div style={{ padding: '0 15px' }}>
+          <Button
+            to="https://airtable.com/shrUoKOEAjMBTsXiL?prefill_Type=Refugee&backgroundColor=orange"
+            newTab
+            color="purple"
+            style={{ margin: '0 auto', fontSize: 20 }}
+          >
+            London:
+            <br />
+            Referral Form
+          </Button>
+        </div>
+        <div style={{ padding: '0 15px' }}>
+          <Button
+            to="https://airtable.com/shrP5uN9KbQWRarwV?prefill_Type=Refugee&backgroundColor=orange"
+            newTab
+            color="yellow"
+            style={{ margin: '0 auto', fontSize: 20 }}
+          >
+            North East:
+            <br />
+            Referral Form
+          </Button>
+        </div>
       </Box>
 
       <Box title="HOSTNATION PRIVACY POLICY" toggle>

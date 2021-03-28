@@ -115,56 +115,60 @@ export default () => (
         <Txt style={styles.boxText}>
           Thank you for your interest in HostNation refugee befriending.
         </Txt>
-        <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
-          North East
-        </Txt>
-        <Txt style={styles.boxText}>
-          We are currently recruiting befrienders in the North East of England
-          to befriend asylum seekers and refugees living in Teesside. Please
-          click on the link below if you are interested in befriending in the
-          North East in 2021.
-        </Txt>
-        <a
-          href="https://airtable.com/shr1yuiiDpPylNm8u?prefill_Type=Befriender"
-          target="_blank"
-        >
-          <Hover
-            style={{
-              ...styles.boxText,
-              color: colors.yellow,
-              fontWeight: 'bold',
-              hover: { color: colors.yellowDark },
-            }}
+        <Div style={{ spacing: 15 }}>
+          <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+            North East
+          </Txt>
+          <Txt style={styles.boxText}>
+            We are currently recruiting befrienders in the North East of England
+            to befriend asylum seekers and refugees living in Teesside. Please
+            click on the link below if you are interested in befriending in the
+            North East in 2021.
+          </Txt>
+          <a
+            href="https://airtable.com/shr1yuiiDpPylNm8u?prefill_Type=Befriender"
+            target="_blank"
           >
-            {({ hoverProps, style }) => (
-              <Txt {...hoverProps} style={style}>
-                North East: Befriender Registration Form &raquo;
-              </Txt>
-            )}
-          </Hover>
-        </a>
-        <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
-          London
-        </Txt>
-        <a
-          href="https://airtable.com/shrEs9XBHYuJxLEaP?prefill_Type=Befriender"
-          target="_blank"
-        >
-          <Hover
-            style={{
-              ...styles.boxText,
-              color: colors.yellow,
-              fontWeight: 'bold',
-              hover: { color: colors.yellowDark },
-            }}
+            <Hover
+              style={{
+                ...styles.boxText,
+                color: colors.yellow,
+                fontWeight: 'bold',
+                hover: { color: colors.yellowDark },
+              }}
+            >
+              {({ hoverProps, style }) => (
+                <Txt {...hoverProps} style={style}>
+                  North East: Befriender Registration Form &raquo;
+                </Txt>
+              )}
+            </Hover>
+          </a>
+        </Div>
+        <Div style={{ spacing: 15 }}>
+          <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+            London
+          </Txt>
+          <a
+            href="https://airtable.com/shrEs9XBHYuJxLEaP?prefill_Type=Befriender"
+            target="_blank"
           >
-            {({ hoverProps, style }) => (
-              <Txt {...hoverProps} style={style}>
-                London: Befriender Registration Form &raquo;
-              </Txt>
-            )}
-          </Hover>
-        </a>
+            <Hover
+              style={{
+                ...styles.boxText,
+                color: colors.yellow,
+                fontWeight: 'bold',
+                hover: { color: colors.yellowDark },
+              }}
+            >
+              {({ hoverProps, style }) => (
+                <Txt {...hoverProps} style={style}>
+                  London: Befriender Registration Form &raquo;
+                </Txt>
+              )}
+            </Hover>
+          </a>
+        </Div>
         <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>
           Many thanks, HostNation.
         </Txt>
