@@ -113,8 +113,49 @@ export default () => (
 
       <Box title="BEFRIENDER REGISTRATION FORM" color="yellow">
         <Txt style={styles.boxText}>
-          Thank you for your interest in HostNation refugee befriending.
+          If you'd like to befriend an asylum seeker or refugee trying to find
+          their feet here in the UK, we would love to hear from you.
         </Txt>
+        <Txt style={styles.boxText}>
+          We ask for an initial commitment of three months, during which we
+          suggest a phone chat once a week and an outing at least once a
+          fortnight. This is your opportunity to show your befriendee around,
+          introduce them to free activities and help them participate more in UK
+          life. They’ll have the chance to get to know a friendly local and
+          practise their English. And you may find a real friend in the process!
+        </Txt>
+        <Div style={{ spacing: 15 }}>
+          <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+            London
+          </Txt>
+          <Txt style={styles.boxText}>
+            We have just re-opened registration in London and are currently
+            looking for friendship matches particularly for male refugees of all
+            ages and female refugees 40+. We also need befrienders across the
+            outer boroughs of London. Some of the refugees referred to us have
+            families, so it would also be great to hear from you if you’re a
+            parent and well versed in London’s fun opportunities for children.
+          </Txt>
+          <a
+            href="https://airtable.com/shrEs9XBHYuJxLEaP?prefill_Type=Befriender"
+            target="_blank"
+          >
+            <Hover
+              style={{
+                ...styles.boxText,
+                color: colors.yellow,
+                fontWeight: 'bold',
+                hover: { color: colors.yellowDark },
+              }}
+            >
+              {({ hoverProps, style }) => (
+                <Txt {...hoverProps} style={style}>
+                  London: Befriender Registration Form &raquo;
+                </Txt>
+              )}
+            </Hover>
+          </a>
+        </Div>
         <Div style={{ spacing: 15 }}>
           <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
             North East
@@ -145,30 +186,7 @@ export default () => (
             </Hover>
           </a>
         </Div>
-        <Div style={{ spacing: 15 }}>
-          <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
-            London
-          </Txt>
-          <a
-            href="https://airtable.com/shrEs9XBHYuJxLEaP?prefill_Type=Befriender"
-            target="_blank"
-          >
-            <Hover
-              style={{
-                ...styles.boxText,
-                color: colors.yellow,
-                fontWeight: 'bold',
-                hover: { color: colors.yellowDark },
-              }}
-            >
-              {({ hoverProps, style }) => (
-                <Txt {...hoverProps} style={style}>
-                  London: Befriender Registration Form &raquo;
-                </Txt>
-              )}
-            </Hover>
-          </a>
-        </Div>
+
         <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>
           Many thanks, HostNation.
         </Txt>

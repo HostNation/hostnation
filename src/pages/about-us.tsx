@@ -13,6 +13,7 @@ import * as cfLogo from '../img/logos/cf.png';
 import * as molLogo from '../img/logos/mol.png';
 import * as cbtLogo from '../img/logos/cbt.jpg';
 import * as sseLogo from '../img/logos/sse.jpg';
+import * as ggLogo from '../img/logos/gg.png';
 
 import * as anneke from '../img/team/anneke.jpg';
 import * as rossana from '../img/team/rossana.png';
@@ -467,7 +468,9 @@ export default () => (
             The National Lottery/DCMS provided emergency Covid-19 funding
             through the Coronavirus Community Support Fund (CCSF). By the end of
             2020 we also had confirmation of three years funding from City
-            Bridge Trust.
+            Bridge Trust. In 2021 GiffGaff partnered with us to help tackle
+            digital exclusion amongst refugees with a generous package of
+            hardware and data support.
           </Txt>
           <Txt style={styles.boxText}>
             Thank you to all our funders for believing in us and the work we do.
@@ -542,6 +545,10 @@ export default () => (
                     <img
                       src={molLogo}
                       style={{ height: 45, width: 'auto', margin: '0 auto' }}
+                    />
+                    <img
+                      src={ggLogo}
+                      style={{ height: 100, width: 'auto', margin: '0 auto' }}
                     />
                   </Div>
                 </Div>

@@ -130,7 +130,7 @@ export default () => (
         <Div style={{ spacing: 25 }}>
           <Txt style={styles.body}>
             To get a feel for befriending watch our short films starring Suzy,
-            Hakim, Sue and Julie:
+            Hakim, Sue and Julie produced by Toby Elwes:
           </Txt>
           <Txt style={styles.body}>
             Film 1: “Befriending is an amazing thing to do.”
