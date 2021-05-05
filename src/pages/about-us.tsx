@@ -468,7 +468,7 @@ export default () => (
             The National Lottery/DCMS provided emergency Covid-19 funding
             through the Coronavirus Community Support Fund (CCSF). By the end of
             2020 we also had confirmation of three years funding from City
-            Bridge Trust. In 2021 GiffGaff partnered with us to help tackle
+            Bridge Trust. In 2021 giffgaff partnered with us to help tackle
             digital exclusion amongst refugees with a generous package of
             hardware and data support.
           </Txt>
