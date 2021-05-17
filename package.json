@@ -9,36 +9,21 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "prettier": "prettier --write \"src/**/*.{ts,tsx}\""
-  },
-  "babel": {
-    "presets": [
-      "env",
-      "stage-0"
-    ]
+    "clean": "gatsby clean",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
-    "@types/react": "^16.4.11",
-    "@types/react-dom": "^16.0.7",
-    "@types/react-router-dom": "^4.3.0",
-    "babel-polyfill": "^6.26.0",
-    "elmnt": "^0.6.5",
-    "fast-memoize": "^2.5.1",
-    "gatsby": "^1.9.277",
-    "gatsby-link": "^1.6.46",
-    "gatsby-plugin-create-client-paths": "^1.0.8",
-    "gatsby-plugin-react-helmet": "^2.0.11",
-    "gatsby-plugin-react-next": "^1.0.11",
-    "gatsby-plugin-typescript": "^1.4.20",
-    "moment": "^2.22.2",
-    "node-fetch": "^2.2.0",
-    "prettier": "^1.14.2",
-    "react-helmet": "^5.2.0",
-    "react-router-dom": "^4.3.1",
-    "refluent": "^0.2.0",
-    "rgo": "^0.3.13",
-    "style-transform": "^0.2.2",
-    "typescript": "^3.0.1",
-    "whatwg-fetch": "^2.0.4"
+    "css-shorthand-expand": "^1.2.0",
+    "gatsby": "^3.5.0",
+    "gatsby-plugin-react-helmet": "^4.5.0",
+    "object-path-immutable": "^4.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "use-resize-observer": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^6.1.1",
+    "prettier": "2.3.0"
   }
 }

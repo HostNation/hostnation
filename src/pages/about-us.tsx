@@ -1,139 +1,122 @@
-import * as React from 'react';
-import r from 'refluent';
-import { Div, Txt } from 'elmnt';
+import React from 'react';
 import Helmet from 'react-helmet';
-import { restyle, watchHover, withWidth } from '../common-client';
 
-import * as logoWide from '../img/logo-wide.png';
-import * as crLogo from '../img/logos/cr.png';
-import * as lcfLogo from '../img/logos/lcf.jpg';
-import * as phfLogo from '../img/logos/phf.jpg';
-import * as tflLogo from '../img/logos/tfl.png';
-import * as cfLogo from '../img/logos/cf.png';
-import * as molLogo from '../img/logos/mol.png';
-import * as cbtLogo from '../img/logos/cbt.jpg';
-import * as sseLogo from '../img/logos/sse.jpg';
-import * as ggLogo from '../img/logos/gg.png';
+import logoWide from '../img/logo-wide.png';
+import crLogo from '../img/logos/cr.png';
+import lcfLogo from '../img/logos/lcf.jpg';
+import phfLogo from '../img/logos/phf.jpg';
+import tflLogo from '../img/logos/tfl.png';
+import cfLogo from '../img/logos/cf.png';
+import molLogo from '../img/logos/mol.png';
+import cbtLogo from '../img/logos/cbt.jpg';
+import sseLogo from '../img/logos/sse.jpg';
+import ggLogo from '../img/logos/gg.png';
 
-import * as anneke from '../img/team/anneke.jpg';
-import * as rossana from '../img/team/rossana.png';
-import * as anthony from '../img/team/anthony.png';
-import * as magda from '../img/team/magda.png';
-import * as peteBini from '../img/team/pete-bini.jpg';
-import * as danny from '../img/team/danny.png';
-import * as dina from '../img/team/dina.png';
-import * as emiljan from '../img/team/emiljan.jpg';
-import * as joanna from '../img/team/joanna.png';
-import * as olivia from '../img/team/olivia.jpg';
-import * as jon from '../img/team/jon.png';
-import * as claudia from '../img/team/claudia.png';
-import * as harriet from '../img/team/harriet.jpg';
-import * as abu from '../img/team/abu.png';
+import anneke from '../img/team/anneke.jpg';
+import rossana from '../img/team/rossana.png';
+import anthony from '../img/team/anthony.png';
+import magda from '../img/team/magda.png';
+import peteBini from '../img/team/pete-bini.jpg';
+import danny from '../img/team/danny.png';
+import dina from '../img/team/dina.png';
+import emiljan from '../img/team/emiljan.jpg';
+import joanna from '../img/team/joanna.png';
+import olivia from '../img/team/olivia.jpg';
+import jon from '../img/team/jon.png';
+import claudia from '../img/team/claudia.png';
+import harriet from '../img/team/harriet.jpg';
+import abu from '../img/team/abu.png';
 
-import * as anthonyStory from '../img/anthony-story.png';
+import anthonyStory from '../img/anthony-story.png';
 
+import { Div, Txt } from '../core/elements';
+import st from '../core/style-transform';
+import { useHover, useToggle, useWidth } from '../core/utils';
 import Box from '../core/Box';
 import Button from '../core/Button';
+import Layout from '../core/Layout';
 import styles, { colors } from '../core/styles';
 
-const OpenButton = r
-  .do(watchHover)
-  .do(
-    restyle('color', 'isHovered', (color, isHovered, style) =>
-      style
-        .defaults(styles.button(color))
-        .mergeKeys({ hover: isHovered })
-        .merge({
-          padding: 5,
-          fontSize: 16,
-          display: 'inline-block',
-          width: 150,
-        }),
-    ),
-  )
-  .yield(({ onClick, style, hoverProps, children }) => (
+const OpenButton = ({ onClick, color, children }) => {
+  const [isHovered, hoverProps] = useHover();
+  const buttonStyle = st(styles.button(color) as any)
+    .mergeKeys({ hover: isHovered })
+    .merge({
+      padding: 5,
+      fontSize: 16,
+      display: 'inline-block',
+      width: 150,
+    });
+  return (
     <Txt
       onClick={onClick}
       {...hoverProps}
-      style={{ ...style, padding: 5, fontSize: 16 }}
+      style={{ ...buttonStyle, padding: 5, fontSize: 16 }}
     >
       {children}
     </Txt>
-  ));
-
-const Profile = r
-  .do((props$, push) => ({
-    isOpen: false,
-    toggleIsOpen: () => push({ isOpen: !props$(true).isOpen }),
-  }))
-  .yield(withWidth(340))
-  .yield(
-    ({
-      image,
-      name,
-      role,
-      bio,
-      credit,
-      isOpen,
-      toggleIsOpen,
-      small = true,
-      setWidthElem,
-    }: any) => (
-      <div ref={setWidthElem}>
-        <Div style={{ spacing: 30, width: '100%' }}>
-          <Div
-            style={{
-              width: small ? '100%' : 340,
-              maxWidth: 340,
-              verticalAlign: 'bottom',
-              spacing: 20,
-            }}
-          >
-            <Div style={{ layout: 'stack', spacing: 5 }}>
-              <img src={image} style={{ width: '100%' }} />
-              {credit && (
-                <Txt style={{ ...styles.text, fontSize: 14 }}>{credit}</Txt>
-              )}
-            </Div>
-            <Div style={{ spacing: 10 }}>
-              <Txt
-                style={{
-                  ...styles.text,
-                  fontSize: 30,
-                  color: colors.yellow,
-                  fontWeight: 'bold',
-                }}
-              >
-                {name}
-              </Txt>
-              <Txt
-                style={{
-                  ...styles.text,
-                  fontSize: 24,
-                  fontWeight: 'bold',
-                }}
-              >
-                {role}
-              </Txt>
-              <OpenButton color="purple" onClick={toggleIsOpen}>
-                {isOpen ? 'CLOSE' : 'READ MORE »'}
-              </OpenButton>
-            </Div>
-          </Div>
-          {isOpen &&
-            bio.map((text, i) => (
-              <Txt style={{ ...styles.boxText, padding: 0 }} key={i}>
-                {text}
-              </Txt>
-            ))}
-        </Div>
-      </div>
-    ),
   );
+};
 
-const Profiles = r
-  .yield(withWidth(750))
-  .yield(({ small = true, setWidthElem }) => (
+const Profile = ({ image, name, role, bio, credit }: any) => {
+  const [setWidthElem, small] = useWidth(340);
+  const [isOpen, toggleIsOpen] = useToggle();
+  return (
+    <div ref={setWidthElem}>
+      <Div style={{ spacing: 30, width: '100%' }}>
+        <Div
+          style={{
+            width: small ? '100%' : 340,
+            maxWidth: 340,
+            verticalAlign: 'bottom',
+            spacing: 20,
+          }}
+        >
+          <Div style={{ layout: 'stack', spacing: 5 }}>
+            <img src={image} style={{ width: '100%' }} />
+            {credit && (
+              <Txt style={{ ...styles.text, fontSize: 14 }}>{credit}</Txt>
+            )}
+          </Div>
+          <Div style={{ spacing: 10 }}>
+            <Txt
+              style={{
+                ...styles.text,
+                fontSize: 30,
+                color: colors.yellow,
+                fontWeight: 'bold',
+              }}
+            >
+              {name}
+            </Txt>
+            <Txt
+              style={{
+                ...styles.text,
+                fontSize: 24,
+                fontWeight: 'bold',
+              }}
+            >
+              {role}
+            </Txt>
+            <OpenButton color="purple" onClick={toggleIsOpen}>
+              {isOpen ? 'CLOSE' : 'READ MORE »'}
+            </OpenButton>
+          </Div>
+        </Div>
+        {isOpen &&
+          bio.map((text, i) => (
+            <Txt style={{ ...styles.boxText, padding: 0 }} key={i}>
+              {text}
+            </Txt>
+          ))}
+      </Div>
+    </div>
+  );
+};
+
+const Profiles = () => {
+  const [setWidthElem, small = true] = useWidth(750);
+  return (
     <div ref={setWidthElem}>
       <Div
         style={{
@@ -367,10 +350,116 @@ const Profiles = r
         </Div>
       </Div>
     </div>
-  ));
+  );
+};
+
+const BlogChunk = () => {
+  const [setWidthElem, small = false] = useWidth(550);
+  return (
+    <div ref={setWidthElem}>
+      <Div
+        style={{
+          layout: small ? 'stack' : 'bar',
+          spacing: small ? 25 : 40,
+        }}
+      >
+        <div style={{ width: 200, margin: '0 auto' }}>
+          <img src={anthonyStory} />
+        </div>
+        <Txt style={styles.boxText}>
+          Anthony Berman gives a personal account of HostNation, before and
+          after COVID-19, and the benefits it has brought to refugees and asylum
+          seekers and their befrienders.
+        </Txt>
+      </Div>
+    </div>
+  );
+};
+
+const LogosChunk = () => {
+  const [setWidthElem, small = false] = useWidth(700);
+  return (
+    <div ref={setWidthElem}>
+      <Div style={{ layout: 'stack', spacing: 25, paddingTop: 20 }}>
+        <Div
+          style={{
+            layout: small ? 'stack' : 'bar',
+            spacing: 25,
+            margin: '0 auto',
+          }}
+        >
+          <img
+            src={phfLogo}
+            style={{ height: 80, width: 'auto', margin: '0 auto' }}
+          />
+          <img
+            src={lcfLogo}
+            style={{ height: 100, width: 'auto', margin: '0 auto' }}
+          />
+          <img
+            src={crLogo}
+            style={{ height: 100, width: 'auto', margin: '0 auto' }}
+          />
+        </Div>
+        <Div
+          style={{
+            layout: small ? 'stack' : 'bar',
+            spacing: 25,
+            margin: '0 auto',
+          }}
+        >
+          <img
+            src={tflLogo}
+            style={{ height: 100, width: 'auto', margin: '0 auto' }}
+          />
+          <img
+            src={cfLogo}
+            style={{
+              height: small ? 80 : 100,
+              width: 'auto',
+              margin: '0 auto',
+            }}
+          />
+        </Div>
+        <Div
+          style={{
+            layout: small ? 'stack' : 'bar',
+            spacing: 25,
+            margin: '0 auto',
+          }}
+        >
+          <img
+            src={cbtLogo}
+            style={{ height: 100, width: 'auto', margin: '0 auto' }}
+          />
+          <img
+            src={sseLogo}
+            style={{ height: 100, width: 'auto', margin: '0 auto' }}
+          />
+        </Div>
+        <Div
+          style={{
+            layout: small ? 'stack' : 'bar',
+            spacing: 25,
+            margin: '0 auto',
+          }}
+        >
+          <img
+            src={molLogo}
+            style={{ height: 45, width: 'auto', margin: '0 auto' }}
+          />
+          <img
+            src={ggLogo}
+            style={{ height: 100, width: 'auto', margin: '0 auto' }}
+          />
+        </Div>
+      </Div>
+    </div>
+  );
+};
 
 export default () => (
-  <>
+  <Layout location="/about-us">
     <Helmet title="About Us | HostNation" />
     <Div style={{ spacing: 50, padding: '50px 0' }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
@@ -407,27 +496,7 @@ export default () => (
           <Txt style={{ ...styles.title, fontSize: 30 }}>
             Loving the Stranger in the Time of Coronavirus: The HostNation Story
           </Txt>
-          {withWidth(550)({
-            next: ({ small = false, setWidthElem }) => (
-              <div ref={setWidthElem}>
-                <Div
-                  style={{
-                    layout: small ? 'stack' : 'bar',
-                    spacing: small ? 25 : 40,
-                  }}
-                >
-                  <div style={{ width: 200, margin: '0 auto' }}>
-                    <img src={anthonyStory} />
-                  </div>
-                  <Txt style={styles.boxText}>
-                    Anthony Berman gives a personal account of HostNation,
-                    before and after COVID-19, and the benefits it has brought
-                    to refugees and asylum seekers and their befrienders.
-                  </Txt>
-                </Div>
-              </div>
-            ),
-          })}
+          <BlogChunk />
           <div style={{ padding: '0 15px' }}>
             <Button
               to="/the-hostnation-story.pdf"
@@ -475,86 +544,7 @@ export default () => (
           <Txt style={styles.boxText}>
             Thank you to all our funders for believing in us and the work we do.
           </Txt>
-          {withWidth(700)({
-            next: ({ small = false, setWidthElem }) => (
-              <div ref={setWidthElem}>
-                <Div style={{ layout: 'stack', spacing: 25, paddingTop: 20 }}>
-                  <Div
-                    style={{
-                      layout: small ? 'stack' : 'bar',
-                      spacing: 25,
-                      margin: '0 auto',
-                    }}
-                  >
-                    <img
-                      src={phfLogo}
-                      style={{ height: 80, width: 'auto', margin: '0 auto' }}
-                    />
-                    <img
-                      src={lcfLogo}
-                      style={{ height: 100, width: 'auto', margin: '0 auto' }}
-                    />
-                    <img
-                      src={crLogo}
-                      style={{ height: 100, width: 'auto', margin: '0 auto' }}
-                    />
-                  </Div>
-                  <Div
-                    style={{
-                      layout: small ? 'stack' : 'bar',
-                      spacing: 25,
-                      margin: '0 auto',
-                    }}
-                  >
-                    <img
-                      src={tflLogo}
-                      style={{ height: 100, width: 'auto', margin: '0 auto' }}
-                    />
-                    <img
-                      src={cfLogo}
-                      style={{
-                        height: small ? 80 : 100,
-                        width: 'auto',
-                        margin: '0 auto',
-                      }}
-                    />
-                  </Div>
-                  <Div
-                    style={{
-                      layout: small ? 'stack' : 'bar',
-                      spacing: 25,
-                      margin: '0 auto',
-                    }}
-                  >
-                    <img
-                      src={cbtLogo}
-                      style={{ height: 100, width: 'auto', margin: '0 auto' }}
-                    />
-                    <img
-                      src={sseLogo}
-                      style={{ height: 100, width: 'auto', margin: '0 auto' }}
-                    />
-                  </Div>
-                  <Div
-                    style={{
-                      layout: small ? 'stack' : 'bar',
-                      spacing: 25,
-                      margin: '0 auto',
-                    }}
-                  >
-                    <img
-                      src={molLogo}
-                      style={{ height: 45, width: 'auto', margin: '0 auto' }}
-                    />
-                    <img
-                      src={ggLogo}
-                      style={{ height: 100, width: 'auto', margin: '0 auto' }}
-                    />
-                  </Div>
-                </Div>
-              </div>
-            ),
-          })}
+          <LogosChunk />
           <Txt
             style={{ ...styles.boxText, paddingTop: 30, textAlign: 'center' }}
           >
@@ -596,5 +586,5 @@ export default () => (
         </Div>
       </Div>
     </Div>
-  </>
+  </Layout>
 );

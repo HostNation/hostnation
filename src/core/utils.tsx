@@ -1,6 +1,41 @@
-import { css } from 'elmnt';
+import React, { useState } from 'react';
+import useResizeObserver from 'use-resize-observer';
 
-export default `
+import { css } from './elements';
+
+export const useToggle = () => {
+  const [isToggled, setIsToggled] = useState(false);
+  return [isToggled, () => setIsToggled(!isToggled), setIsToggled] as any;
+};
+
+export const useHover = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const hoverProps = {
+    onMouseMove: () => setIsHovered(true),
+    onMouseLeave: () => setIsHovered(false),
+  };
+  return [isHovered, hoverProps] as any;
+};
+
+export const useWidth = (toggleWidth) => {
+  const { ref, width } = useResizeObserver();
+  return [ref, width && width <= toggleWidth] as any;
+};
+
+export const StickyFooter = ({ content, footer }) => {
+  const { ref, height = 0 } = useResizeObserver();
+  return (
+    <>
+      <div style={{ minHeight: '100%', marginBottom: -height }}>
+        {content}
+        <div style={{ height: height }} />
+      </div>
+      <div ref={ref}>{footer}</div>
+    </>
+  );
+};
+
+export const cssBase = `
 html,
 body,
 div,

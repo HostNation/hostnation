@@ -1,21 +1,21 @@
-import * as React from 'react';
-import { Div, Hover, Icon, Txt } from 'elmnt';
-import r from 'refluent';
-import { watchHover, withWidth } from '../common-client';
+import React from 'react';
 
-import { Link } from './router';
+import { Div, Hover, Icon, Txt } from './elements';
+import { useHover, useToggle, useWidth } from './utils';
+
+import Link from './Link';
 import styles, { colors, icons } from './styles';
 
-const textStyle = active => ({
+const textStyle = (active) => ({
   ...styles.text,
   color: active ? 'white' : '#f2f2f2',
   fontSize: 18,
   fontWeight: 'normal' as 'normal',
 });
 
-const MenuLink = r
-  .do(watchHover)
-  .yield(({ text, to, newTab, active, setClosed, isHovered, hoverProps }) => (
+const MenuLink = ({ text, to, newTab, active, setClosed }: any) => {
+  const [isHovered, hoverProps] = useHover();
+  return (
     <Link
       to={to}
       newTab={newTab}
@@ -42,22 +42,15 @@ const MenuLink = r
         <Txt style={textStyle(isHovered || active === to)}>{text}</Txt>
       </div>
     </Link>
-  ));
+  );
+};
 
-export default r
-  .yield(withWidth(800))
-  .do('small', (small = true) => ({ small }))
-  .do((props$, push) => ({
-    isOpen: false,
-    toggle: () => push({ isOpen: !props$(true).isOpen }),
-    setClosed: () => push({ isOpen: false }),
-  }))
-  .do(
-    ({ small, isOpen }) => !small && isOpen,
-    'setClosed',
-    (shouldClose, setClosed) => shouldClose && setTimeout(setClosed),
-  )
-  .yield(({ active, isOpen, toggle, setClosed, small, setWidthElem }) => (
+export default ({ active }: any) => {
+  const [setWidthElem, small = true] = useWidth(800);
+  const [isOpen, toggle, setIsOpen] = useToggle();
+  const setClosed = () => setIsOpen(false);
+  if (!small && isOpen) setTimeout(setClosed);
+  return (
     <div
       style={{
         background: colors.black,
@@ -238,4 +231,5 @@ export default r
         )}
       </Div>
     </div>
-  ));
+  );
+};

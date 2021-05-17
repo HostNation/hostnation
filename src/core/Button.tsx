@@ -1,34 +1,35 @@
-import * as React from 'react';
-import r from 'refluent';
-import { Txt } from 'elmnt';
-import { restyle, watchHover } from '../common-client';
+import React from 'react';
 
-import { Link } from './router';
+import { Txt } from './elements';
+import st from './style-transform';
+import { useHover } from './utils';
+
+import Link from './Link';
 import styles from './styles';
 
-export default r
-  .do(watchHover)
-  .do(
-    restyle('color', 'isHovered', (color, isHovered, style) =>
-      style.defaults(styles.button(color)).mergeKeys({ hover: isHovered }),
-    ),
-  )
-  .yield(({ to, newTab, onClick, style, hoverProps, children }) =>
-    !to || onClick ? (
+export default ({ to, newTab, onClick, color, style, children }: any) => {
+  const [isHovered, hoverProps] = useHover();
+  const buttonStyle = st(style)
+    .defaults(styles.button(color) as any)
+    .mergeKeys({ hover: isHovered });
+  if (!to || onClick) {
+    return (
       <div style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}>
-        <Txt onClick={onClick} {...hoverProps} style={style}>
+        <Txt onClick={onClick} {...hoverProps} style={buttonStyle}>
           {children}
         </Txt>
       </div>
-    ) : (
-      <Link
-        to={to}
-        newTab={newTab}
-        style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
-      >
-        <Txt {...hoverProps} style={style}>
-          {children}
-        </Txt>
-      </Link>
-    ),
+    );
+  }
+  return (
+    <Link
+      to={to}
+      newTab={newTab}
+      style={{ display: 'block', maxWidth: 360, margin: '0 auto' }}
+    >
+      <Txt {...hoverProps} style={buttonStyle}>
+        {children}
+      </Txt>
+    </Link>
   );
+};

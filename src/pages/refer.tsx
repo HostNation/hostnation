@@ -1,55 +1,18 @@
-import * as React from 'react';
-// import r from 'refluent';
-import { Div, Hover, Txt } from 'elmnt';
+import React from 'react';
 import Helmet from 'react-helmet';
 
-import * as logoWide from '../img/logo-wide.png';
-import * as bettinaQuote from '../img/quotes/quote-bettina.png';
-import * as orlaQuote from '../img/quotes/quote-orla.png';
+import logoWide from '../img/logo-wide.png';
+import bettinaQuote from '../img/quotes/quote-bettina.png';
+import orlaQuote from '../img/quotes/quote-orla.png';
 
-// import referBlocks from '../blocks/refer';
+import { Div, Hover, Txt } from '../core/elements';
 import Box from '../core/Box';
 import Button from '../core/Button';
-// import Forms from '../core/Forms';
+import Layout from '../core/Layout';
 import styles, { colors } from '../core/styles';
 
-// const ReferForm = r
-//   .do((_, push) => ({
-//     complete: false,
-//     onSubmit: () => push({ complete: true }),
-//   }))
-//   .yield(
-//     ({ onSubmit, complete }) =>
-//       complete ? (
-//         <Txt
-//           style={{
-//             ...styles.base,
-//             fontSize: 30,
-//             lineHeight: '40px',
-//             fontWeight: 'bold',
-//             textAlign: 'center',
-//             padding: '50px 0',
-//             color: colors.purple,
-//           }}
-//         >
-//           Thanks for completing your referral, we’ll be in touch soon!
-//         </Txt>
-//       ) : (
-//         <Forms.Purple
-//           objects={{
-//             refugee: {
-//               type: 'refugees',
-//               initial: { mapaddress: null },
-//             },
-//           }}
-//           blocks={referBlocks()}
-//           onSubmit={onSubmit}
-//         />
-//       ),
-//   );
-
 export default () => (
-  <>
+  <Layout location="/refer">
     <Helmet title="Refer | HostNation" />
     <Div style={{ spacing: 50, paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
@@ -144,13 +107,6 @@ export default () => (
 
       <img src={bettinaQuote} />
 
-      {/* <Box title="REFUGEE & REFERRER REGISTRATION FORM" color="purple">
-        <Txt style={styles.boxText}>
-          Due to the Coronavirus we are not taking referrals or making new
-          matches until further notice.
-        </Txt>
-      </Box> */}
-
       <Box title="REFUGEE & REFERRER REGISTRATION FORMS" color="purple">
         <Txt style={styles.body}>
           Thank you for referring someone to HostNation
@@ -218,5 +174,5 @@ export default () => (
 
       <img src={orlaQuote} />
     </Div>
-  </>
+  </Layout>
 );

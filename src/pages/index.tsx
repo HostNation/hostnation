@@ -1,61 +1,120 @@
-import * as React from 'react';
-import { Div, Hover, Icon, Txt } from 'elmnt';
+import React from 'react';
 import Helmet from 'react-helmet';
-import { withWidth } from '../common-client';
 
-import * as logoWide from '../img/logo-wide.png';
+import logoWide from '../img/logo-wide.png';
 
-import * as quoteImg from '../img/quotes/quote-jack.png';
-import * as partyImg from '../img/party.png';
-import * as statsImg from '../img/stats.png';
+import quoteImg from '../img/quotes/quote-jack.png';
+import partyImg from '../img/party.png';
+import statsImg from '../img/stats.png';
 
-import * as contactIcon from '../img/icons/contact.png';
-import * as guideIcon from '../img/icons/guide.png';
-import * as linksIcon from '../img/icons/links.png';
+import contactIcon from '../img/icons/contact.png';
+import guideIcon from '../img/icons/guide.png';
+import linksIcon from '../img/icons/links.png';
 
+import { Div, Hover, Icon, Txt } from '../core/elements';
 import Button from '../core/Button';
+import Layout from '../core/Layout';
 import styles, { colors, icons } from '../core/styles';
+import { useWidth } from '../core/utils';
+
+const TopButtons = () => {
+  const [setWidthElem, small = false] = useWidth(700);
+  return (
+    <div ref={setWidthElem}>
+      <Div
+        style={{
+          layout: small ? 'stack' : 'bar',
+          width: '100%',
+          spacing: small ? 30 : 50,
+        }}
+      >
+        <div>
+          <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
+        </div>
+        <Div style={{ width: 250, spacing: 10, margin: '0 auto' }}>
+          <Button
+            to="/befriend"
+            color="yellow"
+            style={{ fontSize: 20, padding: 10 }}
+          >
+            BEFRIEND A REFUGEE
+          </Button>
+          <Button
+            to="/refer"
+            color="purple"
+            style={{ fontSize: 20, padding: 10 }}
+          >
+            REFER A REFUGEE
+          </Button>
+        </Div>
+      </Div>
+    </div>
+  );
+};
+
+const IntroText = () => {
+  const [setWidthElem, small = false] = useWidth(700);
+  return (
+    <div ref={setWidthElem}>
+      <Txt
+        style={{
+          ...styles.body,
+          fontSize: small ? 20 : 24,
+          padding: '0 15px',
+        }}
+      >
+        We are a city &amp; town-based introductory service connecting residents
+        to refugees through small acts of kindness, inclusion and friendship. As
+        a result of Covid we now offer ‘smart’ befriending, with first steps
+        taking place online. Regular video-calls are followed by one-to-one
+        meet-ups when covid restrictions allow. We ask for a minimum commitment
+        of three months but many matches become firm friends.
+      </Txt>
+    </div>
+  );
+};
+
+const MoreInfo = () => {
+  const [setWidthElem, small = false] = useWidth(700);
+  return (
+    <div ref={setWidthElem}>
+      <Div
+        style={{
+          spacing: 15,
+          layout: small ? 'stack' : 'bar',
+          margin: '0 auto',
+        }}
+      >
+        <Button
+          to="/hostnation-annual-report.pdf"
+          newTab
+          color="black"
+          style={{ width: 320, fontSize: 20, margin: '0 auto' }}
+        >
+          Read our latest
+          <br />
+          annual report
+        </Button>
+        <Button
+          to="mailto:info@hostnation.org.uk"
+          newTab
+          color="black"
+          style={{ width: 320, fontSize: 20, margin: '0 auto' }}
+        >
+          info@hostnation.org.uk
+          <br />
+          for updates or enquiries
+        </Button>
+      </Div>
+    </div>
+  );
+};
 
 export default () => (
-  <>
+  <Layout>
     <Helmet title="HostNation | Helping refugees through friendship" />
     <Div style={{ spacing: 50, padding: '50px 0' }}>
-      {withWidth(700)({
-        next: ({ small = false, setWidthElem }) => (
-          <div ref={setWidthElem}>
-            <Div
-              style={{
-                layout: small ? 'stack' : 'bar',
-                width: '100%',
-                spacing: small ? 30 : 50,
-              }}
-            >
-              <div>
-                <img
-                  src={logoWide}
-                  style={{ maxWidth: 600, margin: '0 auto' }}
-                />
-              </div>
-              <Div style={{ width: 250, spacing: 10, margin: '0 auto' }}>
-                <Button
-                  to="/befriend"
-                  color="yellow"
-                  style={{ fontSize: 20, padding: 10 }}
-                >
-                  BEFRIEND A REFUGEE
-                </Button>
-                <Button
-                  to="/refer"
-                  color="purple"
-                  style={{ fontSize: 20, padding: 10 }}
-                >
-                  REFER A REFUGEE
-                </Button>
-              </Div>
-            </Div>
-          </div>
-        ),
-      })}
+      <TopButtons />
       <Div style={{ spacing: 20 }}>
         <Txt
           style={{
@@ -77,28 +136,7 @@ export default () => (
       <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ spacing: 50, background: 'white' }}>
         <img src={partyImg} />
-
-        {withWidth(700)({
-          next: ({ small = false, setWidthElem }) => (
-            <div ref={setWidthElem}>
-              <Txt
-                style={{
-                  ...styles.body,
-                  fontSize: small ? 20 : 24,
-                  padding: '0 15px',
-                }}
-              >
-                We are a city &amp; town-based introductory service connecting
-                residents to refugees through small acts of kindness, inclusion
-                and friendship. As a result of Covid we now offer ‘smart’
-                befriending, with first steps taking place online. Regular
-                video-calls are followed by one-to-one meet-ups when covid
-                restrictions allow. We ask for a minimum commitment of three
-                months but many matches become firm friends.
-              </Txt>
-            </div>
-          ),
-        })}
+        <IntroText />
         <img src={statsImg} style={{ maxWidth: 600, margin: '0 auto 50px' }} />
       </Div>
       <Div style={{ spacing: 25 }}>
@@ -216,40 +254,7 @@ export default () => (
         <Txt style={{ ...styles.title, fontSize: 30 }}>
           For more information on HostNation:
         </Txt>
-        {withWidth(700)({
-          next: ({ small = false, setWidthElem }) => (
-            <div ref={setWidthElem}>
-              <Div
-                style={{
-                  spacing: 15,
-                  layout: small ? 'stack' : 'bar',
-                  margin: '0 auto',
-                }}
-              >
-                <Button
-                  to="/hostnation-annual-report.pdf"
-                  newTab
-                  color="black"
-                  style={{ width: 320, fontSize: 20, margin: '0 auto' }}
-                >
-                  Read our latest
-                  <br />
-                  annual report
-                </Button>
-                <Button
-                  to="mailto:info@hostnation.org.uk"
-                  newTab
-                  color="black"
-                  style={{ width: 320, fontSize: 20, margin: '0 auto' }}
-                >
-                  info@hostnation.org.uk
-                  <br />
-                  for updates or enquiries
-                </Button>
-              </Div>
-            </div>
-          ),
-        })}
+        <MoreInfo />
       </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <Div style={{ spacing: 25 }}>
@@ -344,5 +349,5 @@ export default () => (
         </Div>
       </Div>
     </Div>
-  </>
+  </Layout>
 );

@@ -1,18 +1,19 @@
-import * as React from 'react';
-import { Div, Txt } from 'elmnt';
+import React from 'react';
 import Helmet from 'react-helmet';
 
-import * as logoWide from '../img/logo-wide.png';
-import * as maryAmira from '../img/banners/mary-amira.png';
-import * as johnAmin from '../img/banners/john-amin.png';
-import * as yvette from '../img/quotes/quote-yvette.png';
+import logoWide from '../img/logo-wide.png';
+import maryAmira from '../img/banners/mary-amira.png';
+import johnAmin from '../img/banners/john-amin.png';
+import yvette from '../img/quotes/quote-yvette.png';
 
+import { Div, Txt } from '../core/elements';
 import Box from '../core/Box';
-import { Link } from '../core/router';
+import Layout from '../core/Layout';
+import Link from '../core/Link';
 import styles, { colors } from '../core/styles';
 
 export default () => (
-  <>
+  <Layout location="refugee">
     <Helmet title="Befriend | HostNation" />
     <Div style={{ paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
@@ -168,5 +169,5 @@ export default () => (
       </Div>
       <img src={yvette} />
     </Div>
-  </>
+  </Layout>
 );
