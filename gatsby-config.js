@@ -1,3 +1,16 @@
 module.exports = {
-  plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-netlify-cms'],
+  siteMetadata: {
+    title: 'HostNation',
+  },
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-netlify-cms',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'stories',
+        path: `${__dirname}/stories`,
+      },
+    },
+  ],
 };
