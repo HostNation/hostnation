@@ -9,8 +9,8 @@ collections:
     label: Stories
     folder: stories
     create: true
-    media_folder: ''
-    public_folder: ''
+    media_folder: 'static/assets/{{title}}'
+    public_folder: 'assets/{{title}}'
     path: '{{title}}/index'
     editor:
       preview: false
