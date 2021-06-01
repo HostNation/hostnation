@@ -6,7 +6,7 @@ import { Div, Txt } from '../../core/elements';
 import Layout from '../../core/Layout';
 import styles, { colors } from '../../core/styles';
 
-import Story from './Story';
+import Story from '../../core/Story';
 
 import storiesHeader from '../../img/stories.png';
 

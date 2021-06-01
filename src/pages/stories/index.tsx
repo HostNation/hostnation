@@ -8,7 +8,7 @@ import styles, { colors } from '../../core/styles';
 import st from '../../core/style-transform';
 import { useHover } from '../../core/utils';
 
-import Story from './Story';
+import Story from '../../core/Story';
 
 import storiesHeader from '../../img/stories.png';
 
