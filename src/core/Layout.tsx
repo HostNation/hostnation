@@ -50,6 +50,14 @@ export default ({ location, children }: any) => (
             background-position: 0 0;
           }
         }
+        .markdown {
+          font-family: Lato, sans-serif;
+          font-size: 20px;
+          color: #2f3644;
+          line-height: 1.4;
+          font-weight: 300;
+          text-align: left;
+        }
         `}
       </style>
     </Helmet>

@@ -6,25 +6,21 @@ import { Div, Txt } from '../../core/elements';
 import Layout from '../../core/Layout';
 import styles, { colors } from '../../core/styles';
 
-export default ({
-  data: {
-    markdownRemark: { frontmatter, html },
-  },
-}) => (
+import Story from './Story';
+
+import storiesHeader from '../../img/stories.png';
+
+export default ({ data: { markdownRemark: post } }) => (
   <Layout>
-    <Helmet title={`${frontmatter.title} | HostNation`} />
+    <Helmet title={`${post.frontmatter.title} | HostNation`} />
     <Div style={{ spacing: 50, padding: '50px 0' }}>
+      <img src={storiesHeader} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Link to="/stories">
         <Txt style={{ ...styles.text, color: colors.purple }}>« Back</Txt>
       </Link>
-      <Div style={{ spacing: 10 }}>
-        <Txt style={{ ...styles.title }}>{frontmatter.title}</Txt>
-        <Txt style={{ ...styles.title, fontSize: 20 }}>{frontmatter.date}</Txt>
+      <Div style={{ spacing: 20, background: 'white', padding: '50px 15px' }}>
+        <Story post={post} />
       </Div>
-      <div
-        className="blog-post-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
     </Div>
   </Layout>
 );
@@ -35,6 +31,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        author
+        category
         title
       }
     }

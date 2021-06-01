@@ -5,16 +5,33 @@ import Helmet from 'react-helmet';
 import { Div, Txt } from '../../core/elements';
 import Layout from '../../core/Layout';
 import styles, { colors } from '../../core/styles';
+import st from '../../core/style-transform';
+import { useHover } from '../../core/utils';
 
-const PostLink = ({ post }) => (
-  <Link to={post.parent.name}>
-    <Txt style={{ ...styles.text, color: colors.purple }}>
-      {post.frontmatter.title} ({post.frontmatter.date})
-    </Txt>
-  </Link>
-);
+import Story from './Story';
 
-const IndexPage = ({
+import storiesHeader from '../../img/stories.png';
+
+const PostLink = ({ post }) => {
+  const [isHovered, hoverProps] = useHover();
+  const buttonStyle = st(styles.button('purple') as any)
+    .mergeKeys({ hover: isHovered })
+    .merge({
+      padding: 5,
+      fontSize: 16,
+      display: 'inline-block',
+      width: 150,
+    });
+  return (
+    <Link to={post.parent.name}>
+      <Txt {...hoverProps} style={{ ...buttonStyle, padding: 5, fontSize: 16 }}>
+        READ MORE »
+      </Txt>
+    </Link>
+  );
+};
+
+export default ({
   data: {
     allMarkdownRemark: { edges },
   },
@@ -22,18 +39,35 @@ const IndexPage = ({
   <Layout>
     <Helmet title="Stories | HostNation" />
     <Div style={{ spacing: 50, padding: '50px 0' }}>
-      <Txt style={{ ...styles.title }}>HostNation Stories</Txt>
-      <Txt style={{ ...styles.text }}>All stories:</Txt>
+      <img src={storiesHeader} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ spacing: 20 }}>
-        {edges.map((edge) => (
-          <PostLink key={edge.node.id} post={edge.node} />
-        ))}
+        {edges.map((edge, i) => [
+          ...(i === 0
+            ? []
+            : [
+                <div
+                  key={`${edge.node.id}_A`}
+                  style={{
+                    background: colors.black,
+                    height: 3,
+                    borderRadius: 3,
+                  }}
+                />,
+              ]),
+          <Div
+            key={`${edge.node.id}_B`}
+            style={{ spacing: 20, background: 'white', padding: '50px 15px' }}
+          >
+            <Story post={edge.node} />
+            <div style={{ maxWidth: 720, margin: '0 auto' }}>
+              <PostLink post={edge.node} />
+            </div>
+          </Div>,
+        ])}
       </Div>
     </Div>
   </Layout>
 );
-
-export default IndexPage;
 
 export const pageQuery = graphql`
   query {
@@ -41,9 +75,11 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
+          excerpt(format: HTML, pruneLength: 250)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
+            author
+            category
             title
           }
           parent {

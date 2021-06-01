@@ -13,5 +13,12 @@ collections:
       preview: false
     fields:
       - { name: date, label: Date, widget: datetime }
+      - { name: author, label: Author }
+      - {
+          name: category,
+          label: Category,
+          widget: select,
+          options: ['Blog Post', 'HostNation Case Study'],
+        }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
