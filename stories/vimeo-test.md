@@ -4,12 +4,6 @@ author: Jake
 category: Blog Post
 title: Vimeo test
 ---
+# Vimeo Test - 100% width
 
-# Test text
-
-Test text
-
-[Link](www.google.com)
-
-<iframe src="https://player.vimeo.com/video/309762034" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/309762034">HostNation: Sue and Julie | Connecting refugees with host communities</a> from <a href="https://vimeo.com/hostnation">Host Nation</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="https://player.vimeo.com/video/309762034" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
