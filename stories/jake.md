@@ -1,8 +1,8 @@
 ---
 date: 2021-06-09T15:48:37.225Z
-author: Blog test 2
+author: Jake
 category: Blog Post
-title: Jake
+title: Blog test 2
 ---
 HostNation was founded in 2017 to offer friendship and social opportunities to asylum seekers and refugees. We wanted to give refugees – who are often very isolated – a way into our society through the kindness of local residents.
 
