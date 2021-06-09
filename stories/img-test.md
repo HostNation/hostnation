@@ -1,7 +1,7 @@
 ---
 date: 2021-05-20T16:35:46.572Z
-author: 'Anthony Berman'
-category: 'Blog Post'
+author: Jake
+category: Blog Post
 title: Img test
 ---
 
