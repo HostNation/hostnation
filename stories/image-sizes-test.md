@@ -4,8 +4,10 @@ author: Jake
 category: Blog Post
 title: Image sizes test
 ---
-<img src="/assets/hostnation-logo-stacked-charity-no.-1180004.png" alt="logo" width="50"/>
+<img src="/assets/hostnation-logo-stacked-charity-no.-1180004.png" alt="logo" width="50px"/>
 
-<img src="/assets/hostnation-logo-stacked-charity-no.-1180004.png" alt="logo" width="100"/>
+<img src="/assets/hostnation-logo-stacked-charity-no.-1180004.png" alt="logo" width="10%"/>
+
+<img src="/assets/hostnation-logo-stacked-charity-no.-1180004.png" alt="logo" width="100px"/>
 
 ![](/assets/hostnation-logo-stacked-charity-no.-1180004.png)
