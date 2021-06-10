@@ -75,7 +75,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(format: HTML, pruneLength: 250)
+          excerpt(format: HTML, pruneLength: 700)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             author

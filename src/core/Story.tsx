@@ -11,7 +11,8 @@ export default ({ post }) => (
         padding: 5,
         fontSize: 16,
         margin: '0 auto',
-        width: 150,
+        width: 250,
+        textTransform: 'uppercase',
       }}
     >
       {post.frontmatter.category}

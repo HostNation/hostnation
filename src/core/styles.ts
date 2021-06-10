@@ -207,6 +207,11 @@ export default {
     link: {
       color: colors[color],
     },
+    h2: {
+      ...textStyle,
+      padding: '0 15px',
+      fontWeight: 'bold' as 'bold',
+    },
     hr: {
       background: colors[color],
     },
