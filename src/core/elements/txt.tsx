@@ -78,14 +78,3 @@ export default ({ children, style, ...props }) => {
     </span>
   );
 };
-
-// export default base().yield(
-//   r
-//     .do('children', 'placeholder', 'style', (children, placeholder, style) => ({
-//       children: children || placeholder,
-//       style: children ? style.text : style.placeholder,
-//     }))
-//     .yield(({ style, children }) => (
-
-//     )),
-// );

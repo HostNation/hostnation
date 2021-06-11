@@ -12,6 +12,11 @@ module.exports = {
         path: `${__dirname}/stories`,
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        excerpt_separator: `<!-- end -->`,
+      },
+    },
   ],
 };

@@ -42,14 +42,6 @@ export default ({ location, children }: any) => (
         #___gatsby, #gatsby-focus-wrapper {
           height: 100%;
         }
-        @keyframes upload-bar {
-          from {
-            background-position: 40px 0;
-          }
-          to {
-            background-position: 0 0;
-          }
-        }
         .markdown {
           font-family: Lato, sans-serif;
           font-size: 20px;
@@ -57,6 +49,10 @@ export default ({ location, children }: any) => (
           line-height: 1.4;
           font-weight: 300;
           text-align: left;
+        }
+        .markdown h2 {
+          font-weight: bold;
+          font-size: 30px;
         }
         `}
       </style>
