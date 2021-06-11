@@ -13,35 +13,57 @@ const textStyle = (active) => ({
   fontWeight: 'normal' as 'normal',
 });
 
-const MenuLink = ({ text, to, newTab, active, setClosed }: any) => {
+const MenuLink = ({ text, to, newTab, active, setClosed, children }: any) => {
   const [isHovered, hoverProps] = useHover();
   return (
-    <Link
-      to={to}
-      newTab={newTab}
-      onClick={setClosed}
-      {...hoverProps}
-      style={{
-        display: 'block',
-        padding: 5,
-        margin: -5,
-        textAlign: 'center',
-      }}
-    >
-      <div
+    <div {...hoverProps}>
+      <Link
+        to={to}
+        newTab={newTab}
+        onClick={setClosed}
+        // {...hoverProps}
         style={{
-          display: 'inline-block',
-          paddingBottom: 3,
-          borderBottomWidth: 2,
-          borderBottomStyle: 'solid',
-          borderBottomColor:
-            isHovered || active === to ? 'white' : 'transparent',
-          marginBottom: -5,
+          display: 'block',
+          padding: 5,
+          margin: -5,
+          textAlign: 'center',
         }}
       >
-        <Txt style={textStyle(isHovered || active === to)}>{text}</Txt>
+        <div
+          style={{
+            display: 'inline-block',
+            paddingBottom: 3,
+            borderBottomWidth: 2,
+            borderBottomStyle: 'solid',
+            borderBottomColor:
+              isHovered || active === to ? 'white' : 'transparent',
+            marginBottom: -5,
+          }}
+        >
+          <Txt style={textStyle(isHovered || active === to)}>{text}</Txt>
+        </div>
+      </Link>
+      <div
+        {...hoverProps}
+        style={{
+          ...styles.base,
+          display:
+            isHovered ? 'inline-block' : 'none',
+          // display: 'inline-block',
+          position: 'absolute',
+          backgroundColor: 'red',
+          width: '100%',
+          top: '0',
+          zIndex: '-20',
+          padding:'50px',
+          color: 'white',
+          // marginTop:'-50',
+        }}>
+        {children}
       </div>
-    </Link>
+
+
+    </div >
   );
 };
 
@@ -162,16 +184,38 @@ export default ({ active }: any) => {
           ) : (
             <Div style={{ layout: 'bar', spacing: 20, float: 'right' }}>
               <MenuLink text="About Us" to="/about-us" active={active} />
-              <MenuLink text="Befriend" to="/befriend" active={active} />
-              <MenuLink text="Refer" to="/refer" active={active} />
-              <MenuLink text="Refugee" to="/refugee" active={active} />
               <MenuLink
                 text="Donate"
                 to="https://www.totalgiving.co.uk/donate/hostnation"
                 newTab
               />
-              <MenuLink text="Guide" to="/guide.pdf" newTab />
-              <MenuLink text="Links" to="/links.pdf" newTab />
+              <MenuLink text="Refugee" to="/refugee" active={active}>
+                <Link
+                  to="/links.pdf"
+                  newTab="false"
+                // onClick={setClosed}
+                // {...hoverProps}
+                // style={{
+                //   display: 'block',
+                //   padding: 5,
+                //   margin: -5,
+                //   textAlign: 'center',
+                // }}
+                >Links</Link>
+              </MenuLink>
+              {/* Drop down to  /refugee */}
+              {/* Drop down to  /links.pdf */}
+              <MenuLink text="Befriend" to="/befriend" active={active} />
+              {/* Drop down to  /befriend */}
+              {/* Drop down to  /guide.pdf */}
+
+
+              <MenuLink text="Refer" to="/refer" active={active} />
+              <MenuLink text="Stories" to="/stories" active={active} />
+
+
+              {/* <MenuLink text="Guide" to="/guide.pdf" newTab />
+              <MenuLink text="Links" to="/links.pdf" newTab /> */}
             </Div>
           )}
         </Div>
