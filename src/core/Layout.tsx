@@ -50,9 +50,25 @@ export default ({ location, children }: any) => (
           font-weight: 300;
           text-align: left;
         }
+        .markdown p {
+          padding-bottom: 10px;
+        }
         .markdown h2 {
           font-weight: bold;
-          font-size: 30px;
+          font-size: 26px;
+          padding: 10px 0 10px 0;
+        }
+        .markdown strong {
+          font-weight: bold;
+        }
+        .markdown em {
+          font-style: italic;
+          padding-left: 20px;
+          padding-right: 20px;
+          display: block;
+        }
+        .markdown img {
+          padding: 10px 0 10px 0;
         }
         `}
       </style>
