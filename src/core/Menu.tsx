@@ -46,18 +46,19 @@ const MenuLink = ({ text, to, newTab, active, setClosed, children }: any) => {
       <div
         {...hoverProps}
         style={{
-          ...styles.base,
+          ...styles.text,
+          color: active ? 'white' : '#f2f2f2',
+          fontSize: 18,
+          fontWeight: 'normal' as 'normal',
           display:
             isHovered ? 'inline-block' : 'none',
-          // display: 'inline-block',
           position: 'absolute',
-          backgroundColor: 'red',
-          width: '100%',
-          top: '0',
-          zIndex: '-20',
-          padding:'50px',
-          color: 'white',
-          // marginTop:'-50',
+          backgroundColor: '#b04464',
+          width: 'inherit',
+          top: '50px',
+          zIndex: '-99',
+          // margin:'5px',
+          // padding:'10px',
         }}>
         {children}
       </div>
@@ -190,22 +191,15 @@ export default ({ active }: any) => {
                 newTab
               />
               <MenuLink text="Refugee" to="/refugee" active={active}>
-                <Link
-                  to="/links.pdf"
-                  newTab="false"
-                // onClick={setClosed}
-                // {...hoverProps}
-                // style={{
-                //   display: 'block',
-                //   padding: 5,
-                //   margin: -5,
-                //   textAlign: 'center',
-                // }}
-                >Links</Link>
+              <Link to="/refugee" newTab="false">How HostNation works</Link><br/>
+              <Link to="/links.pdf" newTab="false">Signposting refugee services</Link>
               </MenuLink>
               {/* Drop down to  /refugee */}
               {/* Drop down to  /links.pdf */}
-              <MenuLink text="Befriend" to="/befriend" active={active} />
+              <MenuLink text="Befriend" to="/befriend" active={active}>
+              <Link to="/befriend" newTab="false">Registration forms</Link><br/>
+              <Link to="/guide.pdf" newTab="false">Befrienders’ Guide</Link>
+              </MenuLink>
               {/* Drop down to  /befriend */}
               {/* Drop down to  /guide.pdf */}
 
