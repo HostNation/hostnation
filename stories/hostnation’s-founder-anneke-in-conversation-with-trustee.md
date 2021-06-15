@@ -4,6 +4,6 @@ author: HostNation
 category: Film
 title: HostNation’s founder, Anneke, in Conversation with Trustee
 ---
-<iframe src="https://player.vimeo.com/video/360358161?title=0&byline=0&portrait=0" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:600px;margin:0 auto"><div style="position:relative;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/360358161?title=0&amp;byline=0&amp;portrait=0" frameBorder="0" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
 
 HostNation’s founder, Anneke, discussing the value of befriending with one of our Trustees, Dina, who fled Iran as a child.
