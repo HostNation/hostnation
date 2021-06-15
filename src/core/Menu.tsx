@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { Div, Hover, Icon, Txt } from './elements';
+import { Div, Hover, Txt } from './elements';
 import { useHover, useToggle, useWidth } from './utils';
 
 import Link from './Link';
-import styles, { colors, icons } from './styles';
+import styles, { colors } from './styles';
 
 const textStyle = (active) => ({
   ...styles.text,
   color: active ? 'white' : '#f2f2f2',
-  fontSize: 18,
+  fontSize: 16,
   fontWeight: 'normal' as 'normal',
 });
 
@@ -72,68 +72,6 @@ export default ({ active }: any) => {
             width: '100%',
           }}
         >
-          <Div style={{ layout: 'bar', spacing: 13 }}>
-            <Link
-              to="/"
-              onClick={setClosed}
-              style={{ display: 'block', padding: 5, margin: -5 }}
-            >
-              <Hover>
-                {({ isHovered, hoverProps }) => (
-                  <Txt
-                    {...hoverProps}
-                    style={{
-                      ...textStyle(isHovered),
-                      fontSize: 21,
-                      marginRight: 20,
-                    }}
-                  >
-                    HostNation
-                  </Txt>
-                )}
-              </Hover>
-            </Link>
-            <a
-              href="https://www.facebook.com/HostNationUK"
-              target="_blank"
-              style={{ display: 'block', padding: 5, margin: -5 }}
-            >
-              <Hover>
-                {({ isHovered, hoverProps }) => (
-                  <Icon
-                    {...icons.fb}
-                    {...hoverProps}
-                    style={{
-                      ...textStyle(isHovered),
-                      fontSize: 19,
-                      padding: 5,
-                      margin: -5,
-                    }}
-                  />
-                )}
-              </Hover>
-            </a>
-            <a
-              href="https://twitter.com/hostnationuk"
-              target="_blank"
-              style={{ display: 'block' }}
-            >
-              <Hover>
-                {({ isHovered, hoverProps }) => (
-                  <Icon
-                    {...icons.twitter}
-                    {...hoverProps}
-                    style={{
-                      ...textStyle(isHovered),
-                      fontSize: 19,
-                      padding: 5,
-                      margin: -5,
-                    }}
-                  />
-                )}
-              </Hover>
-            </a>
-          </Div>
           {small ? (
             <Hover
               style={{
@@ -160,18 +98,18 @@ export default ({ active }: any) => {
               )}
             </Hover>
           ) : (
-            <Div style={{ layout: 'bar', spacing: 20, float: 'right' }}>
+            <Div style={{ layout: 'bar', spacing: 50, marginLeft: 'auto', marginRight: 'auto', textTransform: "uppercase", }}>
+              <MenuLink text="Home" to="/" active={active} />
               <MenuLink text="About Us" to="/about-us" active={active} />
               <MenuLink text="Befriend" to="/befriend" active={active} />
               <MenuLink text="Refer" to="/refer" active={active} />
               <MenuLink text="Refugee" to="/refugee" active={active} />
+              <MenuLink text="Stories" to="/stories" active={active} />
               <MenuLink
                 text="Donate"
                 to="https://www.totalgiving.co.uk/donate/hostnation"
                 newTab
               />
-              <MenuLink text="Guide" to="/guide.pdf" newTab />
-              <MenuLink text="Links" to="/links.pdf" newTab />
             </Div>
           )}
         </Div>
@@ -183,7 +121,13 @@ export default ({ active }: any) => {
               height: isOpen ? 290 : 0,
             }}
           >
-            <Div style={{ spacing: 20, padding: '20px 0' }}>
+            <Div style={{ spacing: 20, padding: '20px 0', textTransform: "uppercase", }}>
+              <MenuLink
+                text="Home"
+                to="/"
+                active={active}
+                setClosed={setClosed}
+              />
               <MenuLink
                 text="About Us"
                 to="/about-us"
@@ -209,20 +153,14 @@ export default ({ active }: any) => {
                 setClosed={setClosed}
               />
               <MenuLink
+                text="Stories"
+                to="/stories"
+                active={active}
+                setClosed={setClosed}
+              />
+              <MenuLink
                 text="Donate"
                 to="https://www.totalgiving.co.uk/donate/hostnation"
-                newTab
-                setClosed={setClosed}
-              />
-              <MenuLink
-                text="Guide"
-                to="/guide.pdf"
-                newTab
-                setClosed={setClosed}
-              />
-              <MenuLink
-                text="Links"
-                to="/links.pdf"
                 newTab
                 setClosed={setClosed}
               />
@@ -230,6 +168,6 @@ export default ({ active }: any) => {
           </div>
         )}
       </Div>
-    </div>
+    </div >
   );
 };
