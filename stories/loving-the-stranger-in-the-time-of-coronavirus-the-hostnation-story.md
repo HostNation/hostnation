@@ -2,13 +2,13 @@
 date: 2021-06-16T12:19:24.442Z
 author: ANTHONY BERMAN
 category: HostNation Blog Post
-title: "Loving the Stranger in the \x03Time of Coronavirus: The HostNation Story"
+title: "Loving the Stranger in the Time of Coronavirus: The HostNation Story"
 ---
 **Anthony Berman gives a personal account of HostNation, before and after COVID-19, and the benefits it has brought to refugees and asylum seekers and their befrienders.**
 
 ## The beginning
 
-<img src="/assets/anthony-story-ac463ecfade015d5d3c3808f6e9501cc.png" alt="logo" style="width:35%;padding-right:25px;" ALIGN="left" />The story began for me in early June 2017 when I met up with Anneke Elwes and Rossana Horsley in a Kentish Town pub to discuss Anneke’s plans for HostNation. Twelve years earlier, Rosanna and I had been part of the same cohort in a befriending project at the organisation, Freedom from Torture (FfT); we were matched with unaccompanied minors from trouble-torn foreign countries in an attempt to bring some normality to their traumatised lives. Anneke took part in the same programme a couple of years later and then went on to help run a holiday scheme at FfT where around 100 of their asylum-seeking clients spent an annual holiday with a British family. The positive effects for both parties of both befriending and hosting gave her the idea of launching HostNation. <!-- end -->
+<img src="/assets/anthony-story-ac463ecfade015d5d3c3808f6e9501cc.png" alt="logo" style="width:38%;padding-right:25px;" ALIGN="left" />The story began for me in early June 2017 when I met up with Anneke Elwes and Rossana Horsley in a Kentish Town pub to discuss Anneke’s plans for HostNation. Twelve years earlier, Rosanna and I had been part of the same cohort in a befriending project at the organisation, Freedom from Torture (FfT); we were matched with unaccompanied minors from trouble-torn foreign countries in an attempt to bring some normality to their traumatised lives. Anneke took part in the same programme a couple of years later and then went on to help run a holiday scheme at FfT where around 100 of their asylum-seeking clients spent an annual holiday with a British family. The positive effects for both parties of both befriending and hosting gave her the idea of launching HostNation. <!-- end -->
 
 It struck Anneke that the only contact most asylum seekers and refugees have with British people is in a professional capacity: social or case workers, lawyers, therapists, doctors or Home Office officials. She knew that there were many altruistic people in the host community wanting to offer friendship but not knowing how to go about it. The solution: a digital platform to match UK citizens with asylum seekers and refugees in befriending relationships. The scheme would start in the Greater London area and if successful, be rolled out in other parts of the country. With Rossana and me on board, we were joined shortly afterwards by Magda Wolfe who was doing a Master’s in Social Policy and Research; Anneke now had the small team that she needed to embark on this journey. HostNation was on its way.
 
