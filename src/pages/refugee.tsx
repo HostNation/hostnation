@@ -15,14 +15,14 @@ import styles, { colors } from '../core/styles';
 export default () => (
   <Layout location="refugee">
     <Helmet title="Befriend | HostNation" />
-    <Div style={{ paddingTop: 50, paddingBottom: 50 }}>
+    <Div style={{ spacing:50, paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
-      <Div style={{ padding: '50px 0', spacing: 20 }}>
+      <Div style={{ spacing: 20 }}>
         <Txt style={{ ...styles.title, fontSize: 30 }}>
           Welcome to asylum seekers and refugees
         </Txt>
       </Div>
-      <img src={maryAmira} />
+      <img src={maryAmira} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ padding: '50px 0', spacing: 30, background: 'white' }}>
         <Txt style={styles.boxText}>
           If you are an asylum seeker or refugee over 18 and you live in London,
@@ -58,7 +58,7 @@ export default () => (
           many friendships go so well that they continue for years!
         </Txt>
       </Div>
-      <img src={johnAmin} />
+      <img src={johnAmin} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ padding: '50px 0', spacing: 30, background: 'white' }}>
         <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
           How to apply for a friend
@@ -163,7 +163,7 @@ export default () => (
           home with a local friend by your side.
         </Txt>
       </Div>
-      <img src={yvette} />
+      <img src={yvette} style={{ maxWidth: 600, margin: '0 auto' }} />
     </Div>
   </Layout>
 );

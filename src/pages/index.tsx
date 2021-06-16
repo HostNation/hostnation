@@ -142,7 +142,7 @@ export default () => (
       <Div style={{ spacing: 25 }}>
         <Txt style={styles.body}>
           If you are an asylum seeker or refugee and would like a befriender
-          please 
+          please
           <Hover
             style={{
               ...styles.text,
@@ -166,10 +166,10 @@ export default () => (
           <Txt style={styles.body}>
             To see the difference befriending can make, listen to our refugee friends Pinar, Saoud and Hanifah talk about their experiences.
             </Txt>
-            <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 16 }}>
+          <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 16 }}>
             Films 1 min each and shot for HostNation by @DamnFineMedia.
           </Txt>
-          <div style={{ maxWidth: 450, margin: '0 auto' }}>
+          {/* <div style={{ maxWidth: 450, margin: '0 auto' }}>
             <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
               <iframe
                 src="https://player.vimeo.com/video/563320888?title=0&byline=0&portrait=0"
@@ -216,13 +216,63 @@ export default () => (
                 }}
               />
             </div>
+          </div> */}
+          <div style={{ display: 'table', margin: 'auto' }}>
+            <div style={{ width: 400, margin: '0 auto', display: 'table-cell', padding: '10px' }}>
+              <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://player.vimeo.com/video/563320888?title=0&byline=0&portrait=0"
+                  frameBorder="0"
+                  allowFullScreen
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                  }}
+                />
+              </div>
+            </div>
+            <div style={{ width: 400, margin: '0 auto', display: 'table-cell', padding: '10px' }}>
+              <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://player.vimeo.com/video/563324420?title=0&byline=0&portrait=0"
+                  frameBorder="0"
+                  allowFullScreen
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+          <div style={{ maxWidth: 400, margin: '0 auto', padding: '10px', paddingTop: '0px' }}>
+            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/563322749?title=0&byline=0&portrait=0"
+                frameBorder="0"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+              />
+            </div>
           </div>
         </Div>
       </div>
-    <Div style={{ spacing: 25 }}>
+      <Div style={{ spacing: 25 }}>
 
-      <Txt style={styles.body}>
-        For more films, blogs, case studies and podcasts on HostNation befriending
+        <Txt style={styles.body}>
+          For more films, blogs, case studies and podcasts on HostNation befriending
         <Hover
             style={{
               ...styles.text,
@@ -238,7 +288,7 @@ export default () => (
             )}
           </Hover>
         </Txt>
-    </Div>
+      </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <Div style={{ spacing: 25 }}>
         <Txt style={styles.body}>
@@ -258,104 +308,104 @@ export default () => (
 
 
 
-    <Div style={{ spacing: 25 }}>
-      <Txt style={{ ...styles.title, fontSize: 30 }}>
-        For more information on HostNation:
+      <Div style={{ spacing: 25 }}>
+        <Txt style={{ ...styles.title, fontSize: 30 }}>
+          For more information on HostNation:
         </Txt>
-      <MoreInfo />
-    </Div>
-    <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-    <Div style={{ spacing: 25 }}>
-      <Txt style={styles.title}>The Befrienders’ Guide</Txt>
-      <Txt style={styles.body}>
-        To learn more about befriending the HostNation way and seeking asylum
-        in the UK, read our guide.
-        </Txt>
-      <Div style={{ spacing: 15 }}>
-        <img src={guideIcon} style={{ width: 100, margin: '0 auto' }} />
-        <Button
-          to="/guide.pdf"
-          newTab
-          color="yellow"
-          style={{ margin: '0 auto' }}
-        >
-          READ THE GUIDE
-          </Button>
+        <MoreInfo />
       </Div>
-    </Div>
-    <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-    <Div style={{ spacing: 25 }}>
-      <Txt style={styles.title}>Refugee Support Organisations</Txt>
-      <Txt style={styles.body}>
-        For a list of London organisations that provide refugee support -
-        advice, casework, housing, legal, social, drop-in centres - please use
-        our links and help befriendees find the support in the capital that
-        they need.
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+      <Div style={{ spacing: 25 }}>
+        <Txt style={styles.title}>The Befrienders’ Guide</Txt>
+        <Txt style={styles.body}>
+          To learn more about befriending the HostNation way and seeking asylum
+          in the UK, read our guide.
         </Txt>
-      <Div style={{ spacing: 15 }}>
-        <img src={linksIcon} style={{ width: 100, margin: '0 auto' }} />
-        <Button
-          to="/links.pdf"
-          newTab
-          color="purple"
-          style={{ margin: '0 auto' }}
-        >
-          SIGNPOSTING LINKS
+        <Div style={{ spacing: 15 }}>
+          <img src={guideIcon} style={{ width: 100, margin: '0 auto' }} />
+          <Button
+            to="/guide.pdf"
+            newTab
+            color="yellow"
+            style={{ margin: '0 auto' }}
+          >
+            READ THE GUIDE
           </Button>
+        </Div>
       </Div>
-    </Div>
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+      <Div style={{ spacing: 25 }}>
+        <Txt style={styles.title}>Refugee Support Organisations</Txt>
+        <Txt style={styles.body}>
+          For a list of London organisations that provide refugee support -
+          advice, casework, housing, legal, social, drop-in centres - please use
+          our links and help befriendees find the support in the capital that
+          they need.
+        </Txt>
+        <Div style={{ spacing: 15 }}>
+          <img src={linksIcon} style={{ width: 100, margin: '0 auto' }} />
+          <Button
+            to="/links.pdf"
+            newTab
+            color="purple"
+            style={{ margin: '0 auto' }}
+          >
+            SIGNPOSTING LINKS
+          </Button>
+        </Div>
+      </Div>
 
-    <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-    <Div style={{ spacing: 35 }}>
-      <Div style={{ spacing: 15 }}>
-        <img src={contactIcon} style={{ width: 100, margin: '0 auto' }} />
-        <Hover
-          style={{
-            ...styles.subtitle,
-            color: colors.purple,
-            hover: { color: colors.purpleDark },
-          }}
-        >
-          {({ hoverProps, style }) => (
-            <a href="mailto:info@hostnation.org.uk">
-              <Txt {...hoverProps} style={style}>
-                info@hostnation.org.uk
-                </Txt>
-            </a>
-          )}
-        </Hover>
-      </Div>
-      <Div style={{ layout: 'bar', spacing: 40, margin: '0 auto' }}>
-        {[
-          {
-            link: 'https://www.facebook.com/HostNationUK',
-            icon: icons.fbThin,
-          },
-          {
-            link: 'https://twitter.com/hostnationuk',
-            icon: icons.twitter,
-          },
-        ].map(({ link, icon }, i) => (
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+      <Div style={{ spacing: 35 }}>
+        <Div style={{ spacing: 15 }}>
+          <img src={contactIcon} style={{ width: 100, margin: '0 auto' }} />
           <Hover
             style={{
-              display: 'block',
-              padding: 12,
-              margin: -5,
-              background: colors.purple,
-              borderRadius: 100,
-              hover: { background: colors.purpleDark },
+              ...styles.subtitle,
+              color: colors.purple,
+              hover: { color: colors.purpleDark },
             }}
-            key={i}
           >
             {({ hoverProps, style }) => (
-              <a href={link} target="_blank" {...hoverProps} style={style}>
-                <Icon {...icon} style={{ color: 'white', fontSize: 24 }} />
+              <a href="mailto:info@hostnation.org.uk">
+                <Txt {...hoverProps} style={style}>
+                  info@hostnation.org.uk
+                </Txt>
               </a>
             )}
           </Hover>
-        ))}
+        </Div>
+        <Div style={{ layout: 'bar', spacing: 40, margin: '0 auto' }}>
+          {[
+            {
+              link: 'https://www.facebook.com/HostNationUK',
+              icon: icons.fbThin,
+            },
+            {
+              link: 'https://twitter.com/hostnationuk',
+              icon: icons.twitter,
+            },
+          ].map(({ link, icon }, i) => (
+            <Hover
+              style={{
+                display: 'block',
+                padding: 12,
+                margin: -5,
+                background: colors.purple,
+                borderRadius: 100,
+                hover: { background: colors.purpleDark },
+              }}
+              key={i}
+            >
+              {({ hoverProps, style }) => (
+                <a href={link} target="_blank" {...hoverProps} style={style}>
+                  <Icon {...icon} style={{ color: 'white', fontSize: 24 }} />
+                </a>
+              )}
+            </Hover>
+          ))}
+        </Div>
       </Div>
-    </Div>
     </Div>
   </Layout >
 );

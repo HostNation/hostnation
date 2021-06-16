@@ -15,7 +15,7 @@ export default () => (
     <Helmet title="Befriend | HostNation" />
     <Div style={{ spacing: 50, paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
-      <img src={nickAli} />
+      <img src={nickAli} style={{ maxWidth: 600, margin: '0 auto' }}/>
 
       <Box title="WHAT WE ASK OF YOU" toggle>
         <Txt style={styles.boxText}>
@@ -218,7 +218,7 @@ export default () => (
         </a>
       </Box>
 
-      <img src={laylaSue} />
+      <img src={laylaSue} style={{ maxWidth: 600, margin: '0 auto' }} />
     </Div>
   </Layout>
 );

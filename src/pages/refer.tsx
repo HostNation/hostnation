@@ -105,7 +105,7 @@ export default () => (
         </Txt>
       </Box>
 
-      <img src={bettinaQuote} />
+      <img src={bettinaQuote} style={{ maxWidth: 600, margin: '0 auto' }} />
 
       <Box title="REFUGEE & REFERRER REGISTRATION FORMS" color="purple">
         <Txt style={styles.body}>
@@ -172,7 +172,7 @@ export default () => (
         </a>
       </Box>
 
-      <img src={orlaQuote} />
+      <img src={orlaQuote} style={{ maxWidth: 600, margin: '0 auto' }} />
     </Div>
   </Layout>
 );
