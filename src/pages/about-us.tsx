@@ -491,7 +491,7 @@ export default () => (
       <Box title="MEET THE TEAM BEHIND HOSTNATION">
         <Profiles />
       </Box>
-      <Div style={{ spacing: 25, background: 'white', padding: '50px 0' }}>
+      {/* <Div style={{ spacing: 25, background: 'white', padding: '50px 0' }}>
         <Div style={{ spacing: 25, maxWidth: 600, margin: '0 auto' }}>
           <Txt style={{ ...styles.title, fontSize: 30 }}>
             Loving the Stranger in the Time of Coronavirus: The HostNation Story
@@ -508,7 +508,7 @@ export default () => (
             </Button>
           </div>
         </Div>
-      </Div>
+      </Div> */}
       <Div style={{ spacing: 25, background: 'white', padding: '50px 0' }}>
         <Txt style={{ ...styles.title, fontSize: 30 }}>
           Funders and Friends of HostNation

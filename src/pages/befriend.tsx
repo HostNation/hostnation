@@ -60,7 +60,7 @@ export default () => (
             London
           </Txt>
           <Txt style={styles.boxText}>
-            We have just re-opened registration in London and are currently
+            We have re-opened registration in London and are currently
             looking for friendship matches particularly for male refugees of all
             ages and female refugees 40+. We also need befrienders across the
             outer boroughs of London. Some of the refugees referred to us have
@@ -95,7 +95,7 @@ export default () => (
             We are currently recruiting befrienders in the North East of England
             to befriend asylum seekers and refugees living in Teesside. Please
             click on the link below if you are interested in befriending in the
-            North East in 2021.
+            North East.
           </Txt>
           <a
             href="https://airtable.com/shr1yuiiDpPylNm8u?prefill_Type=Befriender"

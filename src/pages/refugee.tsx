@@ -49,11 +49,7 @@ export default () => (
         </Txt>
         <Txt style={styles.boxText}>
           We help refugees and asylum seekers find a local friend to help settle
-          into the UK. We will introduce you online, then you will chat on the
-          phone once a week at first.
-        </Txt>
-        <Txt style={styles.boxText}>
-          When you are both ready, and if Covid rules allow, you can meet face
+          into the UK. We will introduce you online when you are both ready, you can meet face
           to face for outings to places like local cafes, parks, markets or
           museums.
         </Txt>
