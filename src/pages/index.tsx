@@ -165,7 +165,9 @@ export default () => (
         <Div style={{ spacing: 25 }}>
           <Txt style={styles.body}>
             To see the difference befriending can make, listen to our refugee friends Pinar, Saoud and Hanifah talk about their experiences.
-            Each film 1 minute and filmed for HostNation by @DamnFine Media
+            </Txt>
+            <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 16 }}>
+            Films 1 min each and shot for HostNation by @DamnFineMedia.
           </Txt>
           <div style={{ maxWidth: 450, margin: '0 auto' }}>
             <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
