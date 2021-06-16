@@ -52,6 +52,7 @@ export default ({ location, children }: any) => (
         }
         .markdown p {
           padding-bottom: 10px;
+          padding-top: 10px;
         }
         .markdown h2 {
           font-weight: bold;
@@ -66,6 +67,7 @@ export default ({ location, children }: any) => (
           padding-left: 20px;
           padding-right: 20px;
           display: block;
+          border-left: 2px solid rgb(150,150,150);
         }
         .markdown img {
           padding: 10px 0 10px 0;

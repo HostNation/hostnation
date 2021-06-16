@@ -59,14 +59,13 @@ const IntroText = () => {
       <Txt
         style={{
           ...styles.body,
-          fontSize: small ? 20 : 24,
+          // fontSize: small ? 20 : 24,
           padding: '0 15px',
         }}
       >
         We are a city &amp; town-based introductory service connecting residents
         to refugees through small acts of kindness, inclusion and friendship. As
-        a result of Covid we now offer ‘smart’ befriending, with first steps
-        taking place online. Regular video-calls are followed by one-to-one
+        a result of Covid we now offer ‘smart’ befriending, with introductions taking place online and video calls supplementing regular one-to-one meet ups. Regular video-calls are followed by one-to-one
         meet-ups when covid restrictions allow. We ask for a minimum commitment
         of three months but many matches become firm friends.
       </Txt>
@@ -120,16 +119,16 @@ export default () => (
           style={{
             ...styles.text,
             textAlign: 'center',
-            fontSize: 24,
+            // fontSize: 24,
             fontWeight: 'bold',
           }}
         >
           HostNation believes every refugee deserves a friend.
         </Txt>
-        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 24 }}>
+        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20 }}>
           We connect those offering friendship with those needing it.
         </Txt>
-        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 24 }}>
+        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20 }}>
           Now matching friends across Greater London and Teesside.
         </Txt>
       </Div>
@@ -139,15 +138,105 @@ export default () => (
         <IntroText />
         <img src={statsImg} style={{ maxWidth: 600, margin: '0 auto 50px' }} />
       </Div>
+
       <Div style={{ spacing: 25 }}>
         <Txt style={styles.body}>
           If you are an asylum seeker or refugee and would like a befriender
-          please click here for more information.
+          please 
+          <Hover
+            style={{
+              ...styles.text,
+              color: colors.black,
+              fontWeight: 'bold',
+              hover: { color: colors.purpleDark },
+            }}
+          >
+            {({ hoverProps, style }) => (
+              <a href="/refugee" {...hoverProps} style={style}>
+                {" "}click here for more information.
+              </a>
+            )}
+          </Hover>
         </Txt>
-        <Button to="/refugee" color="yellow" style={{ margin: '0 auto' }}>
-          REFUGEE PAGE
-        </Button>
       </Div>
+
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+      <div style={{ background: 'white', padding: '50px 0' }}>
+        <Div style={{ spacing: 25 }}>
+          <Txt style={styles.body}>
+            To see the difference befriending can make, listen to our refugee friends Pinar, Saoud and Hanifah talk about their experiences.
+            Each film 1 minute and filmed for HostNation by @DamnFine Media
+          </Txt>
+          <div style={{ maxWidth: 450, margin: '0 auto' }}>
+            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/563320888?title=0&byline=0&portrait=0"
+                frameBorder="0"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+              />
+            </div>
+          </div>
+          <div style={{ maxWidth: 450, margin: '0 auto' }}>
+            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/563324420?title=0&byline=0&portrait=0"
+                frameBorder="0"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+              />
+            </div>
+          </div>
+          <div style={{ maxWidth: 450, margin: '0 auto' }}>
+            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/563322749?title=0&byline=0&portrait=0"
+                frameBorder="0"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+              />
+            </div>
+          </div>
+        </Div>
+      </div>
+    <Div style={{ spacing: 25 }}>
+
+      <Txt style={styles.body}>
+        For more films, blogs, case studies and podcasts on HostNation befriending
+        <Hover
+            style={{
+              ...styles.text,
+              color: colors.black,
+              fontWeight: 'bold',
+              hover: { color: colors.purpleDark },
+            }}
+          >
+            {({ hoverProps, style }) => (
+              <a href="/refugee" {...hoverProps} style={style}>
+                {" "}click here.
+              </a>
+            )}
+          </Hover>
+        </Txt>
+    </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <Div style={{ spacing: 25 }}>
         <Txt style={styles.body}>
@@ -164,190 +253,107 @@ export default () => (
           DONATE HERE
         </Button>
       </Div>
-      <div style={{ background: 'white', padding: '50px 0' }}>
-        <Div style={{ spacing: 25 }}>
-          <Txt style={styles.body}>
-            To get a feel for befriending watch our short films starring Suzy,
-            Hakim, Sue and Julie produced by Toby Elwes:
-          </Txt>
-          <Txt style={styles.body}>
-            Film 1: “Befriending is an amazing thing to do.”
-          </Txt>
-          <div style={{ maxWidth: 600, margin: '0 auto' }}>
-            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/309771300?title=0&byline=0&portrait=0"
-                frameBorder="0"
-                allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-            </div>
-          </div>
-          <Txt style={styles.body}>Film 2: “It really makes me happy.”</Txt>
-          <div style={{ maxWidth: 600, margin: '0 auto' }}>
-            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/309762034?title=0&byline=0&portrait=0"
-                frameBorder="0"
-                allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-            </div>
-          </div>
-          <Txt style={styles.body}>
-            Watch Hanifah telling her befriender, Helen, what a difference
-            befriending has made:
-          </Txt>
-          <div style={{ maxWidth: 600, margin: '0 auto' }}>
-            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/391708540?title=0&byline=0&portrait=0"
-                frameBorder="0"
-                allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-            </div>
-          </div>
-          <Txt style={styles.body}>
-            And here’s HostNation’s founder, Anneke, discussing the value of
-            befriending with one of our Trustees, Dina, who fled Iran as a
-            child.
-          </Txt>
-          <div style={{ maxWidth: 600, margin: '0 auto' }}>
-            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/360358161?title=0&byline=0&portrait=0"
-                frameBorder="0"
-                allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-            </div>
-          </div>
-        </Div>
-      </div>
 
-      <Div style={{ spacing: 25 }}>
-        <Txt style={{ ...styles.title, fontSize: 30 }}>
-          For more information on HostNation:
-        </Txt>
-        <MoreInfo />
-      </Div>
-      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-      <Div style={{ spacing: 25 }}>
-        <Txt style={styles.title}>The Befrienders’ Guide</Txt>
-        <Txt style={styles.body}>
-          To learn more about befriending the HostNation way and seeking asylum
-          in the UK, read our guide.
-        </Txt>
-        <Div style={{ spacing: 15 }}>
-          <img src={guideIcon} style={{ width: 100, margin: '0 auto' }} />
-          <Button
-            to="/guide.pdf"
-            newTab
-            color="black"
-            style={{ margin: '0 auto' }}
-          >
-            READ THE GUIDE
-          </Button>
-        </Div>
-      </Div>
-      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-      <Div style={{ spacing: 25 }}>
-        <Txt style={styles.title}>Refugee Support Organisations</Txt>
-        <Txt style={styles.body}>
-          For a list of London organisations that provide refugee support -
-          advice, casework, housing, legal, social, drop-in centres - please use
-          our links and help befriendees find the support in the capital that
-          they need.
-        </Txt>
-        <Div style={{ spacing: 15 }}>
-          <img src={linksIcon} style={{ width: 100, margin: '0 auto' }} />
-          <Button
-            to="/links.pdf"
-            newTab
-            color="black"
-            style={{ margin: '0 auto' }}
-          >
-            SIGNPOSTING LINKS
-          </Button>
-        </Div>
-      </Div>
 
-      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-      <Div style={{ spacing: 35 }}>
-        <Div style={{ spacing: 15 }}>
-          <img src={contactIcon} style={{ width: 100, margin: '0 auto' }} />
+
+    <Div style={{ spacing: 25 }}>
+      <Txt style={{ ...styles.title, fontSize: 30 }}>
+        For more information on HostNation:
+        </Txt>
+      <MoreInfo />
+    </Div>
+    <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+    <Div style={{ spacing: 25 }}>
+      <Txt style={styles.title}>The Befrienders’ Guide</Txt>
+      <Txt style={styles.body}>
+        To learn more about befriending the HostNation way and seeking asylum
+        in the UK, read our guide.
+        </Txt>
+      <Div style={{ spacing: 15 }}>
+        <img src={guideIcon} style={{ width: 100, margin: '0 auto' }} />
+        <Button
+          to="/guide.pdf"
+          newTab
+          color="yellow"
+          style={{ margin: '0 auto' }}
+        >
+          READ THE GUIDE
+          </Button>
+      </Div>
+    </Div>
+    <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+    <Div style={{ spacing: 25 }}>
+      <Txt style={styles.title}>Refugee Support Organisations</Txt>
+      <Txt style={styles.body}>
+        For a list of London organisations that provide refugee support -
+        advice, casework, housing, legal, social, drop-in centres - please use
+        our links and help befriendees find the support in the capital that
+        they need.
+        </Txt>
+      <Div style={{ spacing: 15 }}>
+        <img src={linksIcon} style={{ width: 100, margin: '0 auto' }} />
+        <Button
+          to="/links.pdf"
+          newTab
+          color="purple"
+          style={{ margin: '0 auto' }}
+        >
+          SIGNPOSTING LINKS
+          </Button>
+      </Div>
+    </Div>
+
+    <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+    <Div style={{ spacing: 35 }}>
+      <Div style={{ spacing: 15 }}>
+        <img src={contactIcon} style={{ width: 100, margin: '0 auto' }} />
+        <Hover
+          style={{
+            ...styles.subtitle,
+            color: colors.purple,
+            hover: { color: colors.purpleDark },
+          }}
+        >
+          {({ hoverProps, style }) => (
+            <a href="mailto:info@hostnation.org.uk">
+              <Txt {...hoverProps} style={style}>
+                info@hostnation.org.uk
+                </Txt>
+            </a>
+          )}
+        </Hover>
+      </Div>
+      <Div style={{ layout: 'bar', spacing: 40, margin: '0 auto' }}>
+        {[
+          {
+            link: 'https://www.facebook.com/HostNationUK',
+            icon: icons.fbThin,
+          },
+          {
+            link: 'https://twitter.com/hostnationuk',
+            icon: icons.twitter,
+          },
+        ].map(({ link, icon }, i) => (
           <Hover
             style={{
-              ...styles.subtitle,
-              color: colors.purple,
-              hover: { color: colors.purpleDark },
+              display: 'block',
+              padding: 12,
+              margin: -5,
+              background: colors.purple,
+              borderRadius: 100,
+              hover: { background: colors.purpleDark },
             }}
+            key={i}
           >
             {({ hoverProps, style }) => (
-              <a href="mailto:info@hostnation.org.uk">
-                <Txt {...hoverProps} style={style}>
-                  info@hostnation.org.uk
-                </Txt>
+              <a href={link} target="_blank" {...hoverProps} style={style}>
+                <Icon {...icon} style={{ color: 'white', fontSize: 24 }} />
               </a>
             )}
           </Hover>
-        </Div>
-        <Div style={{ layout: 'bar', spacing: 40, margin: '0 auto' }}>
-          {[
-            {
-              link: 'https://www.facebook.com/HostNationUK',
-              icon: icons.fbThin,
-            },
-            {
-              link: 'https://twitter.com/hostnationuk',
-              icon: icons.twitter,
-            },
-          ].map(({ link, icon }, i) => (
-            <Hover
-              style={{
-                display: 'block',
-                padding: 12,
-                margin: -5,
-                background: colors.purple,
-                borderRadius: 100,
-                hover: { background: colors.purpleDark },
-              }}
-              key={i}
-            >
-              {({ hoverProps, style }) => (
-                <a href={link} target="_blank" {...hoverProps} style={style}>
-                  <Icon {...icon} style={{ color: 'white', fontSize: 24 }} />
-                </a>
-              )}
-            </Hover>
-          ))}
-        </Div>
+        ))}
       </Div>
     </Div>
-  </Layout>
+    </Div>
+  </Layout >
 );

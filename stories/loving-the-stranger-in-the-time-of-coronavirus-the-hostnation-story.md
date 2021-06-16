@@ -1,7 +1,7 @@
 ---
 date: 2021-06-15T17:25:25.134Z
 author: ANTHONY BERMAN
-category: Blog Post
+category: HostNation Blog Post
 title: "Loving the Stranger in the \x03Time of Coronavirus: The HostNation Story"
 ---
 **Anthony Berman gives a personal account of HostNation, before and after COVID-19, and the benefits it has brought to refugees and asylum seekers and their befrienders.**
