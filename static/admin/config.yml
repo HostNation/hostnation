@@ -11,6 +11,9 @@ collections:
     create: true
     editor:
       preview: false
+    slug:
+      encoding: 'ascii'
+      clean_accents: true
     fields:
       - { name: date, label: Date, widget: datetime }
       - { name: author, label: Author }
@@ -18,7 +21,13 @@ collections:
           name: category,
           label: Category,
           widget: select,
-          options: ['HostNation Blog Post', 'HostNation Case Study', 'HostNation Podcast', 'HostNation Film'],
+          options:
+            [
+              'HostNation Blog Post',
+              'HostNation Case Study',
+              'HostNation Podcast',
+              'HostNation Film',
+            ],
         }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
