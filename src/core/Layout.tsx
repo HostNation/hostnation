@@ -44,7 +44,7 @@ export default ({ location, children }: any) => (
         }
         .markdown {
           font-family: Lato, sans-serif;
-          font-size: 20px;
+          font-size: 18px;
           color: #2f3644;
           line-height: 1.4;
           font-weight: 300;
