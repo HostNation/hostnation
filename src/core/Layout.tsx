@@ -65,10 +65,14 @@ export default ({ location, children }: any) => (
         .markdown em {
           font-weight: bold;
           font-style: italic;
+          padding-bottom: 5px;
+          padding-top: 5px;
           padding-left: 20px;
-          padding-right: 20px;
           display: block;
           border-left: 2px solid rgb(150,150,150);
+          outline-offset:-10px;  
+          margin-top: -10px;  
+          margin-bottom: -10px;  
         }
         .markdown img {
           padding: 10px 0 10px 0;
