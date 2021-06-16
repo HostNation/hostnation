@@ -230,7 +230,7 @@ export default () => (
             }}
           >
             {({ hoverProps, style }) => (
-              <a href="/refugee" {...hoverProps} style={style}>
+              <a href="/stories" {...hoverProps} style={style}>
                 {" "}click here.
               </a>
             )}
