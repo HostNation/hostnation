@@ -13,6 +13,7 @@ import Story from '../../core/Story';
 import storiesHeader from '../../img/stories.png';
 
 const PostLink = ({ post }) => {
+  console.log(post.frontmatter.category);
   const [isHovered, hoverProps] = useHover();
   const buttonStyle = st(styles.button('purple') as any)
     .mergeKeys({ hover: isHovered })
@@ -22,13 +23,24 @@ const PostLink = ({ post }) => {
       display: 'inline-block',
       width: 150,
     });
-  return (
-    <Link to={post.parent.name}>
-      <Txt {...hoverProps} style={{ ...buttonStyle, padding: 5, fontSize: 16 }}>
-        READ MORE »
+  if (post.frontmatter.category == "HostNation Film") {
+    return (
+      <Link to={post.parent.name}>
+        <Txt {...hoverProps} style={{ ...buttonStyle, padding: 5, fontSize: 16 }}>
+          SEE MORE »
       </Txt>
-    </Link>
-  );
+      </Link>
+    );
+  }
+  else {
+    return (
+      <Link to={post.parent.name}>
+        <Txt {...hoverProps} style={{ ...buttonStyle, padding: 5, fontSize: 16 }}>
+          READ MORE »
+      </Txt>
+      </Link>
+    );
+  }
 };
 
 export default ({
@@ -45,15 +57,15 @@ export default ({
           ...(i === 0
             ? []
             : [
-                <div
-                  key={`${edge.node.id}_A`}
-                  style={{
-                    background: colors.black,
-                    height: 3,
-                    borderRadius: 3,
-                  }}
-                />,
-              ]),
+              <div
+                key={`${edge.node.id}_A`}
+                style={{
+                  background: colors.black,
+                  height: 3,
+                  borderRadius: 3,
+                }}
+              />,
+            ]),
           <Div
             key={`${edge.node.id}_B`}
             style={{ spacing: 20, background: 'white', padding: '50px 15px' }}
