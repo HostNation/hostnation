@@ -18,7 +18,7 @@ collections:
           name: category,
           label: Category,
           widget: select,
-          options: ['Blog Post', 'HostNation Case Study', 'Podcast', 'Film'],
+          options: ['HostNation Blog Post', 'HostNation Case Study', 'HostNation Podcast', 'HostNation Film'],
         }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
