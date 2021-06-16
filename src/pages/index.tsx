@@ -142,7 +142,21 @@ export default () => (
       <Div style={{ spacing: 25 }}>
         <Txt style={styles.body}>
           If you are an asylum seeker or refugee and would like a befriender
-          please <button href="/refugee" style={{...styles.text, fontWeight: 'bold', color: "purple"}} >click here for more information.</button>
+          please 
+          <Hover
+            style={{
+              ...styles.text,
+              color: colors.black,
+              fontWeight: 'bold',
+              hover: { color: colors.purpleDark },
+            }}
+          >
+            {({ hoverProps, style }) => (
+              <a href="/refugee" {...hoverProps} style={style}>
+                {" "}click here for more information.
+              </a>
+            )}
+          </Hover>
         </Txt>
       </Div>
 
@@ -201,63 +215,26 @@ export default () => (
               />
             </div>
           </div>
-          {/* <div style={{ display: 'table', margin: 'auto' }}>
-          <div style={{ width: 250, margin: '0 auto', display: 'table-cell', padding: '10px' }}>
-            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/309771300?title=0&byline=0&portrait=0"
-                frameBorder="0"
-                allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-            </div>
-          </div>
-          <div style={{ width: 250, margin: '0 auto', display: 'table-cell', padding: '10px' }}>
-            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/309762034?title=0&byline=0&portrait=0"
-                frameBorder="0"
-                allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-            </div>
-          </div>
-          <div style={{ width: 250, margin: '0 auto', display: 'table-cell', padding: '10px' }}>
-            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/391708540?title=0&byline=0&portrait=0"
-                frameBorder="0"
-                allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-            </div>
-          </div>
-          </div> */}
         </Div>
       </div>
     <Div style={{ spacing: 25 }}>
 
       <Txt style={styles.body}>
-        For more films, blogs, case studies and podcasts on HostNation befriending <a href="/stories" style={{...styles.text, fontWeight: 'bold'}} >click here.</a>
-
+        For more films, blogs, case studies and podcasts on HostNation befriending
+        <Hover
+            style={{
+              ...styles.text,
+              color: colors.black,
+              fontWeight: 'bold',
+              hover: { color: colors.purpleDark },
+            }}
+          >
+            {({ hoverProps, style }) => (
+              <a href="/refugee" {...hoverProps} style={style}>
+                {" "}click here.
+              </a>
+            )}
+          </Hover>
         </Txt>
     </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
