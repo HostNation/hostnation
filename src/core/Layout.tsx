@@ -63,6 +63,7 @@ export default ({ location, children }: any) => (
           font-weight: bold;
         }
         .markdown em {
+          font-weight: bold;
           font-style: italic;
           padding-left: 20px;
           padding-right: 20px;
