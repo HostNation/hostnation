@@ -11,9 +11,11 @@ collections:
     create: true
     editor:
       preview: false
-    # slug:
-    #   encoding: 'ascii'
-    #   clean_accents: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    encoding: 'ascii'
+    clean_accents: true
+    format: 'frontmatter'
+    identifier_field: makerName
     fields:
       - { name: date, label: Date, widget: datetime }
       - { name: author, label: Author }
