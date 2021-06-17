@@ -110,7 +110,7 @@ const MoreInfo = () => {
 };
 
 const VimeoVids = () => {
-  const [setWidthElem, small = false] = useWidth(700);
+  const [setWidthElem, small = false] = useWidth(800);
   return (
     <div ref={setWidthElem}>
       <Div
