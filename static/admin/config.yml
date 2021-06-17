@@ -4,6 +4,11 @@ backend:
 media_folder: static/assets
 public_folder: /assets
 
+slug:     
+    encoding: 'ascii'
+    clean_accents: true
+    sanitize_replacement: "-"
+
 collections:
   - name: stories
     label: Stories
@@ -12,8 +17,6 @@ collections:
     editor:
       preview: false
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    encoding: 'ascii'
-    clean_accents: true
     format: 'frontmatter'
     identifier_field: makerName
     fields:
