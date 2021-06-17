@@ -266,8 +266,8 @@ export default () => (
           to="https://www.totalgiving.co.uk/donate/hostnation"
           newTab
           color="purple"
-          style={{ margin: '0 auto' }}
-        >
+          style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
+          >
           DONATE HERE
         </Button>
       </Div>
@@ -293,7 +293,7 @@ export default () => (
             to="/guide.pdf"
             newTab
             color="yellow"
-            style={{ margin: '0 auto' }}
+            style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
           >
             READ THE GUIDE
           </Button>
@@ -314,7 +314,7 @@ export default () => (
             to="/links.pdf"
             newTab
             color="purple"
-            style={{ margin: '0 auto' }}
+            style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
           >
             SIGNPOSTING LINKS
           </Button>
