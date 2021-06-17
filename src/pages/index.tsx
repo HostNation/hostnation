@@ -109,6 +109,184 @@ const MoreInfo = () => {
   );
 };
 
+const VimeoVids = () => {
+  const [setWidthElem, small = false] = useWidth(700);
+  return (
+    <div ref={setWidthElem}>
+      <Div
+        style={{
+          display: small ? 'block' : 'table',
+          margin: 'auto',
+        }}
+      >
+        <div style={{ maxWidth: small ? 450 : 'none', width: small ? 'unset' : 400, display: small ? 'block' : 'table-cell', margin: '0 auto', padding: small ? '25px 0 0 0' : '25px 10px 10px 10px' }}>
+          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/563320888?title=0&byline=0&portrait=0"
+              frameBorder="0"
+              allowFullScreen
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+              }}
+            />
+          </div>
+        </div>
+        <div style={{ maxWidth: small ? 450 : 'none', width: small ? 'unset' : 400, display: small ? 'block' : 'table-cell', margin: '0 auto', padding: small ? '25px 0 0 0' : '25px 10px 10px 10px' }}>
+          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/563324420?title=0&byline=0&portrait=0"
+              frameBorder="0"
+              allowFullScreen
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+              }}
+            />
+          </div>
+        </div>
+        </Div>
+        <div style={{ maxWidth: small ? 450 : 'none', width: small ? 'unset' : 400, display: 'block', margin: '0 auto', paddingTop: "25px" }}>
+          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/563322749?title=0&byline=0&portrait=0"
+              frameBorder="0"
+              allowFullScreen
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+              }}
+            />
+          </div>
+        </div>
+    </div>
+  );
+};
+
+
+
+// const VimeoVids = () => {
+//   const [setWidthElem, small = false] = useWidth(700);
+//   if (small == true) {
+//     return (
+//       <div ref={setWidthElem}>
+//         <div style={{ maxWidth: 450, margin: '0 auto', paddingTop: "25px" }}>
+//           <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+//             <iframe
+//               src="https://player.vimeo.com/video/563320888?title=0&byline=0&portrait=0"
+//               frameBorder="0"
+//               allowFullScreen
+//               style={{
+//                 position: 'absolute',
+//                 top: 0,
+//                 left: 0,
+//                 width: '100%',
+//                 height: '100%',
+//               }}
+//             />
+//           </div>
+//         </div>
+//         <div style={{ maxWidth: 450, margin: '0 auto', paddingTop: "25px" }}>
+//           <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+//             <iframe
+//               src="https://player.vimeo.com/video/563324420?title=0&byline=0&portrait=0"
+//               frameBorder="0"
+//               allowFullScreen
+//               style={{
+//                 position: 'absolute',
+//                 top: 0,
+//                 left: 0,
+//                 width: '100%',
+//                 height: '100%',
+//               }}
+//             />
+//           </div>
+//         </div>
+//         <div style={{ maxWidth: 450, margin: '0 auto', paddingTop: "25px" }}>
+//           <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+//             <iframe
+//               src="https://player.vimeo.com/video/563322749?title=0&byline=0&portrait=0"
+//               frameBorder="0"
+//               allowFullScreen
+//               style={{
+//                 position: 'absolute',
+//                 top: 0,
+//                 left: 0,
+//                 width: '100%',
+//                 height: '100%',
+//               }}
+//             />
+//           </div>
+//         </div>
+//       </div>
+//     );
+//   } else {
+//     return (
+//       <div ref={setWidthElem}>
+//         <div style={{ display: 'table', margin: 'auto' }}>
+//           <div style={{ width: 400, margin: '0 auto', display: 'table-cell', padding: '10px' }}>
+//             <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+//               <iframe
+//                 src="https://player.vimeo.com/video/563320888?title=0&byline=0&portrait=0"
+//                 frameBorder="0"
+//                 allowFullScreen
+//                 style={{
+//                   position: 'absolute',
+//                   top: 0,
+//                   left: 0,
+//                   width: '100%',
+//                   height: '100%',
+//                 }}
+//               />
+//             </div>
+//           </div>
+//           <div style={{ width: 400, margin: '0 auto', display: 'table-cell', padding: '10px' }}>
+//             <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+//               <iframe
+//                 src="https://player.vimeo.com/video/563324420?title=0&byline=0&portrait=0"
+//                 frameBorder="0"
+//                 allowFullScreen
+//                 style={{
+//                   position: 'absolute',
+//                   top: 0,
+//                   left: 0,
+//                   width: '100%',
+//                   height: '100%',
+//                 }}
+//               />
+//             </div>
+//           </div>
+//         </div>
+//         <div style={{ maxWidth: 400, margin: '0 auto', padding: '10px', paddingTop: '0px' }}>
+//           <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+//             <iframe
+//               src="https://player.vimeo.com/video/563322749?title=0&byline=0&portrait=0"
+//               frameBorder="0"
+//               allowFullScreen
+//               style={{
+//                 position: 'absolute',
+//                 top: 0,
+//                 left: 0,
+//                 width: '100%',
+//                 height: '100%',
+//               }}
+//             />
+//           </div>
+//         </div>
+//       </div>
+//     );
+//   }
+// };
+
 export default () => (
   <Layout>
     <Helmet title="HostNation | Helping refugees through friendship" />
@@ -169,104 +347,7 @@ export default () => (
           <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 16 }}>
             Films 1 min each and shot for HostNation by @DamnFineMedia.
           </Txt>
-          {/* <div style={{ maxWidth: 450, margin: '0 auto' }}>
-            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/563320888?title=0&byline=0&portrait=0"
-                frameBorder="0"
-                allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-            </div>
-          </div>
-          <div style={{ maxWidth: 450, margin: '0 auto' }}>
-            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/563324420?title=0&byline=0&portrait=0"
-                frameBorder="0"
-                allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-            </div>
-          </div>
-          <div style={{ maxWidth: 450, margin: '0 auto' }}>
-            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/563322749?title=0&byline=0&portrait=0"
-                frameBorder="0"
-                allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-            </div>
-          </div> */}
-          <div style={{ display: 'table', margin: 'auto' }}>
-            <div style={{ width: 400, margin: '0 auto', display: 'table-cell', padding: '10px' }}>
-              <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-                <iframe
-                  src="https://player.vimeo.com/video/563320888?title=0&byline=0&portrait=0"
-                  frameBorder="0"
-                  allowFullScreen
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                  }}
-                />
-              </div>
-            </div>
-            <div style={{ width: 400, margin: '0 auto', display: 'table-cell', padding: '10px' }}>
-              <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-                <iframe
-                  src="https://player.vimeo.com/video/563324420?title=0&byline=0&portrait=0"
-                  frameBorder="0"
-                  allowFullScreen
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-          <div style={{ maxWidth: 400, margin: '0 auto', padding: '10px', paddingTop: '0px' }}>
-            <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/563322749?title=0&byline=0&portrait=0"
-                frameBorder="0"
-                allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-              />
-            </div>
-          </div>
+          <VimeoVids />
         </Div>
       </div>
       <Div style={{ spacing: 25 }}>

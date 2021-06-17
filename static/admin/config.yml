@@ -11,9 +11,9 @@ collections:
     create: true
     editor:
       preview: false
-    slug:
-      encoding: 'ascii'
-      clean_accents: true
+    # slug:
+    #   encoding: 'ascii'
+    #   clean_accents: true
     fields:
       - { name: date, label: Date, widget: datetime }
       - { name: author, label: Author }
