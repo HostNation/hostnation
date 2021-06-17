@@ -1,5 +1,5 @@
 ---
-date: 2021-06-17T13:12:37.971Z
+date: 2021-06-17T13:03:00.000Z
 author: NICK & ALI
 category: HostNation Case Study
 title: We’ll definitely continue to be friends!
