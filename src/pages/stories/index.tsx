@@ -71,7 +71,7 @@ export default ({
             style={{ spacing: 20, background: 'white', padding: '50px 15px' }}
           >
             <Story post={edge.node} />
-            <div style={{ maxWidth: 720, margin: '0 auto' }}>
+            <div style={{ maxWidth: 600, margin: '0 auto' }}>
               <PostLink post={edge.node} />
             </div>
           </Div>,
