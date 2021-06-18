@@ -47,7 +47,7 @@ export default ({ location, children }: any) => (
           font-size: 18px;
           color: #2f3644;
           line-height: 1.4;
-          font-weight: 300;
+          font-weight: 400;
           text-align: left;
         }
         .markdown p {

@@ -4,7 +4,7 @@ import { Div, Txt } from './elements';
 import styles, { colors } from './styles';
 
 export default ({ post }) => (
-  <Div style={{ spacing: 25, maxWidth: 720, margin: '0 auto' }}>
+  <Div style={{ spacing: 25, maxWidth: 600, margin: '0 auto' }}>
     <Txt
       style={{
         ...styles.button('yellow'),

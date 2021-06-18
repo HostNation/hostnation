@@ -105,7 +105,7 @@ const Profile = ({ image, name, role, bio, credit }: any) => {
         </Div>
         {isOpen &&
           bio.map((text, i) => (
-            <Txt style={{ ...styles.boxText, padding: 0 }} key={i}>
+            <Txt style={{ ...styles.boxText, padding: 0, width: '100%' }} key={i}>
               {text}
             </Txt>
           ))}
