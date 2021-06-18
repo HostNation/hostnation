@@ -173,7 +173,7 @@ const VimeoVids = () => {
 };
 
 export default () => (
-  <Layout>
+  <Layout location="/">
     <Helmet title="HostNation | Helping refugees through friendship" />
     <Div style={{ spacing: 50, padding: '50px 0' }}>
       <TopButtons />

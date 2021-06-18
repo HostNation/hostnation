@@ -13,7 +13,7 @@ import Link from '../core/Link';
 import styles, { colors } from '../core/styles';
 
 export default () => (
-  <Layout location="refugee">
+  <Layout location="/refugee">
     <Helmet title="Befriend | HostNation" />
     <Div style={{ spacing:50, paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />

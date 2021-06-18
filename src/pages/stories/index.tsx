@@ -48,7 +48,7 @@ export default ({
     allMarkdownRemark: { edges },
   },
 }) => (
-  <Layout>
+  <Layout location="/stories">
     <Helmet title="Stories | HostNation" />
     <Div style={{ spacing: 50, padding: '50px 0' }}>
       <img src={storiesHeader} style={{ maxWidth: 600, margin: '0 auto' }} />
