@@ -54,9 +54,34 @@ export default ({ location, children }: any) => (
           padding-bottom: 10px;
           padding-top: 10px;
         }
+        .markdown h1 {
+          font-weight: bold;
+          font-size: 32px;
+          padding: 10px 0 10px 0;
+        }
         .markdown h2 {
           font-weight: bold;
           font-size: 26px;
+          padding: 10px 0 10px 0;
+        }
+        .markdown h3 {
+          font-weight: bold;
+          font-size: 24px;
+          padding: 10px 0 10px 0;
+        }
+        .markdown h4 {
+          font-weight: bold;
+          font-size: 22px;
+          padding: 10px 0 10px 0;
+        }
+        .markdown h5 {
+          font-weight: bold;
+          text-align: center;
+          padding: 10px 0 10px 0;
+        }
+        .markdown h6 {
+          font-weight: bold;
+          text-align: center;
           padding: 10px 0 10px 0;
         }
         .markdown strong {
