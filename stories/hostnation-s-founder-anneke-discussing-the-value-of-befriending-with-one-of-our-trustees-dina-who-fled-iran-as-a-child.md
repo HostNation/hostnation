@@ -2,7 +2,7 @@
 date: 2021-06-17T13:02:00.000Z
 author: HostNation
 category: HostNation Film
-title: Anneke (HostNation founder) in conversation with Dina (Trustee)
+title: "Anneke in conversation with Dina "
 ---
 ###### **Anneke, founder of HostNation, discussing the value of befriending with one of our Trustees, Dina, who fled Iran as a child.**
 
