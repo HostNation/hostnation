@@ -4,7 +4,7 @@ author: SUE & LAYLA
 category: HostNation Case Study
 title: Nothing helps like having a real friend
 ---
-Sue (London befriender, female, 50s) *and Layla* (Iranian refugee, female, 60s) hit it off immediately. Sue was really impressed and inspired by Layla. They live close by. Sue dropped off gifts during lockdown when they couldn’t see each other and called regularly. They missed seeing each other and resumed face-to-face as soon as they could.
+Sue (London befriender, female, 50s) and Layla (Iranian refugee, female, 60s) hit it off immediately. Sue was really impressed and inspired by Layla. They live close by. Sue dropped off gifts during lockdown when they couldn’t see each other and called regularly. They missed seeing each other and resumed face-to-face as soon as they could.
 
 ![Sue and Layla having a socially distant lockdown coffee outside on a bench](/assets/sue-and-layla.png "Sue and  Layla having a socially distant lockdown coffee")
 
