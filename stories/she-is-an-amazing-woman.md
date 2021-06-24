@@ -10,8 +10,8 @@ title: She is an amazing woman
 
 MARY on AMIRA: 
 
-> Amira is hugely grateful but she is an amazing woman. It’s a weird mixture with befriending – the people you meet can appear extremely vulnerable and potentially over-dependent, but they are probably stronger than all of us.
+> ***Amira is hugely grateful but she is an amazing woman. It’s a weird mixture with befriending – the people you meet can appear extremely vulnerable and potentially over-dependent, but they are probably stronger than all of us.***
 
 AMIRA on MARY: 
 
-> I want to say thank you. I was alone and I didn’t know what happened to make Mary came into my life at a difficult time. I want to tell you: I can’t believe some people can help here. When I spoke to my family, sometimes friends and family call me, I say Mary is my best friend.
+> ***I want to say thank you. I was alone and I didn’t know what happened to make Mary came into my life at a difficult time. I want to tell you: I can’t believe some people can help here. When I spoke to my family, sometimes friends and family call me, I say Mary is my best friend.***
