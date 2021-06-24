@@ -2,7 +2,7 @@
 date: 2021-06-24T15:45:41.197Z
 author: ANNA & RENUKA
 category: HostNation Case Study
-title: It feels a great gift
+title: It feels like a great gift
 ---
 <img src="/assets/anna-and-renuka.png" alt="zoom" style="width:43%;padding-right:25px;" ALIGN="left" />**Renuka (Sri Lankan refugee, 50s) had been in the UK for over 10 years but her refugee experience had sapped her confidence. Despite being shy, she connected straight away with Anna (London befriender, female, 60s), a professional musician whose gentle manner enabled her to feel at ease.** 
 
