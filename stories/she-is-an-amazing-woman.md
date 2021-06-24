@@ -4,9 +4,9 @@ author: MARY & AMIRA
 category: HostNation Case Study
 title: She is an amazing woman
 ---
-**Mary works for a North London charity that supports isolated parents, and is strongly sympathetic to the needs of vulnerable people in the city. Introduced to Amira a few weeks before lockdown, she showed her neighbourhood shops selling the food she missed, took her to the local library and drove her round the sights of central London she had never seen in her four years here.** 
+**Mary works for a North London charity that supports isolated parents, and is strongly sympathetic to the needs of vulnerable people in the city.** 
 
-<img src="/assets/mary-and-amira.png" alt="coffee" style="width:43%;padding-right:25px;" ALIGN="left" />Knowing she loved gardening, Mary also pointed Amira to a community project she was then able to visit on her own. Their relationship continued to grow during lockdown, with Mary dropping off food for Amira and her son, and the two staying in regular touch on FaceTime or Zoom.
+<img src="/assets/mary-and-amira.png" alt="coffee" style="width:43%;padding-right:25px;" ALIGN="left" />Introduced to Amira a few weeks before lockdown, she showed her neighbourhood shops selling the food she missed, took her to the local library and drove her round the sights of central London she had never seen in her four years here. Knowing she loved gardening, Mary also pointed Amira to a community project she was then able to visit on her own. Their relationship continued to grow during lockdown, with Mary dropping off food for Amira and her son, and the two staying in regular touch on FaceTime or Zoom.
 
 MARY on AMIRA: 
 
