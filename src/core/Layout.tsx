@@ -42,12 +42,15 @@ export default ({ location, children }: any) => (
         #___gatsby, #gatsby-focus-wrapper {
           height: 100%;
         }
+        @font-face {
+          font-family: 'Selima';
+          src: local('Selima'), url('./img/fonts/Selima .woff') format('woff');
+          }
         .markdown {
           font-family: Lato, sans-serif;
           font-size: 18px;
           color: #2f3644;
           line-height: 1.4;
-          font-weight: 400;
           text-align: left;
         }
         .markdown p {
@@ -55,9 +58,12 @@ export default ({ location, children }: any) => (
           padding-top: 10px;
         }
         .markdown h1 {
-          font-weight: bold;
-          font-size: 32px;
-          padding: 10px 0 10px 0;
+          font-family: Selima, cursive;
+          font-weight: normal;
+          font-size: 80px;
+          text-align: center;
+          // padding: 10px 0 10px 0;
+          color: rgb(179, 75, 106);
         }
         .markdown h2 {
           font-weight: bold;
@@ -75,29 +81,52 @@ export default ({ location, children }: any) => (
           padding: 10px 0 10px 0;
         }
         .markdown h5 {
-          font-weight: bold;
-          text-align: center;
+          text-align: right;
           padding: 10px 0 10px 0;
         }
         .markdown h6 {
           font-weight: bold;
           text-align: center;
-          padding: 10px 0 10px 0;
+          padding: 0 0 20px 0;
         }
         .markdown strong {
           font-weight: bold;
         }
         .markdown em {
-          font-weight: bold;
-          font-style: italic;
-          padding-bottom: 5px;
-          padding-top: 5px;
+          font-style: italic;        
+        }
+        .markdown code {
+          font-family: monospace;     
+        }
+        .markdown a {
+          color: rgb(179, 75, 106);
+        }
+        .markdown a:hover, a:active {
+          color: rgb(220, 91, 130);
+        }
+        .markdown blockquote {
+          margin-bottom: 10px;
+          margin-top: 10px;
           padding-left: 20px;
           display: block;
           border-left: 2px solid rgb(150,150,150);
-          outline-offset:-10px;  
-          margin-top: -10px;  
-          margin-bottom: -10px;  
+        }
+        .markdown blockquote p {
+          padding: 0;
+        }
+        .markdown ul {
+          list-style-position: outside;
+          padding-left: 20px;
+          padding-bottom: 10px;
+          padding-top: 10px;
+          list-style-type: disc;
+        }
+        .markdown ol {
+          list-style-position: outside;
+          padding-left: 20px;
+          padding-bottom: 10px;
+          padding-top: 10px;
+          list-style-type: decimal;
         }
         .markdown img {
           padding: 10px 0 10px 0;
