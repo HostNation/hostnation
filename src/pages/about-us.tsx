@@ -106,6 +106,7 @@ const Profile = ({ image, name, role, bio, credit }: any) => {
         {/* move next to next line or dont effect size of other */}
         {isOpen &&
           bio.map((text, i) => (
+            // <Txt style={{ ...styles.boxText, padding: 0, marginRight: -340, width: 340 or '100%' }} key={i}>
             <Txt style={{ ...styles.boxText, padding: 0 }} key={i}>
               {text}
             </Txt>

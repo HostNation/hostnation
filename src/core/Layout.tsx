@@ -57,6 +57,7 @@ export default ({ location, children }: any) => (
           padding-bottom: 10px;
           padding-top: 10px;
         }
+        /*
         .markdown h1 {
           font-family: Selima, cursive;
           font-weight: normal;
@@ -64,6 +65,12 @@ export default ({ location, children }: any) => (
           text-align: center;
           // padding: 10px 0 10px 0;
           color: rgb(179, 75, 106);
+        }
+        */
+        .markdown h1 {
+          font-weight: bold;
+          font-size: 30px;
+          padding: 10px 0 10px 0;
         }
         .markdown h2 {
           font-weight: bold;
