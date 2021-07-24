@@ -6,9 +6,7 @@ title: "Becoming friends: My experience befriending with HostNation"
 ---
 **Olivia Petie is a HostNation trustee who started with us as a volunteer befriender. She is a social researcher and evaluator at a global higher education charity**
 
-<img src="/assets/olivia.jpg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />The story I want to tell is of a friendship, how it came to be and what a wonderful thing it is. Two years ago I first heard about HostNation from a friend’s social media post. Intrigued by what they were doing, I began following them on Facebook and soon afterwards I applied to become a befriender. 
-
-Having volunteered with other organisations supporting refugees, I was aware of the many barriers faced by those arriving in the UK and seeking to rebuild their lives here. 
+<img src="/assets/olivia.jpg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />The story I want to tell is of a friendship, how it came to be and what a wonderful thing it is. Two years ago I first heard about HostNation from a friend’s social media post. Intrigued by what they were doing, I began following them on Facebook and soon afterwards I applied to become a befriender. Having volunteered with other organisations supporting refugees, I was aware of the many barriers faced by those arriving in the UK and seeking to rebuild their lives here. 
 
 > I really liked the HostNation focus on supporting people to build a social network and have some fun whilst getting to know their new city. 
 
