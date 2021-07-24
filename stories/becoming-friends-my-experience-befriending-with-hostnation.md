@@ -16,6 +16,8 @@ These are things often overlooked but so incredibly important for feeling at hom
 
 My HostNation friend turned out to be a young woman I will call Bahar *(she has asked us not to use her photo or real name, ed.)*. She is in her twenties, living in London, trying to find her way in the world, and establish her career – just like so many of my other friends. She is brave, ambitious, and incredibly strong. She also loves good coffee and enjoys a long discussion about the world. But Bahar is also unlike the rest of my friends, because she came to London as a refugee. Three years ago she fled to the UK, leaving her life as a newly qualified doctor to claim asylum in a country where she had no family or friends. But that is her story, it is not mine to tell. Mine is the story of our friendship. 
 
+
+
 ## What’s a HostNation friendship like?
 
 Whilst I understand the benefits of using the term ‘befriending’, this never quite captured the essence of my relationship with Bahar, because it implies some form of imbalance or formal structure. 
