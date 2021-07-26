@@ -26,7 +26,7 @@ I do hope I’ve been able to offer some support and encouragement to Bahar sinc
 
 But usually we just meet up for coffee, go for walks, and we even managed a socially-distanced bike ride. Mainly, we just enjoy hanging out (although admittedly usually a little later than planned due to our shared approach to time keeping!) 
 
-![Help a refugee feel London belongs to me](/assets/hn-referral-banner-london-belongs-to-me-600x200px.png "Referral banner")
+<a href="https://www.hostnation.org.uk/befriend/">![Help a refugee feel London belongs to me](/assets/hn-referral-banner-london-belongs-to-me-600x200px.png "Referral banner")</a>
 
 **[Register online and become a befriender >](https://www.hostnation.org.uk/befriend/)**
 
