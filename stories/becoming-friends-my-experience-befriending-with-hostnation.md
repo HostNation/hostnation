@@ -28,7 +28,7 @@ But usually we just meet up for coffee, go for walks, and we even managed a soci
 
 <a href="https://www.hostnation.org.uk/befriend/">![Help a refugee feel London belongs to me](/assets/hn-referral-banner-london-belongs-to-me-600x200px.png "Referral banner")</a>
 
-**[Register online and become a befriender >](https://www.hostnation.org.uk/befriend/)**
+**[Interested in befriending? Find out more >](https://www.hostnation.org.uk/befriend/)**
 
 ## Learning new cultures
 
