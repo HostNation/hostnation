@@ -24,7 +24,7 @@ export default () => (
           textAlign: 'left',
         }}
       >
-        Due to unprecendented traffic on our site we have had to temporarily close our registration for London.
+        Due to unprecedented traffic on our site we have had to temporarily close our registration for London.
         <br /><br />
 
         We believe this to be a humanitarian response to the dreadful situation in Afghanistan but as we are a small organisation making matches between refugees and residents in London, we cannot process too many registrations at once.
