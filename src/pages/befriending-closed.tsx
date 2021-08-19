@@ -5,6 +5,7 @@ import logoWide from '../img/logo-wide.png';
 
 import { Div, Txt, Hover, Icon } from '../core/elements';
 import Layout from '../core/Layout';
+import Button from '../core/Button';
 import contactIcon from '../img/icons/contact.png';
 import styles, { colors, icons } from '../core/styles';
 
@@ -30,8 +31,16 @@ export default () => (
         We believe this to be a humanitarian response to the dreadful situation in Afghanistan but as we are a small organisation making matches between refugees and residents in London, we cannot process too many registrations at once.
         <br /><br />
 
-        Thank you for your interest and please feel free to get in contact with us directly if you are keen to befriend in the future.
+        If you’d like to help please consider a small, regular donation to support our work.
       </Txt>
+          <Button
+          to="https://www.totalgiving.co.uk/donate/hostnation"
+          newTab
+          color="purple"
+          style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
+          >
+          DONATE HERE
+        </Button>
     </Div>
     <Div style={{ spacing: 35 }}>
         <Div style={{ spacing: 15 }}>

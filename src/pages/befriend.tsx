@@ -70,7 +70,6 @@ export default () => (
           <a
             href="/befriending-closed"
           >
-            {/* https://airtable.com/shrEs9XBHYuJxLEaP?prefill_Type=Befriender */}
             <Hover
               style={{
                 ...styles.boxText,
