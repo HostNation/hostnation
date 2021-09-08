@@ -16,7 +16,7 @@ When Mimi arrived in the UK as an Iranian refugee, she felt lonely and afraid. T
 
 “I kept thinking as I walked to that first meeting, what do I expect? We speak different languages and are from totally different backgrounds, but from the moment I saw Sally, it felt strangely as if we’d known each other forever,” says Mimi. As they discovered a shared love for the arts and a general zest for life, the two of them started meeting regularly, often having coffee together or exploring London. Sally even introduced Mimi to the uniqueness of a British pantomime. 
 
-> ***“Mimi inspires me so much. She just wants to make the most of every moment of life and we just laugh and cry and sometimes talk about serious thing.”*** 
+> ***“Mimi inspires me so much. She just wants to make the most of every moment of life and we just laugh and cry and sometimes talk about serious things.”*** 
 
 "From the moment I met Sally, it felt as if we’d known each other forever" says Sally. As for Mimi, she says Sally’s friendship has given her everything she was looking for. 
 
