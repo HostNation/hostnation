@@ -4,7 +4,7 @@ author: YOURS MAGAZINE
 category: HostNation Blog Post
 title: HostNation in the media
 ---
-**Our wonderful HostNation friends Sally and Mimi star in this lovely article for Yours Magazine about what their friendship means to them.** 
+**Our wonderful HostNation friends Sally and Mimi star in this lovely article for *Yours Magazine* about what their friendship means to them.** 
 
 “Mimi inspires me so much,” says befriender Sally. “She just wants to make the most of every moment of life.“ Many thanks to both of them for agreeing to share their inspiring story for this feature all about the power of female friendship
 
