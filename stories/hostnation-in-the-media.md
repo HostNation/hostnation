@@ -18,7 +18,7 @@ When Mimi arrived in the UK as an Iranian refugee, she felt lonely and afraid. T
 
 > ***“Mimi inspires me so much. She just wants to make the most of every moment of life and we just laugh and cry and sometimes talk about serious things.”*** 
 
-"From the moment I met Sally, it felt as if we’d known each other forever" says Sally. As for Mimi, she says Sally’s friendship has given her everything she was looking for. 
+As for Mimi, she says Sally’s friendship has given her everything she was looking for. 
 
 “Sally never judges me and encourages me to do things that I could never have the freedom to do in my own country, such as riding a bike or going to see dance,” says Mimi. “Sally is everything to me in this country and I’m so thankful to her for that.”
 
