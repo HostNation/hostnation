@@ -119,7 +119,7 @@ const VimeoVids = () => {
           margin: 'auto',
         }}
       >
-        <div style={{ maxWidth: small ? 450 : 'none', width: small ? 'unset' : 400, display: small ? 'block' : 'table-cell', margin: '0 auto', padding: small ? '25px 0 0 0' : '25px 10px 10px 10px' }}>
+        {/* <div style={{ maxWidth: small ? 450 : 'none', width: small ? 'unset' : 400, display: small ? 'block' : 'table-cell', margin: '0 auto', padding: small ? '25px 0 0 0' : '25px 10px 10px 10px' }}> */}
           <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
             <iframe
               src="https://player.vimeo.com/video/563320888?title=0&byline=0&portrait=0"
@@ -134,7 +134,7 @@ const VimeoVids = () => {
               }}
             />
           </div>
-        </div>
+        {/* </div> */}
         <div style={{ maxWidth: small ? 450 : 'none', width: small ? 'unset' : 400, display: small ? 'block' : 'table-cell', margin: '0 auto', padding: small ? '25px 0 0 0' : '25px 10px 10px 10px' }}>
           <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
             <iframe
