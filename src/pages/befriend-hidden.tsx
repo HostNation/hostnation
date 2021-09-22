@@ -68,7 +68,8 @@ export default () => (
             parent and well versed in London’s fun opportunities for children.
           </Txt>
           <a
-            href="/befriending-closed"
+            href="https://airtable.com/shrEs9XBHYuJxLEaP?prefill_Type=Befriender"
+            target="_blank"
           >
             <Hover
               style={{
