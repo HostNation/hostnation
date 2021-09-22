@@ -60,7 +60,7 @@ export default () => (
             London
           </Txt>
           <Txt style={styles.boxText}>
-            We have re-opened registration in London and are currently
+            We are currently
             looking for friendship matches particularly for male refugees of all
             ages and female refugees 40+. We also need befrienders across the
             outer boroughs of London. Some of the refugees referred to us have
@@ -80,7 +80,7 @@ export default () => (
             >
               {({ hoverProps, style }) => (
                 <Txt {...hoverProps} style={style}>
-                  London: Befriender Registration Form &raquo;
+                  London: Befriender Registration Waiting List &raquo;
                 </Txt>
               )}
             </Hover>

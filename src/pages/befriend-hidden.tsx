@@ -1,89 +1,23 @@
-import * as React from 'react';
-// import r from 'refluent';
-import { Div, Hover, Txt } from 'elmnt';
+import React from 'react';
 import Helmet from 'react-helmet';
 
-// import * as mapImage from '../img/map.jpg';
-import * as logoWide from '../img/logo-wide.png';
+import logoWide from '../img/logo-wide.png';
+import laylaSue from '../img/banners/layla-sue.png';
+import nickAli from '../img/banners/nick-ali.png';
 
-// import befriendBlocks from '../blocks/befriend';
+import { Div, Hover, Txt } from '../core/elements';
 import Box from '../core/Box';
-// import Forms from '../core/Forms';
-import { Link } from '../core/router';
+import Layout from '../core/Layout';
 import styles, { colors } from '../core/styles';
 
-// const BefriendForm = r
-//   .do((_, push) => ({
-//     complete: false,
-//     onSubmit: () => push({ complete: true }),
-//   }))
-//   .yield(
-//     ({ onSubmit, complete }) =>
-//       complete ? (
-//         <Div style={{ spacing: 40, padding: '50px 0' }}>
-//           <Txt
-//             style={{
-//               ...styles.base,
-//               fontSize: 30,
-//               lineHeight: '40px',
-//               fontWeight: 'bold',
-//               textAlign: 'center',
-//               color: colors.yellow,
-//             }}
-//           >
-//             Thanks for registering!
-//           </Txt>
-//           <Txt
-//             style={{
-//               ...styles.text,
-//               fontWeight: 'bold',
-//               color: colors.yellow,
-//             }}
-//           >
-//             One of the HostNation team will be in touch shortly to arrange a
-//             call to talk to you about being a befriender. Please check your
-//             inbox (and junk mail) for an email from HostNation. Depending on
-//             where you live and the referrals we receive, it may be a few weeks
-//             or several months before we match you. In the meantime, please
-//             follow us on
-//             <Link to="https://www.facebook.com/HostNationUK/" newTab>
-//               <Txt
-//                 style={{
-//                   ...styles.text,
-//                   fontWeight: 'bold',
-//                   color: colors.yellow,
-//                   display: 'inline-block',
-//                   padding: '0 5px',
-//                   textDecoration: 'underline',
-//                 }}
-//               >
-//                 Facebook
-//               </Txt>
-//             </Link>
-//             and we’ll keep you posted on our progress.
-//           </Txt>
-//         </Div>
-//       ) : (
-//         <Forms.Yellow
-//           objects={{
-//             befriender: {
-//               type: 'befrienders',
-//               initial: { mapaddress: null },
-//             },
-//           }}
-//           blocks={befriendBlocks()}
-//           onSubmit={onSubmit}
-//         />
-//       ),
-//   );
-
 export default () => (
-  <>
+  <Layout location="/befriend">
     <Helmet title="Befriend | HostNation" />
     <Div style={{ spacing: 50, paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
+      <img src={nickAli} style={{ maxWidth: 600, margin: '0 auto' }} />
 
-      <Box title="WHY WE NEED TO ASK A LOT OF YOU" toggle>
+      <Box title="WHAT WE ASK OF YOU" toggle>
         <Txt style={styles.boxText}>
           HostNation recognise that whilst asylum seekers and refugees over the
           age of 18 are not technically classified in legal terms as vulnerable
@@ -110,83 +44,82 @@ export default () => (
 
       <Box title="BEFRIENDER REGISTRATION FORM" color="yellow">
         <Txt style={styles.boxText}>
-          Thank you for your interest in HostNation refugee befriending.
+          If you'd like to befriend an asylum seeker or refugee trying to find
+          their feet here in the UK, we would love to hear from you.
         </Txt>
         <Txt style={styles.boxText}>
-          As we emerge from Covid we are introducing ‘smart’ befriending which
-          is a hybrid of online and face to face. Whilst we still hope our
-          befrienders will be able to show a socially isolated refugee or asylum
-          seeker how to enjoy London and have new, positive experiences cheaply
-          and often for free, we are conscious that many places remain closed
-          and refugees are socially anxious about going out and using public
-          transport. We may also face a second wave of the virus.
+          We ask for an initial commitment of three months, during which we
+          suggest a phone chat once a week and an outing at least once a
+          fortnight. This is your opportunity to show your befriendee around,
+          introduce them to free activities and help them participate more in UK
+          life. They’ll have the chance to get to know a friendly local and
+          practise their English. And you may find a real friend in the process!
         </Txt>
-        <Txt style={styles.boxText}>
-          For this reason we plan to make introductions and facilitate online
-          befriending via What’s App video, FaceTime, FaceBook Messenger or
-          Zoom. Once introduced, we ask befrienders to make weekly calls to
-          check in, chat and help their befriendee practice their English. When
-          both sides feel ready to meet face-to-face, then we encourage making a
-          plan to visit a park, market or museum and to continue to explore and
-          experience London together at least once a fortnight. But, if both
-          parties feel more comfortable carrying on meeting virtually, that’s
-          fine too.
-        </Txt>
-        <Txt style={styles.boxText}>
-          We will be making matches based more on demographics and shared
-          interests than geography – although we will still try to match people
-          who live in the same general part of London (ie. North, East, South or
-          West). However, we remain interested to hear from volunteers who live
-          in Greater London zones 3-6 which is where most refugees and asylum
-          seekers are housed. We are also keen to recruit more men to join
-          HostNation.
-        </Txt>
-        <Txt style={styles.boxText}>
-          We always start the matching process with the needs of the refugee who
-          has been referred, foremost. This could mean it will be a few weeks or
-          even several months before we match you.
-        </Txt>
-        <Txt style={styles.boxText}>
-          Befriending is a service and a commitment of time but it can grow into
-          a mutual and personal friendship.
-        </Txt>
-        <Txt style={styles.boxText}>
-          Meanwhile please follow us on
-          <Link to="https://www.facebook.com/HostNationUK/" newTab>
-            <Txt
+        <Div style={{ spacing: 15 }}>
+          <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+            London
+          </Txt>
+          <Txt style={styles.boxText}>
+            We have re-opened registration in London and are currently
+            looking for friendship matches particularly for male refugees of all
+            ages and female refugees 40+. We also need befrienders across the
+            outer boroughs of London. Some of the refugees referred to us have
+            families, so it would also be great to hear from you if you’re a
+            parent and well versed in London’s fun opportunities for children.
+          </Txt>
+          <a
+            href="/befriending-closed"
+          >
+            <Hover
               style={{
                 ...styles.boxText,
-                fontWeight: 'bold',
                 color: colors.yellow,
-                display: 'inline-block',
-                padding: '0 5px',
-                textDecoration: 'underline',
+                fontWeight: 'bold',
+                hover: { color: colors.yellowDark },
               }}
             >
-              Facebook
-            </Txt>
-          </Link>
-          where we’ll keep you posted on our progress.
-        </Txt>
-        <Txt
-          style={{ ...styles.boxText, fontWeight: 'bold', fontStyle: 'italic' }}
-        >
-          Please do not register if you live outside of Greater London as we are
-          not yet in a position to take referrals from outside of the capital.
-        </Txt>
-        <Txt style={styles.boxText}>Many thanks, HostNation team</Txt>
+              {({ hoverProps, style }) => (
+                <Txt {...hoverProps} style={style}>
+                  London: Befriender Registration Form (private link) &raquo;
+                </Txt>
+              )}
+            </Hover>
+          </a>
+        </Div>
+        <Div style={{ spacing: 15 }}>
+          <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+            North East
+          </Txt>
+          <Txt style={styles.boxText}>
+            We are currently recruiting befrienders in the North East of England
+            to befriend asylum seekers and refugees living in Teesside. Please
+            click on the link below if you are interested in befriending in the
+            North East.
+          </Txt>
+          <a
+            href="https://airtable.com/shr1yuiiDpPylNm8u?prefill_Type=Befriender"
+            target="_blank"
+          >
+            <Hover
+              style={{
+                ...styles.boxText,
+                color: colors.yellow,
+                fontWeight: 'bold',
+                hover: { color: colors.yellowDark },
+              }}
+            >
+              {({ hoverProps, style }) => (
+                <Txt {...hoverProps} style={style}>
+                  North East: Befriender Registration Form &raquo;
+                </Txt>
+              )}
+            </Hover>
+          </a>
+        </Div>
 
-        <iframe
-          className="airtable-embed "
-          src="https://airtable.com/embed/shrEs9XBHYuJxLEaP?prefill_Type=Befriender&backgroundColor=orange"
-          frameBorder="0"
-          width="100%"
-          height="533"
-          style={{
-            background: 'transparent',
-            border: '1px solid #ccc',
-          }}
-        />
+        <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>
+          Many thanks, HostNation.
+        </Txt>
       </Box>
 
       <Box title="SCOPE OF SERVICES AND EXCLUSION OF LIABILITY" toggle>
@@ -271,7 +204,6 @@ export default () => (
             style={{
               ...styles.boxText,
               color: colors.purple,
-              display: 'inline-block',
               fontWeight: 'bold',
               hover: { color: colors.purpleDark },
             }}
@@ -284,6 +216,8 @@ export default () => (
           </Hover>
         </a>
       </Box>
+
+      <img src={laylaSue} style={{ maxWidth: 600, margin: '0 auto' }} />
     </Div>
-  </>
+  </Layout>
 );
