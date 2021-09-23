@@ -14,7 +14,7 @@ import styles, { colors, icons } from '../core/styles';
 export default () => (
   <Layout>
     <Div style={{ spacing: 50, padding: '50px 0' }}>
-      <Helmet title="Befriending Closed | HostNation" />
+      <Helmet title="Befriending Sign Up | HostNation" />
 
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Txt
