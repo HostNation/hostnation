@@ -60,15 +60,14 @@ export default () => (
             London
           </Txt>
           <Txt style={styles.boxText}>
-            We are currently
-            looking for friendship matches particularly for male refugees of all
-            ages and female refugees 40+. We also need befrienders across the
-            outer boroughs of London. Some of the refugees referred to us have
-            families, so it would also be great to hear from you if you’re a
-            parent and well versed in London’s fun opportunities for children.
+            Due to unprecedented traffic on our site over the summer, we have had to close our registration for London.
+          </Txt>
+          <Txt style={styles.boxText}>
+            If you are keen to befriend in London through HostNation, please submit the form below so we can add you to our waiting list and be in touch as and when we need more befrienders.
           </Txt>
           <a
-            href="/befriending-closed"
+            href="https://forms.gle/517pgsohaaTm4v4RA"
+            target="_blank"
           >
             <Hover
               style={{
@@ -80,11 +79,34 @@ export default () => (
             >
               {({ hoverProps, style }) => (
                 <Txt {...hoverProps} style={style}>
-                  London: Befriender Registration Waiting List &raquo;
+                  London: Befriender Waiting List &raquo;
                 </Txt>
               )}
             </Hover>
           </a>
+          <Txt style={styles.boxText}>
+            Meanwhile please consider a small, regular donation to support our work.
+          </Txt>
+          <a
+            href="https://www.totalgiving.co.uk/donate/hostnation"
+            target="_blank"
+          >
+            <Hover
+              style={{
+                ...styles.boxText,
+                color: colors.yellow,
+                fontWeight: 'bold',
+                hover: { color: colors.yellowDark },
+              }}
+            >
+              {({ hoverProps, style }) => (
+                <Txt {...hoverProps} style={style}>
+                  Donate Here &raquo;
+                </Txt>
+              )}
+            </Hover>
+          </a>
+
         </Div>
         <Div style={{ spacing: 15 }}>
           <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
