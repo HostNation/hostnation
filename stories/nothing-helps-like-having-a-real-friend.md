@@ -1,5 +1,5 @@
 ---
-date: 2021-09-08T16:06:58.135Z
+date: 2021-05-05T16:06:00.000Z
 author: SUE & LAYLA
 category: HostNation Case Study
 title: Nothing helps like having a real friend
