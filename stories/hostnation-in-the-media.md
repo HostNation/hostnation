@@ -2,15 +2,13 @@
 date: 2021-09-08T11:40:57.261Z
 author: YOURS MAGAZINE
 category: HostNation in the Media
-title: HostNation in the media
+title: “We’ve learned so much from each other."
 ---
 **Our wonderful HostNation friends Sally and Mimi star in this lovely article for *Yours Magazine* about what their friendship means to them.** 
 
 “Mimi inspires me so much,” says befriender Sally. “She just wants to make the most of every moment of life.“ Many thanks to both of them for agreeing to share their inspiring story for this feature all about the power of female friendship.
 
 ![Yours Magazine article](/assets/yours-magazine-spread.png)
-
-## ‘We’ve learned so much from each other’ 
 
 When Mimi arrived in the UK as an Iranian refugee, she felt lonely and afraid. Then Sally came along and their wonderful friendship changed everything. Having not long fled her birth country of Iran, after being tortured for her work as a writer, Mimi felt afraid of everything and everyone. Her English was patchy, but she knew she needed to speak to someone and find a way to relieve her loneliness. Through the charity HostNation, which offers friendship and social opportunities to refugees and asylum seekers, Mimi was matched with volunteer Sally. 
 
