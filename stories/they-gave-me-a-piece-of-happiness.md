@@ -6,7 +6,7 @@ title: '"They gave me a piece of happiness."'
 ---
 ![](/assets/observer-header.jpg)
 
-**We are thrilled to see some of our HostNation friends featuring in a heartwarming article in *The Observer* newspaper on the power of befriending.** 
+**We are thrilled to see some of our HostNation friends featuring in a heartwarming [article](https://www.theguardian.com/world/2021/sep/19/a-friend-in-need-volunteers-rush-to-help-refugees-feel-at-home-in-uk) in *The Observer* newspaper on the power of befriending.** 
 
 Hafez who is here from North Africa has been finding settling in difficult and was still feeling very lonely after being here for two years. This summer we introduced him to Sara and Salvatore and things have really changed for him. 
 
