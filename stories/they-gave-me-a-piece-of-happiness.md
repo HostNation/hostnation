@@ -17,4 +17,4 @@ That’s the best thing that we at HostNation could ever wish to hear.
 <img src="/assets/george-et-al-dinner-aug-2021.jpeg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />
 Meanwhile seasoned befriender George from Leeds often meets up to play football with Turkish refugee Said. While Said explains that he has learned better English, enjoys the football and is glad to feel more involved in the community, George is delighted too. It turns out Said is an excellent cook and he recently made a delicious dinner for George and his partner Suzy - see photo. 
 
-**Read the full article[ here >](https://www.theguardian.com/world/2021/sep/19/a-friend-in-need-volunteers-rush-to-help-refugees-feel-at-home-in-uk)**
+**Read the full article [here >](https://www.theguardian.com/world/2021/sep/19/a-friend-in-need-volunteers-rush-to-help-refugees-feel-at-home-in-uk)**
