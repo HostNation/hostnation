@@ -1,7 +1,7 @@
 ---
 date: 2021-09-25T13:57:56.501Z
 author: GEORGE AND SAID | HAFEZ, SARA AND SALVATORE
-category: HostNation Blog Post
+category: HostNation in the Media
 title: '"They gave me a piece of happiness."'
 ---
 ![](/assets/observer-header.jpg)

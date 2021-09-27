@@ -31,6 +31,7 @@ collections:
               'HostNation Case Study',
               'HostNation Podcast',
               'HostNation Film',
+              'HostNation in the Media',
             ],
         }
       - { name: title, label: Title }

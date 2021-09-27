@@ -1,7 +1,7 @@
 ---
 date: 2021-09-08T11:40:57.261Z
 author: YOURS MAGAZINE
-category: HostNation Blog Post
+category: HostNation in the Media
 title: HostNation in the media
 ---
 **Our wonderful HostNation friends Sally and Mimi star in this lovely article for *Yours Magazine* about what their friendship means to them.** 
