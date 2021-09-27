@@ -27,7 +27,7 @@ export default () => (
       >
         Sign up to HostNation London using the link below:         <br /><br />
         <Button
-          to="https://forms.gle/517pgsohaaTm4v4RA"
+          to="https://airtable.com/shrEs9XBHYuJxLEaP?prefill_Type=Befriender"
           newTab
           color="yellow"
           style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
