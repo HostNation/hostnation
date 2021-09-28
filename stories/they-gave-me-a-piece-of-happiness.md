@@ -12,7 +12,7 @@ Hafez who is here from North Africa has been finding settling in difficult and w
 
 As he told reporter Clea Skopeliti of The Observer, *“They’ve changed my life in London. They gave me a piece of happiness, to be honest. They gave me some space for fun and kindness.”*
 
-That’s the best thing that we at HostNation could ever wish to hear.
+That’s the best thing that we at HostNation could ever wish to hear.<!-- end —>
 
 <img src="/assets/george-et-al-dinner-aug-2021.jpeg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />
 Meanwhile seasoned befriender George from Leeds often meets up to play football with Turkish refugee Said. While Said explains that he has learned better English, enjoys the football and is glad to feel more involved in the community, George is delighted too. It turns out Said is an excellent cook and he recently made a delicious dinner for George and his partner Suzy - see photo. 
