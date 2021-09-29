@@ -12,6 +12,8 @@ title: HostNation friends star on Channel 5 News
 
 [](<>)The warmth of their friendship comes across strongly in this interview by reporter Toby Sadler of 5 News. 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PaM8ua8oEBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <!-- end -->
 
 ## **An immediate connection**
@@ -36,11 +38,7 @@ Emal, 25, an electrician forced to leave Afghanistan four years ago, explains on
 
 But for the past year he has had a friend to show him the ropes. Charles, who is studying architecture, signed up with HostNation as a befriender and we matched him with Emal. They share a love of cycling so they explore London together on their bikes. 
 
-
-
 ![](/assets/emal-and-charles.jpg)
-
-
 
 ## **A friend to laugh with**
 
