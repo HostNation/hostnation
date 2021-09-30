@@ -45,3 +45,9 @@ But for the past year he has had a friend to show him the ropes. Charles, who is
 "We both like to laugh and we both like to keep fit,” Charles told us, “so there's a lot to talk and joke about. He's interested in the city and culture and history – the conversation never runs dry. It’s been extremely rewarding."
 
 Charles has helped Emal with his English and sourced him a laptop and a guitar, but most importantly, has given him a sense of belonging.
+
+“I felt so happy that I got a good friend,” says Emal. “He has shown me many great places around London. It was wonderful and helpful to have a friend while I felt lonely and helpless.”
+
+These uplifting stories show us the profound changes that can come about when a friendly local reaches out a hand to someone trying to make their way in a new country. 
+
+A cycle round the park, a coffee and a chat – such seemingly simple things can make a huge difference to someone’s life.
