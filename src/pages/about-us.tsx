@@ -82,7 +82,7 @@ const Profile = ({ image, name, role, bio, credit }: any) => {
             <Txt
               style={{
                 ...styles.text,
-                fontSize: 30,
+                fontSize: 24,
                 color: colors.yellow,
                 fontWeight: 'bold',
               }}
@@ -92,7 +92,7 @@ const Profile = ({ image, name, role, bio, credit }: any) => {
             <Txt
               style={{
                 ...styles.text,
-                fontSize: 24,
+                fontSize: 20,
                 fontWeight: 'bold',
               }}
             >
@@ -149,7 +149,7 @@ const Profiles = () => {
           <Profile
             image={rossana}
             name="Rossana Horsley"
-            role="Director"
+            role="Director London Programme"
             bio={[
               'Rossana’s background is in documentary filmmaking, both for television and NGOs, covering a wide range of subjects from arts to the environment. A major strand of her work focused on development issues, which took her filming to several continents. Although she now calls herself a Londoner, she grew up in different countries. She knows that finding your feet in a new culture can be a daunting challenge, even when that choice is made freely.',
               'A long-term supporter of Freedom from Torture, in 2005 Rossana volunteered to be part of their befriending project for unaccompanied minors. Finding this an enriching experience and aware that many people would like to make a similar connection, she was keen to be a part of HostNation to help encourage more such relationships between locals and people looking for a safe refuge in this country.',
@@ -196,7 +196,7 @@ const Profiles = () => {
           <Profile
             image={peteBini}
             name="Pete Widlinski &amp; Biniam Araia"
-            role="North East Co&#8209;ordinators"
+            role="Teesside Hub Managers"
             bio={[
               <span style={{ ...styles.boxText, padding: 0 } as any}>
                 Bini is a founding member of IPC (
@@ -287,11 +287,10 @@ const Profiles = () => {
           <Profile
             image={dina}
             name="Dina Nayeri"
-            credit="Photo credit: Anna Leader"
             role="Trustee"
             bio={[
               'Prize-winning author Dina Nayeri was born during the Iranian revolution and fled when she was eight. She lived as a refugee for two years before being granted asylum in the United States. She writes fiction and nonfiction on displacement, the refugee crisis, and Iranian diaspora. Her work appears in the New York Times, Guardian, LA Times, New Yorker, Wall Street Journal and Granta amongst others. Her acclaimed Guardian Long Read “The Ungrateful Refugee” was one of the most widely-read essays of 2017. Anthologized by Viet Nguyen in The Displaced, it is now taught in schools across Germany. Her book of the same name is published by Canongate Books.',
-              "Dina joined the HostNation Board in 2019. She says: “HostNation is one of the rare charities that understands that the struggle of being a refugee doesn't end the moment one is granted asylum, or even citizenship. To be a refugee is to be forever separated from home, always alert to one's differences. I hope together we can bring some of the joys of home to the displaced people who have become our neighbours.”",
+              "Dina joined the HostNation Board in 2019. She says: “HostNation is one of the rare charities that understands that the struggle of being a refugee doesn't end the moment one is granted asylum, or even citizenship. To be a refugee is to be forever separated from home, always alert to one's differences. I hope together we can bring some of the joys of home to the displaced people who have become our neighbours.”", 'Photo credit: Anna Leader',
             ]}
           />
         </Div>
@@ -572,6 +571,8 @@ export default () => (
               'Debbie Forster, MBE',
               'Leah Selinger',
               'Liz Pepler',
+              'Jake Elwes',
+              'Sarah Robbins',
             ].map((name, i) => (
               <Txt
                 style={{

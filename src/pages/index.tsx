@@ -151,23 +151,23 @@ const VimeoVids = () => {
             />
           </div>
         </div>
-        </Div>
-        <div style={{ maxWidth: small ? 450 : 'none', width: small ? 'unset' : 400, display: 'block', margin: '0 auto', paddingTop: "25px" }}>
-          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/563322749?title=0&byline=0&portrait=0"
-              frameBorder="0"
-              allowFullScreen
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-              }}
-            />
-          </div>
+      </Div>
+      <div style={{ maxWidth: small ? 450 : 'none', width: small ? 'unset' : 400, display: 'block', margin: '0 auto', paddingTop: "25px" }}>
+        <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+          <iframe
+            src="https://player.vimeo.com/video/563322749?title=0&byline=0&portrait=0"
+            frameBorder="0"
+            allowFullScreen
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+            }}
+          />
         </div>
+      </div>
     </div>
   );
 };
@@ -175,6 +175,13 @@ const VimeoVids = () => {
 export default () => (
   <Layout location="/">
     <Helmet title="HostNation | Helping refugees through friendship" />
+
+    <Div style={{ padding: '15px 0 0 0' }}>
+    <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 15 }}>
+          HostNation hubs open in Teesside and Tyneside - sign up to befriend now - and coming to Manchester and the NW in 2022
+        </Txt>
+        </Div>
+
     <Div style={{ spacing: 50, padding: '50px 0' }}>
       <TopButtons />
       <Div style={{ spacing: 20 }}>
@@ -192,7 +199,7 @@ export default () => (
           We connect those offering friendship with those needing it.
         </Txt>
         <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20 }}>
-          Now matching friends across Greater London and Teesside.
+          Now matching friends across Greater London and in the North East.
         </Txt>
       </Div>
       <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} />
@@ -228,7 +235,7 @@ export default () => (
         <Div style={{ spacing: 25 }}>
           <Txt style={styles.body}>
             To see the difference befriending can make, listen to our refugee friends Pinar, Saoud and Hanifah talk about their experiences.
-            </Txt>
+          </Txt>
           <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 16 }}>
             Films 1 min each and shot for HostNation by @DamnFineMedia.
           </Txt>
@@ -239,7 +246,7 @@ export default () => (
 
         <Txt style={styles.body}>
           For more films, blogs, case studies and podcasts on HostNation befriending
-        <Hover
+          <Hover
             style={{
               ...styles.text,
               color: colors.black,
@@ -267,7 +274,7 @@ export default () => (
           newTab
           color="purple"
           style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
-          >
+        >
           DONATE HERE
         </Button>
       </Div>

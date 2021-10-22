@@ -113,10 +113,10 @@ export default () => (
             North East
           </Txt>
           <Txt style={styles.boxText}>
-            We are currently recruiting befrienders in the North East of England
-            to befriend asylum seekers and refugees living in Teesside. Please
-            click on the link below if you are interested in befriending in the
-            North East.
+            We currently have two befriending programmes in the North East of England.  One operates in Teesside for asylum seekers and refugees living in Middlesbrough and Stockton-on-Tees.  The other operates in Tyneside for asylum seekers and refugees living in Newcastle and Gateshead. Please ensure you fill out the correct form.
+          </Txt>
+          <Txt style={{ ...styles.boxText}}>
+            For those wishing to befriend in Middlesbrough / Stockton-on-Tees:
           </Txt>
           <a
             href="https://airtable.com/shr1yuiiDpPylNm8u?prefill_Type=Befriender"
@@ -132,14 +132,38 @@ export default () => (
             >
               {({ hoverProps, style }) => (
                 <Txt {...hoverProps} style={style}>
-                  North East: Befriender Registration Form &raquo;
+                  North East:  Teesside Registration Form &raquo;
+                </Txt>
+              )}
+            </Hover>
+          </a>
+          <Txt style={{ ...styles.boxText, fontWeight: 'bold', paddingTop: 20 }}>
+            For those wishing to befriend in Newcastle / Gateshead:
+          </Txt>
+          <a
+            href="https://airtable.com/shrCcEAP6czVNnjiI?prefill_Type=Befriender"
+            target="_blank"
+          >
+            <Hover
+              style={{
+                ...styles.boxText,
+                color: colors.yellow,
+                fontWeight: 'bold',
+                hover: { color: colors.yellowDark },
+              }}
+            >
+              {({ hoverProps, style }) => (
+                <Txt {...hoverProps} style={style}>
+                  North East:  Tyneside Registration Form &raquo;
                 </Txt>
               )}
             </Hover>
           </a>
         </Div>
 
-        <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>
+
+
+        <Txt style={styles.boxText}>
           Many thanks, HostNation.
         </Txt>
       </Box>

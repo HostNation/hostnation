@@ -15,7 +15,7 @@ import styles, { colors } from '../core/styles';
 export default () => (
   <Layout location="/refugee">
     <Helmet title="Befriend | HostNation" />
-    <Div style={{ spacing:50, paddingTop: 50, paddingBottom: 50 }}>
+    <Div style={{ spacing: 50, paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ spacing: 20 }}>
         <Txt style={{ ...styles.title, fontSize: 30 }}>
@@ -25,8 +25,7 @@ export default () => (
       <img src={maryAmira} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ padding: '50px 0', spacing: 30, background: 'white' }}>
         <Txt style={styles.boxText}>
-          If you are an asylum seeker or refugee over 18 and you live in London,
-          Middlesbrough or Stockton-on-Tees, then HostNation is here for you.
+          If you are an asylum seeker or refugee over 18 and you live in London, Middlesbrough, Stockton-on-Tees, Newcastle or Gateshead then HostNation is here for you.
         </Txt>
         <Txt style={styles.boxText}>
           Do you want a local friend to chat to and find out more about life
@@ -116,7 +115,7 @@ export default () => (
               You are an asylum seeker or refugee.
             </li>
             <li style={{ margin: '5px 0' }}>
-              You live in Greater London or Teesside.
+              You live in Greater London, Teesside or Tyneside..
             </li>
             <li style={{ margin: '5px 0' }}>You are over 18.</li>
             <li style={{ margin: '5px 0' }}>
