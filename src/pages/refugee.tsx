@@ -115,7 +115,7 @@ export default () => (
               You are an asylum seeker or refugee.
             </li>
             <li style={{ margin: '5px 0' }}>
-              You live in Greater London, Teesside or Tyneside..
+              You live in Greater London, Teesside or Tyneside.
             </li>
             <li style={{ margin: '5px 0' }}>You are over 18.</li>
             <li style={{ margin: '5px 0' }}>

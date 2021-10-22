@@ -115,7 +115,7 @@ export default () => (
           <Txt style={styles.boxText}>
             We currently have two befriending programmes in the North East of England.  One operates in Teesside for asylum seekers and refugees living in Middlesbrough and Stockton-on-Tees.  The other operates in Tyneside for asylum seekers and refugees living in Newcastle and Gateshead. Please ensure you fill out the correct form.
           </Txt>
-          <Txt style={{ ...styles.boxText}}>
+          <Txt style={{ ...styles.boxText, fontWeight: 'bold'}}>
             For those wishing to befriend in Middlesbrough / Stockton-on-Tees:
           </Txt>
           <a
@@ -160,12 +160,6 @@ export default () => (
             </Hover>
           </a>
         </Div>
-
-
-
-        <Txt style={styles.boxText}>
-          Many thanks, HostNation.
-        </Txt>
       </Box>
 
       <Box title="SCOPE OF SERVICES AND EXCLUSION OF LIABILITY" toggle>

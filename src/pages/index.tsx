@@ -176,14 +176,11 @@ export default () => (
   <Layout location="/">
     <Helmet title="HostNation | Helping refugees through friendship" />
 
-    <Div style={{ padding: '15px 0 0 0' }}>
-    <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 15 }}>
-          HostNation hubs open in Teesside and Tyneside - sign up to befriend now - and coming to Manchester and the NW in 2022
-        </Txt>
-        </Div>
+
 
     <Div style={{ spacing: 50, padding: '50px 0' }}>
       <TopButtons />
+
       <Div style={{ spacing: 20 }}>
         <Txt
           style={{
@@ -201,6 +198,13 @@ export default () => (
         <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20 }}>
           Now matching friends across Greater London and in the North East.
         </Txt>
+        <Div style={{ padding: '15px 0 0 0' }}>
+        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 18, fontWeight: 'bold', textTransform: 'uppercase', color: colors.purple }}>
+          New HostNation hubs open in Teesside and Tyneside - sign up to befriend now. <br />
+          And coming to Manchester and the NW in 2022
+        </Txt>
+      </Div>
+
       </Div>
       <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ spacing: 50, background: 'white' }}>
