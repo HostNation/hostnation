@@ -12,6 +12,8 @@ He is also an asylum seeker. Tes ­– short for Tesfabrhan – arrived in Middl
 
 Investing in People and Culture, our partner on Teesside, referred Tes to us. We matched him with Judith, a retired head teacher with a deep interest in Africa. Time spent living and working in Uganda and Ghana in the past has taught her what it’s like to be an outsider, as she explains to BBC Radio Teesside in this interview with her and Tes: 
 
+<iframe src="https://drive.google.com/file/d/1QFvVqQAvUdn8tjxi3IUeleFe_rpBj0Z6/preview" width="640" height="480" allow="autoplay"></iframe>
+
 “In Ghana, I was the only white person living in this small town,” she says. “So I kind of had an insight of being in a strange place and knowing nobody.”
 
 It turned out well for Judith though, because of the warmth and kindness of the local community. “I was so well received and people were very friendly,” she recalls.
