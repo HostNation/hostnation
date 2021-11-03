@@ -10,7 +10,11 @@ He is also an asylum seeker. Tes ­– short for Tesfabrhan – arrived in Middl
 
 ![](/assets/judith-and-tes.jpg)
 
-Investing in People and Culture, our partner on Teesside, referred Tes to us. We matched him with Judith, a retired head teacher with a deep interest in Africa. Time spent living and working in Uganda and Ghana in the past has taught her what it’s like to be an outsider, as she explains to BBC Radio Teesside in this interview with her and Tes: 
+Investing in People and Culture, our partner on Teesside, referred Tes to us. We matched him with Judith, a retired head teacher with a deep interest in Africa. 
+
+<!-- end -->
+
+Time spent living and working in Uganda and Ghana in the past has taught her what it’s like to be an outsider, as she explains to BBC Radio Teesside in this interview with her and Tes: 
 
 <iframe src="https://drive.google.com/file/d/1QFvVqQAvUdn8tjxi3IUeleFe_rpBj0Z6/preview" width="640" height="480" allow="autoplay"></iframe>
 
