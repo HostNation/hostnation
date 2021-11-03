@@ -12,19 +12,15 @@ He is also an asylum seeker. Tes ­– short for Tesfabrhan – arrived in Middl
 
 Investing in People and Culture, our partner on Teesside, referred Tes to us. We matched him with Judith, a retired head teacher with a deep interest in Africa. Time spent living and working in Uganda and Ghana in the past has taught her what it’s like to be an outsider, as she explains to BBC Radio Teesside in this interview with her and Tes: 
 
-```
-<iframe src="https://drive.google.com/file/d/1QFvVqQAvUdn8tjxi3IUeleFe_rpBj0Z6/preview" width="640" height="480" allow="autoplay"></iframe>
-```
-
 “In Ghana, I was the only white person living in this small town,” she says. “So I kind of had an insight of being in a strange place and knowing nobody.”
 
 It turned out well for Judith though, because of the warmth and kindness of the local community. “I was so well received and people were very friendly,” she recalls.
 
 The experience made her want to reciprocate by making someone feel welcome here in the UK in turn. “When I saw this project advertised I thought, yes, that’s something I would definitely like to do. Turning up somewhere where you know nobody, it must be just petrifying.”
 
-Middlesbrough houses a disproportionately high number of refugees and asylum seekers and Judith, who was born and raised in the town, feels that her community has done a great job in providing a welcome.
+Middlesbrough houses a disproportionately high number of refugees and asylum seekers and Judith, who was born and raised in the town, feels that her community has done a great job in providing a welcome. She says:
 
-“I am proud of the way my town has assimilated refugees and asylum seekers so successfully,” she says.
+> ***“I am proud of the way my town has assimilated refugees and asylum seekers so successfully."***
 
 Although she and Tes were only introduced by HostNation North-East seven weeks ago, they are already off to a great start. “It feels like seven years!” exclaims Tes. “We really chat open-heartedly about everything. The befriending scheme…really made a difference in my life, like I could easily adjust to my life here.”
 
