@@ -53,6 +53,50 @@ const TopButtons = () => {
   );
 };
 
+const TopBanner = () => {
+  const [setWidthElem, small = false] = useWidth(700);
+  return (
+    <div
+      style={{
+        margin: '0 auto',
+        maxWidth: 850,
+        paddingTop: 0,
+      }}
+    >
+      <div
+        style={{
+          background: colors.yellowFaint,
+          position: 'fixed',
+          zIndex: 100,
+          width: '100%',
+          top: 45,
+          left: 0,
+          paddingTop: 3,
+          paddingBottom: 3,
+        }}
+      >
+        <Txt style={{ ...styles.text, fontSize: 12, fontWeight: 'bold', lineHeight: '5px', textAlign: 'center', }}>
+          We are recruiting Trustees.  Do you have financial skills?  Can you help us grow HostNation?{' '}
+          <Link to="/treasurer-ad.pdf" newTab>
+            <Txt
+              style={{
+                ...styles.text,
+                fontWeight: 'bold',
+                fontSize: 12,
+                color: colors.purple,
+                display: 'inline-block',
+                textDecoration: 'underline',
+              }}
+            >
+              More info here.
+            </Txt>
+          </Link>
+        </Txt>
+      </div>
+    </div>
+  );
+};
+
 const IntroText = () => {
   const [setWidthElem, small = false] = useWidth(700);
   return (
@@ -182,44 +226,7 @@ export default () => (
     <Div style={{ spacing: 50, padding: '50px 0' }}>
       <TopButtons />
 
-      <div
-        style={{
-          margin: '0 auto',
-          padding: '15px',
-          maxWidth: 850,
-        }}
-      >
-        <div
-          style={{
-            background: colors.yellowFaint,
-            position: 'fixed',
-            zIndex: 100,
-            width: '100%',
-            top: 45,
-            left: 0,
-            paddingTop: 3,
-            paddingBottom: 3,
-          }}
-        >
-          <Txt style={{ ...styles.text, fontSize: 12, fontWeight: 'bold', lineHeight: '5px', textAlign: 'center', }}>
-            We are recruiting Trustees.  Do you have financial skills?  Can you help us grow HostNation?{' '}
-            <Link to="/treasurer-ad.pdf" newTab>
-              <Txt
-                style={{
-                  ...styles.text,
-                  fontWeight: 'bold',
-                  fontSize: 12,
-                  color: colors.purple,
-                  display: 'inline-block',
-                  textDecoration: 'underline',
-                }}
-              >
-                More info here.
-              </Txt>
-            </Link>
-          </Txt>
-        </div>
-      </div>
+      <TopBanner />
 
       <Div style={{ spacing: 20 }}>
         <Txt
