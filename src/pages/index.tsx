@@ -57,6 +57,7 @@ const TopBanner = () => {
   const [setWidthElem, small = false] = useWidth(700);
   return (
     <div
+    ref={setWidthElem}
       style={{
         margin: '0 auto',
         maxWidth: 850,
@@ -71,7 +72,7 @@ const TopBanner = () => {
           width: '100%',
           top: 45,
           left: 0,
-          paddingTop: 3,
+          paddingTop: small ? 10 : 3,
           paddingBottom: 3,
         }}
       >
@@ -221,12 +222,12 @@ export default () => (
   <Layout location="/">
     <Helmet title="HostNation | Helping refugees through friendship" />
 
+    <TopBanner />
 
 
     <Div style={{ spacing: 50, padding: '50px 0' }}>
       <TopButtons />
 
-      <TopBanner />
 
       <Div style={{ spacing: 20 }}>
         <Txt
