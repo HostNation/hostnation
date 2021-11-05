@@ -4,6 +4,14 @@ author: JUDITH & TES
 category: HostNation in the Media
 title: The primary school head and the Eritrean Teessider
 ---
+<iframe
+   frameborder="0"
+   width="500"
+   height="100"
+   src="https://drive.google.com/file/d/1-LJ6Gy4vtqF3Y_4L11-IXT442iFMVEIA/preview?usp=sharing">
+</iframe>
+BBC Radio Teesside (**[@BBCTees](https://twitter.com/BBCTees)**)
+
 **Tes has a Master’s degree in International Relations. He loves football, cooking, music and history. He has a contagious sense of humour and is very sociable.**
 
 He is also an asylum seeker. Tes ­– short for Tesfabrhan – arrived in Middlesbrough six months back after a long journey from Eritrea. Far from home and everything he knew, he needed friends.
