@@ -4,7 +4,7 @@ author: JUDITH & TES
 category: HostNation in the Media
 title: The primary school head and the Eritrean Teessider
 ---
-<audio controls="controls">
+<audio controls="controls" style="width: 100%;">
   <source src="https://docs.google.com/uc?export=download&id=1-LJ6Gy4vtqF3Y_4L11-IXT442iFMVEIA">
 </audio>
 
