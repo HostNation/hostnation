@@ -38,4 +38,4 @@ Judith is getting a lot from the friendship herself, as she explains: “I’ve 
 
 So, to Judith and Tes, all of us wish you a long and happy friendship, and a swift, positive outcome for Tes’s asylum process.
 
-[Read more stories of how befriending changes lives.](https://www.hostnation.org.uk/stories)
+[We’re recruiting befrienders on Teesside and Tyneside now >](https://www.hostnation.org.uk/befriend)
