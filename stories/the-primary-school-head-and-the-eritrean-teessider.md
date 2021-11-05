@@ -14,7 +14,7 @@ Investing in People and Culture, our partner on Teesside, referred Tes to us. We
 
 <!-- end -->
 
-Time spent living and working in Uganda and Ghana in the past has taught her what it’s like to be an outsider, as she explains to BBC Radio Teesside in this <a target="_blank" rel="noreferrer noopener" href="https://drive.google.com/file/d/1-LJ6Gy4vtqF3Y_4L11-IXT442iFMVEIA/view?usp=sharing)>interview ></a> with her and Tes.
+Time spent living and working in Uganda and Ghana in the past has taught her what it’s like to be an outsider, as she explains to BBC Radio Teesside in this <a target="_blank" rel="noreferrer noopener" href="https://drive.google.com/file/d/1-LJ6Gy4vtqF3Y_4L11-IXT442iFMVEIA/view?usp=sharing>interview ></a> with her and Tes.
 
 “In Ghana, I was the only white person living in this small town,” she says. “So I kind of had an insight of being in a strange place and knowing nobody.”
 
