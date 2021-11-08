@@ -22,7 +22,7 @@ import dina from '../img/team/dina.png';
 import emiljan from '../img/team/emiljan.jpg';
 import joanna from '../img/team/joanna.png';
 import olivia from '../img/team/olivia.jpg';
-import jon from '../img/team/jon.png';
+import harley from '../img/team/harley.png';
 import claudia from '../img/team/claudia.png';
 import harriet from '../img/team/harriet.jpg';
 import abu from '../img/team/abu.png';
@@ -227,6 +227,27 @@ const Profiles = () => {
               'Pete managed the North of England Refugee Service office in Teesside for 18 years,  running a very successful mentoring programme. He then helped to establish and manage Justice First, assisting people who have been refused asylum to re-engage with the legal process. Pete also chairs The Mary Thompson hardship fund, which raises over £40k per year for asylum seekers and refugees and runs a support drop-in.  Pete has been an active campaigner and advocate for refugee rights for decades and has worked closely with Bini and IPC in the past. Through HostNation, Pete hopes to engage more closely with individuals rather than organisations.',
             ]}
           />
+
+          <Profile
+            image={harley}
+            name="Harley Kuyck-Cohen"
+            role="Tynesdie Hub Manager"
+            bio={[
+              "Harley is a Newcastle-based artist living and working in the city.  He is passionate about the city and its community projects and collaborates with the Newbridge Project, Breeze Creatives, Solidarity Economy and is hoping to establish a project space called the ReadingRoom for the public to engage with the arts.",
+              "He plans to take advantage of these social networks and Newcastle’s vibrant student life and independent businesses to help set up and then manage a HostNation hub in Tyneside alongside his personal practice as a sculptor.",
+              'Harley has the energy, commitment and communication skills to get volunteers on board to make HostNation refugee befriending in Tyneside a reality.  He’s looking forward to making matches in order to (in his own words): “humanise a group of people who are so often dehumanised. Volunteering brings a really refreshing opportunity to meet somebody you would never otherwise have met, hear somebody else’s stories and open your social circle”.',
+           ]}
+          />
+        </Div>
+        <Div
+          style={{
+            layout: small ? 'stack' : 'bar',
+            spacing: 40,
+            verticalAlign: 'top',
+            margin: '0 auto',
+            maxWidth: small ? 340 : '100%',
+          }}
+        >
           <Profile
             image={danny}
             name="Daniel Silverstone"
@@ -236,16 +257,7 @@ const Profiles = () => {
               "Danny's mother arrived in London in 1939 on the Kindertransport and he grew up in a family marked by his mother's experiences as a child refugee. Danny became a HostNation befriender in 2017. Impressed by the quality of HostNation's work, he was delighted to become HostNation's chair in October 2018.",
             ]}
           />
-        </Div>
-        <Div
-          style={{
-            layout: small ? 'stack' : 'bar',
-            spacing: 40,
-            verticalAlign: 'top',
-            margin: '0 auto',
-            maxWidth: small ? 340 : '100%',
-          }}
-        >
+
           <Profile
             image={joanna}
             name="Joanna Winterbottom"
@@ -255,7 +267,16 @@ const Profiles = () => {
               "Jo values HostNation’s aim of giving refugees a warm and supportive welcome to their new home. Jo's own experiences in moving countries have been cushioned by her employer, but have nevertheless given her an insight into the challenges of uprooting your life, creating new social networks and getting to grips with an unfamiliar environment.",
             ]}
           />
-
+        </Div>
+        <Div
+          style={{
+            layout: small ? 'stack' : 'bar',
+            spacing: 40,
+            verticalAlign: 'top',
+            margin: '0 auto',
+            maxWidth: small ? 340 : '100%',
+          }}
+        >
           <Profile
             image={emiljan}
             name="Emiljan Gega"
@@ -265,16 +286,7 @@ const Profiles = () => {
               "Emiljan is deeply interested in politics, business best practice and history. He volunteers at such institutions as The Prince's Trust and Brightside mentoring, building on his previous work leading a schools outreach programme at university. He believes HostNation to be a rare charity that underscores the need for renewed social provision in this country, and that it is at the forefront of demonstrating a progressive approach to communities.",
             ]}
           />
-        </Div>
-        <Div
-          style={{
-            layout: small ? 'stack' : 'bar',
-            spacing: 40,
-            verticalAlign: 'top',
-            margin: '0 auto',
-            maxWidth: small ? 340 : '100%',
-          }}
-        >
+
           <Profile
             image={olivia}
             name="Olivia Petie"
@@ -284,6 +296,16 @@ const Profiles = () => {
               'Olivia was thrilled to join the HostNation board, after a wonderful experience befriending through them. She has been impressed by their human approach, which allows authentic friendships to form, and feels their work has never been more needed. She is looking forward to being part of their future development.',
             ]}
           />
+        </Div>
+        <Div
+          style={{
+            layout: small ? 'stack' : 'bar',
+            spacing: 40,
+            verticalAlign: 'top',
+            margin: '0 auto',
+            maxWidth: small ? 340 : '100%',
+          }}
+        >
           <Profile
             image={dina}
             name="Dina Nayeri"
@@ -293,16 +315,7 @@ const Profiles = () => {
               "Dina joined the HostNation Board in 2019. She says: “HostNation is one of the rare charities that understands that the struggle of being a refugee doesn't end the moment one is granted asylum, or even citizenship. To be a refugee is to be forever separated from home, always alert to one's differences. I hope together we can bring some of the joys of home to the displaced people who have become our neighbours.”", 'Photo credit: Anna Leader',
             ]}
           />
-        </Div>
-        <Div
-          style={{
-            layout: small ? 'stack' : 'bar',
-            spacing: 40,
-            verticalAlign: 'top',
-            margin: '0 auto',
-            maxWidth: small ? 340 : '100%',
-          }}
-        >
+
           <Profile
             image={claudia}
             name="Claudia Möller"
@@ -311,15 +324,6 @@ const Profiles = () => {
               'Claudia is a freelance graphic designer and previously worked for United Business Media in London, specialising in corporate identity and brand design. Using the iVolunteer scheme at UBM, she created the HostNation logo, website, social media pages, and visual comms. Claudia is in charge of how HostNation looks and has previously volunteered for community centres in North London, offering design advice and services.',
             ]}
           />
-          <Profile
-            image={jon}
-            name="Jon Whitehead"
-            role="Digital Architect"
-            bio={[
-              'Since graduating from Cambridge, Jon has specialised in working in the non-profit sector to build efficient digital platforms to automate and scale up humanitarian and volunteering projects. For six years he worked with Student Hubs, which supports student volunteers to tackle social and environmental challenges. His jobs evolved from Digital Communications Manager, to Digital Analyst, and finally to Digital Architect with responsibility for helping the charity develop new digital systems.',
-              'Alongside website and database development Jon developed an online case management system for Safe Passage, which helps unaccompanied child refugees and vulnerable adults in Europe find safe, legal routes to the UK. Jon has developed a secure digital infrastructure for HostNation to create an effective online referral system and manages their digital platform.',
-            ]}
-          />
         </Div>
         <Div
           style={{
@@ -330,6 +334,7 @@ const Profiles = () => {
             maxWidth: small ? 340 : '100%',
           }}
         >
+
           <Profile
             image={harriet}
             name="Harriet Paterson"
