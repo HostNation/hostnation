@@ -67,7 +67,8 @@ const TopBanner = () => {
       <div
         style={{
           background: colors.yellowFaint,
-          position: 'fixed',
+          position: 'absolute', 
+          // position: 'fixed' - for sticky           
           zIndex: 100,
           width: '100%',
           top: 45,
@@ -77,7 +78,7 @@ const TopBanner = () => {
         }}
       >
         <Txt style={{ ...styles.text, fontSize: 12, fontWeight: 'bold', lineHeight: '5px', textAlign: 'center', }}>
-          We are recruiting Trustees.  Do you have financial skills?  Can you help us grow HostNation?{' '}
+          We are recruiting Trustees.  &nbsp; Do you have financial skills? &nbsp; Can you help us grow HostNation?&nbsp;{' '}
           <Link to="/treasurer-ad.pdf" newTab>
             <Txt
               style={{
