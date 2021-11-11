@@ -231,7 +231,7 @@ const Profiles = () => {
           <Profile
             image={harley}
             name="Harley Kuyck-Cohen"
-            role="Tynesdie Hub Manager"
+            role="Tyneside Hub Manager"
             bio={[
               "Harley is a Newcastle-based artist living and working in the city.  He is passionate about the city and its community projects and collaborates with the Newbridge Project, Breeze Creatives, Solidarity Economy and is hoping to establish a project space called the ReadingRoom for the public to engage with the arts.",
               "He plans to take advantage of these social networks and Newcastle’s vibrant student life and independent businesses to help set up and then manage a HostNation hub in Tyneside alongside his personal practice as a sculptor.",
