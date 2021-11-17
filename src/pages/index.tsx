@@ -247,18 +247,15 @@ export default () => (
         <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20 }}>
           Now matching friends across Greater London and in the North East.
         </Txt>
-        <Div style={{ padding: '15px 0 0 0' }}>
-          <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 18, fontWeight: 'bold', textTransform: 'uppercase', color: colors.purple }}>
-          New hub in Newcastle!  <br />
-          <Hover
-            style={{
-              ...styles.text,
-              color: colors.yellow,
-              fontWeight: 'bold',
-              fontSize: 18,
-              hover: { color: colors.yellowDark },
-            }}
-          >
+        </Div>
+        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+
+        <Div style={{ spacing: 20 }}>
+          <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 25, fontWeight: 'bold', color: colors.purple }}>
+          New hub in Newcastle! 
+          </Txt>
+          <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: colors.purple }}>
+          <Hover style={{ ...styles.text, color: colors.purple, textDecoration: 'underline', fontWeight: 'bold', fontSize: 20, hover: { color: colors.purpleDark }, }} >
             {({ hoverProps, style }) => (
               <a href="/stories/hostnation-launches-new-hub-on-tyneside" {...hoverProps} style={style}>
                 {" "}Watch our welcome video here{" "}
@@ -266,29 +263,20 @@ export default () => (
             )}
           </Hover>
           and 
-          <Hover
-            style={{
-              ...styles.text,
-              color: colors.yellow,
-              fontWeight: 'bold',
-              fontSize: 18,
-              hover: { color: colors.yellowDark },
-            }}
-          >
+          <Hover style={{ ...styles.text, color: colors.purple, textDecoration: 'underline', fontWeight: 'bold', fontSize: 20, hover: { color: colors.purpleDark }, }} >
             {({ hoverProps, style }) => (
               <a href="/befriend" {...hoverProps} style={style}>
                 {" "}sign up to befriend now.{" "}
               </a>
             )}
           </Hover>
-          
-           <br />
+          </Txt>
+          <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: colors.purple }}>
            Coming to Manchester in early 2022.
           </Txt>
         </Div>
+        <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} />
 
-      </Div>
-      <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ spacing: 50, background: 'white' }}>
         <img src={partyImg} />
         <IntroText />
