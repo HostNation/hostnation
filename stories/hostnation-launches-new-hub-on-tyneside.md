@@ -1,7 +1,7 @@
 ---
 date: 2021-11-17T16:12:24.192Z
 author: HostNation NorthEast
-category: HostNation Blog Post
+category: HostNation Film
 title: HostNation launches new hub on Tyneside
 ---
 **We’re excited to have opened HostNation North East in Newcastle and Gateshead. Together with our partner organisation Investing in People and Culture, we’re recruiting friendly locals who want to make refugees welcome in our cities.**
