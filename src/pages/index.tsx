@@ -258,15 +258,15 @@ export default () => (
           <Hover style={{ ...styles.text, color: colors.purple, textDecoration: 'underline', fontWeight: 'bold', fontSize: 20, hover: { color: colors.purpleDark }, }} >
             {({ hoverProps, style }) => (
               <a href="/stories/hostnation-launches-new-hub-on-tyneside" {...hoverProps} style={style}>
-                {" "}Watch our welcome video here{" "}
+                Watch our welcome video here
               </a>
             )}
           </Hover>
-          and 
+          {" "}and{" "} 
           <Hover style={{ ...styles.text, color: colors.purple, textDecoration: 'underline', fontWeight: 'bold', fontSize: 20, hover: { color: colors.purpleDark }, }} >
             {({ hoverProps, style }) => (
               <a href="/befriend" {...hoverProps} style={style}>
-                {" "}sign up to befriend now.{" "}
+                sign up to befriend now.
               </a>
             )}
           </Hover>
