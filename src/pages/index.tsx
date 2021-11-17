@@ -249,8 +249,41 @@ export default () => (
         </Txt>
         <Div style={{ padding: '15px 0 0 0' }}>
           <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 18, fontWeight: 'bold', textTransform: 'uppercase', color: colors.purple }}>
-            New HostNation hubs open in Teesside and Tyneside - sign up to befriend now. <br />
-            And coming to Manchester and the NW in 2022
+          New hub in Newcastle!  <br />
+          <Hover
+            style={{
+              ...styles.text,
+              color: colors.yellow,
+              fontWeight: 'bold',
+              fontSize: 18,
+              hover: { color: colors.yellowDark },
+            }}
+          >
+            {({ hoverProps, style }) => (
+              <a href="/stories/hostnation-launches-new-hub-on-tyneside" {...hoverProps} style={style}>
+                {" "}Watch our welcome video here{" "}
+              </a>
+            )}
+          </Hover>
+          and 
+          <Hover
+            style={{
+              ...styles.text,
+              color: colors.yellow,
+              fontWeight: 'bold',
+              fontSize: 18,
+              hover: { color: colors.yellowDark },
+            }}
+          >
+            {({ hoverProps, style }) => (
+              <a href="/befriend" {...hoverProps} style={style}>
+                {" "}sign up to befriend now.{" "}
+              </a>
+            )}
+          </Hover>
+          
+           <br />
+           Coming to Manchester in early 2022.
           </Txt>
         </Div>
 
