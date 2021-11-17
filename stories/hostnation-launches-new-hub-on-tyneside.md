@@ -13,7 +13,7 @@ Since Geordies were voted the friendliest people in the UK, that’s a perfect m
 \
 **Meet Harley, the face of HostNation NorthEast**
 
-“Volunteering brings a really refreshing opportunity to meet somebody you would never otherwise get to know,” says Harley, the new face of HostNation in Newcastle and Gateshead. “It’s a wonderful chance to hear somebody else’s stories and open your social circle.”
+“Volunteering brings a really refreshing opportunity to meet somebody you would never otherwise get to know,” says Harley, the new face of HostNation in Newcastle and Gateshead. “It’s a wonderful chance to hear somebody else’s stories and open your social circle.” <!-- end -->
 
 Harley is a sculptor who lives and works in Newcastle. He loves the city and is involved with several local community projects. He is naturally interested in meeting new people and bringing them together, something he does plenty of through his involvement in the Newcastle art scene. 
 
