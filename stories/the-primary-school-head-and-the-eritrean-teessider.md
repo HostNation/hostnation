@@ -12,7 +12,9 @@ BBC Radio Teesside (**[@BBCTees](https://twitter.com/BBCTees)**)
 
 **Tes loves football, cooking, music and history. He has a contagious sense of humour and is very sociable. He has three master’s degrees.**
 
-He is also an asylum seeker. Tes ­– short for Tesfabrhan – arrived in Middlesbrough six months ago. “I escaped the dictatorial regime of my country, Eritrea, in September 2017, shortly after my wedding,” he tells us. “Since then, it has been such a long, demanding journey to get here – to the promised land, to liberty and opportunity.” Read Tes’s personal testimonial at the end.
+He is also an asylum seeker. Tes ­– short for Tesfabrhan – arrived in Middlesbrough six months ago. “I escaped the dictatorial regime of my country, Eritrea, in September 2017, shortly after my wedding,” he tells us. “Since then, it has been such a long, demanding journey to get here – to the promised land, to liberty and opportunity.” 
+
+You can read Tes’s personal testimonial ***below*.**
 
 ![](/assets/judith-and-tes-new.jpg)
 
@@ -32,13 +34,13 @@ Middlesbrough houses a disproportionately high number of refugees and asylum see
 
 > ***“I am proud of the way my town has assimilated refugees and asylum seekers so successfully."***
 
-Although she and Tes were only introduced by HostNation North-East seven weeks ago, they are already off to a great start. “It feels like seven years!” exclaims Tes on the interview. “We really chat open-heartedly about everything. The befriending scheme…really made a difference in my life.”
+Although she and Tes were only introduced by HostNation North-East seven weeks ago, they are already off to a great start. “It feels like seven years!” exclaims Tes on the interview. 
+
+> ***“We really chat open-heartedly about everything. The befriending scheme…really made a difference in my life.”***
 
 He appreciates Judith’s interest in African affairs and finds they have a lot to talk about: “The quality of HostNation’s befriending service is in the effort they make to find people who are compatible, by looking at a wide range of details from professional background to hobbies. So it’s no surprise to see they made me a perfect match! Judith has not only been an indispensable friend but a trustworthy advisor.”
 
-When the BBC reporter asks Tes if he feels at home now, he bursts out irrepressibly: “Way, way better than the way I was when I arrived here!” And, echoing the popular local chant much heard at football matches, Tes adds:
-
-> ***“I feel a bit like a T-T-Teessider!”***
+When the BBC reporter asks Tes if he feels at home now, he bursts out irrepressibly: “Way, way better than the way I was when I arrived here!” And, echoing the popular local chant much heard at football matches, Tes adds: "I feel a bit like a T-T-Teessider!"
 
 Judith is also getting a lot from the friendship, as she explains: “I’ve really enjoyed it and I’m glad that it’s been beneficial. It’s what people need in a new setting. I think it’s a really lovely thing to do.”
 
@@ -51,8 +53,6 @@ So, to Judith and Tes, all of us wish you a long and happy friendship, and a pos
 > ***"Thanks to HostNation for the blessing of friendship.”***
 
 I escaped the dictatorial regime of my country, Eritrea, in September 2017, shortly after my wedding. Since then, it has been such a long, demanding journey to get here – to the promised land, chasing liberty and the opportunity to start a new life.
-
-<img src="/assets/tes-and-judith-2021-11-22.jpeg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />
 
 It has been more than four years since I have seen my wife. I confess the misery of life’s ups and downs has been almost unbearable. Much of what I suffered through can’t be told in this brief article, but the loneliness of the traumatic journey and my challenging psychological issues can perhaps be understood. 
 
@@ -78,11 +78,13 @@ But there’s nothing like the value of befriending when trying to settle into a
 
 Thanks to their office in Middlesbrough, who connected me to the friend I needed, things couldn't be better.
 
+<img src="/assets/tes-and-judith-2021-11-22.jpeg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />
+
 The quality of HostNation's service is down to the effort they make to find people who are compatible across a wide range of categories, from professional background to hobbies. So it was no surprise that I landed a perfect match! 
 
-Judith has not only been an indispensable friend but a trustworthy advisor. She’s a real angel, who brings the abstract notion of community hospitality to life. She’s a proud Teessider who loves discussing both local and global topics. We are perfectly suited in the things we like to talk about, proving the success of the matching process.
+Judith has not only been an indispensable friend but a trustworthy advisor. She’s a proud Teessider who loves discussing both local and global topics. We are perfectly suited in the things we like to talk about, proving the success of the matching process.
 
-Since the start of our friendship, my life has changed significantly – simply because I met someone who cares and supports and informs and open-heartedly chats with me about the daily hassles I struggle with as I adjust to life here.
+> ***"Since the start of our friendship, my life has changed significantly – simply because I met someone who cares and supports and informs and open-heartedly chats with me about the daily hassles I struggle with as I adjust to life here."***
 
 ## A two-way exchange
 
