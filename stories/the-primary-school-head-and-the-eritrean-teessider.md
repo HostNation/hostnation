@@ -48,13 +48,13 @@ So, to Judith and Tes, all of us wish you a long and happy friendship, and a pos
 
 **[We’re recruiting befrienders on Teesside and Tyneside now >](https://www.hostnation.org.uk/befriend)**
 
-
-
 # Tes’s story:
 
 > ***"Thanks to HostNation for the blessing of friendship.”***
 
 I escaped the dictatorial regime of my country, Eritrea, in September 2017, shortly after my wedding. Since then, it has been such a long, demanding journey to get here – to the promised land, chasing liberty and the opportunity to start a new life.
+
+<img src="/assets/tes-and-judith-2021-11-22.jpeg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />
 
 It has been more than four years since I have seen my wife. I confess the misery of life’s ups and downs has been almost unbearable. Much of what I suffered through can’t be told in this brief article, but the loneliness of the traumatic journey and my challenging psychological issues can perhaps be understood.
 
