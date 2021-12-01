@@ -90,6 +90,8 @@ Judith has not only been an indispensable friend but a trustworthy advisor. She�
 
 On top of that, we swap reading linked to both our interests, predominantly political and cultural matters. The information exchange goes both ways; I think I’ve helped her to delve deeper into the African issues she was already interested in.
 
+<img src="/assets/photo-2021-11-22-14-17-36.jpg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />
+
 The huge jump I have made in acclimatising myself to my new community would have been unthinkable without her. We regularly hang out around Middlesbrough and nearby Teesside towns and villages and historical sites such as museums, to help me understand the structural and sociocultural fabric of the northeast and the UK.
 
 Through Judith I’ve met her whole family at several family gatherings. This has renewed my hope of building a new life and given me the confidence to settle into this new social environment.
