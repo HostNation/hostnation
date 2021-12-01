@@ -54,7 +54,9 @@ I escaped the dictatorial regime of my country, Eritrea, in September 2017, shor
 
 <img src="/assets/tes-and-judith-2021-11-22.jpeg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />
 
-It has been more than four years since I have seen my wife. I confess the misery of life’s ups and downs has been almost unbearable. Much of what I suffered through can’t be told in this brief article, but the loneliness of the traumatic journey and my challenging psychological issues can perhaps be understood. Speaking from my heart, I'm so worried about my wife. I can't wait to reunite with her, my sorely-missed soulmate, to feel once more the warmth of our love.
+It has been more than four years since I have seen my wife. I confess the misery of life’s ups and downs has been almost unbearable. Much of what I suffered through can’t be told in this brief article, but the loneliness of the traumatic journey and my challenging psychological issues can perhaps be understood. 
+
+Speaking from my heart, I'm so worried about my wife. I can't wait to reunite with her, my sorely-missed soulmate, to feel once more the warmth of our love.
 
 Yet I keep my hope ablaze, inspired by a saying from Joe Neguse, an Eritrean-American member of Congress with a refugee background: “Fear is contagious but so is hope”.
 
