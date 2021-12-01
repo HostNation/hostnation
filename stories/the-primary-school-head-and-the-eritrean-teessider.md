@@ -12,9 +12,7 @@ BBC Radio Teesside (**[@BBCTees](https://twitter.com/BBCTees)**)
 
 **Tes loves football, cooking, music and history. He has a contagious sense of humour and is very sociable. He has three master’s degrees.**
 
-He is also an asylum seeker. Tes ­– short for Tesfabrhan – arrived in Middlesbrough six months ago. “I escaped the dictatorial regime of my country, Eritrea, in September 2017, shortly after my wedding,” he tells us. “Since then, it has been such a long, demanding journey to get here – to the promised land, to liberty and opportunity.”
-
-Read Tes’s personal testimonial here
+He is also an asylum seeker. Tes ­– short for Tesfabrhan – arrived in Middlesbrough six months ago. “I escaped the dictatorial regime of my country, Eritrea, in September 2017, shortly after my wedding,” he tells us. “Since then, it has been such a long, demanding journey to get here – to the promised land, to liberty and opportunity.” Read Tes’s personal testimonial at the end.
 
 ![](/assets/judith-and-tes-new.jpg)
 
