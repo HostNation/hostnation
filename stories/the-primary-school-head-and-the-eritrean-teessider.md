@@ -16,7 +16,7 @@ He is also an asylum seeker. Tes ­– short for Tesfabrhan – arrived in Middl
 
 Read Tes’s personal testimonial here
 
-![](/assets/judith-and-tes.jpg)
+![](/assets/judith-and-tes-new.jpg)
 
 Far from home and missing his wife desperately, he needed friends. “Adapting to a new social environment when you’re suddenly dropped into an unknown community is pretty hard,” he explains.  
 
