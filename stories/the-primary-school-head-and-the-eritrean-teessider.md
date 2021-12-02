@@ -4,6 +4,36 @@ author: JUDITH & TES
 category: HostNation in the Media
 title: The primary school head and the Eritrean Teessider
 ---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+
 <audio controls="controls" style="width: 100%;">
   <source src="https://docs.google.com/uc?export=download&id=1QFvVqQAvUdn8tjxi3IUeleFe_rpBj0Z6">
 </audio>
@@ -14,7 +44,7 @@ BBC Radio Teesside (**[@BBCTees](https://twitter.com/BBCTees)**)
 
 He is also an asylum seeker. Tes ­– short for Tesfabrhan – arrived in Middlesbrough six months ago. “I escaped the dictatorial regime of my country, Eritrea, in September 2017, shortly after my wedding,” he tells us. “Since then, it has been such a long, demanding journey to get here – to the promised land, to liberty and opportunity.” 
 
-You can read Tes’s personal testimonial ***below*.**
+You can read Tes’s personal testimonial <a href="#TesStory">***below*.**</a>
 
 ![](/assets/judith-and-tes-new.jpg)
 
@@ -46,9 +76,11 @@ Judith is also getting a lot from the friendship, as she explains: “I’ve rea
 
 So, to Judith and Tes, all of us wish you a long and happy friendship, and a positive outcome for Tes’s asylum process.
 
+<div id="TesStory"></div>
+
 **[We’re recruiting befrienders on Teesside and Tyneside now >](https://www.hostnation.org.uk/befriend)**
 
-# Tes’s story:
+<h2>Tes’s story:</h2>
 
 > ***"Thanks to HostNation for the blessing of friendship.”***
 
