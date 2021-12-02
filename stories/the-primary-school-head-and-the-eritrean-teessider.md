@@ -44,7 +44,7 @@ BBC Radio Teesside (**[@BBCTees](https://twitter.com/BBCTees)**)
 
 He is also an asylum seeker. Tes ­– short for Tesfabrhan – arrived in Middlesbrough six months ago. “I escaped the dictatorial regime of my country, Eritrea, in September 2017, shortly after my wedding,” he tells us. “Since then, it has been such a long, demanding journey to get here – to the promised land, to liberty and opportunity.” 
 
-You can read Tes’s personal testimonial <a href="#TesStory">***below*.**</a>
+You can read Tes’s personal testimonial <a href="https://www.hostnation.org.uk/stories/the-primary-school-head-and-the-eritrean-teessider#TesStory">***below*.**</a>
 
 ![](/assets/judith-and-tes-new.jpg)
 
