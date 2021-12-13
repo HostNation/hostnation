@@ -223,7 +223,7 @@ export default () => (
   <Layout location="/">
     <Helmet title="HostNation | Helping refugees through friendship" />
 
-    <TopBanner />
+    {/* <TopBanner /> */}
 
 
     <Div style={{ spacing: 50, padding: '50px 0' }}>
