@@ -226,7 +226,7 @@ export default () => (
     {/* <TopBanner /> */}
 
 
-    <Div style={{ spacing: 50, padding: '50px 0' }}>
+    <Div style={{ spacing: 50, padding: '30px 0' }}>
       <TopButtons />
 
 
@@ -252,7 +252,7 @@ export default () => (
 
         <Div style={{ spacing: 20 }}>
           <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 25, fontWeight: 'bold', color: colors.purple }}>
-          New hub in Newcastle! 
+          NEW HUB IN NEWCASTLE! 
           </Txt>
           <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: colors.purple }}>
           <Hover style={{ ...styles.text, color: colors.purple, textDecoration: 'underline', fontWeight: 'bold', fontSize: 20, hover: { color: colors.purpleDark }, }} >
