@@ -55,7 +55,8 @@ export default () => (
           life. They’ll have the chance to get to know a friendly local and
           practise their English. And you may find a real friend in the process!
         </Txt>
-        <Div style={{ spacing: 15 }}>
+
+        <Div style={{ spacing: 15, paddingTop: 30 }}>
           <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
             London
           </Txt>
@@ -108,14 +109,44 @@ export default () => (
           </a>
 
         </Div>
-        <Div style={{ spacing: 15 }}>
+
+        <Div style={{ spacing: 15, paddingTop: 30 }}>
+          <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+            North West
+          </Txt>
+          <Txt style={{ ...styles.boxText }}>
+          For those wishing to befriend in Greater Manchester:
+          </Txt>
+          <a
+            href="https://airtable.com/shrikBVOxwnEwgAUV?prefill_Type=Befriender"
+            target="_blank"
+          >
+            <Hover
+              style={{
+                ...styles.boxText,
+                color: colors.yellow,
+                fontWeight: 'bold',
+                hover: { color: colors.yellowDark },
+              }}
+            >
+              {({ hoverProps, style }) => (
+                <Txt {...hoverProps} style={style}>
+                  North West: Manchester Registration Form &raquo;
+                </Txt>
+              )}
+            </Hover>
+          </a>
+        </Div>
+
+
+        <Div style={{ spacing: 15, paddingTop: 30 }}>
           <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
             North East
           </Txt>
           <Txt style={styles.boxText}>
             We currently have two befriending programmes in the North East of England.  One operates in Teesside for asylum seekers and refugees living in Middlesbrough and Stockton-on-Tees.  The other operates in Tyneside for asylum seekers and refugees living in Newcastle and Gateshead. Please ensure you fill out the correct form.
           </Txt>
-          <Txt style={{ ...styles.boxText, fontWeight: 'bold'}}>
+          <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>
             For those wishing to befriend in Middlesbrough / Stockton-on-Tees:
           </Txt>
           <a
