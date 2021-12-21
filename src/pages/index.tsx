@@ -78,8 +78,8 @@ const TopBanner = () => {
         }}
       >
         <Txt style={{ ...styles.text, fontSize: 12, fontWeight: 'bold', lineHeight: '5px', textAlign: 'center', }}>
-          We are recruiting Trustees.  &nbsp; Do you have financial skills? &nbsp; Can you help us grow HostNation?&nbsp;{' '}
-          <Link to="/treasurer-ad.pdf" newTab>
+        Read our latest annual report: &nbsp;{' '}
+          <Link to="/hostnation-annual-report-2021.pdf" newTab>
             <Txt
               style={{
                 ...styles.text,
@@ -90,7 +90,7 @@ const TopBanner = () => {
                 textDecoration: 'underline',
               }}
             >
-              More info here.
+              HostNation 2020-21
             </Txt>
           </Link>
         </Txt>
@@ -132,7 +132,7 @@ const MoreInfo = () => {
         }}
       >
         <Button
-          to="/hostnation-annual-report.pdf"
+          to="/hostnation-annual-report-2021.pdf"
           newTab
           color="black"
           style={{ width: 320, fontSize: 20, margin: '0 auto' }}
@@ -223,10 +223,10 @@ export default () => (
   <Layout location="/">
     <Helmet title="HostNation | Helping refugees through friendship" />
 
-    {/* <TopBanner /> */}
+    <TopBanner />
 
 
-    <Div style={{ spacing: 50, padding: '30px 0' }}>
+    <Div style={{ spacing: 50, padding: '50px 0' }}>
       <TopButtons />
 
 
