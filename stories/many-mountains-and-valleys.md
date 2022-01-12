@@ -22,6 +22,8 @@ Here with kind permission from Dave, we reproduce some of his paintings, alongsi
 
 
 
+![](/assets/image1.png)
+
 ## *Torn between a burnt home and cultural rejection*
 
 ***by Dave, in his own words***
@@ -42,6 +44,8 @@ Here with kind permission from Dave, we reproduce some of his paintings, alongsi
 
 *Missing home, the food, the culture, the soil… one thing you can never take is your heart, it will always belong in your homeland.* 
 
+![](/assets/image2.png)
+
 *No matter where we come from, look like or what language we speak, inside we are all the same and yearn for the same things – that is to feel safe and to be treated with dignity as human beings.* 
 
 *We all have the same emotions, feelings and only want for our family to be in a safe place, just like you. People forget that we are human too, just like you. There is no alien, foreigner and no-one is illegal, there is only one race: the human race…* 
@@ -55,3 +59,5 @@ Here with kind permission from Dave, we reproduce some of his paintings, alongsi
 *Painting in my tent while waiting for the painting to dry and the rain to stop. Which one will be first?*
 
 *It has given me the strength and courage to find a new life to live for. By expressing myself in this way it has given me a voice, given me hope to look forward... I hope this will inspire, motivate and empower others  to use their voice.*
+
+![](/assets/image3.png)
