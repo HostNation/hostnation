@@ -8,7 +8,7 @@ title: Many mountains and valleys
 
 <img src="/assets/anthony-and-dave-nov2021.jpg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />
 
-Dave *(right, at his show with HostNation's Anthony Berman)* has been in the UK for 18 years but has still not been granted refugee status. Perhaps unsurprisingly, this interminable existence in limbo has led to PTSD. He also had to endure a period of homelessness during covid lockdown and believes that it is only his creativity that has helped preserve his sanity.
+Dave *(right, at his show with HostNation's Anthony Berman)*  has been in the UK for 18 years but has still not been granted refugee status. Perhaps unsurprisingly, this interminable existence in limbo has led to PTSD. He also had to endure a period of homelessness during covid lockdown and believes that it is only his creativity that has helped preserve his sanity.
 
 But now through HostNation, he has found a new friend. Music producer Tommy plays the double bass, drums and guitar and like Dave, loves making art. They met just before Dave’s exhibition opened. 
 
