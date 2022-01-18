@@ -24,7 +24,7 @@ Here with kind permission from Dave, we reproduce some of his paintings, alongsi
 
 ## *Torn between a burnt home and cultural rejection*
 
-<em><strong style="color:#b34b6a;">by Dave, in his own words</strong></em>
+<em><strong style="color:#b34b6a;">by Dave, in his own words</strong>
 
 Never sure, never know how far we could fall to the great unknown. Many mountains and valleys, and all that will come in between, desert and ocean, just to risk it all, to feel safe. 
 
@@ -56,6 +56,6 @@ Missing home, the food, the culture, the soil… one thing you can never take is
 
 *Painting in my tent while waiting for the painting to dry and the rain to stop. Which one will be first?*
 
-*It has given me the strength and courage to find a new life to live for. By expressing myself in this way it has given me a voice, given me hope to look forward... I hope this will inspire, motivate and empower others  to use their voice.*
+*It has given me the strength and courage to find a new life to live for. By expressing myself in this way it has given me a voice, given me hope to look forward... I hope this will inspire, motivate and empower others  to use their voice.*</em>
 
 ![](/assets/image3.png)
