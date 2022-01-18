@@ -18,13 +18,13 @@ But now through HostNation, he has found a new friend. Music producer Tommy play
 
 In a beautiful piece of writing (see below) that perfectly captures the experience of being an asylum seeker, Dave describes how finding an artistic voice has brought him hope.
 
-Here with kind permission from Dave, we reproduce some of his paintings, alongside extracts from a powerful and moving personal testimony he wrote for Refugee Week, first published on the [New Art Studio](https://www.newartstudio.org.uk/2021/05/17/the-bridge/) website:
+Here with kind permission from Dave, we reproduce some of his paintings, alongside extracts from a powerful and moving personal testimony he wrote for Refugee Week, first published on the <a target=“_blank” href="https://www.newartstudio.org.uk/2021/05/17/the-bridge/">New Art Studio</a> website:
 
 ![](/assets/image1.png)
 
 ## *Torn between a burnt home and cultural rejection*
 
-***by Dave, in his own words***
+<em><strong style="color:#b34b6a;">by Dave, in his own words</strong></em>
 
 Never sure, never know how far we could fall to the great unknown. Many mountains and valleys, and all that will come in between, desert and ocean, just to risk it all, to feel safe. 
 
