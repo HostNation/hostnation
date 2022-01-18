@@ -26,7 +26,7 @@ Here with kind permission from Dave, we reproduce some of his paintings, alongsi
 
 by Dave, in his own words
 
-<em><p style="color:#b34b6a;">"color:#b34b6a;">Never sure, never know how far we could fall to the great unknown. Many mountains and valleys, and all that will come in between, desert and ocean, just to risk it all, to feel safe. 
+<em><p style="color:#b34b6a;">Never sure, never know how far we could fall to the great unknown. Many mountains and valleys, and all that will come in between, desert and ocean, just to risk it all, to feel safe. 
 
 Even when you do find sanctuary one still has to encumber with the static, hostile environment and worst of all is being treated as if you are not a human being or you don’t exist. 
 
