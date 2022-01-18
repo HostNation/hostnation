@@ -25,9 +25,9 @@ export default () => (
           textAlign: 'center',
         }}
       >
-        Due to unprecedented traffic on our site over the summer, we have had to close our registration for London.  
+        Due to unprecedented traffic on our site in 2021, we have had to close our registration for London.  
         <br /><br />
-        If you are keen to befriend through HostNation, please submit the form below so we can add you to our waiting list and be in touch as and when we need more befrienders.          <br /><br />
+        Currently we are ONLY considering volunteers who live in one of the following boroughs: Hillingdon, Harrow, Barnet, Enfield, Redbridge, Havering or Barking &amp; Dagenham.  If you live in one of these boroughs, please submit the form below so we can add you to our waiting list and be in touch.        
         <Button
           to="https://forms.gle/517pgsohaaTm4v4RA"
           newTab

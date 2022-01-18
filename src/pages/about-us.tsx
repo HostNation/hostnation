@@ -578,6 +578,7 @@ export default () => (
               'Liz Pepler',
               'Jake Elwes',
               'Sarah Robbins',
+              'Peter Melrose',
             ].map((name, i) => (
               <Txt
                 style={{
