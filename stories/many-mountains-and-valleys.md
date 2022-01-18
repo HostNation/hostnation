@@ -18,7 +18,7 @@ But now through HostNation, he has found a new friend. Music producer Tommy play
 
 In a beautiful piece of writing (see below) that perfectly captures the experience of being an asylum seeker, Dave describes how finding an artistic voice has brought him hope.
 
-Here with kind permission from Dave, we reproduce some of his paintings, alongside extracts from a powerful and moving personal testimony he wrote for Refugee Week, first published on the <a target=“_blank” href="https://www.newartstudio.org.uk/2021/05/17/the-bridge/">New Art Studio</a> website website:
+Here with kind permission from Dave, we reproduce some of his paintings, alongside extracts from a powerful and moving personal testimony he wrote for Refugee Week, first published on the <a target=“_blank” href="https://www.newartstudio.org.uk/2021/05/17/the-bridge/">New Art Studio</a> website:
 
 ![](/assets/image1.png)
 
