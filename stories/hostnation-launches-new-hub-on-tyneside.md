@@ -1,5 +1,5 @@
 ---
-date: 2021-11-17T16:12:24.192Z
+date: 2022-01-18T12:09:08.778Z
 author: HostNation NorthEast
 category: HostNation Film
 title: HostNation launches new hub on Tyneside
