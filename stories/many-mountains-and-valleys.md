@@ -22,7 +22,7 @@ Here with kind permission from Dave, we reproduce some of his paintings, alongsi
 
 ![](/assets/image1.png)
 
-## *Torn between a burnt home and cultural rejection*
+## Torn between a burnt home and cultural rejection
 
 ***by Dave, in his own words***
 
