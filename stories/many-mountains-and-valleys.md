@@ -26,7 +26,7 @@ Here with kind permission from Dave, we reproduce some of his paintings, alongsi
 
 ***by Dave, in his own words***
 
-<p style="color:#b34b6a;">Never sure, never know how far we could fall to the great unknown. Many mountains and valleys, and all that will come in between, desert and ocean, just to risk it all, to feel safe. 
+Never sure, never know how far we could fall to the great unknown. Many mountains and valleys, and all that will come in between, desert and ocean, just to risk it all, to feel safe. 
 
 Even when you do find sanctuary one still has to encumber with the static, hostile environment and worst of all is being treated as if you are not a human being or you don’t exist. 
 
@@ -56,6 +56,6 @@ The only thing I could take were my ideas: art, painting. It was therapeutic, a 
 
 Painting in my tent while waiting for the painting to dry and the rain to stop. Which one will be first?
 
-It has given me the strength and courage to find a new life to live for. By expressing myself in this way it has given me a voice, given me hope to look forward... I hope this will inspire, motivate and empower others  to use their voice.</p>
+It has given me the strength and courage to find a new life to live for. By expressing myself in this way it has given me a voice, given me hope to look forward... I hope this will inspire, motivate and empower others  to use their voice.
 
 ![](/assets/image3.png)
