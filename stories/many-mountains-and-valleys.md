@@ -24,7 +24,7 @@ Here with kind permission from Dave, we reproduce some of his paintings, alongsi
 
 ## *Torn between a burnt home and cultural rejection*
 
-<em><strong style="color:#b34b6a;">by Dave, in his own words</strong></em>
+<em><p style="color:#b34b6a;">"color:#b34b6a;">by Dave, in his own words</p></em>
 
 Never sure, never know how far we could fall to the great unknown. Many mountains and valleys, and all that will come in between, desert and ocean, just to risk it all, to feel safe. 
 
