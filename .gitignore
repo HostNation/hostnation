@@ -1,7 +1,5 @@
 node_modules
 .cache/
-public/assets/
-public/admin/
-public/page-data/
+public
 .DS_Store
 stories/format-test.md
