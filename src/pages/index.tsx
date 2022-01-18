@@ -392,7 +392,7 @@ export default () => (
         <Div style={{ spacing: 15 }}>
           <img src={linksIcon} style={{ width: 100, margin: '0 auto' }} />
           <Button
-            to="/Refugee signposting 2022.pdf"
+            to="/Refugee-signposting-2022.pdf"
             newTab
             color="purple"
             style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
