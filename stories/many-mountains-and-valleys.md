@@ -24,7 +24,7 @@ Here with kind permission from Dave, we reproduce some of his paintings, alongsi
 
 ## *Torn between a burnt home and cultural rejection*
 
-<em><strong style="color:#b34b6a;">by Dave, in his own words
+<em><strong style="color:#b34b6a;">by Dave, in his own words</strong></em>
 
 Never sure, never know how far we could fall to the great unknown. Many mountains and valleys, and all that will come in between, desert and ocean, just to risk it all, to feel safe. 
 
@@ -44,18 +44,18 @@ Missing home, the food, the culture, the soil… one thing you can never take is
 
 ![](/assets/image2.png)
 
-*No matter where we come from, look like or what language we speak, inside we are all the same and yearn for the same things – that is to feel safe and to be treated with dignity as human beings.* 
+No matter where we come from, look like or what language we speak, inside we are all the same and yearn for the same things – that is to feel safe and to be treated with dignity as human beings. 
 
-*We all have the same emotions, feelings and only want for our family to be in a safe place, just like you. People forget that we are human too, just like you. There is no alien, foreigner and no-one is illegal, there is only one race: the human race…* 
+We all have the same emotions, feelings and only want for our family to be in a safe place, just like you. People forget that we are human too, just like you. There is no alien, foreigner and no-one is illegal, there is only one race: the human race… 
 
-*One can’t begin to ever understand what it is like, unless you have been through the journey. One doesn’t choose to be a refugee, it is not who you are nor a lifestyle choice. It is something that happens to you.* 
+One can’t begin to ever understand what it is like, unless you have been through the journey. One doesn’t choose to be a refugee, it is not who you are nor a lifestyle choice. It is something that happens to you. 
 
-*God forbid you ever had to walk a mile in their shoes ‘cause then you really might know what it’s like to have to choose, what it’s like to lose it all.* 
+God forbid you ever had to walk a mile in their shoes ‘cause then you really might know what it’s like to have to choose, what it’s like to lose it all. 
 
-*The only thing I could take were my ideas: art, painting. It was therapeutic, a great relief and escapism from the horrors of being in a war zone, the trauma that was playing in my head, or my uninvited friend PTSD who visits me frequently while being street homeless.* 
+The only thing I could take were my ideas: art, painting. It was therapeutic, a great relief and escapism from the horrors of being in a war zone, the trauma that was playing in my head, or my uninvited friend PTSD who visits me frequently while being street homeless. 
 
-*Painting in my tent while waiting for the painting to dry and the rain to stop. Which one will be first?*
+Painting in my tent while waiting for the painting to dry and the rain to stop. Which one will be first?
 
-*It has given me the strength and courage to find a new life to live for. By expressing myself in this way it has given me a voice, given me hope to look forward... I hope this will inspire, motivate and empower others  to use their voice.*</strong></em>
+It has given me the strength and courage to find a new life to live for. By expressing myself in this way it has given me a voice, given me hope to look forward... I hope this will inspire, motivate and empower others  to use their voice.
 
 ![](/assets/image3.png)
