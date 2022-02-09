@@ -61,12 +61,12 @@ export default () => (
             London
           </Txt>
           <Txt style={styles.boxText}>
-            Due to unprecedented traffic on our site in 2021, we have had to close our registration for London.  
-        <br /><br />
-        Currently we are ONLY considering volunteers who live in one of the following boroughs: Hillingdon, Harrow, Barnet, Enfield, Redbridge, Havering or Barking &amp; Dagenham.     
+            Due to unprecedented traffic on our site in 2021, we have had to close our registration for London.
+            <br /><br />
+            Currently we are ONLY considering volunteers who live in one of the following boroughs: Hillingdon, Harrow, Barnet, Enfield, Redbridge, Havering or Barking &amp; Dagenham.
           </Txt>
           <Txt style={styles.boxText}>
-          If you live in one of these boroughs, please submit the form below so we can add you to our waiting list and be in touch.              </Txt>
+            If you live in one of these boroughs, please submit the form below so we can add you to our waiting list and be in touch.              </Txt>
           <a
             href="https://forms.gle/517pgsohaaTm4v4RA"
             target="_blank"
@@ -116,7 +116,7 @@ export default () => (
             North West
           </Txt>
           <Txt style={{ ...styles.boxText }}>
-          For those wishing to befriend in Greater Manchester:
+            For those wishing to befriend in Greater Manchester:
           </Txt>
           <a
             href="https://airtable.com/shrikBVOxwnEwgAUV?prefill_Type=Befriender"
@@ -256,20 +256,15 @@ export default () => (
 
       <Box title="HOSTNATION PRIVACY POLICY" toggle>
         <Txt style={styles.boxText}>
-          At HostNation we will only collect, process and store information
-          about you that you have willingly provided. We aim to be open about
-          collecting this information and clear about what we will use it for.
-          You do not need to give us any information to use our website,
-          although as a result of your use of the website we may collect cookies
-          and other related information (see below).
+          At HostNation we will only collect, process and store information about you that you have willingly
+          provided. We aim to be open about collecting this information and clear about what we will use it
+          for.
         </Txt>
         <Txt style={styles.boxText}>
-          We will not share your information with third parties or outside of
-          the European Economic Area (EEA) without your permission unless we are
-          legally permitted or required to do so. There are times when we may be
-          forced to share your information with police, regulatory bodies or
-          legal advisors without your permission (sometimes referred to as
-          ‘breaching confidentiality’).
+          We will not share your information with third parties or outside of the European Economic Area
+          (EEA) without your permission unless we are legally required to do so. There are times when we
+          may be forced to share your information with police, regulatory bodies or legal advisors without
+          your permission (sometimes referred to as ‘breaching confidentiality’).
         </Txt>
         <a href="/privacy-policy.pdf" target="_blank">
           <Hover
