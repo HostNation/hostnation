@@ -53,7 +53,7 @@ export default class BoroughSelect extends React.Component<{}, SelectState> {
             isOpen = <div></div>
 
         } else {
-            isOpen = <div>We’re sorry but we are over-subscribed in this borough.
+            isOpen = <div>We’re sorry but we are currently over-subscribed in this borough.
                 <br></br>Many thanks for your interest and maybe you could consider a small, regular donation to support our work instead?
 
                 <a
