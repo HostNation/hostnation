@@ -8,7 +8,10 @@ import nickAli from '../img/banners/nick-ali.png';
 import { Div, Hover, Txt } from '../core/elements';
 import Box from '../core/Box';
 import Layout from '../core/Layout';
+import BoroughSelect from '../core/BoroughSelect';
 import styles, { colors } from '../core/styles';
+
+
 
 export default () => (
   <Layout location="/befriend">
@@ -61,53 +64,14 @@ export default () => (
             London
           </Txt>
           <Txt style={styles.boxText}>
-            Due to unprecedented traffic on our site in 2021, we have had to close our registration for London.
-            <br /><br />
-            Currently we are ONLY considering volunteers who live in one of the following boroughs: Hillingdon, Harrow, Barnet, Enfield, Redbridge, Havering or Barking &amp; Dagenham.
+          Please select the borough you live in to see if you can register:
           </Txt>
-          <Txt style={styles.boxText}>
-            If you live in one of these boroughs, please submit the form below so we can add you to our waiting list and be in touch.              </Txt>
-          <a
-            href="https://forms.gle/517pgsohaaTm4v4RA"
-            target="_blank"
-          >
-            <Hover
-              style={{
-                ...styles.boxText,
-                color: colors.yellow,
-                fontWeight: 'bold',
-                hover: { color: colors.yellowDark },
-              }}
-            >
-              {({ hoverProps, style }) => (
-                <Txt {...hoverProps} style={style}>
-                  London: Befriender Waiting List &raquo;
-                </Txt>
-              )}
-            </Hover>
-          </a>
-          <Txt style={styles.boxText}>
-            Meanwhile please consider a small, regular donation to support our work.
-          </Txt>
-          <a
-            href="https://www.totalgiving.co.uk/donate/hostnation"
-            target="_blank"
-          >
-            <Hover
-              style={{
-                ...styles.boxText,
-                color: colors.yellow,
-                fontWeight: 'bold',
-                hover: { color: colors.yellowDark },
-              }}
-            >
-              {({ hoverProps, style }) => (
-                <Txt {...hoverProps} style={style}>
-                  Donate Here &raquo;
-                </Txt>
-              )}
-            </Hover>
-          </a>
+ 
+          
+          <BoroughSelect></BoroughSelect>
+
+
+
 
         </Div>
 
@@ -260,11 +224,14 @@ export default () => (
           provided. We aim to be open about collecting this information and clear about what we will use it
           for.
         </Txt>
+        <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>
+          What is “Personal Data”?
+        </Txt>
         <Txt style={styles.boxText}>
-          We will not share your information with third parties or outside of the European Economic Area
-          (EEA) without your permission unless we are legally required to do so. There are times when we
-          may be forced to share your information with police, regulatory bodies or legal advisors without
-          your permission (sometimes referred to as ‘breaching confidentiality’).
+          Personal Data is any information concerned with living individuals who can be identified either
+          from that information alone or in combination with other information that is held by HostNation.
+          Personal data collected and processed by HostNation includes: names, sex, dates of birth, email
+          addresses, phone numbers, occupation, religion, visual ID.
         </Txt>
         <a href="/privacy-policy.pdf" target="_blank">
           <Hover
