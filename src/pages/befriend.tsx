@@ -199,15 +199,6 @@ export default () => (
           provided. We aim to be open about collecting this information and clear about what we will use it
           for.
         </Txt>
-        <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>
-          What is “Personal Data”?
-        </Txt>
-        <Txt style={styles.boxText}>
-          Personal Data is any information concerned with living individuals who can be identified either
-          from that information alone or in combination with other information that is held by HostNation.
-          Personal data collected and processed by HostNation includes: names, sex, dates of birth, email
-          addresses, phone numbers, occupation, religion, visual ID.
-        </Txt>
         <a href="/privacy-policy.pdf" target="_blank">
           <Hover
             style={{

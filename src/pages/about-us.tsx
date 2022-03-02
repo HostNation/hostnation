@@ -307,7 +307,27 @@ const Profiles = () => {
           />
 
         </Div>
+        <Div
+          style={{
+            layout: small ? 'stack' : 'bar',
+            spacing: 40,
+            verticalAlign: 'left',
+            margin: '0 0',
+            maxWidth: small ? 340 : '100%',
+          }}
+        >
 
+          <Profile
+            image={abu}
+            name="Abu Haron"
+            role="Refugee Advisor"
+            bio={[
+              'Abu fled the Darfur genocide in Sudan as a child and after a harrowing journey arrived in the UK aged 16 with no family, no friends, no money and no English. At 17 he was matched with a befriender through Freedom from Torture’s befriending scheme. Abu gained refugee status in 2015, is a fluent Arabic speaker, speaks Level 2 English, has acted as a community interpreter, has volunteered for the Children’s Radio Foundation, has given talks at the British Red Cross and has done an internship at the BBC.',
+              'Abu’s experience as an asylum seeker in the UK and the benefit he received from being befriended, is the inspiration behind HostNation. He helps to promote it as well as acting as an ambassador amongst refugee (and Arabic-speaking) communities.',
+            ]}
+          />
+
+        </Div>
       </Div>
     </div>
   );
