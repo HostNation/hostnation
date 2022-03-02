@@ -3,6 +3,17 @@ module.exports = {
     title: 'HostNation',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-ZYY0J6MLZG",
+      ],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify-cms',
     {
