@@ -125,24 +125,12 @@ export default () => (
         </div>
         <div style={{ padding: '0 15px' }}>
           <Button
-            to="https://airtable.com/shrP5uN9KbQWRarwV?prefill_Type=Refugee&backgroundColor=orange"
+            to="https://airtable.com/shrCnkF1DgqeK5Yoa?prefill_Type=Refugee&backgroundColor=orange"
             newTab
             color="yellow"
             style={{ margin: '0 auto', fontSize: 20 }}
           >
-            Middlesbrough / Teesside:
-            <br />
-            Referral Form
-          </Button>
-        </div>
-        <div style={{ padding: '0 15px' }}>
-          <Button
-            to="https://airtable.com/shrCnkF1DgqeK5Yoa?prefill_Type=Refugee&backgroundColor=orange"
-            newTab
-            color="black"
-            style={{ margin: '0 auto', fontSize: 20 }}
-          >
-            Newcastle / Tyneside:
+            Newcastle / Gateshead:
             <br />
             Referral Form
           </Button>
@@ -151,20 +139,18 @@ export default () => (
 
       <Box title="HOSTNATION PRIVACY POLICY" toggle>
         <Txt style={styles.boxText}>
-          At HostNation we will only collect, process and store information
-          about you that you have willingly provided. We aim to be open about
-          collecting this information and clear about what we will use it for.
-          You do not need to give us any information to use our website,
-          although as a result of your use of the website we may collect cookies
-          and other related information (see below).
+          At HostNation we will only collect, process and store information about you that you have willingly
+          provided. We aim to be open about collecting this information and clear about what we will use it
+          for.
+        </Txt>
+        <Txt style={{ ...styles.boxText, fontWeight: 'bold' }}>
+          What is “Personal Data”?
         </Txt>
         <Txt style={styles.boxText}>
-          We will not share your information with third parties or outside of
-          the European Economic Area (EEA) without your permission unless we are
-          legally permitted or required to do so. There are times when we may be
-          forced to share your information with police, regulatory bodies or
-          legal advisors without your permission (sometimes referred to as
-          ‘breaching confidentiality’).
+          Personal Data is any information concerned with living individuals who can be identified either
+          from that information alone or in combination with other information that is held by HostNation.
+          Personal data collected and processed by HostNation includes: names, sex, dates of birth, email
+          addresses, phone numbers, occupation, religion, visual ID.
         </Txt>
         <a href="/privacy-policy.pdf" target="_blank">
           <Hover

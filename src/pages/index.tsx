@@ -57,7 +57,7 @@ const TopBanner = () => {
   const [setWidthElem, small = false] = useWidth(700);
   return (
     <div
-    ref={setWidthElem}
+      ref={setWidthElem}
       style={{
         margin: '0 auto',
         maxWidth: 850,
@@ -67,7 +67,7 @@ const TopBanner = () => {
       <div
         style={{
           background: colors.yellowFaint,
-          position: 'absolute', 
+          position: 'absolute',
           // position: 'fixed' - for sticky           
           zIndex: 100,
           width: '100%',
@@ -78,7 +78,7 @@ const TopBanner = () => {
         }}
       >
         <Txt style={{ ...styles.text, fontSize: 12, fontWeight: 'bold', lineHeight: '5px', textAlign: 'center', }}>
-        Read our latest annual report: &nbsp;{' '}
+          Read our latest annual report: &nbsp;{' '}
           <Link to="/hostnation-annual-report-2021.pdf" newTab>
             <Txt
               style={{
@@ -110,11 +110,8 @@ const IntroText = () => {
           padding: '0 15px',
         }}
       >
-        We are a city &amp; town-based introductory service connecting residents
-        to refugees through small acts of kindness, inclusion and friendship. As
-        a result of Covid we now offer ‘smart’ befriending, with introductions taking place online and video calls supplementing regular one-to-one meet ups. Regular video-calls are followed by one-to-one
-        meet-ups when covid restrictions allow. We ask for a minimum commitment
-        of three months but many matches become firm friends.
+        We are a city-based introductory service connecting residents to refugees through small acts of kindness, inclusion and friendship. Once introduced by HostNation, it’s up to our befrienders and their refugee friends to make plans and to meet up to participate in city life. We ask for a weekly commitment of meeting face-to-face over three months, but many matches become firm friends.
+
       </Txt>
     </div>
   );
@@ -223,7 +220,7 @@ export default () => (
   <Layout location="/">
     <Helmet title="HostNation | Helping refugees through friendship" />
 
-    <TopBanner />
+    {/* <TopBanner /> */}
 
 
     <Div style={{ spacing: 50, padding: '50px 0' }}>
@@ -244,38 +241,24 @@ export default () => (
         <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20 }}>
           We connect those offering friendship with those needing it.
         </Txt>
-        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20 }}>
-          Now matching friends across Greater London and in the North East.
-        </Txt>
-        </Div>
-        <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
+      </Div>
+      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
 
-        <Div style={{ spacing: 20 }}>
-          <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 25, fontWeight: 'bold', color: colors.purple }}>
-          NEW HUB IN NEWCASTLE! 
-          </Txt>
-          <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: colors.purple }}>
-          <Hover style={{ ...styles.text, color: colors.purple, textDecoration: 'underline', fontWeight: 'bold', fontSize: 20, hover: { color: colors.purpleDark }, }} >
-            {({ hoverProps, style }) => (
-              <a href="/stories/hostnation-launches-new-hub-on-tyneside" {...hoverProps} style={style}>
-                Watch our welcome video here
-              </a>
-            )}
-          </Hover>
-          {" "}and{" "} 
+      <Div style={{ spacing: 20 }}>
+        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold' }}>
+          Now matching friends across Greater London and in the North East and recruiting befrienders in Newcastle, Gateshead and Manchester.
+        </Txt>
+        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: colors.purple }}>
           <Hover style={{ ...styles.text, color: colors.purple, textDecoration: 'underline', fontWeight: 'bold', fontSize: 20, hover: { color: colors.purpleDark }, }} >
             {({ hoverProps, style }) => (
               <a href="/befriend" {...hoverProps} style={style}>
-                sign up to befriend now.
+                Sign up to befriend
               </a>
             )}
           </Hover>
-          </Txt>
-          <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: colors.purple }}>
-           Coming to Manchester in early 2022.
-          </Txt>
-        </Div>
-        <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} />
+        </Txt>
+      </Div>
+      <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} />
 
       <Div style={{ spacing: 50, background: 'white' }}>
         <img src={partyImg} />
