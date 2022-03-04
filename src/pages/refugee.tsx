@@ -25,7 +25,7 @@ export default () => (
       <img src={maryAmira} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ padding: '50px 0', spacing: 30, background: 'white' }}>
         <Txt style={styles.boxText}>
-          If you are an asylum seeker or refugee over 18 and you live in London, Middlesbrough, Stockton-on-Tees, Newcastle or Gateshead then HostNation is here for you.
+        If you are an asylum seeker or refugee over 18 and you live in London, Manchester, Newcastle or Gateshead then HostNation is here for you.
         </Txt>
         <Txt style={styles.boxText}>
           Do you want a local friend to chat to and find out more about life
@@ -115,7 +115,7 @@ export default () => (
               You are an asylum seeker or refugee.
             </li>
             <li style={{ margin: '5px 0' }}>
-              You live in Greater London, Teesside or Tyneside.
+            You live in Greater London, Greater Manchester or Tyne &amp; Wear.
             </li>
             <li style={{ margin: '5px 0' }}>You are over 18.</li>
             <li style={{ margin: '5px 0' }}>
