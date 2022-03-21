@@ -28,7 +28,7 @@ All you need is a couple of spare hours a week for a relaxed coffee with your re
 
 Befriending a refugee can make a real impact on both sides of the match. Last year 93% of our London befrienders said they found the experience rewarding. “People need people,” as Cara points out. “It’s that simple.” 
 
-Most refugees have suffered trauma in one way or another; all have left their homes and everything most familiar to them. Many of them don’t know any local people outside of an often hostile refugee and asylum system, so a welcoming, interested and empathetic volunteer befriender can make a huge difference to their refugee friend’s experience of the city. What seems like a simple chat over a coffee to the befriender can be a real lifeline to their refugee friend, helping them feel less lonely, less isolated and more part of their new home.
+Most refugees have suffered trauma in one way or another; all have left their homes and everything most familiar to them. Many of them don’t know any local people outside of an often hostile refugee and asylum system, so a welcoming, interested and empathetic volunteer befriender can make a huge difference to their experience of the city. What seems like a simple chat over a coffee to the befriender can be a real lifeline to their refugee friend, helping them feel less lonely, less isolated and more part of their new home.
 
 Kim, who has lived in Manchester for 25 years, knows that Manchester is full of friendly, welcoming and committed people who are ready to reach out and make friends with locally-based refugees and asylum seekers.  
 
