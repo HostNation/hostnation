@@ -12,7 +12,7 @@ HostNation NorthWest is a way for friendly locals to reach out to refugees and h
 
 ![](/assets/manchester-kim-and-cara.png)
 
-“There is a brilliant network of organisations and partnerships supporting refugees and asylum seekers here, and we are excited about the potential of HostNation to complement that work by offering a welcoming befriending service.”
+> ***“There is a brilliant network of organisations and partnerships supporting refugees and asylum seekers here, and we are excited about the potential of HostNation to complement that work by offering a welcoming befriending service.”***
 
 ## How it works
 
@@ -30,7 +30,7 @@ Most refugees have suffered trauma in one way or another; all have left their ho
 
 Kim, who has lived in Manchester for 25 years, knows that Manchester is full of friendly, welcoming and committed people who are ready to reach out and make friends with locally-based refugees and asylum seekers.  
 
-“We put a lot of thought into making the right match so that the friendship has the most chance of success. It literally can be life-changing for both parties.”
+> ***“We put a lot of thought into making the right match so that the friendship has the most chance of success. It literally can be life-changing for both parties.”***
 
 “Since the start of our friendship, my life has changed significantly,” says Eritrean asylum seeker Tes, who we matched in Tyneside through HostNation NorthEast. “I met someone who cares and supports and informs me and open-heartedly chats with me about the daily hassles I struggle with as I adjust to life here. This has renewed my hope of building a new life.”
 
