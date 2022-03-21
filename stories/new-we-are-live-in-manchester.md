@@ -40,7 +40,7 @@ Kim, who has lived in Manchester for 25 years, knows that Manchester is full of 
 
 “I feel strongly about how important it is that we as a society work hard to break down borders and barriers, and stop the entire idea that there is an 'us and them'. HostNation offers a simple way for each of us to help that happen. I love the idea that through friendship there is the potential for social and cultural exchange and integration. It can only enrich our society. It’s exciting!”
 
-**To find out more about befriending, read some our stories here.** 
+**To find out more about befriending, read some our stories <a target="_blank" rel="noreferrer noopener" href="https://www.hostnation.org.uk/stories/the-primary-school-head-and-the-eritrean-teessider">here ></a>
 
 **Find our registration form here.**
 
