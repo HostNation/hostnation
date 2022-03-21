@@ -14,6 +14,8 @@ HostNation NorthWest is a way for friendly locals to reach out to refugees and h
 
 > ***“There is a brilliant network of organisations and partnerships supporting refugees and asylum seekers here, and we are excited about the potential of HostNation to complement that work by offering a welcoming befriending service.”***
 
+<!-- end -->
+
 ## How it works
 
 All you need is a couple of spare hours a week for a relaxed coffee with your refugee friend, a walk around our top heritage spots or a dive into one of Manchester’s great museums. Whatever appeals most to relax with a new friend.
