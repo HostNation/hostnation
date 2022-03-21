@@ -42,6 +42,6 @@ Kim, who has lived in Manchester for 25 years, knows that Manchester is full of 
 
 To find out more about befriending, read some our stories <a target="_blank" rel="noreferrer noopener" href="https://www.hostnation.org.uk/stories/the-primary-school-head-and-the-eritrean-teessider">here ></a>
 
-**Find our registration form here.**
+**Find our registration form [here >](https://airtable.com/shrikBVOxwnEwgAUV?prefill_Type=Befriender)**
 
-**Follow us and share on social media:**
+**Follow us and share on social media.**
