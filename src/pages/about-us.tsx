@@ -11,6 +11,7 @@ import molLogo from '../img/logos/mol.png';
 import cbtLogo from '../img/logos/cbt.jpg';
 import sseLogo from '../img/logos/sse.jpg';
 import ggLogo from '../img/logos/gg.png';
+import vfnLogo from '../img/logos/vfn.png';
 
 import anneke from '../img/team/anneke.jpg';
 import rossana from '../img/team/rossana.png';
@@ -24,7 +25,12 @@ import olivia from '../img/team/olivia.jpg';
 import harley from '../img/team/harley.png';
 import claudia from '../img/team/claudia.png';
 import harriet from '../img/team/harriet.jpg';
+import mohamed from '../img/team/mohamed.png';
+import lucy from '../img/team/lucy.png';
+import kim from '../img/team/kim.png';
+import cara from '../img/team/cara.png';
 import abu from '../img/team/abu.png';
+
 
 import anthonyStory from '../img/anthony-story.png';
 
@@ -115,7 +121,7 @@ const Profile = ({ image, name, role, bio, credit }: any) => {
   );
 };
 
-const Profiles = () => {
+const ManagementProfiles = () => {
   const [setWidthElem, small = true] = useWidth(750);
   return (
     <div ref={setWidthElem}>
@@ -225,6 +231,42 @@ const Profiles = () => {
             maxWidth: small ? 340 : '100%',
           }}
         >
+
+          <Profile
+            image={kim}
+            name="KIM GOWLAND"
+            role="Manchester Hub Manager"
+            bio={[
+              "After 25 years working in the cultural sector, mainly in museums and galleries, Kim retrained and set up her own business as a leadership coach in 2019, helping leaders to fulfil their professional and personal potential.",
+              "Kim has lived in Manchester since 1995, having grown up in the North East. She first came to HostNation as a befriender and then jumped at the opportunity to help establish the charity in Greater Manchester. She knows how alienating and lonely cities can be, especially for refugees and asylum seekers, and is eager to help introduce them to friendly locals with the aim of improving their lives for the better.",
+              
+            ]}
+          />
+
+
+          <Profile
+            image={cara}
+            name="CARA MARIE DATTANI"
+            role="Manchester Hub Manager"
+            bio={[
+              'Cara is setting up our Manchester hub with Kim Gowland. Her freelance TV career involves working with the UK’s major broadcasters, and with charities including Children in Need, Comic Relief and Sport Relief.',
+              'She also makes music videos and content for brands and footballers. She is a storyteller and takes pride in making films with personality and authenticity.',
+              'Of Welsh and Indian heritage, she is a strong believer in cultural exchange and this brought her to HostNation, to foster social and cultural integration through building friendship and community.',
+              
+            ]}
+          />
+
+        </Div>
+
+        <Div
+          style={{
+            layout: small ? 'stack' : 'bar',
+            spacing: 40,
+            verticalAlign: 'left',
+            margin: '0 0',
+            maxWidth: small ? 340 : '100%',
+          }}
+        >
           <Profile
             image={claudia}
             name="Claudia Möller"
@@ -233,18 +275,24 @@ const Profiles = () => {
               'Claudia is a freelance graphic designer and previously worked for United Business Media in London, specialising in corporate identity and brand design. Using the iVolunteer scheme at UBM, she created the HostNation logo, website, social media pages, and visual comms. Claudia is in charge of how HostNation looks and has previously volunteered for community centres in North London, offering design advice and services.',
             ]}
           />
+          </Div>
+          </Div>
+    </div>
+  );
+};
 
-          <Profile
-            image={danny}
-            name="Daniel Silverstone"
-            role="Trustee (Chair)"
-            bio={[
-              "Danny is a Londoner with a 40-year career in the public and charitable sector culminating in CEO roles at London Boroughs Grants, the Commission for Racial Equality, London Remade – a green social enterprise – and the international human rights charity Interights.  Improving opportunities and rights for our most disadvantaged communities has been a linking thread through his career. He contributed to pathfinding race equality programmes in local government and led the implementation of the amended Race Relations Act while at the CRE. Danny has held a number of non-executive roles including five years on the Big Lottery's England Committee, which invested £400m a year in England's non-profit sector. He chairs the Jewish human rights charity Rene Cassin.",
-              "Danny's mother arrived in London in 1939 on the Kindertransport and he grew up in a family marked by his mother's experiences as a child refugee. Danny became a HostNation befriender in 2017. Impressed by the quality of HostNation's work, he was delighted to become HostNation's chair in October 2018.",
-            ]}
-          />
-
-        </Div>
+const TrusteeProfiles = () => {
+  const [setWidthElem, small = true] = useWidth(750);
+  return (
+    <div ref={setWidthElem}>
+      <Div
+        style={{
+          spacing: 40,
+          maxWidth: 750,
+          margin: '0 auto',
+          padding: '0 15px',
+        }}
+      >
         <Div
           style={{
             layout: small ? 'stack' : 'bar',
@@ -254,6 +302,15 @@ const Profiles = () => {
             maxWidth: small ? 340 : '100%',
           }}
         >
+          <Profile
+            image={danny}
+            name="Daniel Silverstone"
+            role="Trustee (Chair)"
+            bio={[
+              "Danny is a Londoner with a 40-year career in the public and charitable sector culminating in CEO roles at London Boroughs Grants, the Commission for Racial Equality, London Remade – a green social enterprise – and the international human rights charity Interights.  Improving opportunities and rights for our most disadvantaged communities has been a linking thread through his career. He contributed to pathfinding race equality programmes in local government and led the implementation of the amended Race Relations Act while at the CRE. Danny has held a number of non-executive roles including five years on the Big Lottery's England Committee, which invested £400m a year in England's non-profit sector. He chairs the Jewish human rights charity Rene Cassin.",
+              "Danny's mother arrived in London in 1939 on the Kindertransport and he grew up in a family marked by his mother's experiences as a child refugee. Danny became a HostNation befriender in 2017. Impressed by the quality of HostNation's work, he was delighted to become HostNation's chair in October 2018.",
+            ]}
+          />
 
           <Profile
             image={joanna}
@@ -265,6 +322,19 @@ const Profiles = () => {
             ]}
           />
 
+
+        </Div>
+        <Div
+          style={{
+            layout: small ? 'stack' : 'bar',
+            spacing: 40,
+            verticalAlign: 'top',
+            margin: '0 auto',
+            maxWidth: small ? 340 : '100%',
+          }}
+        >
+
+
           <Profile
             image={emiljan}
             name="Emiljan Gega"
@@ -272,6 +342,51 @@ const Profiles = () => {
             bio={[
               "Emiljan has called London home for over ten years. Born in Albania, he has been a refugee in various countries, including the Republic of Ireland where he now proudly holds citizenship. He works in strategy consulting and executive search, having graduated from King's College London and the London School of Economics.",
               "Emiljan is deeply interested in politics, business best practice and history. He volunteers at such institutions as The Prince's Trust and Brightside mentoring, building on his previous work leading a schools outreach programme at university. He believes HostNation to be a rare charity that underscores the need for renewed social provision in this country, and that it is at the forefront of demonstrating a progressive approach to communities.",
+            ]}
+          />
+
+          <Profile
+            image={mohamed}
+            name="MOHAMED MASSOUD"
+            role="Trustee"
+            bio={[
+              "Mohamed (Mo) has expertise in banking, corporate finance and fundraising in developing markets. He works for development finance institution Guarantco, funding projects with social and development impact in the global south.",
+              "In his free time, Mo advises start-ups and entrepreneurs on fundraising. He volunteers with the CFA UK society on impact investing. He holds an MBA from Manchester Business School where he maintains contacts, making him a strong addition as we expand into the north west.",
+              "Mo befriended with us in 2020, impressed by the support the HostNation family was providing in hard times to refugees and asylum seekers. Coming from the Middle East, with a professional specialisation in Africa and Asia, he brings a keen awareness of political conflicts, refugees crises and cultural nuances in these regions.",
+
+            ]}
+          />
+          
+
+        </Div>
+        <Div
+          style={{
+            layout: small ? 'stack' : 'bar',
+            spacing: 40,
+            verticalAlign: 'top',
+            margin: '0 auto',
+            maxWidth: small ? 340 : '100%',
+          }}
+        >
+
+          <Profile
+            image={lucy}
+            name="LUCY GOULD"
+            role="Trustee (Treasurer)"
+            bio={[
+              "Lucy comes to us as treasurer from a background in charity sector finance, with expertise in developing financial strategy and organisational growth. She works with both grant-making and grant-receiving organisations and is currently in the healthcare field. We welcome her experience in business development, cost modelling for new projects and bids.",
+              "Lucy’s interest in the charity sector began at university when she volunteered with refugee organisations CamCRAG and Cambridge Refugee Resettlement Group. She has worked for large homelessness organisations, focusing on ensuring value for money and resolving inefficiencies. She has an MPhil in Political Thought and Intellectual History.",
+
+            ]}
+          />
+
+          <Profile
+            image={olivia}
+            name="Olivia Petie"
+            role="Trustee"
+            bio={[
+              'Olivia is a social researcher and evaluator. In her role as Senior Evaluation Officer for the UK government’s Chevening Scholarship Programme, Olivia is involved with research, monitoring and evaluation for this initiative awarding foreign students the chance to study at UK universities. Previously as Research and Evaluation Project Manager at Renaisi (a refugee service provider), Olivia worked with a wide range of community projects including Hackney Borough Council’s Integrated Communities Project and North and South London Cares. Her voluntary experience includes having been a Refugee Guide through the Helen Bamber Foundation.',
+              'Olivia was thrilled to join the HostNation board, after a wonderful experience befriending through them. She has been impressed by their human approach, which allows authentic friendships to form, and feels their work has never been more needed. She is looking forward to being part of their future development.',
             ]}
           />
 
@@ -287,16 +402,6 @@ const Profiles = () => {
         >
 
           <Profile
-            image={olivia}
-            name="Olivia Petie"
-            role="Trustee"
-            bio={[
-              'Olivia is a social researcher and evaluator. In her role as Senior Evaluation Officer for the UK government’s Chevening Scholarship Programme, Olivia is involved with research, monitoring and evaluation for this initiative awarding foreign students the chance to study at UK universities. Previously as Research and Evaluation Project Manager at Renaisi (a refugee service provider), Olivia worked with a wide range of community projects including Hackney Borough Council’s Integrated Communities Project and North and South London Cares. Her voluntary experience includes having been a Refugee Guide through the Helen Bamber Foundation.',
-              'Olivia was thrilled to join the HostNation board, after a wonderful experience befriending through them. She has been impressed by their human approach, which allows authentic friendships to form, and feels their work has never been more needed. She is looking forward to being part of their future development.',
-            ]}
-          />
-
-          <Profile
             image={dina}
             name="Dina Nayeri"
             role="Trustee"
@@ -306,16 +411,6 @@ const Profiles = () => {
             ]}
           />
 
-        </Div>
-        <Div
-          style={{
-            layout: small ? 'stack' : 'bar',
-            spacing: 40,
-            verticalAlign: 'left',
-            margin: '0 0',
-            maxWidth: small ? 340 : '100%',
-          }}
-        >
 
           <Profile
             image={abu}
@@ -429,6 +524,10 @@ const LogosChunk = () => {
             style={{ height: 45, width: 'auto', margin: '0 auto' }}
           />
           <img
+            src={vfnLogo}
+            style={{ height: 70, width: 'auto', margin: '0 auto' }}
+          />
+          <img
             src={ggLogo}
             style={{ height: 100, width: 'auto', margin: '0 auto' }}
           />
@@ -460,16 +559,20 @@ export default () => (
         </Txt>
         <Txt style={styles.boxText}>
           We gained charitable status in 2018 and a network of refugee referrers
-          are now alerting us to refugees in need of friendship in London and
-          across the north-east of England.
+          are now alerting us to refugees in need of friendship in
+          London and across both the north-east and north-west of England.
         </Txt>
         <Txt style={styles.boxText}>
           We are a CIO registered with the Charity Commission. Charity no.
           1180004
         </Txt>
       </Div>
-      <Box title="MEET THE TEAM BEHIND HOSTNATION">
-        <Profiles />
+      <Box title="MEET THE MANAGEMENT TEAM">
+        <ManagementProfiles />
+      </Box>
+
+      <Box title="MEET OUR TRUSTEES">
+        <TrusteeProfiles />
       </Box>
       {/* <Div style={{ spacing: 25, background: 'white', padding: '50px 0' }}>
         <Div style={{ spacing: 25, maxWidth: 600, margin: '0 auto' }}>
@@ -517,9 +620,7 @@ export default () => (
             The National Lottery/DCMS provided emergency Covid-19 funding
             through the Coronavirus Community Support Fund (CCSF). By the end of
             2020 we also had confirmation of three years funding from City
-            Bridge Trust. In 2021 giffgaff partnered with us to help tackle
-            digital exclusion amongst refugees with a generous package of
-            hardware and data support.
+            Bridge Trust. In 2021 both giffgaff and Vodafone partnered with us to help tackle digital exclusion amongst refugees with both hardware and data support.
           </Txt>
           <Txt style={styles.boxText}>
             Thank you to all our funders for believing in us and the work we do.
@@ -553,6 +654,7 @@ export default () => (
               'Jake Elwes',
               'Sarah Robbins',
               'Peter Melrose',
+              'Charlotte Stevenson',
             ].map((name, i) => (
               <Txt
                 style={{
