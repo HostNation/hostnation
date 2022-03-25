@@ -87,7 +87,7 @@ const Profile = ({ image, name, role, bio, credit }: any) => {
             <Txt
               style={{
                 ...styles.text,
-                fontSize: 24,
+                fontSize: 20,
                 color: colors.yellow,
                 fontWeight: 'bold',
               }}
@@ -97,7 +97,7 @@ const Profile = ({ image, name, role, bio, credit }: any) => {
             <Txt
               style={{
                 ...styles.text,
-                fontSize: 20,
+                fontSize: 16,
                 fontWeight: 'bold',
               }}
             >
@@ -112,7 +112,7 @@ const Profile = ({ image, name, role, bio, credit }: any) => {
         {isOpen &&
           bio.map((text, i) => (
             // <Txt style={{ ...styles.boxText, padding: 0, marginRight: -340, width: 340 or '100%' }} key={i}>
-            <Txt style={{ ...styles.boxText, padding: 0 }} key={i}>
+            <Txt style={{ ...styles.boxText, fontSize: 16, padding: 0 }} key={i}>
               {text}
             </Txt>
           ))}
@@ -160,6 +160,15 @@ const ManagementProfiles = () => {
               'A long-term supporter of Freedom from Torture, in 2005 Rossana volunteered to be part of their befriending project for unaccompanied minors. Finding this an enriching experience and aware that many people would like to make a similar connection, she was keen to be a part of HostNation to help encourage more such relationships between locals and people looking for a safe refuge in this country.',
             ]}
           />
+          <Profile
+            image={anthony}
+            name="Anthony Berman"
+            role="London Manager"
+            bio={[
+              'A retired root canal specialist, Anthony still teaches part time at QMUL. He came to London with his family from his native South Africa at the age of 13. Although his circumstances were considerably more comfortable than those of the average refugee or asylum seeker, he still remembers the challenges involved in being uprooted from his home to start a new life.',
+              'Twelve years ago Anthony became a volunteer befriender with Freedom from Torture for children who had arrived unaccompanied in the UK. The aim was to introduce some normality into the lives of these frequently damaged young people. The young person with whom he was paired has become part of Anthony’s family and it has been a richly rewarding experience all round. Anthony is also one of the coordinators for the New London Synagogue Drop-In Centre for destitute asylum seekers. He believes strongly that HostNation provides a transformative experience for both sides of the friendships it fosters.',
+            ]}
+          />
         </Div>
         <Div
           style={{
@@ -170,15 +179,6 @@ const ManagementProfiles = () => {
             maxWidth: small ? 340 : '100%',
           }}
         >
-          <Profile
-            image={anthony}
-            name="Anthony Berman"
-            role="Operations Manager"
-            bio={[
-              'A retired root canal specialist, Anthony still teaches part time at QMUL. He came to London with his family from his native South Africa at the age of 13. Although his circumstances were considerably more comfortable than those of the average refugee or asylum seeker, he still remembers the challenges involved in being uprooted from his home to start a new life.',
-              'Twelve years ago Anthony became a volunteer befriender with Freedom from Torture for children who had arrived unaccompanied in the UK. The aim was to introduce some normality into the lives of these frequently damaged young people. The young person with whom he was paired has become part of Anthony’s family and it has been a richly rewarding experience all round. Anthony is also one of the coordinators for the New London Synagogue Drop-In Centre for destitute asylum seekers. He believes strongly that HostNation provides a transformative experience for both sides of the friendships it fosters.',
-            ]}
-          />
           <Profile
             image={magda}
             name="Magda Wolfe"
@@ -188,17 +188,6 @@ const ManagementProfiles = () => {
               'She is fascinated by observing the ever-changing social landscape and is passionate about driving positive change towards a fairer society. Her interest is in social inequality issues and the problems derived from economic disparity particularly those linked to migration and the forced displacement of people. She joined HostNation in its early days as she strongly believes in the positive impact of intercultural relationships on building cohesive communities.',
             ]}
           />
-        </Div>
-        <Div
-          style={{
-            layout: small ? 'stack' : 'bar',
-            spacing: 40,
-            verticalAlign: 'top',
-            margin: '0 auto',
-            maxWidth: small ? 340 : '100%',
-          }}
-        >
-
           <Profile
             image={harley}
             name="Harley Kuyck-Cohen"
@@ -234,39 +223,29 @@ const ManagementProfiles = () => {
 
           <Profile
             image={kim}
-            name="KIM GOWLAND"
+            name="Kim Gowland"
             role="Manchester Hub Manager"
             bio={[
               "After 25 years working in the cultural sector, mainly in museums and galleries, Kim retrained and set up her own business as a leadership coach in 2019, helping leaders to fulfil their professional and personal potential.",
               "Kim has lived in Manchester since 1995, having grown up in the North East. She first came to HostNation as a befriender and then jumped at the opportunity to help establish the charity in Greater Manchester. She knows how alienating and lonely cities can be, especially for refugees and asylum seekers, and is eager to help introduce them to friendly locals with the aim of improving their lives for the better.",
-              
+
             ]}
           />
 
 
           <Profile
             image={cara}
-            name="CARA MARIE DATTANI"
+            name="Cara Marie Dattani"
             role="Manchester Hub Manager"
             bio={[
               'Cara is setting up our Manchester hub with Kim Gowland. Her freelance TV career involves working with the UK’s major broadcasters, and with charities including Children in Need, Comic Relief and Sport Relief.',
               'She also makes music videos and content for brands and footballers. She is a storyteller and takes pride in making films with personality and authenticity.',
               'Of Welsh and Indian heritage, she is a strong believer in cultural exchange and this brought her to HostNation, to foster social and cultural integration through building friendship and community.',
-              
+
             ]}
           />
 
-        </Div>
 
-        <Div
-          style={{
-            layout: small ? 'stack' : 'bar',
-            spacing: 40,
-            verticalAlign: 'left',
-            margin: '0 0',
-            maxWidth: small ? 340 : '100%',
-          }}
-        >
           <Profile
             image={claudia}
             name="Claudia Möller"
@@ -275,8 +254,8 @@ const ManagementProfiles = () => {
               'Claudia is a freelance graphic designer and previously worked for United Business Media in London, specialising in corporate identity and brand design. Using the iVolunteer scheme at UBM, she created the HostNation logo, website, social media pages, and visual comms. Claudia is in charge of how HostNation looks and has previously volunteered for community centres in North London, offering design advice and services.',
             ]}
           />
-          </Div>
-          </Div>
+        </Div>
+      </Div>
     </div>
   );
 };
@@ -323,16 +302,6 @@ const TrusteeProfiles = () => {
           />
 
 
-        </Div>
-        <Div
-          style={{
-            layout: small ? 'stack' : 'bar',
-            spacing: 40,
-            verticalAlign: 'top',
-            margin: '0 auto',
-            maxWidth: small ? 340 : '100%',
-          }}
-        >
 
 
           <Profile
@@ -345,18 +314,6 @@ const TrusteeProfiles = () => {
             ]}
           />
 
-          <Profile
-            image={mohamed}
-            name="MOHAMED MASSOUD"
-            role="Trustee"
-            bio={[
-              "Mohamed (Mo) has expertise in banking, corporate finance and fundraising in developing markets. He works for development finance institution Guarantco, funding projects with social and development impact in the global south.",
-              "In his free time, Mo advises start-ups and entrepreneurs on fundraising. He volunteers with the CFA UK society on impact investing. He holds an MBA from Manchester Business School where he maintains contacts, making him a strong addition as we expand into the north west.",
-              "Mo befriended with us in 2020, impressed by the support the HostNation family was providing in hard times to refugees and asylum seekers. Coming from the Middle East, with a professional specialisation in Africa and Asia, he brings a keen awareness of political conflicts, refugees crises and cultural nuances in these regions.",
-
-            ]}
-          />
-          
 
         </Div>
         <Div
@@ -370,8 +327,20 @@ const TrusteeProfiles = () => {
         >
 
           <Profile
+            image={mohamed}
+            name="Mohamed Massoud"
+            role="Trustee"
+            bio={[
+              "Mohamed (Mo) has expertise in banking, corporate finance and fundraising in developing markets. He works for development finance institution Guarantco, funding projects with social and development impact in the global south.",
+              "In his free time, Mo advises start-ups and entrepreneurs on fundraising. He volunteers with the CFA UK society on impact investing. He holds an MBA from Manchester Business School where he maintains contacts, making him a strong addition as we expand into the north west.",
+              "Mo befriended with us in 2020, impressed by the support the HostNation family was providing in hard times to refugees and asylum seekers. Coming from the Middle East, with a professional specialisation in Africa and Asia, he brings a keen awareness of political conflicts, refugees crises and cultural nuances in these regions.",
+
+            ]}
+          />
+
+          <Profile
             image={lucy}
-            name="LUCY GOULD"
+            name="Lucy Gould"
             role="Trustee (Treasurer)"
             bio={[
               "Lucy comes to us as treasurer from a background in charity sector finance, with expertise in developing financial strategy and organisational growth. She works with both grant-making and grant-receiving organisations and is currently in the healthcare field. We welcome her experience in business development, cost modelling for new projects and bids.",
@@ -395,9 +364,9 @@ const TrusteeProfiles = () => {
           style={{
             layout: small ? 'stack' : 'bar',
             spacing: 40,
-            verticalAlign: 'top',
-            margin: '0 auto',
-            maxWidth: small ? 340 : '100%',
+            verticalAlign: 'left',
+            margin: '0 0',
+            maxWidth: small ? 340 : '65%',
           }}
         >
 
