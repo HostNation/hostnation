@@ -16,6 +16,8 @@ Then things changed. Shoaib was referred to us so that we could find him a frien
 
 The two new friends quickly hit it off. “It’s really brilliant!” beams Shoaib. “Chloe made it all easy for me. I was so happy when I met her. We go on trips, and she gives me books to read. I have really enjoyed all of our meetings.
 
+![](/assets/chloe-and-shoaib_sightseeing.jpeg)
+
 After a first meeting in Brent Cross shopping centre, Chloe decided it was time Shoaib really got to see the sights. “On our second outing we walked 17km across central London,” she says. “He said it was his favourite day in the UK to date!” 
 
 The huge voyage of discovery took over five hours, yet it was all worth it for Shoaib. “Before I met Chloe I didn’t know anything about London,” he says. “But now I know that London is above all other cities.”
@@ -34,7 +36,7 @@ Chloe sounds proud of all the progress that Shoaib is making as he gradually fin
 
 Chloe may be the one introducing Shoaib to local life, but the benefits of the friendship are two-way. When she moved flat recently, he came straight over to help with some of the heavy lifting. It  helped him to feel he was giving something back to her, and got him out of the hotel room. 
 
-“He isn’t allowed to work yet but really wants to contribute so it’s just so frustrating,” points out Chloe. “He has a degree in animal nutrition so he would love to work with animals here.”
+<img src="/assets/chloe-and-shoaib_sh-helps-c-move-flat.jpg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />“He isn’t allowed to work yet but really wants to contribute so it’s just so frustrating,” points out Chloe. “He has a degree in animal nutrition so he would love to work with animals here.”
 
 Chloe can see that having a London friend has made all the difference to Shoaib, who previously felt totally isolated. “I worry about all the ones who haven’t got something like this,” she comments. 
 
