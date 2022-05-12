@@ -1,6 +1,6 @@
 ---
 date: 2022-05-12T17:14:05.860Z
-author: CHLOE AND SHOIAB
+author: CHLOE AND SHOAIB
 category: HostNation Blog Post
 title: '"It was one of the highlights of my life.”'
 ---
