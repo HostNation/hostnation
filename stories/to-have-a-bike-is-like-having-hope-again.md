@@ -14,6 +14,8 @@ This excellent charity refurbishes unwanted bikes and donates them to refugees a
 
 An author and activist who is also a refugee, Hassan has seen for himself what a difference having a bike can make: “A bike can’t fix the UK’s broken asylum system, but in it’s own way, it can make things a little easier for people,” as he says. 
 
+<!-- end -->
+
 Some of those people  are our very own refugee and asylum seeker friends at HostNation, who are loving the free bicycles they have received through the scheme.
 
 “To discover London with the eye of a bike rider is so interesting,” says Carim from Syria (name changed). “It gives me an opportunity to stop when I want to enjoy London's parks and monuments. 
@@ -22,7 +24,7 @@ Some of those people  are our very own refugee and asylum seeker friends at Hos
 
 ![](/assets/greg.jpg)
 
-***Greg took Carim to see Big Ben** (Carim asked not to be photographed)*
+**\*Greg took Carim to see Big Ben** (Carim asked not to be photographed)*
 
 We matched Carim to his befriender Greg, who is a keen cyclist, and the two use their bikes to explore the city while building their friendship and chatting to improve Carim’s English.
 
