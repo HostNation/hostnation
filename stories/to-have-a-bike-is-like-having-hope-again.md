@@ -48,5 +48,6 @@ The benefits go both ways. “It's been wonderful,” says Frances, who tweets p
 
 Amid all the negative news currently overwhelming refugee issues in the UK, it is fantastic to see our HostNation friends sharing great experiences and having fun, whether on their bikes or otherwise. Friends like Frances and Sisay are making our communities better places to live - for all of us. 
 
-**If you’d like to befriend with us in London, Newcastle or Manchester, register [here >](https://www.hostnation.org.uk/befriend/)**\
+**If you’d like to befriend with us in London, Newcastle or Manchester, register [here >](https://www.hostnation.org.uk/befriend/)**
+
 **To discover more about the Bike Project, donate a bike or sign their pledge to stand with refugees, click [here >](https://thebikeproject.co.uk)**
