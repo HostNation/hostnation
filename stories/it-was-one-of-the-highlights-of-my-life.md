@@ -6,9 +6,9 @@ title: '"It was one of the highlights of my life.”'
 ---
 **A visit to Wembley stadium with a new friend has fulfilled a long-time dream for an isolated asylum seeker.**
 
-For Shoaib, a long and traumatic journey to the UK in search of freedom has so far brought him to a run-down barrack block used by the Home Office, then to a cramped room in a Brent Cross hotel full of other asylum seekers. Not quite the new life he had in mind.
+<img src="/assets/chloe-and-shoaib_at-wembley.jpeg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />For Shoaib, a long and traumatic journey to the UK in search of freedom has so far brought him to a run-down barrack block used by the Home Office, then to a cramped room in a Brent Cross hotel full of other asylum seekers. Not quite the new life he had in mind.
 
-<img src="/assets/chloe-and-shoaib_at-wembley.jpeg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />“At first I really didn’t like London,” he admits. “It’s so big, and I think it’s very hard to live here when you are all alone. I stayed in the hotel for weeks at a time without going out.” 
+“At first I really didn’t like London,” he admits. “It’s so big, and I think it’s very hard to live here when you are all alone. I stayed in the hotel for weeks at a time without going out.” 
 
 Then things changed. Shoaib was referred to us so that we could find him a friend to talk to. We matched him with Chloe, a paralegal who had recently signed up with us to become a befriender. 
 
