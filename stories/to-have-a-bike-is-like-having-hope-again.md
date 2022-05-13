@@ -18,7 +18,7 @@ This charity refurbishes unwanted bikes and donates them to refugees and asylum 
 
 We matched Carim to his befriender Greg, a keen cyclist, and the two use their bikes to explore the city while building their friendship and chatting to improve Carim’s English.
 
-“To discover London with the eye of a bike rider is so interesting,” says Carim, “It gives me an opportunity to stop and enjoy London's parks and monuments. 
+“To discover London with the eye of a bike rider is so interesting,” says Carim. “It gives me an opportunity to stop and enjoy London's parks and monuments."
 
 <img src="/assets/greg-and-alias-carim-kopie.jpeg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />*Greg took Carim to see Big Ben (Carim asked not to be photographed)*
 
