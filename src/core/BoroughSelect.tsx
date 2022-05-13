@@ -8,7 +8,7 @@ interface SelectState {
     optionsState: string;
 }
 
-let openBoroughs = ["Hillingdon", "Harrow", "Barnet", "Enfield", "Redbridge", "Havering", "Barking", "Brent"]
+let openBoroughs = ["Hillingdon", "Harrow", "Barnet", "Enfield", "Redbridge", "Havering", "Barking", "Brent", "Hounslow", "Ealing"]
 
 export default class BoroughSelect extends React.Component<{}, SelectState> {
     constructor(props) {
@@ -26,7 +26,11 @@ export default class BoroughSelect extends React.Component<{}, SelectState> {
 
         if (openBoroughs.includes(this.state.optionsState)) {
             isOpen =
-                <div>We are currently accepting applications in your borough. Sign up here:
+            <Div style={{ paddingTop: 15, marginLeft: -15 }}>
+            <Txt style={styles.boxText}>
+            &#10004; We are currently accepting applications in your borough. Sign up here:
+            </Txt>
+            <Div style={{ paddingTop: 15 }}>
                     <a
                         href="https://airtable.com/shrEs9XBHYuJxLEaP?prefill_Type=Befriender"
                         target="_blank"
@@ -48,14 +52,19 @@ export default class BoroughSelect extends React.Component<{}, SelectState> {
                             )}
                         </Hover>
                     </a>
-                </div>
+                    </Div>
+                </Div>
         } else if (this.state.optionsState == "") {
             isOpen = <div></div>
 
         } else {
-            isOpen = <div>We’re sorry but we are currently over-subscribed in this borough.
+            isOpen = 
+            <Div style={{ paddingTop: 15, marginLeft: -15 }}>
+            <Txt style={styles.boxText}>
+                We’re sorry but we are currently over-subscribed in this borough.
                 <br></br>Many thanks for your interest and maybe you could consider a small, regular donation to support our work instead?
-
+                </Txt>
+                <Div style={{ paddingTop: 15 }}>
                 <a
                     href="https://www.totalgiving.co.uk/donate/hostnation"
                     target="_blank"
@@ -75,8 +84,9 @@ export default class BoroughSelect extends React.Component<{}, SelectState> {
                         )}
                     </Hover>
                 </a>
+                </Div>
 
-            </div>
+            </Div>
         }
 
 
