@@ -10,7 +10,11 @@ title: '"It was one of the highlights of my life.”'
 
 “At first I really didn’t like London,” he admits. “It’s so big, and I think it’s very hard to live here when you are all alone. I stayed in the hotel for weeks at a time without going out.” 
 
-Then things changed. Shoaib was referred to us so that we could find him a friend to talk to. We matched him with Chloe, a paralegal who had recently signed up with us to become a befriender. 
+Then things changed. Shoaib was referred to us so that we could find him a friend to talk to. 
+
+<!-- end -->
+
+We matched him with Chloe, a paralegal who had recently signed up with us to become a befriender. 
 
 “I heard about HostNation from a viral tweet,” explains Chloe. “I had always wanted to do something with refugees, both as a friend to them and for my own understanding and awareness. So many of us want to help but just don’t really know how. It can be hard to know how to get involved as an individual.”
 
