@@ -2,7 +2,7 @@
 date: 2021-05-10T13:09:52.639Z
 author: HostNation
 category: HostNation Film
-title: '"It really makes me happy”'
+title: '"It really makes me happy.”'
 ---
 ###### Watch Sue and Julie discuss the benefits of befriending as they walk on Hampstead Heath
 
