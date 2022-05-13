@@ -20,7 +20,7 @@ We matched Carim to his befriender Greg, a keen cyclist, and the two use their b
 
 “To discover London with the eye of a bike rider is so interesting,” says Carim, “It gives me an opportunity to stop and enjoy London's parks and monuments. 
 
-<img src=“/assets/greg-and-alias-carim-kopie.jpeg“ alt=“logo“ style=“width:43%;padding-right:25px;“ ALIGN=“left“ /> *Greg took Carim to see Big Ben (Carim asked not to be photographed)*
+<img src="/assets/greg-and-alias-carim-kopie.jpeg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />*Greg took Carim to see Big Ben (Carim asked not to be photographed)*
 
 While asylum seekers and refugees have typically made huge sacrifices to get to the UK, most see very little of their new cities at first, due to transport costs and lack of confidence. One of the great values of their befriender is to help them not only to find their way around, but to relax and have fun in their new surroundings.
 
@@ -28,13 +28,13 @@ While asylum seekers and refugees have typically made huge sacrifices to get to 
 
 It’s not all plain sailing learning to ride a bike in a new country though… Sisay (*name changed*), who is an asylum seeker from Eritrea, had to navigate a few cultural differences while learning to cycle in the UK. “At first it was a bit complicated because in my country we drive on the right,” he laughs. “Also, people shouted at me in the beginning for jumping red lights on the bike. In my country, traffic lights are not usual!”
 
-<img src=“/assets/sisay-on-his-bike-2022.jpg“ alt=“logo“ style=“width:43%;padding-right:25px;“ ALIGN=“left“ />Now however Sisay has learned his road skills and things have got a lot safer. “It is going well,” he says. “Whenever I go anywhere, I go on the bike and then I don’t have to pay a bus fare.” 
+<img src="/assets/sisay-on-his-bike-2022.jpg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />Now however Sisay has learned his road skills and things have got a lot safer. “It is going well,” he says. “Whenever I go anywhere, I go on the bike and then I don’t have to pay a bus fare.” 
 
 Sisay, in common with around 37,000 asylum seekers in the UK, is currently housed in a single hotel room by the UK Home Office. The majority of people in his situation have so little money that they are effectively trapped within walking distance of these hotels because of the cost of transport.
 
 With his new bike, at least Sisay doesn’t have to worry about travel costs when meeting up with his HostNation befriender Frances. “Sisay is delighted with the bike he got from the Bike Project and he's been cycling a lot,” says Frances, a media officer at the charity CAFOD. “We've cycled together and he's really enjoying it.” 
 
-<img src=“/assets/frances-leach-easter-meal-with-sisay-apr22.png“ alt=“logo“ style=“width:43%;padding-right:25px;“ ALIGN=“left“ />Other than cycling, our befriending scheme sees Frances and Sisay hanging out together, watching football, and tasting British and Eritrean food. “We meet every week and she is really great,” he says.  
+<img src="/assets/frances-leach-easter-meal-with-sisay-apr22.png" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />Other than cycling, our befriending scheme sees Frances and Sisay hanging out together, watching football, and tasting British and Eritrean food. “We meet every week and she is really great,” he says.  
 
 “We have lunch and a walk, she even invited me to lunch at her house. I am getting much better with my English, and she is even teaching me about how to dress in British style!” 
 
