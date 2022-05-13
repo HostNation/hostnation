@@ -20,9 +20,7 @@ We matched Carim to his befriender Greg, a keen cyclist, and the two use their b
 
 “To discover London with the eye of a bike rider is so interesting,” says Carim, “It gives me an opportunity to stop and enjoy London's parks and monuments. 
 
-![](blob:https://www.hostnation.org.uk/5967a5bf-fd08-4005-9de4-318567946a62)
-
-*Greg took Carim to see Big Ben (Carim asked not to be photographed)]*
+<img src=“/assets/greg-and-alias-carim-kopie.jpeg“ alt=“logo“ style=“width:43%;padding-right:25px;“ ALIGN=“left“ /> *Greg took Carim to see Big Ben (Carim asked not to be photographed)*
 
 While asylum seekers and refugees have typically made huge sacrifices to get to the UK, most see very little of their new cities at first, due to transport costs and lack of confidence. One of the great values of their befriender is to help them not only to find their way around, but to relax and have fun in their new surroundings.
 
