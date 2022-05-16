@@ -34,7 +34,7 @@ Sisay, in common with around 37,000 asylum seekers in the UK, is currently hous
 
 With his new bike, at least Sisay doesn’t have to worry about travel costs when meeting up with his HostNation befriender Frances. “Sisay is delighted with the bike he got from the Bike Project and he's been cycling a lot,” says Frances, a media officer at the charity CAFOD. “We've cycled together and he's really enjoying it.” 
 
-<img src="/assets/frances-leach-easter-meal-with-sisay-apr22.png" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />Other than cycling, our befriending scheme sees Frances and Sisay hanging out together, watching football, and tasting British and Eritrean food. “We meet every week and she is really great,” he says.  
+<img src="/assets/frances-leach_left.png" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />Other than cycling, our befriending scheme sees Frances and Sisay hanging out together, watching football, and tasting British and Eritrean food. “We meet every week and she is really great,” he says.  
 
 “We have lunch and a walk, she even invited me to lunch at her house. I am getting much better with my English, and she is even teaching me about how to dress in British style!” 
 
