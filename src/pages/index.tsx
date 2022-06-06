@@ -367,20 +367,43 @@ export default () => (
       <Div style={{ spacing: 25 }}>
         <Txt style={styles.title}>Refugee Support Organisations</Txt>
         <Txt style={styles.body}>
-          For a list of London organisations that provide refugee support -
+          For a list of organisations in London, Manchester, Newcastle and Gateshead that provide refugee support -
           advice, casework, housing, legal, social, drop-in centres - please use
-          our links and help befriendees find the support in the capital that
+          our links and help befriendees find the support that
           they need.
         </Txt>
         <Div style={{ spacing: 15 }}>
           <img src={linksIcon} style={{ width: 100, margin: '0 auto' }} />
+          <Txt style={{...styles.title, fontSize: 25}}>SIGNPOSTING LINKS:</Txt> 
+        </Div>
+        <Div style={{ spacing: 15 }}>
           <Button
-            to="/links.pdf"
+            to="/signposting-London.pdf"
             newTab
             color="purple"
             style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
           >
-            SIGNPOSTING LINKS
+            LONDON
+          </Button>
+        </Div>
+        <Div style={{ spacing: 15 }}>
+          <Button
+            to="/signposting-Manchester.pdf"
+            newTab
+            color="yellow"
+            style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
+          >
+            MANCHESTER
+          </Button>
+        </Div>
+        <Div style={{ spacing: 15 }}>
+          <Button
+            to="/signposting-Tyne-Wear.pdf"
+            newTab
+            color="black"
+            style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
+          >
+            NEWCASTLE &amp; GATESHEAD
           </Button>
         </Div>
       </Div>
