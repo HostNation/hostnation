@@ -4,6 +4,8 @@ author: REFUGEE WEEK
 category: HostNation Blog Post
 title: "Refugee Week 2022 is all about healing "
 ---
+![](/assets/refugee-week-header.jpg)
+
 **This Refugee Week explores the theme of ‘Healing’. It is a celebration of community, mutual care and the human ability to recover from painful experiences.**
 
 No-one understands this better than those who have been forced to leave home and build new lives from scratch. We have so much to learn from refugees about holding onto hope when everything seems impossible.
