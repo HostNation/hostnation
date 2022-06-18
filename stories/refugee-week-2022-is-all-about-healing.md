@@ -10,8 +10,9 @@ No-one understands this better than those who have been forced to leave home and
 
 HostNation exists to welcome asylum seekers and refugees into our communities by forging  friendships with local people. This makes our cities better, more inclusive, happier places for all of us. Let’s imagine a world where healing replaces harm, and care becomes our shared currency.
 
-### \
-In their own words
+
+
+### In their own words
 
 **Our refugee and asylum-seeker friends speak about the healing power of friendship:**
 
