@@ -19,53 +19,53 @@ HostNation exists to welcome asylum seekers and refugees into our communities by
 **Our refugee and asylum-seeker friends speak about the healing power of friendship:**
 
 > *“It has absolutely made me feel happier. I’ve been recovering from my severe depression because I have no friends here, and with Anne I have someone to talk to. I feel more positive about living in London."* \
-> **Asif**
->
+> **Osman**
+ 
 > *“I feel less lonely and my heart is happy when I call Mira.”* \
-> **Peyman**
->
+> **Amir**
+ 
 > *“This is life, to have friends, to talk. When you have a friend, life is better.”* \
-> **Artila**
->
+> **Arta**
+ 
 > *“I enjoyed talking to her when I had problems and didn't feel good. I feel open with her. Before I used to get depressed, sadness, always taking tablets non-stop. I couldn't sleep. Today I can sleep.”* \
-> **Zeranduapi**
->
+> **Abiola**
+ 
 > *“I was dying inside, because of the thing that was missing. The one thing you need in life is love and care. The heaviness is all gone now. I am happy.”* \
-> **Christine**  
->
+> **Veronica**  
+ 
 > *“I feel very light with her.”* \
-> **Mohsin**
->
+> **Ibrahim**
+ 
 > *“It was wonderful and helpful to have him as a friend while I felt lonely and helpless.”* \
-> **Emal**
->
+> **Jameel**
+ 
 > *“She is like an angel to me.”* \
-> **Aneela**
->
+> **Aziza**
+ 
 > *“I felt so good after seeing her. I felt fresh.”* \
-> **Asma**
->
+> **Aisha**
+ 
 > *“Now at least once a week I can go out and feel free, I don't think about my situation. I find myself in a different life.  She changed the way I think about my life.”* \
 > **Shoaib**
->
+ 
 > *“Talking is the most important thing for me, a friend that listens to me.”* \
-> **Ahmet**
->
+> **Emir**
+ 
 > *“Nothing could be better. Her friendship is real, not fake, that’s all you need.”* \
 > **Atabak** 
->
+ 
 > *“This kind of positive commitment takes away the negativity of being alone.”* \
-> **Wael**
->
+> **Hussain**
+ 
 > *“We are like brother and sister.”* \
-> **Medhin**
->
+> **Mesfin**
+ 
 > *“One step forwards to having a normal life, friends etc. It's motivating me. Even if I don't feel like going out, because we've planned something, I do it.”* \
-> **Marsha**
->
+> **Jessica**
+ 
 > *“Everytime I see her it puts a smile on my face.  I am so happy!”* \
-> **Patience**
->
+> **Blessed**
+ 
 > *“My mind was blocked with worry about my situation, my family… they gave me some space for fun and kindness.”* \
 > **Hafez**
 
