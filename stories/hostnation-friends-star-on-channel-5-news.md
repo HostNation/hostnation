@@ -51,3 +51,7 @@ Charles has helped Emal with his English and sourced him a laptop and a guitar, 
 These uplifting stories show us the profound changes that can come about when a friendly local reaches out a hand to someone trying to make their way in a new country. 
 
 A cycle round the park, a coffee and a chat – such seemingly simple things can make a huge difference to someone’s life.
+
+
+
+*Some names have been changed*
