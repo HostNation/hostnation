@@ -61,14 +61,37 @@ export default () => (
           <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
             London
           </Txt>
-          <Txt style={styles.boxText}>
+
+          <Txt style={{ ...styles.boxText }}>
+            For those wishing to befriend in London:
+          </Txt>
+          <a
+            href="https://airtable.com/shrEs9XBHYuJxLEaP?prefill_Type=Befriender"
+            target="_blank"
+          >
+            <Hover
+              style={{
+                ...styles.boxText,
+                color: colors.yellow,
+                fontWeight: 'bold',
+                hover: { color: colors.yellowDark },
+              }}
+            >
+              {({ hoverProps, style }) => (
+                <Txt {...hoverProps} style={style}>
+                 London Registration Form &raquo;
+                </Txt>
+              )}
+            </Hover>
+          </a>
+          
+
+          {/* <Txt style={styles.boxText}>
             Please select the borough you live in to see if you can register:
           </Txt>
 
 
-          <BoroughSelect></BoroughSelect>
-
-
+          <BoroughSelect></BoroughSelect> */}
 
 
         </Div>
