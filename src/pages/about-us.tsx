@@ -2,15 +2,14 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import logoWide from '../img/logo-wide.png';
-import crLogo from '../img/logos/cr.png';
-import lcfLogo from '../img/logos/lcf.jpg';
+import thtLogo from '../img/logos/tht.png';
+import ambcLogo from '../img/logos/ambc.jpg';
 import phfLogo from '../img/logos/phf.jpg';
 import tflLogo from '../img/logos/tfl.png';
 import cfLogo from '../img/logos/cf.png';
 import molLogo from '../img/logos/mol.png';
 import cbtLogo from '../img/logos/cbt.jpg';
-import sseLogo from '../img/logos/sse.jpg';
-import ggLogo from '../img/logos/gg.png';
+import gwfLogo from '../img/logos/gwf.png';
 import vfnLogo from '../img/logos/vfn.png';
 
 import anneke from '../img/team/anneke.jpg';
@@ -437,33 +436,10 @@ const LogosChunk = () => {
             style={{ height: 80, width: 'auto', margin: '0 auto' }}
           />
           <img
-            src={lcfLogo}
-            style={{ height: 100, width: 'auto', margin: '0 auto' }}
-          />
-          <img
-            src={crLogo}
-            style={{ height: 100, width: 'auto', margin: '0 auto' }}
-          />
-        </Div>
-        <Div
-          style={{
-            layout: small ? 'stack' : 'bar',
-            spacing: 25,
-            margin: '0 auto',
-          }}
-        >
-          <img
             src={tflLogo}
             style={{ height: 100, width: 'auto', margin: '0 auto' }}
           />
-          <img
-            src={cfLogo}
-            style={{
-              height: small ? 80 : 100,
-              width: 'auto',
-              margin: '0 auto',
-            }}
-          />
+
         </Div>
         <Div
           style={{
@@ -476,9 +452,36 @@ const LogosChunk = () => {
             src={cbtLogo}
             style={{ height: 100, width: 'auto', margin: '0 auto' }}
           />
+
           <img
-            src={sseLogo}
-            style={{ height: 100, width: 'auto', margin: '0 auto' }}
+            src={cfLogo}
+            style={{
+              height: small ? 60 : 80,
+              width: 'auto',
+              margin: '0 auto',
+            }}
+          />
+        </Div>
+        <Div
+          style={{
+            layout: small ? 'stack' : 'bar',
+            spacing: 25,
+            margin: '0 auto',
+          }}
+        >
+
+
+          <img
+            src={gwfLogo}
+            style={{ height: 90, width: 'auto', margin: '0 auto' }}
+          />
+                    <img
+            src={thtLogo}
+            style={{ height: 90, width: 'auto', margin: '0 auto' }}
+          />
+          <img
+            src={vfnLogo}
+            style={{ height: 70, width: 'auto', margin: '0 auto' }}
           />
         </Div>
         <Div
@@ -492,13 +495,10 @@ const LogosChunk = () => {
             src={molLogo}
             style={{ height: 45, width: 'auto', margin: '0 auto' }}
           />
+
           <img
-            src={vfnLogo}
-            style={{ height: 70, width: 'auto', margin: '0 auto' }}
-          />
-          <img
-            src={ggLogo}
-            style={{ height: 100, width: 'auto', margin: '0 auto' }}
+            src={ambcLogo}
+            style={{ height: 90, width: 'auto', margin: '0 auto' }}
           />
         </Div>
       </Div>
@@ -580,16 +580,7 @@ export default () => (
             grant from Team London and the Mayor of London's office.
           </Txt>
           <Txt style={styles.boxText}>
-            2020 was challenging for all small charities and we are hugely
-            grateful to our existing funders for helping us again when we needed
-            it the most. Paul Hamlyn Foundation and the School for Social
-            Entrepreneurs provided us with a package of financial and mentoring
-            support and funded our regional expansion. Trust for London have
-            continued their core funding for a further two years (2020-2022) and
-            The National Lottery/DCMS provided emergency Covid-19 funding
-            through the Coronavirus Community Support Fund (CCSF). By the end of
-            2020 we also had confirmation of three years funding from City
-            Bridge Trust. In 2021 both giffgaff and Vodafone partnered with us to help tackle digital exclusion amongst refugees with both hardware and data support.
+            Since 2020 the Paul Hamlyn Foundation helped fund our our regional expansion. Trust for London have continued their core funding for a further three years and The National Lottery/DCMS provided emergency Covid-19 funding through the Coronavirus Community Support Fund (CCSF). City Bridge Trust have granted us three years of funding for our London programme (2021-2023) whilst in 2022 Garfield Weston Foundation and the Headley Trust provided unrestricted core funding. In Sept 2022 the University of Manchester Business School chose HostNation for pro bono consultancy from their new cohort of MBA students on their not for profit module.
           </Txt>
           <Txt style={styles.boxText}>
             Thank you to all our funders for believing in us and the work we do.
@@ -624,6 +615,8 @@ export default () => (
               'Sarah Robbins',
               'Peter Melrose',
               'Charlotte Stevenson',
+              'Krystyna Pomeroy and Nicholas Rao',
+              'Camilla Woodward',
             ].map((name, i) => (
               <Txt
                 style={{

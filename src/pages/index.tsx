@@ -246,7 +246,7 @@ export default () => (
 
       <Div style={{ spacing: 20 }}>
         <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold' }}>
-          Now matching friends across Greater London and in the North East and recruiting befrienders in Newcastle, Gateshead and Manchester.
+        Now matching friends across Greater London, Greater Manchester and Tyne &amp; Wear.
         </Txt>
         <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: colors.purple }}>
           <Hover style={{ ...styles.text, color: colors.purple, textDecoration: 'underline', fontWeight: 'bold', fontSize: 20, hover: { color: colors.purpleDark }, }} >
