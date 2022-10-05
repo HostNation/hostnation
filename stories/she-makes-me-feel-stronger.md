@@ -44,4 +44,6 @@ Sonja and Qadir are now well beyond their initial three-month commitment and ha
 
 For Sonja too, Qadir is here to stay: “I can’t imagine NOT seeing him. He feels like part of my life now.”
 
+**Are you ready to make a new best friend? [Sign up to befriend a refugee with us >](https://www.hostnation.org.uk/befriend)**
+
 ![](/assets/qadir-and-sonja.png)
