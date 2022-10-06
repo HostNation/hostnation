@@ -28,7 +28,7 @@ The two friends have also done yoga classes, gone dancing and visited a botanic 
 
 One of his favourite outings was a simple walk in the country. “It was another first for him,” explains Sonja. “We drove to Derbyshire, went walking in the hills and watched a blood moon rising. He just loved it!” 
 
-The trip was extra special for Qadir. Housed in an inner-city hotel, he has next to nothing to live on while he seeks a refugee visa. “I hadn’t been in the countryside in the whole two years I’ve been in the UK,” as he says. “The view of the hills and the moon was so beautiful.” 
+The trip was extra special for Qadir. Housed in an inner-city hotel, he has next to nothing to live on while he seeks a refugee visa. “I hadn’t been in the countryside in the whole two years I’ve been in the UK,” he says. “The view of the hills and the moon was so beautiful.” 
 
 The impact of the friendship with Sonja on Qadir’s life has been powerful: 
 
@@ -36,7 +36,7 @@ The impact of the friendship with Sonja on Qadir’s life has been powerful:
 
 Sonja finds that befriending has definitely been a two-way street. “I find him really inspiring,” she says. “Despite how little he has, he spends a lot of his time volunteering for charity as he really wants to give back. He’s very open so I love spending time with him.”
 
-This has made it very easy for her to fit befriending into her life, she explains. “It’s doesn’t feel at all like I have to make a special effort. I just feel I’ve been introduced to a friend.” 
+This has made it easy for her to fit befriending into her life, she explains. “It’s doesn’t feel at all like I have to make a special effort. I just feel I’ve been introduced to a friend.” 
 
 She found the process also made things easy. “HostNation is very welcoming and informative. It’s left up to you how you want to spend your time, but at the same time HostNation is so supportive. You feel very safe. I would definitely encourage people to do it. You’d be surprised by how great it is!”
 
