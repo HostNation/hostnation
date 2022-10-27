@@ -61,10 +61,10 @@ export default () => (
           <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
             London
           </Txt>
-          <Txt style={{ ...styles.boxText }}>
+          {/* <Txt style={{ ...styles.boxText }}>
             We are sorry that London registrations are closed for the time being whilst we work to match those already on board.
 
-          </Txt>
+          </Txt> */}
 
           {/* <Txt style={{ ...styles.boxText }}>
             For those wishing to befriend in London:
@@ -90,10 +90,10 @@ export default () => (
           </a> */}
 
 
-          {/* <Txt style={styles.boxText}>
+          <Txt style={styles.boxText}>
             Please select the borough you live in to see if you can register:
           </Txt>
-          <BoroughSelect></BoroughSelect> */}
+          <BoroughSelect></BoroughSelect>
 
 
         </Div>
