@@ -163,7 +163,7 @@ const VimeoVids = () => {
           margin: 'auto',
         }}
       >
-        <div style={{ maxWidth: small ? 450 : 'none', width: small ? 'unset' : 400, display: small ? 'block' : 'table-cell', margin: '0 auto', padding: small ? '25px 0 0 0' : '25px 10px 10px 10px' }}>
+        <div style={{ maxWidth: small ? 400 : 'none', width: small ? 'unset' : 300, display: small ? 'block' : 'table-cell', margin: '0 auto', padding: small ? '25px 0 0 0' : '25px 10px 10px 10px' }}>
           <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
             <iframe
               src="https://player.vimeo.com/video/563320888?title=0&byline=0&portrait=0"
@@ -179,7 +179,7 @@ const VimeoVids = () => {
             />
           </div>
         </div>
-        <div style={{ maxWidth: small ? 450 : 'none', width: small ? 'unset' : 400, display: small ? 'block' : 'table-cell', margin: '0 auto', padding: small ? '25px 0 0 0' : '25px 10px 10px 10px' }}>
+        <div style={{ maxWidth: small ? 400 : 'none', width: small ? 'unset' : 300, display: small ? 'block' : 'table-cell', margin: '0 auto', padding: small ? '25px 0 0 0' : '25px 10px 10px 10px' }}>
           <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
             <iframe
               src="https://player.vimeo.com/video/563324420?title=0&byline=0&portrait=0"
@@ -195,8 +195,7 @@ const VimeoVids = () => {
             />
           </div>
         </div>
-      </Div>
-      <div style={{ maxWidth: small ? 450 : 'none', width: small ? 'unset' : 400, display: 'block', margin: '0 auto', paddingTop: "25px" }}>
+        <div style={{ maxWidth: small ? 400 : 'none', width: small ? 'unset' : 300, display: small ? 'block' : 'table-cell', margin: '0 auto', padding: small ? '25px 0 0 0' : '25px 10px 10px 10px' }}>
         <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
           <iframe
             src="https://player.vimeo.com/video/563322749?title=0&byline=0&portrait=0"
@@ -212,6 +211,7 @@ const VimeoVids = () => {
           />
         </div>
       </div>
+      </Div>
     </div>
   );
 };
@@ -260,12 +260,20 @@ export default () => (
       </Div>
       <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} />
 
-      <Div style={{ spacing: 50, background: 'white' }}>
-        <img src={partyImg} />
+      <Div style={{ spacing: 25, background: 'white' }}>
+        {/* <img src={partyImg} /> */}
+       <Txt style={{...styles.body,  textAlign: 'center', fontWeight: 'bold', paddingTop: '25px', marginBottom: '-25px' }}>
+        Listen to our refugee friends Pinar, Saoud and Hanifah talk about their experiences.
+        </Txt>
+        <VimeoVids />
+        <Txt style={{...styles.body,  textAlign: 'center', fontSize: 15, marginTop: '-20px' }}>
+        Films 1 min each and shot for HostNation by @DamnFineMedia.
+        </Txt>
+
+
         <IntroText />
         <img src={statsImg} style={{ maxWidth: 600, margin: '0 auto 50px' }} />
       </Div>
-
       <Div style={{ spacing: 25 }}>
         <Txt style={styles.body}>
           If you are an asylum seeker or refugee and would like a befriender
@@ -287,38 +295,7 @@ export default () => (
         </Txt>
       </Div>
 
-      <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
-      <div style={{ background: 'white', padding: '50px 0' }}>
-        <Div style={{ spacing: 25 }}>
-          <Txt style={styles.body}>
-            To see the difference befriending can make, listen to our refugee friends Pinar, Saoud and Hanifah talk about their experiences.
-          </Txt>
-          <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 16 }}>
-            Films 1 min each and shot for HostNation by @DamnFineMedia.
-          </Txt>
-          <VimeoVids />
-        </Div>
-      </div>
-      <Div style={{ spacing: 25 }}>
 
-        <Txt style={styles.body}>
-          For more films, blogs, case studies and podcasts on HostNation befriending
-          <Hover
-            style={{
-              ...styles.text,
-              color: colors.black,
-              fontWeight: 'bold',
-              hover: { color: colors.purpleDark },
-            }}
-          >
-            {({ hoverProps, style }) => (
-              <a href="/stories" {...hoverProps} style={style}>
-                {" "}click here.
-              </a>
-            )}
-          </Hover>
-        </Txt>
-      </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
       <Div style={{ spacing: 25 }}>
         <Txt style={styles.body}>

@@ -617,6 +617,7 @@ export default () => (
               'Charlotte Stevenson',
               'Krystyna Pomeroy and Nicholas Rao',
               'Camilla Woodward',
+              'Gareth Hadley',
             ].map((name, i) => (
               <Txt
                 style={{
