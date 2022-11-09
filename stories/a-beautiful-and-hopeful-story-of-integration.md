@@ -2,13 +2,15 @@
 date: 2022-11-09T15:06:08.007Z
 author: Henry and Afewerki
 category: HostNation in the Media
-title: A beautiful and hopeful story of integration
+title: Asylum Speakers
 ---
-**We’re delighted to have been a part of “The Journey”, the inspiring ‘Asylum Speakers’ podcast from Worldwide Tribe. Jaz O’Hara, host and founder, traces the refugee journey from start to finish, with heartbreaking and uplifting moments along the way.**
+**We’re delighted to have been a part of “The Journey”, the inspiring podcast from Worldwide Tribe Worldwide Tribe. Jaz O’Hara, host and founder, traces the refugee journey from start to finish, with heartbreaking and uplifting moments along the way.**
 
-![](/assets/henry-and-afe-in-field-landscape.jpg)
+Listen to the podcast here or read our short version of the story, below.
 
 <iframe src="https://embed.acast.com/$/61e7d3853ef606001435ecf0/45-the-journey-episode-5-a-new-home" frameBorder="0" width="100%" height="110px" allow="autoplay"></iframe>
+
+![](/assets/henry-and-afe-in-field-landscape.jpg)
 
  “There have been great ways we can help each other,” says HostNation befriender Henry, as he and his Eritrean friend Afewerki tell their story in ‘Episode 5: A New Home’.
 
@@ -38,4 +40,4 @@ As for Afe, Henry was his first British friend, so meeting him opened a new door
 
 As pod host Jaz concludes: “Henry and Afewerki represent how mutually beneficial the connection between refugees and host communities can be.”
 
-*For a fascinating and moving insight into refugee lives, do listen to all six episodes of [“The Journey”. ](https://shows.acast.com/asylum-speakers-podcast-with-jaz-ohara-stories-of-migration)Presenter Jaz O’Hara has four foster brothers from refugee backgrounds, making her a warm and empathetic listener as she interviews people at every stage of the refugee journey.*
+*For a fascinating and moving insight into refugee lives, do listen to all six episodes of ['The Journey'. ](https://shows.acast.com/asylum-speakers-podcast-with-jaz-ohara-stories-of-migration)Presenter Jaz O’Hara has four foster brothers from refugee backgrounds, making her a warm and empathetic listener as she interviews people at every stage of the refugee journey.*
