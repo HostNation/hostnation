@@ -6,9 +6,11 @@ title: Asylum Speakers
 ---
 **We’re delighted to have been a part of “The Journey”, the inspiring podcast from Worldwide Tribe Worldwide Tribe. Jaz O’Hara, host and founder, traces the refugee journey from start to finish, with heartbreaking and uplifting moments along the way.**
 
-Listen to the podcast here or read our short version of the story, below.
+Listen to the podcast here:
 
 <iframe src="https://embed.acast.com/$/61e7d3853ef606001435ecf0/45-the-journey-episode-5-a-new-home" frameBorder="0" width="100%" height="110px" allow="autoplay"></iframe>
+
+...or read our short version of the story, below:
 
 ![](/assets/henry-and-afe-in-field-landscape.jpg)
 
