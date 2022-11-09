@@ -6,8 +6,6 @@ title: A beautiful and hopeful story of integration
 ---
 **We’re delighted to have been a part of “The Journey”, the inspiring ‘Asylum Speakers’ podcast from Worldwide Tribe. Jaz O’Hara, host and founder, traces the refugee journey from start to finish, with heartbreaking and uplifting moments along the way.**
 
-
-
 ![](/assets/henry-and-afe-in-field-landscape.jpg)
 
 <iframe src="https://embed.acast.com/$/61e7d3853ef606001435ecf0/45-the-journey-episode-5-a-new-home" frameBorder="0" width="100%" height="110px" allow="autoplay"></iframe>
@@ -33,6 +31,8 @@ This wasn’t the way Henry had expected befriending to go. “I had thought it 
 Also interviewed on the podcast, our founder Anneke points to the strength and endurance so often shown by our refugee friends: “So many of the refugees that we come across are extraordinarily resilient, they’ve been through so much, and are still so positive about life, they’re a real inspiration…it really makes you look at your own life and realise how lucky you are.”
 
 As for Afe, Henry was his first British friend, so meeting him opened a new door into life in the UK: “The first few months I found it difficult at the place where I lived, I couldn’t meet anyone,” as he says. Henry changed that. “I learned a lot of things about British culture,” says Afe, “and he has learned about Africa and Eritrea, about Eritrean food.”
+
+![](/assets/henry-and-aferwerki-copy.jpg)
 
 “Afe and I are great mates,” says Henry. “I would really encourage other people to try it. You gain loads from it.” Afe agrees: “I would like to suggest that people join HostNation, they will learn from each other and can support each other.” 
 
