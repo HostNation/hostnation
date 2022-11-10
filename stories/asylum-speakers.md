@@ -4,7 +4,7 @@ author: Henry and Afewerki
 category: HostNation in the Media
 title: Asylum Speakers
 ---
-**We’re delighted to have been a part of "The Journey", the inspiring podcast from Worldwide Tribe. Jaz O’Hara, host and founder, traces the refugee journey from start to finish, with heartbreaking and uplifting moments along the way.**
+**We’re delighted to have been a part of *"The Journey"*, the inspiring podcast from Worldwide Tribe. Jaz O’Hara, host and founder, traces the refugee journey from start to finish, with heartbreaking and uplifting moments along the way.**
 
 Listen to the podcast here:
 
@@ -44,4 +44,4 @@ As for Afe, Henry was his first British friend, so meeting him opened a new door
 
 As pod host Jaz concludes: “Henry and Afewerki represent how mutually beneficial the connection between refugees and host communities can be.”
 
-*For a fascinating and moving insight into refugee lives, do listen to all six episodes of [The Journey. ](https://shows.acast.com/asylum-speakers-podcast-with-jaz-ohara-stories-of-migration)Presenter Jaz O’Hara has four foster brothers from refugee backgrounds, making her a warm and empathetic listener as she interviews people at every stage of the refugee journey.*
+*For a fascinating and moving insight into refugee lives, do listen to all six episodes of '[The Journey'. ](https://shows.acast.com/asylum-speakers-podcast-with-jaz-ohara-stories-of-migration)Presenter Jaz O’Hara has four foster brothers from refugee backgrounds, making her a warm and empathetic listener as she interviews people at every stage of the refugee journey.*
