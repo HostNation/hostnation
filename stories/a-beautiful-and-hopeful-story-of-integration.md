@@ -2,7 +2,7 @@
 date: 2022-11-09T15:06:08.007Z
 author: Henry and Afewerki
 category: HostNation in the Media
-title: Asylum Speakers
+title: A beautiful and hopeful story
 ---
 **We’re delighted to have been a part of “The Journey”, the inspiring podcast from. Jaz O’Hara, host and founder, traces the refugee journey from start to finish, with heartbreaking and uplifting moments along the way.**
 
