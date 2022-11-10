@@ -10,8 +10,6 @@ Listen to the podcast here:
 
 <iframe src="https://embed.acast.com/$/61e7d3853ef606001435ecf0/45-the-journey-episode-5-a-new-home" frameBorder="0" width="100%" height="110px" allow="autoplay"></iframe>
 
-
-
 ...or read our short version of the story, below:
 
 ![](/assets/henry-and-afe-in-field-landscape.jpg)
@@ -28,13 +26,15 @@ Before they were introduced, Henry admits to feeling a little apprehensive. “I
 
 The two men, who have now been friends for three years, were interviewed by podcaster Jaz O’Hara, after she spent three months following common routes of refugees and asylum seekers from North Africa and the Middle East to Northern Europe.
 
-Theirs is a positive story of what it’s like for migrants to integrate into their newfound communities, and how much we all stand to gain from welcoming and interacting with refugees and asylum seekers. Henry describes how much he has learned from his friend: 
+Theirs is a positive story of what it’s like for migrants to integrate into their newfound communities, and how much we all stand to gain from welcoming and interacting with refugees and asylum seekers. HostNation director Anneke explains to Jaz why she founded the charity: 
 
-“Afe has achieved a lot in terms of what he’s set his mind to do, it’s been impressive to watch. His attitude to life is good…he’s been through a lot and he’s wise, despite being a lot younger. If something doesn’t work out for me I can be quite impetuous and get angry... but Afe says, ‘Chill out, you’re being ridiculous’. He’s never really fazed by anything.”
+“​It seemed to me that befriending was just an extraordinary thing to do… It was such a simple idea because you make introductions between people that you hope will get on and then you leave it up to them… I thought OK, why can’t we use digital technology to scale up befriending opportunities both for befrienders and for refugees and asylum seekers, so that you can make a lot more matches and a lot more connections between people… It can be really transformative.”
+
+Henry describes how much he has learned from his friend: “Afe has achieved a lot in terms of what he’s set his mind to do, it’s been impressive to watch. His attitude to life is good…he’s been through a lot and he’s wise, despite being a lot younger. If something doesn’t work out for me I can be quite impetuous and get angry... but Afe says, ‘Chill out, you’re being ridiculous’. He’s never really fazed by anything.”
 
 This wasn’t the way Henry had expected befriending to go. “I had thought it would maybe be the other way around – that being a bit older than Afe and being from the UK, I would be helping him and instead he’s like, ‘Relax my friend’! He could easily be a massive victim…but he’s always really chilled and things always work out really well for him.”
 
-Also interviewed on the podcast, our founder Anneke points to the strength and endurance so often shown by our refugee friends: “So many of the refugees that we come across are extraordinarily resilient, they’ve been through so much, and are still so positive about life, they’re a real inspiration…it really makes you look at your own life and realise how lucky you are.”
+Anneke points to the strength and endurance so often shown by our refugee friends: “So many of the refugees that we come across are extraordinarily resilient, they’ve been through so much, and are still so positive about life, they’re a real inspiration…it really makes you look at your own life and realise how lucky you are.”
 
 As for Afe, Henry was his first British friend, so meeting him opened a new door into life in the UK: “The first few months I found it difficult at the place where I lived, I couldn’t meet anyone,” as he says. Henry changed that. “I learned a lot of things about British culture,” says Afe, “and he has learned about Africa and Eritrea, about Eritrean food.”
 
