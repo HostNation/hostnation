@@ -123,16 +123,15 @@ export default () => (
             Referral Form
           </Button>
         </div>
-        <div style={{ padding: '0 15px' }}>
+        <div style={{ padding: '0 15px'}}>
           <Button
-            to="https://airtable.com/shrCnkF1DgqeK5Yoa?prefill_Type=Refugee&backgroundColor=orange"
-            newTab
-            color="yellow"
-            style={{ margin: '0 auto', fontSize: 20 }}
+            style={{ margin: '0 auto', fontSize: 20, cursor: "auto", background: "rgb(195, 162, 23)" }}
           >
             Newcastle / Gateshead:
             <br />
-            Referral Form
+            Referrals are temporarily closed.  
+            <br />
+            We will re-open early Jan 2023.
           </Button>
         </div>
         <div style={{ padding: '0 15px' }}>
