@@ -105,7 +105,7 @@ export default () => (
         </Txt>
       </Box>
 
-      <img src={bettinaQuote} style={{ maxWidth: 600, margin: '0 auto' }} />
+      {/* <img src={bettinaQuote} style={{ maxWidth: 600, margin: '0 auto' }} /> */}
 
       <Box title="REFUGEE & REFERRER REGISTRATION FORMS" color="purple">
         <Txt style={styles.body}>
