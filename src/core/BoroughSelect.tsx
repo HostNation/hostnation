@@ -8,7 +8,8 @@ interface SelectState {
     optionsState: string;
 }
 
-let openBoroughs = ["Lewisham", "Tower", "Newham", "Greenwich", "Hillingdon", "Redbridge", "Barking", "Brent", "Harrow", "Ealing"]
+let openBoroughs = ["Barking", "Barnet", "Bexley", "Brent", "Bromley", "Camden", "City", "Croydon", "Ealing", "Enfield", "Greenwich", "Hammersmith", "Haringey", "Harrow", "Havering", "Hillingdon", "Hounslow", "Islington", "Kensington", "Lambeth", "Lewisham", "Newham", "Redbridge", "Southwark", "Tower", "Waltham", "Westminster"]
+// let openBoroughs = ["Barking", "Barnet", "Bexley", "Brent", "Bromley", "Camden", "City", "Croydon", "Ealing", "Enfield", "Greenwich", "Hackney", "Hammersmith", "Haringey", "Harrow", "Havering", "Hillingdon", "Hounslow", "Islington", "Kensington", "Kingston", "Lambeth", "Lewisham", "Merton", "Newham", "Redbridge", "Richmond", "Southwark", "Sutton", "Tower", "Waltham", "Wandsworth", "Westminster"]
 
 export default class BoroughSelect extends React.Component<{}, SelectState> {
     constructor(props) {
