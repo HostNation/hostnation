@@ -73,4 +73,4 @@ Thanks a million to all our wonderful befrienders who are bringing so much joy a
 
 If you think you are ready to befriend, we are currently recruiting in Manchester and Tyne & Wear. You can register [here](https://www.hostnation.org.uk/befriend). We’re now open for applications in certain areas of London; please get in touch at info@hostnation.org.uk\
 **\
-To support our work finding new friends for isolated refugees, please consider a [donation](https://www.totalgiving.co.uk/donate/hostnation).**
+To support our work finding new friends for isolated refugees, please consider a [donation](https://checkout.justgiving.com/w8d0xdwlda).**

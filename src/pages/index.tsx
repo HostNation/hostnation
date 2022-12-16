@@ -304,14 +304,16 @@ export default () => (
           please consider a donation.
         </Txt>
         <Button
-          to="https://www.totalgiving.co.uk/donate/hostnation"
+          to="https://checkout.justgiving.com/w8d0xdwlda"
           newTab
           color="purple"
           style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
         >
           DONATE HERE
         </Button>
+        <img style={{width: 300, display:'block', margin:'auto'}} src={"https://www.jg-cdn.com/buttons/payment-type-logos-gb.svg"} alt={"Pay with Mastercard, Visa, American Express, PayPal, Bank Transfer, Apple Pay or Direct Debit."}></img>
       </Div>
+      
 
 
 

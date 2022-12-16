@@ -107,7 +107,7 @@ export default ({ active }: any) => {
               <MenuLink text="Stories" to="/stories" active={active} />
               <MenuLink
                 text="Donate"
-                to="https://www.totalgiving.co.uk/donate/hostnation"
+                to="https://checkout.justgiving.com/w8d0xdwlda"
                 newTab
               />
             </Div>
@@ -160,7 +160,7 @@ export default ({ active }: any) => {
               />
               <MenuLink
                 text="Donate"
-                to="https://www.totalgiving.co.uk/donate/hostnation"
+                to="https://checkout.justgiving.com/w8d0xdwlda"
                 newTab
                 setClosed={setClosed}
               />

@@ -67,7 +67,7 @@ export default class BoroughSelect extends React.Component<{}, SelectState> {
                 </Txt>
                 <Div style={{ paddingTop: 15 }}>
                 <a
-                    href="https://www.totalgiving.co.uk/donate/hostnation"
+                    href="https://checkout.justgiving.com/w8d0xdwlda"
                     target="_blank"
                 >
                     <Hover

@@ -43,7 +43,7 @@ export default () => (
       </Txt>
 
       <Button
-        to="https://www.totalgiving.co.uk/donate/hostnation"
+        to="https://checkout.justgiving.com/w8d0xdwlda"
         newTab
         color="purple"
         style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
