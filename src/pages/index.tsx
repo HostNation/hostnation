@@ -79,7 +79,7 @@ const TopBanner = () => {
       >
         <Txt style={{ ...styles.text, fontSize: 12, fontWeight: 'bold', lineHeight: '5px', textAlign: 'center', }}>
           Read our latest annual report: &nbsp;{' '}
-          <Link to="/hostnation-annual-report-2021.pdf" newTab>
+          <Link to="/hostnation-annual-report-2022.pdf" newTab>
             <Txt
               style={{
                 ...styles.text,
