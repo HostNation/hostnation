@@ -129,7 +129,7 @@ const MoreInfo = () => {
         }}
       >
         <Button
-          to="/hostnation-annual-report-2021.pdf"
+          to="/hostnation-annual-report-2022.pdf"
           newTab
           color="black"
           style={{ width: 320, fontSize: 20, margin: '0 auto' }}
