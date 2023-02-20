@@ -153,72 +153,15 @@ const MoreInfo = () => {
   );
 };
 
-const VimeoVids = () => {
-  const [setWidthElem, small = false] = useWidth(800);
-  return (
-    <div ref={setWidthElem}>
-      <Div
-        style={{
-          display: small ? 'block' : 'table',
-          margin: 'auto',
-        }}
-      >
-        <div style={{ maxWidth: small ? 400 : 'none', width: small ? 'unset' : 300, display: small ? 'block' : 'table-cell', margin: '0 auto', padding: small ? '25px 0 0 0' : '25px 10px 10px 10px' }}>
-          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/563320888?title=0&byline=0&portrait=0"
-              frameBorder="0"
-              allowFullScreen
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-              }}
-            />
-          </div>
-        </div>
-        <div style={{ maxWidth: small ? 400 : 'none', width: small ? 'unset' : 300, display: small ? 'block' : 'table-cell', margin: '0 auto', padding: small ? '25px 0 0 0' : '25px 10px 10px 10px' }}>
-          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-            <iframe
-              src="https://player.vimeo.com/video/563324420?title=0&byline=0&portrait=0"
-              frameBorder="0"
-              allowFullScreen
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-              }}
-            />
-          </div>
-        </div>
-        <div style={{ maxWidth: small ? 400 : 'none', width: small ? 'unset' : 300, display: small ? 'block' : 'table-cell', margin: '0 auto', padding: small ? '25px 0 0 0' : '25px 10px 10px 10px' }}>
-        <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
-          <iframe
-            src="https://player.vimeo.com/video/563322749?title=0&byline=0&portrait=0"
-            frameBorder="0"
-            allowFullScreen
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-            }}
-          />
-        </div>
-      </div>
-      </Div>
-    </div>
-  );
-};
-
 export default () => (
   <Layout location="/">
-    <Helmet title="HostNation | Helping refugees through friendship" />
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>HostNation | Helping refugees through friendship</title>
+      <meta name="description" content="HostNation believes every refugee deserves a friend. We connect those offering friendship with those needing it. We are a city-based introductory service connecting residents to refugees through small acts of kindness, inclusion and friendship." />
+      <meta name="twitter:site" content="@hostnation" />
+      <meta name="twitter:image" content="https://www.hostnation.org.uk/static/logo-wide-7fd7e3e8b147a6fdce40e0b5c6b3ef0e.png" />
+    </Helmet>
 
     {/* <TopBanner /> */}
 
@@ -245,9 +188,6 @@ export default () => (
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
 
       <Div style={{ spacing: 20 }}>
-        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold' }}>
-        Now matching friends across Greater London, Greater Manchester and Tyne &amp; Wear.
-        </Txt>
         <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: colors.purple }}>
           <Hover style={{ ...styles.text, color: colors.purple, textDecoration: 'underline', fontWeight: 'bold', fontSize: 20, hover: { color: colors.purpleDark }, }} >
             {({ hoverProps, style }) => (
@@ -257,19 +197,39 @@ export default () => (
             )}
           </Hover>
         </Txt>
+        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold' }}>
+        In London, Greater Manchester and Tyne & Wear.
+        </Txt>
       </Div>
-      <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} />
 
       <Div style={{ spacing: 25, background: 'white' }}>
         {/* <img src={partyImg} /> */}
-       <Txt style={{...styles.body,  textAlign: 'center', fontWeight: 'bold', paddingTop: '25px', marginBottom: '-25px' }}>
-        Listen to our refugee friends Pinar, Saoud and Hanifah talk about their experiences.
-        </Txt>
-        <VimeoVids />
-        <Txt style={{...styles.body,  textAlign: 'center', fontSize: 15, marginTop: '-20px' }}>
-        Films 1 min each and shot for HostNation by @DamnFineMedia.
+        <Txt style={{ ...styles.body, textAlign: 'center', fontSize: 20, fontWeight: 'bold', paddingTop: '25px' }}>
+        Watch this film made by our Northern team:
         </Txt>
 
+        <Div style={{ spacing: 20 }}>
+          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+            <iframe
+              src="https://player.vimeo.com/video/798823473?title=0&byline=0&portrait=0"
+              frameBorder="0"
+              allowFullScreen
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+              }}
+            />
+          </div>
+          </Div>
+
+          <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} />
+
+        {/* <Txt style={{ ...styles.body, textAlign: 'center', fontSize: 15, marginTop: '-20px' }}>
+          Films 1 min each and shot for HostNation by @DamnFineMedia.
+        </Txt> */}
 
         <IntroText />
         <img src={statsImg} style={{ maxWidth: 600, margin: '0 auto 50px' }} />
@@ -311,9 +271,9 @@ export default () => (
         >
           DONATE HERE
         </Button>
-        <img style={{width: 300, display:'block', margin:'auto'}} src={"https://www.jg-cdn.com/buttons/payment-type-logos-gb.svg"} alt={"Pay with Mastercard, Visa, American Express, PayPal, Bank Transfer, Apple Pay or Direct Debit."}></img>
+        <img style={{ width: 300, display: 'block', margin: 'auto' }} src={"https://www.jg-cdn.com/buttons/payment-type-logos-gb.svg"} alt={"Pay with Mastercard, Visa, American Express, PayPal, Bank Transfer, Apple Pay or Direct Debit."}></img>
       </Div>
-      
+
 
 
 
@@ -353,7 +313,7 @@ export default () => (
         </Txt>
         <Div style={{ spacing: 15 }}>
           <img src={linksIcon} style={{ width: 100, margin: '0 auto' }} />
-          <Txt style={{...styles.title, fontSize: 25}}>SIGNPOSTING LINKS:</Txt> 
+          <Txt style={{ ...styles.title, fontSize: 25 }}>SIGNPOSTING LINKS:</Txt>
         </Div>
         <Div style={{ spacing: 15 }}>
           <Button
