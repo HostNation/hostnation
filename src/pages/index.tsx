@@ -193,13 +193,10 @@ export default () => (
           <Hover style={{ ...styles.text, color: colors.purple, textDecoration: 'underline', fontWeight: 'bold', fontSize: 20, hover: { color: colors.purpleDark }, }} >
             {({ hoverProps, style }) => (
               <a href="/befriend" {...hoverProps} style={style}>
-                Sign up to befriend
+                Sign up to befriend in London, Greater Manchester and Tyne & Wear.
               </a>
             )}
           </Hover>
-        </Txt>
-        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold' }}>
-        In London, Greater Manchester and Tyne & Wear.
         </Txt>
       </Div>
 
