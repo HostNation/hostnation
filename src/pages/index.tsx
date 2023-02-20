@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import logoWide from '../img/logo-wide.png';
+import logoPreview from '../img/logo-strapline.jpg';
 
 import quoteImg from '../img/quotes/quote-jack.png';
 import partyImg from '../img/party.png';
@@ -160,7 +161,7 @@ export default () => (
       <title>HostNation | Helping refugees through friendship</title>
       <meta name="description" content="HostNation believes every refugee deserves a friend. We connect those offering friendship with those needing it. We are a city-based introductory service connecting residents to refugees through small acts of kindness, inclusion and friendship." />
       <meta name="twitter:site" content="@hostnation" />
-      <meta name="twitter:image" content="https://www.hostnation.org.uk/static/logo-wide-7fd7e3e8b147a6fdce40e0b5c6b3ef0e.png" />
+      <meta name="twitter:image" content={logoPreview} />
     </Helmet>
 
     {/* <TopBanner /> */}
