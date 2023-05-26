@@ -19,38 +19,39 @@ export default () => (
 
       <Box title="SCREENING & SAFEGUARDING" toggle>
         <Txt style={styles.boxText}>
-          HostNation recognise that whilst asylum seekers and refugees over the
-          age of 18 are not technically classified as ‘vulnerable adults’ many
-          of them are nevertheless vulnerable. For this reason all befrienders
-          on our database are screened and checked.
+        HostNation recognise that whilst asylum seekers and refugees over the age of 18 may not be technically classified as ‘vulnerable adults’ many of them are nevertheless adults at risk. For this reason all befrienders on our database are carefully screened and checked.
         </Txt>
         <Txt style={styles.boxText}>
-          They provide two references that are followed up and they also upload
-          their passport ID and a photo of themselves and their DBS/PVG
-          certificate if they have one. They fill in a detailed screening and
-          profiling questionnaire and HostNation calls each applicant to discuss
-          the role and ensure suitability. They commit to online training and to
-          read the befriending guide which has a lot of information on seeking
-          asylum in the UK, the problems many asylum seekers and refugees
-          encounter, how the system works, best practice befriending,
-          boundaries, signposting to specialist support services etc.
+        They provide two references that are followed up and they also upload their passport ID and a photo of themselves and their DBS/PVG certificate if they have one. They fill in a detailed screening and profiling questionnaire, commit to a 2 hour training session and to reading the befriending guide which has a lot of information on seeking asylum in the UK, the problems many asylum seekers and refugees encounter, how the system works, best practice befriending, boundaries, signposting to specialist support services etc.  HostNation then calls each applicant to ‘screen’ them, discuss the role and ensure suitability.
         </Txt>
         <Txt style={styles.boxText}>
-          Many of our befrienders are recruited from refugee support networks or
-          come from caring professions or have a background of community
-          volunteering and many of them have a DBS. We do not ask them to have a
-          DBS-check specifically to join HostNation as this is primarily an
-          introductory service. We assume that we are matching informed and
-          consenting adults who will take responsibility for their friendship.
+        Befriending is not a role eligible for standard or enhanced DBS checks, however many of our befrienders are recruited from refugee support networks or come from caring professions or have a background of community volunteering and some of them have an existing DBS. We do not take children (under 18) or people with substance abuse issues and advise against referring the highly vulnerable or those with mental health problems. If you feel it is necessary for the person you are referring to be matched with someone from our database who has a DBS, please state this in the any other information section at the end of the referral form.
         </Txt>
         <Txt style={styles.boxText}>
-          We do not take children (under 18) or people with substance abuse
-          issues and advise against referring the highly vulnerable or those
-          with mental health problems. If you feel it is necessary for the
-          person you are referring to be matched with someone from our database
-          who has a DBS, please state this in the any other information section
-          at the end of the referral form.
+        We are primarily an introductory service and we assume that we are matching informed and consenting adults who will take responsibility for their friendship.
         </Txt>
+        <div style={{ padding: '0 15px' }}>
+          <Button
+            to="/screening-checks-policy.pdf"
+            newTab
+            color="yellow"
+            style={{ margin: '0 auto', fontSize: 20 }}
+          >
+          Our safeguarding policy
+          </Button>
+        </div>
+
+        <div style={{ padding: '0 15px' }}>
+          <Button
+            to="/safeguarding-policy.pdf"
+            newTab
+            color="purple"
+            style={{ margin: '0 auto', fontSize: 20 }}
+          >
+            Read more about the screening and checks we do
+          </Button>
+        </div>
+
       </Box>
 
       <Box title="SCOPE OF SERVICES AND EXCLUSION OF LIABILITY" toggle>

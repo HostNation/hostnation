@@ -375,6 +375,14 @@ export default () => (
               link: 'https://twitter.com/hostnationuk',
               icon: icons.twitter,
             },
+            {
+              link: 'https://www.instagram.com/hostnationuk/',
+              icon: icons.instagram,
+            },
+            {
+              link: 'https://www.youtube.com/@HostNation',
+              icon: icons.youtube,
+            },
           ].map(({ link, icon }, i) => (
             <Hover
               style={{
