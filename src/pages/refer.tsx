@@ -32,7 +32,7 @@ export default () => (
         </Txt>
         <div style={{ padding: '0 15px' }}>
           <Button
-            to="/screening-checks-policy.pdf"
+            to="/safeguarding-policy.pdf"
             newTab
             color="yellow"
             style={{ margin: '0 auto', fontSize: 20 }}
@@ -43,7 +43,7 @@ export default () => (
 
         <div style={{ padding: '0 15px' }}>
           <Button
-            to="/safeguarding-policy.pdf"
+            to="/screening-checks-policy.pdf"
             newTab
             color="purple"
             style={{ margin: '0 auto', fontSize: 20 }}
