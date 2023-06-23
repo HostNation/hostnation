@@ -40,7 +40,7 @@ While driving Bahaa back to the tube, he told me a bit more about his family. He
 
 Five days later, Bahaa was being introduced to another British institution. He and I, along with the Breaking Barriers film crew, went to a pub in Camden Town to watch a hugely important game between Manchester City and Arsenal. The cherished position at the top of the league was at stake. No sooner had we entered the crowded pub than Bahaa was being chatted up by a couple of young women. The man’s got star quality, I smiled to myself. It was a disastrous night for Arsenal, but somehow watching the game with Bahaa and a bunch of other miserable Gooners made it a lot more bearable than if I’d been watching it from my sofa at home.
 
-<img src="/assets/PHOTO-2023-06-20-22-02-35.jpg" alt="image" style="width:43%;padding-right:25px;" ALIGN="left" />
+<img src="/assets/PHOTO-2023-06-20-22-02-35NEW.jpg" alt="image" style="width:43%;padding-right:25px;" ALIGN="left" />
 
 Bahaa’s Arsenal story has a wonderful postscript. I was delighted to get a call from Rosie Horton, who is Communications Manager at Breaking Barriers, and incidentally, a befriender with HostNation. Arsenal had heard about Bahaa’s story, and had a very special gift for him… a football shirt signed by the entire first team squad. When she asked me to present it to him on World Refugee Day, I didn’t hesitate. The smile on his face in the photo says it all. It’s been a privilege getting to know this remarkable man – and a bonus being able to welcome him to the Gooner fraternity.
 
