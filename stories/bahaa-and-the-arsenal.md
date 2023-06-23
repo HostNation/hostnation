@@ -4,8 +4,6 @@ author: BAHAA & JOSH
 category: HostNation Blog Post
 title: Bahaa and the Arsenal
 ---
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-tJL03NiD9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 “Which football team do you support, Bahaa?”
 
 “Arsenal!” came the reply.
@@ -13,6 +11,10 @@ title: Bahaa and the Arsenal
 As a lifelong Gooner (a hardcore Arsenal fan), this was music to my ears. Bahaa had been flagged to HostNation by one of our referral partners, Breaking Barriers, who help refugees prepare for the workplace; as one of the management team at HostNation, I was on the phone getting to know more about him, so we could provide him with a local friend. 
 
 When he shared the fact that he supported Arsenal, I knew we had the perfect befriender waiting in the wings. Joshua Hill is a few years younger than Bahaa and among his many interests is a love of football. Like me, Josh is a season ticket holder at the Arsenal. When I introduced them on WhatsApp video, I saw from the outset that this was a true meeting of football minds.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-tJL03NiD9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<!-- end -->
 
 <img src="/assets/Bahaa_Josh_2023-05-21.jpeg" alt="image" style="width:43%;padding-right:25px;" ALIGN="left" />
 
