@@ -66,7 +66,7 @@ export default () => (
 
           </Txt> */}
 
-          {/* <Txt style={{ ...styles.boxText }}>
+          <Txt style={{ ...styles.boxText }}>
             For those wishing to befriend in London:
           </Txt>
           <a
@@ -87,13 +87,13 @@ export default () => (
                 </Txt>
               )}
             </Hover>
-          </a> */}
+          </a>
 
 
-          <Txt style={styles.boxText}>
+          {/* <Txt style={styles.boxText}>
             Please select the borough you live in to see if you can register:
           </Txt>
-          <BoroughSelect></BoroughSelect>
+          <BoroughSelect></BoroughSelect> */}
 
 
         </Div>
