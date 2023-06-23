@@ -40,6 +40,6 @@ Five days later, Bahaa was being introduced to another British institution. He a
 
 Bahaa’s Arsenal story has a wonderful postscript. I was delighted to get a call from Rosie Horton, who is Communications Manager at Breaking Barriers, and incidentally, a befriender with HostNation. Arsenal had heard about Bahaa’s story, and had a very special gift for him… a football shirt signed by the entire first team squad. When she asked me to present it to him on World Refugee Day, I didn’t hesitate. The smile on his face in the photo says it all. It’s been a privilege getting to know this remarkable man – and a bonus being able to welcome him to the Gooner fraternity.
 
-\>img src=“/assets/PHOTO-2023-06-20-22-02-35.jpg“ alt=“description“ style=“width:43%;padding-right:25px;“ ALIGN=“left“ /<
+> img src=“/assets/PHOTO-2023-06-20-22-02-35.jpg“ alt=“description“ style=“width:43%;padding-right:25px;“ ALIGN=“left“ /<
 
 **Could you befriend a refugee like Bahaa? It’s simple, and fun. Sign up *[here.](https://www.hostnation.org.uk/befriend)***
