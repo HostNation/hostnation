@@ -18,13 +18,11 @@ Shortly after that, Arsenal were playing at home to Southampton on a Friday nigh
 
 On the morning of the match, Bahaa told me about a documentary that Breaking Barriers was making about him and four other refugees who were getting their lives back on track, having being granted refugee status in the UK. The crew wanted to film us both outside the stadium before the match. There’s a heartwarming scene where Bahaa and I greet each other like long-lost brothers before I present him with an Arsenal cap. The smile on his face as he says, “Now I am a proper fan,” is unforgettable.
 
- 
-
 ![](/assets/josh-and-bahaa-at-arsenal_2023-05-19.jpg)
 
- 
-
 In the bar, Bahaa, Josh and I sat discussing the upcoming match; the warm impression I had formed of the young refugee during our phone calls was spot on. Yet life for him since his decision to seek asylum in this country has been very hard.  As he explains in the documentary: “I started my life here in the UK from scratch. I had no friends, no family, no one at all.” He is still sharing a tiny room in a Home Office-approved hotel in Paddington, which feels almost like a prison cell.  And yet from his upbeat, smiling, charismatic demeanour, you would never guess what struggles are going on in his life. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vVpsglgz0TU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Before kick-off I was a bit concerned as to how he’d react to the swearing that reverberates around the terraces during every match, since Bahaa is a practicing Muslim. I needn’t have worried; from the start he was up on his feet, urging the team on and showing that he was no stranger to a bit of industrial language himself. 
 
