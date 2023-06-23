@@ -1,6 +1,6 @@
 ---
 date: 2023-06-23T18:07:22.543Z
-author: BAHAA & JOSH
+author: ANTHONY, JOSH & BAHAA
 category: HostNation Blog Post
 title: Bahaa and the Arsenal
 ---
