@@ -12,7 +12,7 @@ As a lifelong Gooner (a hardcore Arsenal fan), this was music to my ears. Bahaa 
 
 When he shared the fact that he supported Arsenal, I knew we had the perfect befriender waiting in the wings. Joshua Hill is a few years younger than Bahaa and among his many interests is a love of football. Like me, Josh is a season ticket holder at the Arsenal. When I introduced them on WhatsApp video, I saw from the outset that this was a true meeting of football minds.
 
-<img src="/assets/Bahaa_Josh_2023-05-21.jpeg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />
+<img src="/assets/Bahaa_Josh_2023-05-21.jpeg" alt="image" style="width:43%;padding-right:25px;" ALIGN="left" />
 
 Shortly after that, Arsenal were playing at home to Southampton on a Friday night. The friend I usually sit with was unwell and offered me his ticket. I called Bahaa to ask if he fancied a trip to the Emirates and, no surprise, he jumped at the chance. It was his childhood dream to see Arsenal play at their famous stadium. Even better, Josh was going to the match and would join us in the bar pre-kick off.
 
@@ -32,7 +32,7 @@ Southampton were bottom of the league and Arsenal were top, so this should have 
 
 But it wasn’t to be. After the final whistle, Bahaa slumped back in his seat, smiling and shaking his head from side to side. “Unbelievable, three-three! It’s bad… but it’s better than losing!”
 
-<img src="/assets/Bahaa at Arsenal game-2023-05-19.jpg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />
+<img src="/assets/Bahaa_at_Arsenal_game-2023-05-19.jpg" alt="image" style="width:43%;padding-right:25px;" ALIGN="left" />
 
 While driving Bahaa back to the tube, he told me a bit more about his family. He is one of six children, all of them university educated and working in professions like dentistry, pharmacy and engineering. Bahaa is a structural engineer with a PhD and an impressive CV and mentioned that he had a job interview coming up the following week. 
 
@@ -40,8 +40,8 @@ While driving Bahaa back to the tube, he told me a bit more about his family. He
 
 Five days later, Bahaa was being introduced to another British institution. He and I, along with the Breaking Barriers film crew, went to a pub in Camden Town to watch a hugely important game between Manchester City and Arsenal. The cherished position at the top of the league was at stake. No sooner had we entered the crowded pub than Bahaa was being chatted up by a couple of young women. The man’s got star quality, I smiled to myself. It was a disastrous night for Arsenal, but somehow watching the game with Bahaa and a bunch of other miserable Gooners made it a lot more bearable than if I’d been watching it from my sofa at home.
 
-Bahaa’s Arsenal story has a wonderful postscript. I was delighted to get a call from Rosie Horton, who is Communications Manager at Breaking Barriers, and incidentally, a befriender with HostNation. Arsenal had heard about Bahaa’s story, and had a very special gift for him… a football shirt signed by the entire first team squad. When she asked me to present it to him on World Refugee Day, I didn’t hesitate. The smile on his face in the photo says it all. It’s been a privilege getting to know this remarkable man – and a bonus being able to welcome him to the Gooner fraternity.
+<img src="/assets/PHOTO-2023-06-20-22-02-35.jpg" alt="image" style="width:43%;padding-right:25px;" ALIGN="left" />
 
-<img src="/assets/PHOTO-2023-06-20-22-02-35.jpg" alt="logo" style="width:43%;padding-right:25px;" ALIGN="left" />
+Bahaa’s Arsenal story has a wonderful postscript. I was delighted to get a call from Rosie Horton, who is Communications Manager at Breaking Barriers, and incidentally, a befriender with HostNation. Arsenal had heard about Bahaa’s story, and had a very special gift for him… a football shirt signed by the entire first team squad. When she asked me to present it to him on World Refugee Day, I didn’t hesitate. The smile on his face in the photo says it all. It’s been a privilege getting to know this remarkable man – and a bonus being able to welcome him to the Gooner fraternity.
 
 **Could you befriend a refugee like Bahaa? It’s simple, and fun. Sign up *[here.](https://www.hostnation.org.uk/befriend)***
