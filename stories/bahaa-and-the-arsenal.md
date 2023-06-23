@@ -22,7 +22,13 @@ On the morning of the match, Bahaa told me about a documentary that Breaking Bar
 
 In the bar, Bahaa, Josh and I sat discussing the upcoming match; the warm impression I had formed of the young refugee during our phone calls was spot on. Yet life for him since his decision to seek asylum in this country has been very hard.  As he explains in the documentary: “I started my life here in the UK from scratch. I had no friends, no family, no one at all.” He is still sharing a tiny room in a Home Office-approved hotel in Paddington, which feels almost like a prison cell.  And yet from his upbeat, smiling, charismatic demeanour, you would never guess what struggles are going on in his life. 
 
+
+
+**Watch the Breaking Barriers documentary starring Bahaa:** 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vVpsglgz0TU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 
 Before kick-off I was a bit concerned as to how he’d react to the swearing that reverberates around the terraces during every match, since Bahaa is a practicing Muslim. I needn’t have worried; from the start he was up on his feet, urging the team on and showing that he was no stranger to a bit of industrial language himself. 
 
