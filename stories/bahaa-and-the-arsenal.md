@@ -20,9 +20,9 @@ When he shared the fact that he supported Arsenal, I knew we had the perfect bef
 
 Shortly after that, Arsenal were playing at home to Southampton on a Friday night. The friend I usually sit with was unwell and offered me his ticket. I called Bahaa to ask if he fancied a trip to the Emirates and, no surprise, he jumped at the chance. It was his childhood dream to see Arsenal play at their famous stadium. Even better, Josh was going to the match and would join us in the bar pre-kick off.
 
-On the morning of the match, Bahaa told me about a documentary that Breaking Barriers was making about him and four other refugees who were getting their lives back on track, having being granted refugee status in the UK. The crew wanted to film us both outside the stadium before the match. There’s a heartwarming scene where Bahaa and I greet each other like long-lost brothers before I present him with an Arsenal cap. The smile on his face as he says, “Now I am a proper fan,” is unforgettable.
-
 ![](/assets/josh-and-bahaa-at-arsenal_2023-05-19.jpg)
+
+On the morning of the match, Bahaa told me about a documentary that Breaking Barriers was making about him and four other refugees who were getting their lives back on track, having being granted refugee status in the UK. The crew wanted to film us both outside the stadium before the match. There’s a heartwarming scene where Bahaa and I greet each other like long-lost brothers before I present him with an Arsenal cap. The smile on his face as he says, “Now I am a proper fan,” is unforgettable.
 
 In the bar, Bahaa, Josh and I sat discussing the upcoming match; the warm impression I had formed of the young refugee during our phone calls was spot on. Yet life for him since his decision to seek asylum in this country has been very hard.  As he explains in the documentary: “I started my life here in the UK from scratch. I had no friends, no family, no one at all.” He is still sharing a tiny room in a Home Office-approved hotel in Paddington, which feels almost like a prison cell.  And yet from his upbeat, smiling, charismatic demeanour, you would never guess what struggles are going on in his life. 
 
