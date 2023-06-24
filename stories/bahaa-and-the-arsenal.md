@@ -4,7 +4,7 @@ author: ANTHONY, JOSH & BAHAA
 category: HostNation Blog Post
 title: Bahaa and the Arsenal
 ---
-<img src="/assets/Bahaa_at_Arsenal_game-2023-05-19.jpg" alt="image" style="width:43%;padding-right:25px;" ALIGN="left" />
+<img src="/assets/Bahaa_at_Arsenal_game-2023-05-19NEW.jpg" alt="image" style="width:43%;padding-right:25px;" ALIGN="left" />
 
 “Which football team do you support, Bahaa?”
 
@@ -38,13 +38,9 @@ While driving Bahaa back to the tube, he told me a bit more about his family. He
 
 “What do you like about the UK?” I asked him. “I like the way the English speak,” he replied. “I like the way they shorten words. They don’t say ‘what,’ they say ‘wha’’, they don’t say ‘butter’, they say ‘bu’er’. I think that’s cool.” I explained this was a London cockney accent and even in these egalitarian times he’d be better off saying “what” not “wha’” when he went for his interview. It’s become a standing joke between us. 
 
-
-
 **Watch the Breaking Barriers documentary starring Bahaa:** 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vVpsglgz0TU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
 
 Five days later, Bahaa was being introduced to another British institution. He and I, along with the Breaking Barriers film crew, went to a pub in Camden Town to watch a hugely important game between Manchester City and Arsenal. The cherished position at the top of the league was at stake. No sooner had we entered the crowded pub than Bahaa was being chatted up by a couple of young women. The man’s got star quality, I smiled to myself. It was a disastrous night for Arsenal, but somehow watching the game with Bahaa and a bunch of other miserable Gooners made it a lot more bearable than if I’d been watching it from my sofa at home.
 
