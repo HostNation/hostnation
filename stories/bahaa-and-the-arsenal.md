@@ -4,6 +4,8 @@ author: ANTHONY, JOSH & BAHAA
 category: HostNation Blog Post
 title: Bahaa and the Arsenal
 ---
+<img src="/assets/Bahaa_at_Arsenal_game-2023-05-19.jpg" alt="image" style="width:43%;padding-right:25px;" ALIGN="left" />
+
 “Which football team do you support, Bahaa?”
 
 “Arsenal!” came the reply.
@@ -31,8 +33,6 @@ Before kick-off I was a bit concerned as to how he’d react to the swearing tha
 Southampton were bottom of the league and Arsenal were top, so this should have been a stroll in the park for the Gunners. However, with a few minutes to go, Arsenal were losing by three goals to one and the mood in the stadium was decidedly downbeat. Getting hammered by the worst team in the league certainly wasn’t part of the script. A moment later, however, Arsenal pulled one back and almost immediately followed up with an equaliser. Pandemonium! We were all up on our feet, roaring the team on to get an unlikely winner. 
 
 But it wasn’t to be. After the final whistle, Bahaa slumped back in his seat, smiling and shaking his head from side to side. “Unbelievable, three-three! It’s bad… but it’s better than losing!”
-
-<img src="/assets/Bahaa_at_Arsenal_game-2023-05-19.jpg" alt="image" style="width:43%;padding-right:25px;" ALIGN="left" />
 
 While driving Bahaa back to the tube, he told me a bit more about his family. He is one of six children, all of them university educated and working in professions like dentistry, pharmacy and engineering. Bahaa is a structural engineer with a PhD and an impressive CV and mentioned that he had a job interview coming up the following week. 
 
