@@ -67,7 +67,7 @@ const baseStyle = {
 
 const textStyle = {
   ...baseStyle,
-  fontSize: 20,
+  fontSize:16,
   fontWeight: 300 as 300,
   textAlign: 'left',
 };
@@ -179,7 +179,7 @@ export default {
   text: textStyle,
   title: {
     ...textStyle,
-    fontSize: 30,
+    fontSize: 22,
     fontWeight: 'bold' as 'bold',
     textAlign: 'center',
     padding: '0 15px',

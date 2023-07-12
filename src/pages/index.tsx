@@ -31,22 +31,22 @@ const TopButtons = () => {
         }}
       >
         <div>
-          <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
+          <img src={logoWide} style={{ maxWidth: 400 }} />
         </div>
         <Div style={{ width: 250, spacing: 10, margin: '0 auto' }}>
           <Button
             to="/befriend"
             color="yellow"
-            style={{ fontSize: 20, padding: 10 }}
+            style={{ fontSize: 16, padding: 10 }}
           >
-            BEFRIEND A REFUGEE
+            Befriend a refugee
           </Button>
           <Button
             to="/refer"
             color="purple"
-            style={{ fontSize: 20, padding: 10 }}
+            style={{ fontSize: 16, padding: 10 }}
           >
-            REFER A REFUGEE
+            Refer a refugee
           </Button>
         </Div>
       </Div>
@@ -107,11 +107,11 @@ const IntroText = () => {
       <Txt
         style={{
           ...styles.body,
-          // fontSize: small ? 20 : 24,
+          textAlign: 'left',
           padding: '0 15px',
         }}
       >
-        We are a city-based introductory service connecting residents to refugees through small acts of kindness, inclusion and friendship. Once introduced by HostNation, it’s up to our befrienders and their refugee friends to make plans and to meet up to participate in city life. We ask for a weekly commitment of meeting face-to-face over three months, but many matches become firm friends.
+        We are a city-based, refugee support platform connecting refugees to residents through small acts of kindness, inclusion and friendship. Once introduced by HostNation, it’s up to our volunteer befrienders and their refugee friends to make plans and to meet up to participate in city life. We ask for a weekly commitment of meeting face-to-face over three months, but many matches become firm friends.
 
       </Txt>
     </div>
@@ -133,7 +133,7 @@ const MoreInfo = () => {
           to="/hostnation-annual-report-2022.pdf"
           newTab
           color="black"
-          style={{ width: 320, fontSize: 20, margin: '0 auto' }}
+          style={{ width: 320, fontSize: 16, margin: '0 auto' }}
         >
           Read our latest
           <br />
@@ -143,7 +143,7 @@ const MoreInfo = () => {
           to="mailto:info@hostnation.org.uk"
           newTab
           color="black"
-          style={{ width: 320, fontSize: 20, margin: '0 auto' }}
+          style={{ width: 320, fontSize: 16, margin: '0 auto' }}
         >
           info@hostnation.org.uk
           <br />
@@ -159,7 +159,7 @@ export default () => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>HostNation | Helping refugees through friendship</title>
-      <meta name="description" content="HostNation believes every refugee deserves a friend. We connect those offering friendship with those needing it. We are a city-based introductory service connecting residents to refugees through small acts of kindness, inclusion and friendship." />
+      <meta name="description" content="HostNation believes every refugee deserves a friend. We are a volunteer-led organisation supporting refugees. We connect those offering friendship with those needing it." />
       <meta name="twitter:site" content="@hostnation" />
       <meta name="twitter:image" content={logoPreview} />
     </Helmet>
@@ -172,28 +172,18 @@ export default () => (
 
 
       <Div style={{ spacing: 20 }}>
-        <Txt
-          style={{
-            ...styles.text,
-            textAlign: 'center',
-            // fontSize: 24,
-            fontWeight: 'bold',
-          }}
-        >
-          HostNation believes every refugee deserves a friend.
-        </Txt>
-        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20 }}>
-          We connect those offering friendship with those needing it.
+        <Txt style={{ ...styles.text, textAlign: 'left', paddingRight: '20px'}}>
+        HostNation believes every refugee deserves a friend. We are a volunteer-led organisation supporting refugees. We connect those offering friendship with those needing it.
         </Txt>
       </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
 
       <Div style={{ spacing: 20 }}>
-        <Txt style={{ ...styles.text, textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: colors.purple }}>
-          <Hover style={{ ...styles.text, color: colors.purple, textDecoration: 'underline', fontWeight: 'bold', fontSize: 20, hover: { color: colors.purpleDark }, }} >
+        <Txt style={{ ...styles.text, textAlign: 'left', fontWeight: 'bold', color: colors.purple }}>
+          <Hover style={{ ...styles.text, color: colors.purple, textDecoration: 'underline', fontWeight: 'bold', hover: { color: colors.purpleDark }, }} >
             {({ hoverProps, style }) => (
               <a href="/befriend" {...hoverProps} style={style}>
-                Sign up to befriend in London, Greater Manchester and Tyne & Wear.
+                Volunteer with us to befriend a refugee in London, Greater Manchester or Tyne & Wear.
               </a>
             )}
           </Hover>
@@ -202,7 +192,7 @@ export default () => (
 
       <Div style={{ spacing: 25, background: 'white' }}>
         {/* <img src={partyImg} /> */}
-        <Txt style={{ ...styles.body, textAlign: 'center', fontSize: 20, fontWeight: 'bold', paddingTop: '25px' }}>
+        <Txt style={{ ...styles.body, textAlign: 'center', fontWeight: 'bold', paddingTop: '25px' }}>
         Watch this film made by our Northern team:
         </Txt>
 
@@ -223,19 +213,18 @@ export default () => (
           </div>
           </Div>
 
-          <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} />
+          <img src={quoteImg} style={{ maxWidth: 600, margin: '0 auto' }} alt="I can honestly say that joining Host Nation is one of the best and most rewarding things I have ever done."/>
 
         {/* <Txt style={{ ...styles.body, textAlign: 'center', fontSize: 15, marginTop: '-20px' }}>
           Films 1 min each and shot for HostNation by @DamnFineMedia.
         </Txt> */}
 
         <IntroText />
-        <img src={statsImg} style={{ maxWidth: 600, margin: '0 auto 50px' }} />
+        <img src={statsImg} style={{ maxWidth: 600, margin: '0 auto 50px' }} alt="700 matches and counting... 86% of our refugee friends say they feel better as a result, 93% of our befrienders find the experience rewarding" />
       </Div>
       <Div style={{ spacing: 25 }}>
         <Txt style={styles.body}>
-          If you are an asylum seeker or refugee and would like a befriender
-          please
+          If you are an asylum seeker or refugee and would like a befriender please
           <Hover
             style={{
               ...styles.text,
@@ -258,16 +247,15 @@ export default () => (
       <Div style={{ spacing: 25 }}>
         <Txt style={styles.body}>
           If you like what we do but are not able to befriend,
-          <br />
           please consider a donation.
         </Txt>
         <Button
           to="https://checkout.justgiving.com/w8d0xdwlda"
           newTab
           color="purple"
-          style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
+          style={{ margin: '0 auto', fontSize: 18, padding: 10 }}
         >
-          DONATE HERE
+          Donate here
         </Button>
         <img style={{ width: 300, display: 'block', margin: 'auto' }} src={"https://www.jg-cdn.com/buttons/payment-type-logos-gb.svg"} alt={"Pay with Mastercard, Visa, American Express, PayPal, Bank Transfer, Apple Pay or Direct Debit."}></img>
       </Div>
@@ -276,7 +264,7 @@ export default () => (
 
 
       <Div style={{ spacing: 25 }}>
-        <Txt style={{ ...styles.title, fontSize: 30 }}>
+        <Txt style={{ ...styles.body }}>
           For more information on HostNation:
         </Txt>
         <MoreInfo />
@@ -294,9 +282,9 @@ export default () => (
             to="/guide.pdf"
             newTab
             color="yellow"
-            style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
+            style={{ margin: '0 auto', fontSize: 18, padding: 10 }}
           >
-            READ THE GUIDE
+            Read the guide
           </Button>
         </Div>
       </Div>
@@ -311,16 +299,16 @@ export default () => (
         </Txt>
         <Div style={{ spacing: 15 }}>
           <img src={linksIcon} style={{ width: 100, margin: '0 auto' }} />
-          <Txt style={{ ...styles.title, fontSize: 25 }}>SIGNPOSTING LINKS:</Txt>
+          <Txt style={{ ...styles.title }}>Signposting Links:</Txt>
         </Div>
         <Div style={{ spacing: 15 }}>
           <Button
             to="/signposting-London.pdf"
             newTab
             color="purple"
-            style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
+            style={{ margin: '0 auto', fontSize: 18, padding: 10 }}
           >
-            LONDON
+            London
           </Button>
         </Div>
         <Div style={{ spacing: 15 }}>
@@ -328,9 +316,9 @@ export default () => (
             to="/signposting-Manchester.pdf"
             newTab
             color="yellow"
-            style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
+            style={{ margin: '0 auto', fontSize: 18, padding: 10 }}
           >
-            MANCHESTER
+            Manchester
           </Button>
         </Div>
         <Div style={{ spacing: 15 }}>
@@ -338,9 +326,9 @@ export default () => (
             to="/signposting-Tyne-Wear.pdf"
             newTab
             color="black"
-            style={{ margin: '0 auto', fontSize: 22, padding: 10 }}
+            style={{ margin: '0 auto', fontSize: 18, padding: 10 }}
           >
-            NEWCASTLE &amp; GATESHEAD
+            Newcastle &amp; Gateshead
           </Button>
         </Div>
       </Div>

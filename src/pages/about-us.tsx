@@ -12,6 +12,11 @@ import cbtLogo from '../img/logos/cbt.jpg';
 import gwfLogo from '../img/logos/gwf.png';
 import vfnLogo from '../img/logos/vfn.png';
 
+import hscLogo from '../img/logos/hsc.png';
+import hcfLogo from '../img/logos/hcf.jpg';
+import milaLogo from '../img/logos/mila.png';
+
+
 import anneke from '../img/team/anneke.jpg';
 import rossana from '../img/team/rossana.png';
 import anthony from '../img/team/anthony.png';
@@ -86,7 +91,7 @@ const Profile = ({ image, name, role, bio, credit }: any) => {
             <Txt
               style={{
                 ...styles.text,
-                fontSize: 20,
+                fontSize: 18,
                 color: colors.yellow,
                 fontWeight: 'bold',
               }}
@@ -475,13 +480,9 @@ const LogosChunk = () => {
             src={gwfLogo}
             style={{ height: 90, width: 'auto', margin: '0 auto' }}
           />
-                    <img
+          <img
             src={thtLogo}
             style={{ height: 90, width: 'auto', margin: '0 auto' }}
-          />
-          <img
-            src={vfnLogo}
-            style={{ height: 70, width: 'auto', margin: '0 auto' }}
           />
         </Div>
         <Div
@@ -492,10 +493,28 @@ const LogosChunk = () => {
           }}
         >
           <img
-            src={molLogo}
-            style={{ height: 45, width: 'auto', margin: '0 auto' }}
+            src={hscLogo}
+            style={{ height: 90, width: 'auto', margin: '0 auto' }}
           />
 
+
+          <img
+            src={milaLogo}
+            style={{ height: 90, width: 'auto', margin: '0 auto' }}
+          />
+
+        </Div>
+        <Div
+          style={{
+            layout: small ? 'stack' : 'bar',
+            spacing: 25,
+            margin: '0 auto',
+          }}
+        >
+          <img
+            src={hcfLogo}
+            style={{ height: 90, width: 'auto', margin: '0 auto' }}
+          />
           <img
             src={ambcLogo}
             style={{ height: 90, width: 'auto', margin: '0 auto' }}
@@ -510,7 +529,7 @@ export default () => (
   <Layout location="/about-us">
     <Helmet title="About Us | HostNation" />
     <Div style={{ spacing: 50, padding: '50px 0' }}>
-      <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
+      <img src={logoWide} style={{ maxWidth: 400, margin: '0 auto' }} />
       <Div style={{ spacing: 25, background: 'white', padding: '50px 0' }}>
         <Txt style={styles.title}>Who Are We?</Txt>
         <Txt style={styles.boxText}>
@@ -562,7 +581,7 @@ export default () => (
         </Div>
       </Div> */}
       <Div style={{ spacing: 25, background: 'white', padding: '50px 0' }}>
-        <Txt style={{ ...styles.title, fontSize: 30 }}>
+        <Txt style={{ ...styles.title }}>
           Funders and Friends of HostNation
         </Txt>
         <Div style={{ spacing: 30 }}>
@@ -580,7 +599,7 @@ export default () => (
             grant from Team London and the Mayor of London's office.
           </Txt>
           <Txt style={styles.boxText}>
-            Since 2020 the Paul Hamlyn Foundation helped fund our our regional expansion. Trust for London have continued their core funding for a further three years and The National Lottery/DCMS provided emergency Covid-19 funding through the Coronavirus Community Support Fund (CCSF). City Bridge Trust have granted us three years of funding for our London programme (2021-2023) whilst in 2022 Garfield Weston Foundation and the Headley Trust provided unrestricted core funding. In Sept 2022 the University of Manchester Business School chose HostNation for pro bono consultancy from their new cohort of MBA students on their not for profit module.
+            Since 2020 the Paul Hamlyn Foundation helped fund our our regional expansion. Trust for London have continued their core funding for a further three years and The National Lottery/DCMS provided emergency Covid-19 funding through the Coronavirus Community Support Fund (CCSF). City Bridge Trust have granted us three years of funding for our London programme (2021-2023) whilst in 2022 Garfield Weston Foundation and the Headley Trust provided unrestricted core funding. In Sept 2022 the University of Manchester Business School chose HostNation for pro bono consultancy from their new cohort of MBA students on their not for profit module. In 2023 The Henry Smith Charity confirmed 3 years of core funding.
           </Txt>
           <Txt style={styles.boxText}>
             Thank you to all our funders for believing in us and the work we do.

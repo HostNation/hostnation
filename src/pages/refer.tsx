@@ -35,7 +35,7 @@ export default () => (
             to="/safeguarding-policy.pdf"
             newTab
             color="yellow"
-            style={{ margin: '0 auto', fontSize: 20 }}
+            style={{ margin: '0 auto', fontSize: 18 }}
           >
           Our safeguarding policy
           </Button>
@@ -46,7 +46,7 @@ export default () => (
             to="/screening-checks-policy.pdf"
             newTab
             color="purple"
-            style={{ margin: '0 auto', fontSize: 20 }}
+            style={{ margin: '0 auto', fontSize: 18 }}
           >
             Read more about the screening and checks we do
           </Button>
@@ -55,7 +55,7 @@ export default () => (
       </Box>
 
       <Box title="SCOPE OF SERVICES AND EXCLUSION OF LIABILITY" toggle>
-        <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+        <Txt style={{ ...styles.boxText, fontSize: 22, fontWeight: 'bold' }}>
           Scope of Services
         </Txt>
         <Txt style={styles.boxText}>
@@ -91,7 +91,7 @@ export default () => (
           relationship at 1 month and 3 month intervals with both referrer and
           befriender.
         </Txt>
-        <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+        <Txt style={{ ...styles.boxText, fontSize: 22, fontWeight: 'bold' }}>
           Exclusion of Liability
         </Txt>
         <Txt style={styles.boxText}>
@@ -117,7 +117,7 @@ export default () => (
             to="https://airtable.com/shrUoKOEAjMBTsXiL?prefill_Type=Refugee&backgroundColor=orange"
             newTab
             color="purple"
-            style={{ margin: '0 auto', fontSize: 20 }}
+            style={{ margin: '0 auto', fontSize: 18 }}
           >
             London:
             <br />
@@ -129,7 +129,7 @@ export default () => (
             to="https://airtable.com/shrCnkF1DgqeK5Yoa?prefill_Type=Refugee&backgroundColor=orange"
             newTab
             color="yellow"
-            style={{ margin: '0 auto', fontSize: 20 }}
+            style={{ margin: '0 auto', fontSize: 18 }}
           >
             Newcastle / Gateshead:
             <br />
@@ -141,7 +141,7 @@ export default () => (
             to="https://airtable.com/shro988lQckxA3Byn?prefill_Type=Refugee&backgroundColor=orange"
             newTab
             color="black"
-            style={{ margin: '0 auto', fontSize: 20 }}
+            style={{ margin: '0 auto', fontSize: 18 }}
           >
             Manchester:
             <br />

@@ -18,7 +18,7 @@ export default () => (
     <Div style={{ spacing: 50, paddingTop: 50, paddingBottom: 50 }}>
       <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ spacing: 20 }}>
-        <Txt style={{ ...styles.title, fontSize: 30 }}>
+        <Txt style={{ ...styles.title, fontSize: 22 }}>
           Welcome to asylum seekers and refugees
         </Txt>
       </Div>
@@ -39,7 +39,7 @@ export default () => (
         <Txt
           style={{
             ...styles.boxText,
-            fontSize: 30,
+            fontSize: 22,
             fontWeight: 'bold',
             paddingTop: 30,
           }}
@@ -59,7 +59,7 @@ export default () => (
       </Div>
       <img src={johnAmin} style={{ maxWidth: 600, margin: '0 auto' }} />
       <Div style={{ padding: '50px 0', spacing: 30, background: 'white' }}>
-        <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+        <Txt style={{ ...styles.boxText, fontSize: 22, fontWeight: 'bold' }}>
           How to apply for a friend
         </Txt>
         <Txt style={styles.boxText}>
@@ -143,7 +143,7 @@ export default () => (
             ...styles.boxText,
             color: colors.purple,
             fontWeight: 'bold',
-            fontSize: 24,
+            fontSize: 22,
             textAlign: 'center',
             paddingTop: 18,
           }}
@@ -154,7 +154,7 @@ export default () => (
           style={{
             ...styles.boxText,
             fontWeight: 'bold',
-            fontSize: 24,
+            fontSize: 18,
             textAlign: 'center',
           }}
         >

@@ -17,7 +17,7 @@ export default () => (
   <Layout location="/befriend">
     <Helmet title="Befriend | HostNation" />
     <Div style={{ spacing: 50, paddingTop: 50, paddingBottom: 50 }}>
-      <img src={logoWide} style={{ maxWidth: 600, margin: '0 auto' }} />
+      <img src={logoWide} style={{ maxWidth: 400, margin: '0 auto' }} />
       <img src={nickAli} style={{ maxWidth: 600, margin: '0 auto' }} />
 
       <Box title="WHAT WE ASK OF YOU" toggle>
@@ -57,8 +57,8 @@ export default () => (
           practise their English. And you may find a real friend in the process!
         </Txt>
 
-        <Div style={{ spacing: 15, paddingTop: 30 }}>
-          <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+        <Div style={{ spacing: 15, paddingTop: 10 }}>
+          <Txt style={{ ...styles.boxText, fontSize: 22, fontWeight: 'bold' }}>
             London
           </Txt>
           {/* <Txt style={{ ...styles.boxText }}>
@@ -98,8 +98,8 @@ export default () => (
 
         </Div>
 
-        <Div style={{ spacing: 15, paddingTop: 30 }}>
-          <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+        <Div style={{ spacing: 15, paddingTop: 10 }}>
+          <Txt style={{ ...styles.boxText, fontSize: 22, fontWeight: 'bold' }}>
             North West
           </Txt>
           <Txt style={{ ...styles.boxText }}>
@@ -127,8 +127,8 @@ export default () => (
         </Div>
 
 
-        <Div style={{ spacing: 15, paddingTop: 30 }}>
-          <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+        <Div style={{ spacing: 15, paddingTop: 10 }}>
+          <Txt style={{ ...styles.boxText, fontSize: 22, fontWeight: 'bold' }}>
             North East
           </Txt>
           <Txt style={{ ...styles.boxText }}>
@@ -157,7 +157,7 @@ export default () => (
       </Box>
 
       <Box title="SCOPE OF SERVICES AND EXCLUSION OF LIABILITY" toggle>
-        <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+        <Txt style={{ ...styles.boxText, fontSize: 24, fontWeight: 'bold' }}>
           Scope of Services
         </Txt>
         <Txt style={styles.boxText}>
@@ -200,7 +200,7 @@ export default () => (
           best to respond as quickly as we can, but we are unable to provide a
           full support service.
         </Txt>
-        <Txt style={{ ...styles.boxText, fontSize: 30, fontWeight: 'bold' }}>
+        <Txt style={{ ...styles.boxText, fontSize: 24, fontWeight: 'bold' }}>
           Exclusion of Liability
         </Txt>
         <Txt style={styles.boxText}>
