@@ -167,16 +167,14 @@ export default () => (
     {/* <TopBanner /> */}
 
 
-    <Div style={{ spacing: 50, padding: '50px 0' }}>
+    <Div style={{ spacing: 25, padding: '50px 0' }}>
       <TopButtons />
 
 
-      <Div style={{ spacing: 20 }}>  
       <Txt style={{...styles.title, textAlign: 'left', padding: 0}}>HostNation believes every refugee deserves a friend.</Txt>
         <Txt style={{ ...styles.text, textAlign: 'left'}}>
         We are a volunteer-led organisation supporting refugees. We connect those offering friendship with those needing it.
         </Txt>
-      </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
 
       <Div style={{ spacing: 20 }}>
