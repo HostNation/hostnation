@@ -171,9 +171,10 @@ export default () => (
       <TopButtons />
 
 
-      <Div style={{ spacing: 20 }}>
-        <Txt style={{ ...styles.text, textAlign: 'left', paddingRight: '20px'}}>
-        HostNation believes every refugee deserves a friend. We are a volunteer-led organisation supporting refugees. We connect those offering friendship with those needing it.
+      <Div style={{ spacing: 20 }}>  
+      <Txt style={{...styles.title, textAlign: 'left', padding: 0}}>HostNation believes every refugee deserves a friend.</Txt>
+        <Txt style={{ ...styles.text, textAlign: 'left'}}>
+        We are a volunteer-led organisation supporting refugees. We connect those offering friendship with those needing it.
         </Txt>
       </Div>
       <div style={{ background: colors.black, height: 3, borderRadius: 3 }} />
@@ -197,7 +198,7 @@ export default () => (
         </Txt>
 
         <Div style={{ spacing: 20 }}>
-          <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+          <div style={{ position: 'relative', paddingBottom: '30%', marginLeft: "20%", marginRight: "20%"}}>
             <iframe
               src="https://player.vimeo.com/video/798823473?title=0&byline=0&portrait=0"
               frameBorder="0"
